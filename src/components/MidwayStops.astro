@@ -8,10 +8,16 @@ interface Stop {
 interface Props {
   cityA: string;
   cityB: string;
+  cityASlug: string;
+  cityBSlug: string;
   stops: Stop[];
 }
-const { cityA, cityB, stops } = Astro.props;
+const { cityA, cityB, cityASlug, cityBSlug, stops } = Astro.props;
 const KM_TO_MILES = 0.621371;
+
+function pairUrl(a: string, b: string) {
+  return `/distance/${a < b ? a + '-to-' + b : b + '-to-' + a}/`;
+}
 ---
 {stops.length > 0 && (
   <section class="card midway-stops">
@@ -19,7 +25,13 @@ const KM_TO_MILES = 0.621371;
     <ul>
       {stops.map(s => (
         <li>
-          <a href={`/city/${s.slug}/`}>{s.name}</a>
+          <div class="stop-info">
+            <a href={`/city/${s.slug}/`}>{s.name}</a>
+            <span class="stop-links">
+              <a href={pairUrl(cityASlug, s.slug)}>{cityA} → {s.name}</a>
+              <a href={pairUrl(s.slug, cityBSlug)}>{s.name} → {cityB}</a>
+            </span>
+          </div>
           <span class="dist">{Math.round(s.distanceFromA_km * KM_TO_MILES)} mi from {cityA}</span>
         </li>
       ))}
@@ -36,5 +48,9 @@ const KM_TO_MILES = 0.621371;
     padding: 0.5rem 0; border-bottom: 1px solid var(--border);
   }
   .midway-stops li:last-child { border-bottom: none; }
-  .dist { color: var(--text-muted); font-size: 0.875rem; }
+  .stop-info { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stop-links { display: flex; gap: 0.75rem; font-size: 0.8rem; }
+  .stop-links a { color: var(--text-muted); }
+  .stop-links a:hover { color: var(--accent); }
+  .dist { color: var(--text-muted); font-size: 0.875rem; white-space: nowrap; }
 </style>
