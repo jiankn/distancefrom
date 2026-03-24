@@ -9,7 +9,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "data:cities": "tsx scripts/prepare-cities.ts",
+    "data:routes": "tsx scripts/fetch-osrm-routes.ts",
+    "data:pairs": "tsx scripts/generate-popular-pairs.ts",
+    "data:all": "npm run data:cities && npm run data:pairs",
+    "deploy": "npm run build && npx wrangler pages deploy dist"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.1.3",
