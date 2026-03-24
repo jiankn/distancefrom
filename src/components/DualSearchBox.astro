@@ -1,0 +1,122 @@
+---
+// Dual city search with autocomplete
+---
+<form class="search-box" action="/distance/" method="get" id="search-form" role="search" aria-label="Distance search">
+  <div class="search-inputs">
+    <div class="input-group">
+      <label for="from-input" class="sr-only">From city</label>
+      <input type="text" id="from-input" name="from" placeholder="From city..." autocomplete="off" required aria-label="Origin city" />
+      <ul class="suggestions" id="from-suggestions" role="listbox" aria-label="City suggestions"></ul>
+    </div>
+    <span class="swap-btn" role="button" tabindex="0" aria-label="Swap cities" id="swap-btn">⇄</span>
+    <div class="input-group">
+      <label for="to-input" class="sr-only">To city</label>
+      <input type="text" id="to-input" name="to" placeholder="To city..." autocomplete="off" required aria-label="Destination city" />
+      <ul class="suggestions" id="to-suggestions" role="listbox" aria-label="City suggestions"></ul>
+    </div>
+  </div>
+  <button type="submit">Calculate Distance</button>
+</form>
+
+<style>
+  .search-box { margin: 2rem 0; }
+  .search-inputs {
+    display: flex; align-items: center; gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .input-group { flex: 1; min-width: 200px; position: relative; }
+  .input-group input {
+    width: 100%; padding: 0.75rem 1rem;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); color: var(--text-primary);
+    font-size: 1rem; outline: none;
+  }
+  .input-group input:focus { border-color: var(--accent); }
+  .swap-btn {
+    font-size: 1.25rem; cursor: pointer; color: var(--text-secondary);
+    padding: 0.5rem; user-select: none;
+  }
+  .swap-btn:hover { color: var(--accent); }
+  button {
+    margin-top: 0.75rem; width: 100%; padding: 0.75rem;
+    background: var(--accent); color: #000; border: none;
+    border-radius: var(--radius-sm); font-size: 1rem;
+    font-weight: 600; cursor: pointer;
+  }
+  button:hover { background: var(--accent-hover); }
+  .suggestions {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); list-style: none;
+    max-height: 200px; overflow-y: auto; z-index: 10;
+    display: none;
+  }
+  .suggestions.active { display: block; }
+  .suggestions li {
+    padding: 0.5rem 1rem; cursor: pointer;
+    color: var(--text-primary); font-size: 0.9rem;
+  }
+  .suggestions li:hover, .suggestions li[aria-selected="true"] {
+    background: var(--bg-secondary);
+  }
+</style>
+
+<script>
+  import citiesData from '../data/cities.json';
+
+  const cities = Object.entries(citiesData).map(([slug, c]: [string, any]) => ({
+    slug, name: c.name, country: c.countryName, state: c.state,
+  }));
+
+  function setupAutocomplete(inputId: string, listId: string) {
+    const input = document.getElementById(inputId) as HTMLInputElement;
+    const list = document.getElementById(listId) as HTMLUListElement;
+    let selectedSlug = '';
+
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase().trim();
+      if (q.length < 2) { list.classList.remove('active'); return; }
+      const matches = cities
+        .filter(c => c.name.toLowerCase().includes(q) || c.slug.includes(q))
+        .slice(0, 8);
+      list.innerHTML = matches.map(c =>
+        `<li role="option" data-slug="${c.slug}">${c.name}${c.state ? ', ' + c.state : ''}, ${c.country}</li>`
+      ).join('');
+      list.classList.toggle('active', matches.length > 0);
+    });
+
+    list.addEventListener('click', (e) => {
+      const li = (e.target as HTMLElement).closest('li');
+      if (!li) return;
+      selectedSlug = li.dataset.slug!;
+      input.value = li.textContent!.split(',')[0];
+      input.dataset.slug = selectedSlug;
+      list.classList.remove('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!(e.target as HTMLElement).closest(`#${inputId}, #${listId}`)) {
+        list.classList.remove('active');
+      }
+    });
+  }
+
+  setupAutocomplete('from-input', 'from-suggestions');
+  setupAutocomplete('to-input', 'to-suggestions');
+
+  document.getElementById('swap-btn')?.addEventListener('click', () => {
+    const from = document.getElementById('from-input') as HTMLInputElement;
+    const to = document.getElementById('to-input') as HTMLInputElement;
+    [from.value, to.value] = [to.value, from.value];
+    [from.dataset.slug, to.dataset.slug] = [to.dataset.slug, from.dataset.slug];
+  });
+
+  document.getElementById('search-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const from = (document.getElementById('from-input') as HTMLInputElement).dataset.slug;
+    const to = (document.getElementById('to-input') as HTMLInputElement).dataset.slug;
+    if (from && to && from !== to) {
+      window.location.href = `/distance/${from}-to-${to}/`;
+    }
+  });
+</script>

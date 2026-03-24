@@ -1,0 +1,122 @@
+---
+export const prerender = false; // SSR for long-tail, will add getStaticPaths for top pairs later
+
+import Base from '../../layouts/Base.astro';
+import DistanceResult from '../../components/DistanceResult.astro';
+import Map from '../../components/Map.astro';
+import MidwayStops from '../../components/MidwayStops.astro';
+import QuickFacts from '../../components/QuickFacts.astro';
+import RelatedDistances from '../../components/RelatedDistances.astro';
+import DataSources from '../../components/DataSources.astro';
+import AdUnit from '../../components/AdUnit.astro';
+import DualSearchBox from '../../components/DualSearchBox.astro';
+
+import citiesData from '../../data/cities.json';
+import routeDataJson from '../../data/route-data.json';
+import fuelPricesJson from '../../data/fuel-prices.json';
+
+import { haversine } from '../../utils/haversine';
+import { bearing } from '../../utils/bearing';
+import { driveEstimate, setRouteData } from '../../utils/drive-estimate';
+import { flightEstimate } from '../../utils/flight-estimate';
+import { findMidwayStops } from '../../utils/midway-stops';
+import { tripCost, setFuelPrices } from '../../utils/trip-cost';
+import { isCanonicalOrder, canonicalPairKey } from '../../utils/slug';
+import { distancePageTitle, distancePageDescription, canonicalUrl, distanceJsonLd } from '../../utils/seo';
+
+import type { City } from '../../data/types';
+
+// Initialize data
+setRouteData(routeDataJson as any);
+setFuelPrices(fuelPricesJson as any);
+
+const cities = citiesData as Record<string, City>;
+
+// Parse slug: "new-york-to-boston"
+const rawSlug = Astro.params.slug ?? '';
+const parts = rawSlug.replace(/\/$/, '').split('-to-');
+if (parts.length !== 2) return Astro.redirect('/');
+const [slugA, slugB] = parts;
+
+// Canonical redirect: if not in alphabetical order, 301 to canonical
+if (!isCanonicalOrder(slugA, slugB)) {
+  return Astro.redirect(`/distance/${slugB}-to-${slugA}/`, 301);
+}
+
+const cityA = cities[slugA];
+const cityB = cities[slugB];
+if (!cityA || !cityB) return Astro.redirect('/');
+
+// Compute all data
+const dist = haversine(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
+const bear = bearing(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
+const drive = driveEstimate(slugA, slugB, dist.km, cityA.lat, cityA.lng, cityB.lat, cityB.lng);
+const flight = flightEstimate(dist.km);
+const cost = drive.drivable ? tripCost(drive.distanceKm, cityA.country, cityB.country) : null;
+const stops = findMidwayStops(slugA, cityA.lat, cityA.lng, slugB, cityB.lat, cityB.lng, cities);
+
+// Related distances
+function getRelated(slug: string, city: City, excludeSlug: string) {
+  return (city.nearby ?? [])
+    .filter((s: string) => s !== excludeSlug && cities[s])
+    .slice(0, 6)
+    .map((s: string) => {
+      const c = cities[s];
+      const d = haversine(city.lat, city.lng, c.lat, c.lng);
+      return { slug: s, name: c.name, distanceMiles: d.miles };
+    });
+}
+const relatedA = getRelated(slugA, cityA, slugB);
+const relatedB = getRelated(slugB, cityB, slugA);
+
+// SEO
+const title = distancePageTitle(cityA.name, cityB.name, dist.miles, drive.formatted);
+const description = distancePageDescription(
+  cityA.name, cityB.name, dist.miles, dist.km,
+  drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
+);
+const canonical = canonicalUrl(slugA, slugB);
+const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canonical);
+---
+<Base title={title} description={description} canonical={canonical} jsonLd={jsonLd}>
+  <h1>Distance from {cityA.name} to {cityB.name}</h1>
+  <DualSearchBox />
+
+  <DistanceResult
+    straightLineMiles={dist.miles} straightLineKm={dist.km}
+    drivingMiles={drive.distanceMiles} drivingKm={drive.distanceKm}
+    driveTime={drive.formatted} driveSource={drive.source} drivable={drive.drivable}
+    flightTime={flight.formatted} noDirectFlight={flight.noDirectFlight}
+    bearingDeg={bear.degrees} bearingDir={bear.direction}
+    fuelCost={cost?.formatted ?? 'N/A'}
+  />
+
+  <AdUnit slot="distance-top" />
+
+  <Map lat1={cityA.lat} lng1={cityA.lng} label1={cityA.name}
+       lat2={cityB.lat} lng2={cityB.lng} label2={cityB.name} />
+
+  <MidwayStops cityA={cityA.name} cityB={cityB.name} stops={stops} />
+
+  <QuickFacts cityA={{ name: cityA.name, lat: cityA.lat, lng: cityA.lng, timezone: cityA.timezone, elevation: cityA.elevation }}
+              cityB={{ name: cityB.name, lat: cityB.lat, lng: cityB.lng, timezone: cityB.timezone, elevation: cityB.elevation }} />
+
+  <AdUnit slot="distance-mid" />
+
+  <RelatedDistances
+    cityAName={cityA.name} cityBName={cityB.name}
+    cityASlug={slugA} cityBSlug={slugB}
+    fromA={relatedA} fromB={relatedB}
+  />
+
+  <p class="reverse-link">
+    🔄 Reverse: <a href={`/distance/${slugB}-to-${slugA}/`}>{cityB.name} to {cityA.name}</a>
+  </p>
+
+  <DataSources driveSource={drive.source} />
+</Base>
+
+<style>
+  h1 { margin-top: 1.5rem; }
+  .reverse-link { margin: 1.5rem 0; font-size: 0.95rem; }
+</style>

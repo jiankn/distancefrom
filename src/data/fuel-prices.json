@@ -1,0 +1,16 @@
+{
+  "US": { "currency": "USD", "pricePerLiter": 0.92, "unit": "gallon", "pricePerUnit": 3.50 },
+  "CA": { "currency": "CAD", "pricePerLiter": 1.55, "unit": "liter", "pricePerUnit": 1.55 },
+  "GB": { "currency": "GBP", "pricePerLiter": 1.45, "unit": "liter", "pricePerUnit": 1.45 },
+  "DE": { "currency": "EUR", "pricePerLiter": 1.65, "unit": "liter", "pricePerUnit": 1.65 },
+  "FR": { "currency": "EUR", "pricePerLiter": 1.70, "unit": "liter", "pricePerUnit": 1.70 },
+  "ES": { "currency": "EUR", "pricePerLiter": 1.50, "unit": "liter", "pricePerUnit": 1.50 },
+  "IT": { "currency": "EUR", "pricePerLiter": 1.75, "unit": "liter", "pricePerUnit": 1.75 },
+  "AU": { "currency": "AUD", "pricePerLiter": 1.80, "unit": "liter", "pricePerUnit": 1.80 },
+  "JP": { "currency": "JPY", "pricePerLiter": 170, "unit": "liter", "pricePerUnit": 170 },
+  "IN": { "currency": "INR", "pricePerLiter": 95, "unit": "liter", "pricePerUnit": 95 },
+  "BR": { "currency": "BRL", "pricePerLiter": 5.80, "unit": "liter", "pricePerUnit": 5.80 },
+  "MX": { "currency": "MXN", "pricePerLiter": 22, "unit": "liter", "pricePerUnit": 22 },
+  "CN": { "currency": "CNY", "pricePerLiter": 8.20, "unit": "liter", "pricePerUnit": 8.20 },
+  "KR": { "currency": "KRW", "pricePerLiter": 1650, "unit": "liter", "pricePerUnit": 1650 }
+}

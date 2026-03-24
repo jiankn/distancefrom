@@ -1,0 +1,25 @@
+---
+export const prerender = true;
+import Base from '../layouts/Base.astro';
+---
+<Base title="Privacy Policy — DistanceFrom.co" description="Privacy policy for DistanceFrom.co.">
+  <h1>Privacy Policy</h1>
+  <div class="content">
+    <p>Last updated: {new Date().toISOString().split('T')[0]}</p>
+    <h2>Information We Collect</h2>
+    <p>We do not collect personal information. We use Google AdSense for advertising, which may use cookies to serve ads based on your browsing history.</p>
+    <h2>Cookies</h2>
+    <p>Third-party vendors, including Google, use cookies to serve ads based on your prior visits. You can opt out of personalized advertising at <a href="https://www.google.com/settings/ads" rel="noopener">Google Ads Settings</a>.</p>
+    <h2>Analytics</h2>
+    <p>We may use privacy-friendly analytics to understand how visitors use our site. No personally identifiable information is collected.</p>
+    <h2>Contact</h2>
+    <p>For questions about this policy, please contact us through our website.</p>
+  </div>
+</Base>
+
+<style>
+  h1 { margin-top: 1.5rem; }
+  .content { margin-top: 1.5rem; line-height: 1.8; }
+  .content h2 { margin-top: 1.5rem; font-size: 1.2rem; color: var(--text-primary); }
+  .content p { margin-top: 0.75rem; color: var(--text-secondary); }
+</style>

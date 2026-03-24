@@ -1,0 +1,68 @@
+---
+import '../assets/styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  jsonLd?: object;
+}
+
+const { title, description, canonical, jsonLd } = Astro.props;
+const canonicalUrl = canonical ?? Astro.url.href;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  {jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">DistanceFrom.co</a>
+    </div>
+  </header>
+  <main class="container">
+    <slot />
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} DistanceFrom.co &middot; <a href="/about">About</a> &middot; <a href="/privacy">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style>
+  .site-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .logo:hover { color: var(--accent); }
+  .site-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+interface RelatedCity {
+  slug: string;
+  name: string;
+  distanceMiles: number;
+}
+interface Props {
+  cityAName: string;
+  cityBName: string;
+  fromA: RelatedCity[];
+  fromB: RelatedCity[];
+  cityASlug: string;
+  cityBSlug: string;
+}
+const { cityAName, cityBName, fromA, fromB, cityASlug, cityBSlug } = Astro.props;
+---
+<section class="card related">
+  <div class="related-group">
+    <h2>🔗 Related Distances from <a href={`/city/${cityASlug}/`}>{cityAName}</a></h2>
+    <ul>
+      {fromA.map(c => (
+        <li>
+          <a href={`/distance/${cityASlug < c.slug ? cityASlug + '-to-' + c.slug : c.slug + '-to-' + cityASlug}/`}>
+            → {c.name}
+          </a>
+          <span class="dist">{c.distanceMiles} mi</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="related-group">
+    <h2>🔗 Related Distances from <a href={`/city/${cityBSlug}/`}>{cityBName}</a></h2>
+    <ul>
+      {fromB.map(c => (
+        <li>
+          <a href={`/distance/${cityBSlug < c.slug ? cityBSlug + '-to-' + c.slug : c.slug + '-to-' + cityBSlug}/`}>
+            → {c.name}
+          </a>
+          <span class="dist">{c.distanceMiles} mi</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .related { margin: 1.5rem 0; }
+  .related-group + .related-group { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .related h2 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .related ul { list-style: none; }
+  .related li {
+    display: flex; justify-content: space-between;
+    padding: 0.35rem 0; font-size: 0.9rem;
+  }
+  .dist { color: var(--text-muted); }
+</style>

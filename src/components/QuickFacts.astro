@@ -1,0 +1,43 @@
+---
+interface CityFact {
+  name: string;
+  lat: number;
+  lng: number;
+  timezone: string;
+  elevation: number;
+}
+interface Props { cityA: CityFact; cityB: CityFact; }
+const { cityA, cityB } = Astro.props;
+
+function formatCoord(lat: number, lng: number): string {
+  const latDir = lat >= 0 ? 'N' : 'S';
+  const lngDir = lng >= 0 ? 'E' : 'W';
+  return `${Math.abs(lat).toFixed(2)}°${latDir}, ${Math.abs(lng).toFixed(2)}°${lngDir}`;
+}
+---
+<section class="card quick-facts">
+  <h2>Quick Facts</h2>
+  <div class="fact-row">
+    <span class="label">{cityA.name}</span>
+    <span>{formatCoord(cityA.lat, cityA.lng)} | {cityA.timezone}</span>
+  </div>
+  <div class="fact-row">
+    <span class="label">{cityB.name}</span>
+    <span>{formatCoord(cityB.lat, cityB.lng)} | {cityB.timezone}</span>
+  </div>
+  <div class="fact-row">
+    <span class="label">Elevation</span>
+    <span>{cityA.name} {cityA.elevation}m → {cityB.name} {cityB.elevation}m</span>
+  </div>
+</section>
+
+<style>
+  .quick-facts { margin: 1.5rem 0; }
+  .quick-facts h2 { margin-bottom: 0.75rem; font-size: 1.1rem; }
+  .fact-row {
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    padding: 0.4rem 0; font-size: 0.9rem; gap: 0.5rem;
+  }
+  .fact-row + .fact-row { border-top: 1px solid var(--border); }
+  .label { color: var(--text-secondary); font-weight: 500; }
+</style>

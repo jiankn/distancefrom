@@ -1,0 +1,54 @@
+---
+export const prerender = false;
+
+import Base from '../../layouts/Base.astro';
+import DualSearchBox from '../../components/DualSearchBox.astro';
+import citiesData from '../../data/cities.json';
+import { haversine } from '../../utils/haversine';
+import { canonicalPairKey } from '../../utils/slug';
+import type { City } from '../../data/types';
+
+const cities = citiesData as Record<string, City>;
+const slug = Astro.params.city ?? '';
+const city = cities[slug];
+if (!city) return Astro.redirect('/');
+
+// All distances from this city, sorted by distance
+const distances = Object.entries(cities)
+  .filter(([s]) => s !== slug)
+  .map(([s, c]) => {
+    const d = haversine(city.lat, city.lng, c.lat, c.lng);
+    const key = canonicalPairKey(slug, s);
+    return { slug: s, name: c.name, country: c.countryName, miles: d.miles, km: d.km, href: `/distance/${key}/` };
+  })
+  .sort((a, b) => a.miles - b.miles);
+
+const title = `Distances from ${city.name} to Major Cities`;
+const description = `Find the distance from ${city.name} to any city worldwide. Driving distance, flight time, and more.`;
+---
+<Base title={title} description={description}>
+  <h1>{title}</h1>
+  <DualSearchBox />
+
+  <section class="city-distances">
+    {distances.map(d => (
+      <a href={d.href} class="city-row">
+        <span class="city-name">{d.name}, {d.country}</span>
+        <span class="city-dist">{d.miles} mi ({d.km} km)</span>
+      </a>
+    ))}
+  </section>
+</Base>
+
+<style>
+  h1 { margin-top: 1.5rem; }
+  .city-distances { margin-top: 1.5rem; }
+  .city-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.6rem 1rem; border-bottom: 1px solid var(--border);
+    color: var(--text-primary); transition: background 0.15s;
+  }
+  .city-row:hover { background: var(--bg-card); }
+  .city-name { font-size: 0.95rem; }
+  .city-dist { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; }
+</style>

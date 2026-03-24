@@ -1,0 +1,75 @@
+---
+interface Props {
+  straightLineMiles: number;
+  straightLineKm: number;
+  drivingMiles: number;
+  drivingKm: number;
+  driveTime: string;
+  driveSource: 'osrm' | 'estimated';
+  drivable: boolean;
+  flightTime: string;
+  noDirectFlight: boolean;
+  bearingDeg: number;
+  bearingDir: string;
+  fuelCost: string;
+}
+const {
+  straightLineMiles, straightLineKm,
+  drivingMiles, drivingKm, driveTime, driveSource, drivable,
+  flightTime, noDirectFlight,
+  bearingDeg, bearingDir, fuelCost,
+} = Astro.props;
+---
+<div class="card result-card">
+  <div class="result-row">
+    <span class="icon">📏</span>
+    <span>{straightLineMiles} miles ({straightLineKm} km) straight line</span>
+  </div>
+  {drivable ? (
+    <div class="result-row">
+      <span class="icon">🚗</span>
+      <span>{drivingMiles} miles ({drivingKm} km) driving
+        <span class={`badge ${driveSource}`}>{driveSource === 'osrm' ? 'actual route' : 'estimated'}</span>
+      </span>
+    </div>
+    <div class="result-row">
+      <span class="icon">⏱️</span>
+      <span>{driveTime} drive time</span>
+    </div>
+    <div class="result-row">
+      <span class="icon">💰</span>
+      <span>Est. fuel cost: {fuelCost}</span>
+    </div>
+  ) : (
+    <div class="result-row">
+      <span class="icon">🚗</span>
+      <span class="muted">Not drivable (ocean/continent separation)</span>
+    </div>
+  )}
+  <div class="result-row">
+    <span class="icon">✈️</span>
+    <span>~{flightTime} flight time{noDirectFlight ? ' (usually no direct flights)' : ''}</span>
+  </div>
+  <div class="result-row">
+    <span class="icon">🧭</span>
+    <span>Bearing: {bearingDeg}° ({bearingDir})</span>
+  </div>
+</div>
+
+<style>
+  .result-card { margin: 1.5rem 0; }
+  .result-row {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.5rem 0; font-size: 1.05rem;
+  }
+  .result-row + .result-row { border-top: 1px solid var(--border); }
+  .icon { font-size: 1.2rem; width: 1.5rem; text-align: center; }
+  .badge {
+    font-size: 0.7rem; padding: 0.15rem 0.5rem;
+    border-radius: 4px; margin-left: 0.5rem;
+    text-transform: uppercase; font-weight: 600;
+  }
+  .badge.osrm { background: #065f46; color: var(--success); }
+  .badge.estimated { background: #78350f; color: var(--warning); }
+  .muted { color: var(--text-muted); }
+</style>

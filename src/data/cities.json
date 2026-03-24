@@ -1,0 +1,639 @@
+{
+  "new-york": {
+    "name": "New York",
+    "country": "US",
+    "countryName": "United States",
+    "state": "New York",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "timezone": "America/New_York",
+    "population": 8336817,
+    "elevation": 10,
+    "nearby": [
+      "jersey-city",
+      "newark",
+      "new-haven",
+      "philadelphia",
+      "hartford",
+      "providence"
+    ]
+  },
+  "los-angeles": {
+    "name": "Los Angeles",
+    "country": "US",
+    "countryName": "United States",
+    "state": "California",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "timezone": "America/Los_Angeles",
+    "population": 3979576,
+    "elevation": 71,
+    "nearby": [
+      "san-diego"
+    ]
+  },
+  "chicago": {
+    "name": "Chicago",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Illinois",
+    "lat": 41.8781,
+    "lng": -87.6298,
+    "timezone": "America/Chicago",
+    "population": 2693976,
+    "elevation": 181,
+    "nearby": []
+  },
+  "houston": {
+    "name": "Houston",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Texas",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "timezone": "America/Chicago",
+    "population": 2320268,
+    "elevation": 15,
+    "nearby": [
+      "austin"
+    ]
+  },
+  "phoenix": {
+    "name": "Phoenix",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Arizona",
+    "lat": 33.4484,
+    "lng": -112.074,
+    "timezone": "America/Phoenix",
+    "population": 1680992,
+    "elevation": 331,
+    "nearby": []
+  },
+  "philadelphia": {
+    "name": "Philadelphia",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Pennsylvania",
+    "lat": 39.9526,
+    "lng": -75.1652,
+    "timezone": "America/New_York",
+    "population": 1603797,
+    "elevation": 12,
+    "nearby": [
+      "newark",
+      "jersey-city",
+      "new-york",
+      "washington-dc",
+      "new-haven",
+      "hartford"
+    ]
+  },
+  "san-antonio": {
+    "name": "San Antonio",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Texas",
+    "lat": 29.4241,
+    "lng": -98.4936,
+    "timezone": "America/Chicago",
+    "population": 1547253,
+    "elevation": 198,
+    "nearby": [
+      "austin"
+    ]
+  },
+  "san-diego": {
+    "name": "San Diego",
+    "country": "US",
+    "countryName": "United States",
+    "state": "California",
+    "lat": 32.7157,
+    "lng": -117.1611,
+    "timezone": "America/Los_Angeles",
+    "population": 1423851,
+    "elevation": 20,
+    "nearby": [
+      "los-angeles"
+    ]
+  },
+  "dallas": {
+    "name": "Dallas",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Texas",
+    "lat": 32.7767,
+    "lng": -96.797,
+    "timezone": "America/Chicago",
+    "population": 1343573,
+    "elevation": 131,
+    "nearby": [
+      "austin"
+    ]
+  },
+  "san-jose": {
+    "name": "San Jose",
+    "country": "US",
+    "countryName": "United States",
+    "state": "California",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "timezone": "America/Los_Angeles",
+    "population": 1021795,
+    "elevation": 25,
+    "nearby": [
+      "san-francisco"
+    ]
+  },
+  "austin": {
+    "name": "Austin",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Texas",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "timezone": "America/Chicago",
+    "population": 978908,
+    "elevation": 149,
+    "nearby": [
+      "san-antonio",
+      "houston",
+      "dallas"
+    ]
+  },
+  "san-francisco": {
+    "name": "San Francisco",
+    "country": "US",
+    "countryName": "United States",
+    "state": "California",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "timezone": "America/Los_Angeles",
+    "population": 873965,
+    "elevation": 16,
+    "nearby": [
+      "san-jose"
+    ]
+  },
+  "seattle": {
+    "name": "Seattle",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Washington",
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "timezone": "America/Los_Angeles",
+    "population": 737015,
+    "elevation": 56,
+    "nearby": [
+      "portland"
+    ]
+  },
+  "denver": {
+    "name": "Denver",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Colorado",
+    "lat": 39.7392,
+    "lng": -104.9903,
+    "timezone": "America/Denver",
+    "population": 715522,
+    "elevation": 1609,
+    "nearby": []
+  },
+  "washington-dc": {
+    "name": "Washington DC",
+    "country": "US",
+    "countryName": "United States",
+    "state": "District of Columbia",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "timezone": "America/New_York",
+    "population": 689545,
+    "elevation": 7,
+    "nearby": [
+      "philadelphia"
+    ]
+  },
+  "boston": {
+    "name": "Boston",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Massachusetts",
+    "lat": 42.3601,
+    "lng": -71.0589,
+    "timezone": "America/New_York",
+    "population": 692600,
+    "elevation": 43,
+    "nearby": [
+      "providence",
+      "hartford",
+      "new-haven"
+    ]
+  },
+  "las-vegas": {
+    "name": "Las Vegas",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Nevada",
+    "lat": 36.1699,
+    "lng": -115.1398,
+    "timezone": "America/Los_Angeles",
+    "population": 641903,
+    "elevation": 610,
+    "nearby": []
+  },
+  "miami": {
+    "name": "Miami",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Florida",
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "timezone": "America/New_York",
+    "population": 467963,
+    "elevation": 2,
+    "nearby": []
+  },
+  "atlanta": {
+    "name": "Atlanta",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Georgia",
+    "lat": 33.749,
+    "lng": -84.388,
+    "timezone": "America/New_York",
+    "population": 498715,
+    "elevation": 320,
+    "nearby": []
+  },
+  "detroit": {
+    "name": "Detroit",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Michigan",
+    "lat": 42.3314,
+    "lng": -83.0458,
+    "timezone": "America/Detroit",
+    "population": 639111,
+    "elevation": 183,
+    "nearby": []
+  },
+  "london": {
+    "name": "London",
+    "country": "GB",
+    "countryName": "United Kingdom",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "timezone": "Europe/London",
+    "population": 8982000,
+    "elevation": 11,
+    "nearby": []
+  },
+  "paris": {
+    "name": "Paris",
+    "country": "FR",
+    "countryName": "France",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "timezone": "Europe/Paris",
+    "population": 2161000,
+    "elevation": 35,
+    "nearby": []
+  },
+  "berlin": {
+    "name": "Berlin",
+    "country": "DE",
+    "countryName": "Germany",
+    "lat": 52.52,
+    "lng": 13.405,
+    "timezone": "Europe/Berlin",
+    "population": 3748148,
+    "elevation": 34,
+    "nearby": []
+  },
+  "madrid": {
+    "name": "Madrid",
+    "country": "ES",
+    "countryName": "Spain",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "timezone": "Europe/Madrid",
+    "population": 3223334,
+    "elevation": 667,
+    "nearby": []
+  },
+  "rome": {
+    "name": "Rome",
+    "country": "IT",
+    "countryName": "Italy",
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "timezone": "Europe/Rome",
+    "population": 2873000,
+    "elevation": 21,
+    "nearby": []
+  },
+  "tokyo": {
+    "name": "Tokyo",
+    "country": "JP",
+    "countryName": "Japan",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "timezone": "Asia/Tokyo",
+    "population": 13960000,
+    "elevation": 40,
+    "nearby": []
+  },
+  "sydney": {
+    "name": "Sydney",
+    "country": "AU",
+    "countryName": "Australia",
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "timezone": "Australia/Sydney",
+    "population": 5312000,
+    "elevation": 3,
+    "nearby": []
+  },
+  "toronto": {
+    "name": "Toronto",
+    "country": "CA",
+    "countryName": "Canada",
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "timezone": "America/Toronto",
+    "population": 2731571,
+    "elevation": 76,
+    "nearby": []
+  },
+  "mexico-city": {
+    "name": "Mexico City",
+    "country": "MX",
+    "countryName": "Mexico",
+    "lat": 19.4326,
+    "lng": -99.1332,
+    "timezone": "America/Mexico_City",
+    "population": 9209944,
+    "elevation": 2240,
+    "nearby": []
+  },
+  "mumbai": {
+    "name": "Mumbai",
+    "country": "IN",
+    "countryName": "India",
+    "lat": 19.076,
+    "lng": 72.8777,
+    "timezone": "Asia/Kolkata",
+    "population": 12442373,
+    "elevation": 14,
+    "nearby": []
+  },
+  "sao-paulo": {
+    "name": "São Paulo",
+    "country": "BR",
+    "countryName": "Brazil",
+    "lat": -23.5505,
+    "lng": -46.6333,
+    "timezone": "America/Sao_Paulo",
+    "population": 12325232,
+    "elevation": 760,
+    "nearby": []
+  },
+  "beijing": {
+    "name": "Beijing",
+    "country": "CN",
+    "countryName": "China",
+    "lat": 39.9042,
+    "lng": 116.4074,
+    "timezone": "Asia/Shanghai",
+    "population": 21540000,
+    "elevation": 43,
+    "nearby": []
+  },
+  "shanghai": {
+    "name": "Shanghai",
+    "country": "CN",
+    "countryName": "China",
+    "lat": 31.2304,
+    "lng": 121.4737,
+    "timezone": "Asia/Shanghai",
+    "population": 24870895,
+    "elevation": 4,
+    "nearby": []
+  },
+  "dubai": {
+    "name": "Dubai",
+    "country": "AE",
+    "countryName": "United Arab Emirates",
+    "lat": 25.2048,
+    "lng": 55.2708,
+    "timezone": "Asia/Dubai",
+    "population": 3331420,
+    "elevation": 5,
+    "nearby": []
+  },
+  "singapore": {
+    "name": "Singapore",
+    "country": "SG",
+    "countryName": "Singapore",
+    "lat": 1.3521,
+    "lng": 103.8198,
+    "timezone": "Asia/Singapore",
+    "population": 5850342,
+    "elevation": 15,
+    "nearby": []
+  },
+  "bangkok": {
+    "name": "Bangkok",
+    "country": "TH",
+    "countryName": "Thailand",
+    "lat": 13.7563,
+    "lng": 100.5018,
+    "timezone": "Asia/Bangkok",
+    "population": 10539000,
+    "elevation": 2,
+    "nearby": []
+  },
+  "amsterdam": {
+    "name": "Amsterdam",
+    "country": "NL",
+    "countryName": "Netherlands",
+    "lat": 52.3676,
+    "lng": 4.9041,
+    "timezone": "Europe/Amsterdam",
+    "population": 872680,
+    "elevation": -2,
+    "nearby": []
+  },
+  "barcelona": {
+    "name": "Barcelona",
+    "country": "ES",
+    "countryName": "Spain",
+    "lat": 41.3874,
+    "lng": 2.1686,
+    "timezone": "Europe/Madrid",
+    "population": 1620343,
+    "elevation": 12,
+    "nearby": []
+  },
+  "portland": {
+    "name": "Portland",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Oregon",
+    "lat": 45.5152,
+    "lng": -122.6784,
+    "timezone": "America/Los_Angeles",
+    "population": 652503,
+    "elevation": 15,
+    "nearby": [
+      "seattle"
+    ]
+  },
+  "orlando": {
+    "name": "Orlando",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Florida",
+    "lat": 28.5383,
+    "lng": -81.3792,
+    "timezone": "America/New_York",
+    "population": 307573,
+    "elevation": 34,
+    "nearby": []
+  },
+  "nashville": {
+    "name": "Nashville",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Tennessee",
+    "lat": 36.1627,
+    "lng": -86.7816,
+    "timezone": "America/Chicago",
+    "population": 689447,
+    "elevation": 182,
+    "nearby": []
+  },
+  "new-orleans": {
+    "name": "New Orleans",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Louisiana",
+    "lat": 29.9511,
+    "lng": -90.0715,
+    "timezone": "America/Chicago",
+    "population": 383997,
+    "elevation": 1,
+    "nearby": []
+  },
+  "minneapolis": {
+    "name": "Minneapolis",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Minnesota",
+    "lat": 44.9778,
+    "lng": -93.265,
+    "timezone": "America/Chicago",
+    "population": 429954,
+    "elevation": 264,
+    "nearby": []
+  },
+  "hartford": {
+    "name": "Hartford",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Connecticut",
+    "lat": 41.7658,
+    "lng": -72.6734,
+    "timezone": "America/New_York",
+    "population": 121054,
+    "elevation": 18,
+    "nearby": [
+      "new-haven",
+      "providence",
+      "boston",
+      "new-york",
+      "jersey-city",
+      "newark",
+      "philadelphia"
+    ]
+  },
+  "providence": {
+    "name": "Providence",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Rhode Island",
+    "lat": 41.824,
+    "lng": -71.4128,
+    "timezone": "America/New_York",
+    "population": 190934,
+    "elevation": 23,
+    "nearby": [
+      "boston",
+      "hartford",
+      "new-haven",
+      "new-york",
+      "jersey-city",
+      "newark"
+    ]
+  },
+  "new-haven": {
+    "name": "New Haven",
+    "country": "US",
+    "countryName": "United States",
+    "state": "Connecticut",
+    "lat": 41.3083,
+    "lng": -72.9279,
+    "timezone": "America/New_York",
+    "population": 134023,
+    "elevation": 5,
+    "nearby": [
+      "hartford",
+      "new-york",
+      "jersey-city",
+      "newark",
+      "providence",
+      "boston",
+      "philadelphia"
+    ]
+  },
+  "newark": {
+    "name": "Newark",
+    "country": "US",
+    "countryName": "United States",
+    "state": "New Jersey",
+    "lat": 40.7357,
+    "lng": -74.1724,
+    "timezone": "America/New_York",
+    "population": 311549,
+    "elevation": 10,
+    "nearby": [
+      "jersey-city",
+      "new-york",
+      "philadelphia",
+      "new-haven",
+      "hartford",
+      "providence"
+    ]
+  },
+  "jersey-city": {
+    "name": "Jersey City",
+    "country": "US",
+    "countryName": "United States",
+    "state": "New Jersey",
+    "lat": 40.7178,
+    "lng": -74.0431,
+    "timezone": "America/New_York",
+    "population": 292449,
+    "elevation": 7,
+    "nearby": [
+      "new-york",
+      "newark",
+      "new-haven",
+      "philadelphia",
+      "hartford",
+      "providence"
+    ]
+  }
+}

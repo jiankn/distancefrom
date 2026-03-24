@@ -1,0 +1,69 @@
+---
+export const prerender = true;
+
+import Base from '../layouts/Base.astro';
+import DualSearchBox from '../components/DualSearchBox.astro';
+import citiesData from '../data/cities.json';
+import { haversine } from '../utils/haversine';
+import { canonicalPairKey } from '../utils/slug';
+
+// Top popular pairs for homepage
+const popularPairs = [
+  ['new-york', 'boston'], ['los-angeles', 'san-francisco'], ['chicago', 'detroit'],
+  ['dallas', 'houston'], ['new-york', 'washington-dc'], ['miami', 'orlando'],
+  ['london', 'paris'], ['seattle', 'portland'], ['las-vegas', 'los-angeles'],
+  ['san-francisco', 'los-angeles'], ['new-york', 'philadelphia'], ['austin', 'houston'],
+  ['boston', 'new-york'], ['atlanta', 'nashville'], ['denver', 'las-vegas'],
+  ['madrid', 'barcelona'], ['berlin', 'amsterdam'], ['new-orleans', 'houston'],
+  ['tokyo', 'beijing'], ['sydney', 'singapore'],
+];
+
+const cities = citiesData as Record<string, any>;
+const routes = popularPairs
+  .map(([a, b]) => {
+    const cA = cities[a]; const cB = cities[b];
+    if (!cA || !cB) return null;
+    const d = haversine(cA.lat, cA.lng, cB.lat, cB.lng);
+    const key = canonicalPairKey(a, b);
+    return { from: cA.name, to: cB.name, miles: d.miles, href: `/distance/${key}/` };
+  })
+  .filter(Boolean)
+  .slice(0, 20);
+---
+<Base title="Distance Calculator — How Far Between Cities" description="Calculate the distance between any two cities worldwide. Get driving distance, drive time, flight time, fuel cost, and best stops along the way.">
+  <h1>Distance Calculator — How Far Between Cities</h1>
+  <p class="subtitle">Get driving distance, drive time, flight time, fuel cost & best stops.</p>
+  <DualSearchBox />
+
+  <section class="popular">
+    <h2>Popular Routes</h2>
+    <div class="routes-grid">
+      {routes.map(r => r && (
+        <a href={r.href} class="route-card">
+          <span class="route-cities">{r.from} → {r.to}</span>
+          <span class="route-dist">{r.miles} mi</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  h1 { margin-top: 2rem; text-align: center; }
+  .subtitle { text-align: center; color: var(--text-secondary); margin: 0.5rem 0 0; }
+  .popular { margin-top: 3rem; }
+  .popular h2 { margin-bottom: 1rem; }
+  .routes-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+  .route-card {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.75rem 1rem; background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text-primary); transition: border-color 0.2s;
+  }
+  .route-card:hover { border-color: var(--accent); color: var(--text-primary); }
+  .route-cities { font-size: 0.9rem; }
+  .route-dist { color: var(--text-muted); font-size: 0.85rem; }
+</style>

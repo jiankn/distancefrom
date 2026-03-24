@@ -1,0 +1,18 @@
+---
+// Placeholder for AdSense ad unit. Replace data-ad-slot with real values.
+interface Props { slot?: string; format?: string; }
+const { slot = 'XXXXXXXXXX', format = 'auto' } = Astro.props;
+---
+<div class="ad-unit" aria-hidden="true">
+  <!-- AdSense placeholder — replace with real ad code -->
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+    data-ad-slot={slot}
+    data-ad-format={format}
+    data-full-width-responsive="true"></ins>
+</div>
+
+<style>
+  .ad-unit { margin: 1.5rem 0; min-height: 90px; text-align: center; }
+</style>

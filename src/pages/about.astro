@@ -1,0 +1,29 @@
+---
+export const prerender = true;
+import Base from '../layouts/Base.astro';
+---
+<Base title="About — DistanceFrom.co" description="Learn about DistanceFrom.co, how we calculate distances, and our data sources.">
+  <h1>About DistanceFrom.co</h1>
+  <div class="content">
+    <p>DistanceFrom.co helps you find the distance between any two cities worldwide, along with driving time, flight time, fuel cost estimates, and recommended stops along the way.</p>
+    <h2>How We Calculate</h2>
+    <p>Straight-line distances use the <strong>Haversine formula</strong>, which accounts for Earth's curvature with less than 0.5% error.</p>
+    <p>Driving distances for popular routes use real road data from <a href="https://project-osrm.org/" rel="noopener">OSRM (Open Source Routing Machine)</a>. For less common routes, we estimate using road factor coefficients (clearly labeled as "estimated").</p>
+    <p>Flight times are estimated based on an average cruise speed of 800 km/h plus 30 minutes for takeoff and landing.</p>
+    <h2>Data Sources</h2>
+    <ul>
+      <li><a href="https://www.geonames.org/" rel="noopener">GeoNames</a> — City coordinates and metadata</li>
+      <li><a href="https://www.openstreetmap.org/" rel="noopener">OpenStreetMap</a> — Map tiles and road data</li>
+      <li><a href="https://project-osrm.org/" rel="noopener">OSRM</a> — Real driving route calculations</li>
+    </ul>
+  </div>
+</Base>
+
+<style>
+  h1 { margin-top: 1.5rem; }
+  .content { margin-top: 1.5rem; line-height: 1.8; }
+  .content h2 { margin-top: 1.5rem; font-size: 1.2rem; color: var(--text-primary); }
+  .content p { margin-top: 0.75rem; color: var(--text-secondary); }
+  .content ul { margin-top: 0.75rem; padding-left: 1.5rem; color: var(--text-secondary); }
+  .content li { margin-top: 0.25rem; }
+</style>

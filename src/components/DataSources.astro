@@ -1,0 +1,25 @@
+---
+interface Props { driveSource: 'osrm' | 'estimated'; }
+const { driveSource } = Astro.props;
+---
+<section class="data-sources">
+  <p>
+    📋 Data sources:
+    <a href="https://www.geonames.org/" rel="noopener noreferrer" target="_blank">GeoNames</a>,
+    <a href="https://www.openstreetmap.org/" rel="noopener noreferrer" target="_blank">OpenStreetMap</a>
+    {driveSource === 'osrm' && (
+      <>, <a href="https://project-osrm.org/" rel="noopener noreferrer" target="_blank">OSRM</a></>
+    )}.
+    {driveSource === 'estimated' && (
+      <> Driving distance is estimated using road factor coefficients.</>
+    )}
+  </p>
+</section>
+
+<style>
+  .data-sources {
+    margin: 1.5rem 0; padding: 0.75rem 1rem;
+    background: var(--bg-secondary); border-radius: var(--radius-sm);
+    font-size: 0.8rem; color: var(--text-muted);
+  }
+</style>

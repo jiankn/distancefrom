@@ -1,0 +1,40 @@
+---
+interface Stop {
+  slug: string;
+  name: string;
+  country: string;
+  distanceFromA_km: number;
+}
+interface Props {
+  cityA: string;
+  cityB: string;
+  stops: Stop[];
+}
+const { cityA, cityB, stops } = Astro.props;
+const KM_TO_MILES = 0.621371;
+---
+{stops.length > 0 && (
+  <section class="card midway-stops">
+    <h2>🛑 Best Stops Between {cityA} & {cityB}</h2>
+    <ul>
+      {stops.map(s => (
+        <li>
+          <a href={`/city/${s.slug}/`}>{s.name}</a>
+          <span class="dist">{Math.round(s.distanceFromA_km * KM_TO_MILES)} mi from {cityA}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .midway-stops { margin: 1.5rem 0; }
+  .midway-stops h2 { margin-bottom: 0.75rem; font-size: 1.1rem; }
+  .midway-stops ul { list-style: none; }
+  .midway-stops li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+  }
+  .midway-stops li:last-child { border-bottom: none; }
+  .dist { color: var(--text-muted); font-size: 0.875rem; }
+</style>
