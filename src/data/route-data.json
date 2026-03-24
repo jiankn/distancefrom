@@ -1918,5 +1918,2825 @@
     "drivingDistanceKm": 6031.7,
     "drivingDistanceMiles": 3747.9,
     "drivingDurationMin": 3981
+  },
+  "dubai-to-paris": {
+    "drivingDistanceKm": 6533.1,
+    "drivingDistanceMiles": 4059.5,
+    "drivingDurationMin": 4291
+  },
+  "barcelona-to-dubai": {
+    "drivingDistanceKm": 6741,
+    "drivingDistanceMiles": 4188.7,
+    "drivingDurationMin": 4437
+  },
+  "amsterdam-to-dubai": {
+    "drivingDistanceKm": 6468.8,
+    "drivingDistanceMiles": 4019.5,
+    "drivingDurationMin": 4248
+  },
+  "madrid-to-rome": {
+    "drivingDistanceKm": 1940.6,
+    "drivingDistanceMiles": 1205.8,
+    "drivingDurationMin": 1258
+  },
+  "madrid-to-toronto": {
+    "drivingDistanceKm": 2524.6,
+    "drivingDistanceMiles": 1568.7,
+    "drivingDurationMin": 2125
+  },
+  "chicago-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "houston-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-paris": {
+    "drivingDistanceKm": 1267.4,
+    "drivingDistanceMiles": 787.5,
+    "drivingDurationMin": 810
+  },
+  "madrid-to-phoenix": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "barcelona-to-madrid": {
+    "drivingDistanceKm": 616.5,
+    "drivingDistanceMiles": 383.1,
+    "drivingDurationMin": 412
+  },
+  "madrid-to-philadelphia": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-san-antonio": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-san-diego": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "dallas-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-san-jose": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "austin-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-san-francisco": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "amsterdam-to-madrid": {
+    "drivingDistanceKm": 1772.5,
+    "drivingDistanceMiles": 1101.4,
+    "drivingDurationMin": 1142
+  },
+  "madrid-to-seattle": {
+    "drivingDistanceKm": 2516.8,
+    "drivingDistanceMiles": 1563.9,
+    "drivingDurationMin": 2109
+  },
+  "denver-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "boston-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-washington-dc": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-nashville": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-portland": {
+    "drivingDistanceKm": 2516.8,
+    "drivingDistanceMiles": 1563.9,
+    "drivingDurationMin": 2109
+  },
+  "las-vegas-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "detroit-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "atlanta-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-miami": {
+    "drivingDistanceKm": 658.3,
+    "drivingDistanceMiles": 409,
+    "drivingDurationMin": 429
+  },
+  "madrid-to-minneapolis": {
+    "drivingDistanceKm": 2516.8,
+    "drivingDistanceMiles": 1563.9,
+    "drivingDurationMin": 2109
+  },
+  "madrid-to-new-orleans": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-newark": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-orlando": {
+    "drivingDistanceKm": 658.3,
+    "drivingDistanceMiles": 409,
+    "drivingDurationMin": 429
+  },
+  "jersey-city-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-providence": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "madrid-to-new-haven": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "hartford-to-madrid": {
+    "drivingDistanceKm": 662.2,
+    "drivingDistanceMiles": 411.5,
+    "drivingDurationMin": 434
+  },
+  "rome-to-toronto": {
+    "drivingDistanceKm": 2917.3,
+    "drivingDistanceMiles": 1812.7,
+    "drivingDurationMin": 2366
+  },
+  "chicago-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "houston-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "paris-to-rome": {
+    "drivingDistanceKm": 1421.6,
+    "drivingDistanceMiles": 883.3,
+    "drivingDurationMin": 910
+  },
+  "phoenix-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "barcelona-to-rome": {
+    "drivingDistanceKm": 1358.4,
+    "drivingDistanceMiles": 844.1,
+    "drivingDurationMin": 878
+  },
+  "philadelphia-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "rome-to-san-antonio": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "rome-to-san-diego": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "dallas-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "rome-to-san-jose": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "austin-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "rome-to-san-francisco": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "amsterdam-to-rome": {
+    "drivingDistanceKm": 1650.2,
+    "drivingDistanceMiles": 1025.4,
+    "drivingDurationMin": 1045
+  },
+  "rome-to-seattle": {
+    "drivingDistanceKm": 2909.6,
+    "drivingDistanceMiles": 1807.9,
+    "drivingDurationMin": 2350
+  },
+  "denver-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "boston-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "rome-to-washington-dc": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "nashville-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "portland-to-rome": {
+    "drivingDistanceKm": 2909.6,
+    "drivingDistanceMiles": 1807.9,
+    "drivingDurationMin": 2350
+  },
+  "las-vegas-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "detroit-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "atlanta-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "miami-to-rome": {
+    "drivingDistanceKm": 2548.9,
+    "drivingDistanceMiles": 1583.8,
+    "drivingDurationMin": 1617
+  },
+  "minneapolis-to-rome": {
+    "drivingDistanceKm": 2909.6,
+    "drivingDistanceMiles": 1807.9,
+    "drivingDurationMin": 2350
+  },
+  "new-orleans-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "newark-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "orlando-to-rome": {
+    "drivingDistanceKm": 2548.9,
+    "drivingDistanceMiles": 1583.8,
+    "drivingDurationMin": 1617
+  },
+  "jersey-city-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "providence-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "new-haven-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "hartford-to-rome": {
+    "drivingDistanceKm": 2552.9,
+    "drivingDistanceMiles": 1586.3,
+    "drivingDurationMin": 1622
+  },
+  "chicago-to-toronto": {
+    "drivingDistanceKm": 836.4,
+    "drivingDistanceMiles": 519.7,
+    "drivingDurationMin": 583
+  },
+  "houston-to-toronto": {
+    "drivingDistanceKm": 2450.1,
+    "drivingDistanceMiles": 1522.4,
+    "drivingDurationMin": 1697
+  },
+  "paris-to-toronto": {
+    "drivingDistanceKm": 1508.1,
+    "drivingDistanceMiles": 937.1,
+    "drivingDurationMin": 1493
+  },
+  "phoenix-to-toronto": {
+    "drivingDistanceKm": 3554.5,
+    "drivingDistanceMiles": 2208.7,
+    "drivingDurationMin": 2427
+  },
+  "barcelona-to-toronto": {
+    "drivingDistanceKm": 2479.3,
+    "drivingDistanceMiles": 1540.6,
+    "drivingDurationMin": 2075
+  },
+  "philadelphia-to-toronto": {
+    "drivingDistanceKm": 761.9,
+    "drivingDistanceMiles": 473.4,
+    "drivingDurationMin": 576
+  },
+  "san-antonio-to-toronto": {
+    "drivingDistanceKm": 2703.3,
+    "drivingDistanceMiles": 1679.8,
+    "drivingDurationMin": 1841
+  },
+  "san-diego-to-toronto": {
+    "drivingDistanceKm": 4157.9,
+    "drivingDistanceMiles": 2583.6,
+    "drivingDurationMin": 2744
+  },
+  "dallas-to-toronto": {
+    "drivingDistanceKm": 2264.8,
+    "drivingDistanceMiles": 1407.3,
+    "drivingDurationMin": 1550
+  },
+  "san-jose-to-toronto": {
+    "drivingDistanceKm": 4296,
+    "drivingDistanceMiles": 2669.4,
+    "drivingDurationMin": 2799
+  },
+  "austin-to-toronto": {
+    "drivingDistanceKm": 2577.4,
+    "drivingDistanceMiles": 1601.5,
+    "drivingDurationMin": 1754
+  },
+  "san-francisco-to-toronto": {
+    "drivingDistanceKm": 4246.9,
+    "drivingDistanceMiles": 2638.9,
+    "drivingDurationMin": 2766
+  },
+  "amsterdam-to-toronto": {
+    "drivingDistanceKm": 1487.3,
+    "drivingDistanceMiles": 924.2,
+    "drivingDurationMin": 1208
+  },
+  "seattle-to-toronto": {
+    "drivingDistanceKm": 4131.3,
+    "drivingDistanceMiles": 2567.1,
+    "drivingDurationMin": 2733
+  },
+  "denver-to-toronto": {
+    "drivingDistanceKm": 2429.4,
+    "drivingDistanceMiles": 1509.6,
+    "drivingDurationMin": 1624
+  },
+  "boston-to-toronto": {
+    "drivingDistanceKm": 886.1,
+    "drivingDistanceMiles": 550.6,
+    "drivingDurationMin": 650
+  },
+  "toronto-to-washington-dc": {
+    "drivingDistanceKm": 768.3,
+    "drivingDistanceMiles": 477.4,
+    "drivingDurationMin": 610
+  },
+  "nashville-to-toronto": {
+    "drivingDistanceKm": 1223.1,
+    "drivingDistanceMiles": 760,
+    "drivingDurationMin": 873
+  },
+  "portland-to-toronto": {
+    "drivingDistanceKm": 4228.6,
+    "drivingDistanceMiles": 2627.5,
+    "drivingDurationMin": 2757
+  },
+  "las-vegas-to-toronto": {
+    "drivingDistanceKm": 3627.1,
+    "drivingDistanceMiles": 2253.8,
+    "drivingDurationMin": 2383
+  },
+  "detroit-to-toronto": {
+    "drivingDistanceKm": 372.1,
+    "drivingDistanceMiles": 231.2,
+    "drivingDurationMin": 284
+  },
+  "atlanta-to-toronto": {
+    "drivingDistanceKm": 1509,
+    "drivingDistanceMiles": 937.6,
+    "drivingDurationMin": 1078
+  },
+  "miami-to-toronto": {
+    "drivingDistanceKm": 2382.8,
+    "drivingDistanceMiles": 1480.6,
+    "drivingDurationMin": 1676
+  },
+  "minneapolis-to-toronto": {
+    "drivingDistanceKm": 1495.5,
+    "drivingDistanceMiles": 929.3,
+    "drivingDurationMin": 1044
+  },
+  "new-orleans-to-toronto": {
+    "drivingDistanceKm": 2077.4,
+    "drivingDistanceMiles": 1290.8,
+    "drivingDurationMin": 1450
+  },
+  "newark-to-toronto": {
+    "drivingDistanceKm": 742.8,
+    "drivingDistanceMiles": 461.6,
+    "drivingDurationMin": 571
+  },
+  "orlando-to-toronto": {
+    "drivingDistanceKm": 2054.2,
+    "drivingDistanceMiles": 1276.4,
+    "drivingDurationMin": 1453
+  },
+  "jersey-city-to-toronto": {
+    "drivingDistanceKm": 754.2,
+    "drivingDistanceMiles": 468.6,
+    "drivingDurationMin": 584
+  },
+  "providence-to-toronto": {
+    "drivingDistanceKm": 877.1,
+    "drivingDistanceMiles": 545,
+    "drivingDurationMin": 642
+  },
+  "new-haven-to-toronto": {
+    "drivingDistanceKm": 820.6,
+    "drivingDistanceMiles": 509.9,
+    "drivingDurationMin": 626
+  },
+  "hartford-to-toronto": {
+    "drivingDistanceKm": 792.8,
+    "drivingDistanceMiles": 492.6,
+    "drivingDurationMin": 583
+  },
+  "chicago-to-houston": {
+    "drivingDistanceKm": 1741.4,
+    "drivingDistanceMiles": 1082.1,
+    "drivingDurationMin": 1173
+  },
+  "chicago-to-paris": {
+    "drivingDistanceKm": 1776.6,
+    "drivingDistanceMiles": 1103.9,
+    "drivingDurationMin": 1125
+  },
+  "chicago-to-phoenix": {
+    "drivingDistanceKm": 2823.9,
+    "drivingDistanceMiles": 1754.7,
+    "drivingDurationMin": 1890
+  },
+  "barcelona-to-chicago": {
+    "drivingDistanceKm": 1275.9,
+    "drivingDistanceMiles": 792.8,
+    "drivingDurationMin": 830
+  },
+  "chicago-to-philadelphia": {
+    "drivingDistanceKm": 1222,
+    "drivingDistanceMiles": 759.3,
+    "drivingDurationMin": 839
+  },
+  "chicago-to-san-antonio": {
+    "drivingDistanceKm": 1994.5,
+    "drivingDistanceMiles": 1239.3,
+    "drivingDurationMin": 1317
+  },
+  "chicago-to-san-diego": {
+    "drivingDistanceKm": 3346,
+    "drivingDistanceMiles": 2079.1,
+    "drivingDurationMin": 2188
+  },
+  "chicago-to-dallas": {
+    "drivingDistanceKm": 1556.1,
+    "drivingDistanceMiles": 966.9,
+    "drivingDurationMin": 1027
+  },
+  "chicago-to-san-jose": {
+    "drivingDistanceKm": 3484.2,
+    "drivingDistanceMiles": 2165,
+    "drivingDurationMin": 2243
+  },
+  "austin-to-chicago": {
+    "drivingDistanceKm": 1868.7,
+    "drivingDistanceMiles": 1161.2,
+    "drivingDurationMin": 1230
+  },
+  "chicago-to-san-francisco": {
+    "drivingDistanceKm": 3435,
+    "drivingDistanceMiles": 2134.4,
+    "drivingDurationMin": 2210
+  },
+  "amsterdam-to-chicago": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "chicago-to-seattle": {
+    "drivingDistanceKm": 3296.3,
+    "drivingDistanceMiles": 2048.2,
+    "drivingDurationMin": 2154
+  },
+  "chicago-to-denver": {
+    "drivingDistanceKm": 1617.6,
+    "drivingDistanceMiles": 1005.1,
+    "drivingDurationMin": 1068
+  },
+  "boston-to-chicago": {
+    "drivingDistanceKm": 1598.2,
+    "drivingDistanceMiles": 993.1,
+    "drivingDurationMin": 1127
+  },
+  "chicago-to-washington-dc": {
+    "drivingDistanceKm": 1121.3,
+    "drivingDistanceMiles": 696.7,
+    "drivingDurationMin": 789
+  },
+  "chicago-to-nashville": {
+    "drivingDistanceKm": 753.3,
+    "drivingDistanceMiles": 468.1,
+    "drivingDurationMin": 532
+  },
+  "chicago-to-portland": {
+    "drivingDistanceKm": 3416.7,
+    "drivingDistanceMiles": 2123,
+    "drivingDurationMin": 2201
+  },
+  "chicago-to-las-vegas": {
+    "drivingDistanceKm": 2815.2,
+    "drivingDistanceMiles": 1749.3,
+    "drivingDurationMin": 1827
+  },
+  "chicago-to-detroit": {
+    "drivingDistanceKm": 453.2,
+    "drivingDistanceMiles": 281.6,
+    "drivingDurationMin": 318
+  },
+  "atlanta-to-chicago": {
+    "drivingDistanceKm": 1101.4,
+    "drivingDistanceMiles": 684.4,
+    "drivingDurationMin": 799
+  },
+  "chicago-to-miami": {
+    "drivingDistanceKm": 2165.2,
+    "drivingDistanceMiles": 1345.4,
+    "drivingDurationMin": 1520
+  },
+  "chicago-to-minneapolis": {
+    "drivingDistanceKm": 660.4,
+    "drivingDistanceMiles": 410.4,
+    "drivingDurationMin": 465
+  },
+  "chicago-to-new-orleans": {
+    "drivingDistanceKm": 1486.8,
+    "drivingDistanceMiles": 923.9,
+    "drivingDurationMin": 1010
+  },
+  "chicago-to-newark": {
+    "drivingDistanceKm": 1256.7,
+    "drivingDistanceMiles": 780.9,
+    "drivingDurationMin": 873
+  },
+  "chicago-to-orlando": {
+    "drivingDistanceKm": 1804.7,
+    "drivingDistanceMiles": 1121.4,
+    "drivingDurationMin": 1274
+  },
+  "chicago-to-jersey-city": {
+    "drivingDistanceKm": 1268,
+    "drivingDistanceMiles": 787.9,
+    "drivingDurationMin": 886
+  },
+  "chicago-to-providence": {
+    "drivingDistanceKm": 1558.3,
+    "drivingDistanceMiles": 968.3,
+    "drivingDurationMin": 1101
+  },
+  "chicago-to-new-haven": {
+    "drivingDistanceKm": 1387.6,
+    "drivingDistanceMiles": 862.2,
+    "drivingDurationMin": 982
+  },
+  "chicago-to-hartford": {
+    "drivingDistanceKm": 1436,
+    "drivingDistanceMiles": 892.3,
+    "drivingDurationMin": 1005
+  },
+  "houston-to-paris": {
+    "drivingDistanceKm": 1776.6,
+    "drivingDistanceMiles": 1103.9,
+    "drivingDurationMin": 1125
+  },
+  "houston-to-phoenix": {
+    "drivingDistanceKm": 1888.6,
+    "drivingDistanceMiles": 1173.5,
+    "drivingDurationMin": 1186
+  },
+  "barcelona-to-houston": {
+    "drivingDistanceKm": 1275.9,
+    "drivingDistanceMiles": 792.8,
+    "drivingDurationMin": 830
+  },
+  "houston-to-philadelphia": {
+    "drivingDistanceKm": 2487.5,
+    "drivingDistanceMiles": 1545.7,
+    "drivingDurationMin": 1720
+  },
+  "houston-to-san-antonio": {
+    "drivingDistanceKm": 314.5,
+    "drivingDistanceMiles": 195.4,
+    "drivingDurationMin": 208
+  },
+  "houston-to-san-diego": {
+    "drivingDistanceKm": 2363.2,
+    "drivingDistanceMiles": 1468.4,
+    "drivingDurationMin": 1495
+  },
+  "dallas-to-houston": {
+    "drivingDistanceKm": 383.9,
+    "drivingDistanceMiles": 238.5,
+    "drivingDurationMin": 253
+  },
+  "houston-to-san-jose": {
+    "drivingDistanceKm": 3031.1,
+    "drivingDistanceMiles": 1883.4,
+    "drivingDurationMin": 1964
+  },
+  "austin-to-houston": {
+    "drivingDistanceKm": 261.4,
+    "drivingDistanceMiles": 162.4,
+    "drivingDurationMin": 180
+  },
+  "houston-to-san-francisco": {
+    "drivingDistanceKm": 3099.1,
+    "drivingDistanceMiles": 1925.7,
+    "drivingDurationMin": 2006
+  },
+  "amsterdam-to-houston": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "houston-to-seattle": {
+    "drivingDistanceKm": 3728.5,
+    "drivingDistanceMiles": 2316.8,
+    "drivingDurationMin": 2459
+  },
+  "denver-to-houston": {
+    "drivingDistanceKm": 1663.7,
+    "drivingDistanceMiles": 1033.8,
+    "drivingDurationMin": 1110
+  },
+  "boston-to-houston": {
+    "drivingDistanceKm": 2961.3,
+    "drivingDistanceMiles": 1840.1,
+    "drivingDurationMin": 2081
+  },
+  "houston-to-washington-dc": {
+    "drivingDistanceKm": 2267.7,
+    "drivingDistanceMiles": 1409.1,
+    "drivingDurationMin": 1551
+  },
+  "houston-to-nashville": {
+    "drivingDistanceKm": 1254.7,
+    "drivingDistanceMiles": 779.6,
+    "drivingDurationMin": 850
+  },
+  "houston-to-portland": {
+    "drivingDistanceKm": 3631.9,
+    "drivingDistanceMiles": 2256.8,
+    "drivingDurationMin": 2388
+  },
+  "houston-to-las-vegas": {
+    "drivingDistanceKm": 2292.7,
+    "drivingDistanceMiles": 1424.6,
+    "drivingDurationMin": 1526
+  },
+  "detroit-to-houston": {
+    "drivingDistanceKm": 2080.5,
+    "drivingDistanceMiles": 1292.8,
+    "drivingDurationMin": 1426
+  },
+  "atlanta-to-houston": {
+    "drivingDistanceKm": 1276.9,
+    "drivingDistanceMiles": 793.4,
+    "drivingDurationMin": 872
+  },
+  "houston-to-miami": {
+    "drivingDistanceKm": 1911.2,
+    "drivingDistanceMiles": 1187.6,
+    "drivingDurationMin": 1300
+  },
+  "houston-to-minneapolis": {
+    "drivingDistanceKm": 1892.1,
+    "drivingDistanceMiles": 1175.7,
+    "drivingDurationMin": 1287
+  },
+  "houston-to-new-orleans": {
+    "drivingDistanceKm": 560.2,
+    "drivingDistanceMiles": 348.1,
+    "drivingDurationMin": 392
+  },
+  "houston-to-newark": {
+    "drivingDistanceKm": 2603.9,
+    "drivingDistanceMiles": 1618,
+    "drivingDurationMin": 1798
+  },
+  "houston-to-orlando": {
+    "drivingDistanceKm": 1550.7,
+    "drivingDistanceMiles": 963.6,
+    "drivingDurationMin": 1054
+  },
+  "houston-to-jersey-city": {
+    "drivingDistanceKm": 2616.8,
+    "drivingDistanceMiles": 1626,
+    "drivingDurationMin": 1807
+  },
+  "houston-to-providence": {
+    "drivingDistanceKm": 2910.3,
+    "drivingDistanceMiles": 1808.4,
+    "drivingDurationMin": 2042
+  },
+  "houston-to-new-haven": {
+    "drivingDistanceKm": 2744.8,
+    "drivingDistanceMiles": 1705.5,
+    "drivingDurationMin": 1919
+  },
+  "hartford-to-houston": {
+    "drivingDistanceKm": 2803.5,
+    "drivingDistanceMiles": 1742,
+    "drivingDurationMin": 1962
+  },
+  "paris-to-phoenix": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "barcelona-to-paris": {
+    "drivingDistanceKm": 1035.5,
+    "drivingDistanceMiles": 643.4,
+    "drivingDurationMin": 650
+  },
+  "paris-to-philadelphia": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-san-antonio": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-san-diego": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "dallas-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-san-jose": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "austin-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-san-francisco": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "amsterdam-to-paris": {
+    "drivingDistanceKm": 503.3,
+    "drivingDistanceMiles": 312.7,
+    "drivingDurationMin": 350
+  },
+  "paris-to-seattle": {
+    "drivingDistanceKm": 1495.4,
+    "drivingDistanceMiles": 929.2,
+    "drivingDurationMin": 1464
+  },
+  "denver-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "boston-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-washington-dc": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "nashville-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-portland": {
+    "drivingDistanceKm": 1495.4,
+    "drivingDistanceMiles": 929.2,
+    "drivingDurationMin": 1464
+  },
+  "las-vegas-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "detroit-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "atlanta-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "miami-to-paris": {
+    "drivingDistanceKm": 1772.9,
+    "drivingDistanceMiles": 1101.6,
+    "drivingDurationMin": 1116
+  },
+  "minneapolis-to-paris": {
+    "drivingDistanceKm": 1495.4,
+    "drivingDistanceMiles": 929.2,
+    "drivingDurationMin": 1464
+  },
+  "new-orleans-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "newark-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "orlando-to-paris": {
+    "drivingDistanceKm": 1772.9,
+    "drivingDistanceMiles": 1101.6,
+    "drivingDurationMin": 1116
+  },
+  "jersey-city-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "paris-to-providence": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "new-haven-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "hartford-to-paris": {
+    "drivingDistanceKm": 1776.8,
+    "drivingDistanceMiles": 1104.1,
+    "drivingDurationMin": 1121
+  },
+  "barcelona-to-phoenix": {
+    "drivingDistanceKm": 1275.9,
+    "drivingDistanceMiles": 792.8,
+    "drivingDurationMin": 830
+  },
+  "philadelphia-to-phoenix": {
+    "drivingDistanceKm": 3772.4,
+    "drivingDistanceMiles": 2344.1,
+    "drivingDurationMin": 2561
+  },
+  "phoenix-to-san-antonio": {
+    "drivingDistanceKm": 1579.4,
+    "drivingDistanceMiles": 981.4,
+    "drivingDurationMin": 982
+  },
+  "phoenix-to-san-diego": {
+    "drivingDistanceKm": 571.3,
+    "drivingDistanceMiles": 355,
+    "drivingDurationMin": 393
+  },
+  "dallas-to-phoenix": {
+    "drivingDistanceKm": 1714.8,
+    "drivingDistanceMiles": 1065.5,
+    "drivingDurationMin": 1089
+  },
+  "phoenix-to-san-jose": {
+    "drivingDistanceKm": 1142.4,
+    "drivingDistanceMiles": 709.9,
+    "drivingDurationMin": 782
+  },
+  "austin-to-phoenix": {
+    "drivingDistanceKm": 1619.5,
+    "drivingDistanceMiles": 1006.3,
+    "drivingDurationMin": 1029
+  },
+  "phoenix-to-san-francisco": {
+    "drivingDistanceKm": 1210.4,
+    "drivingDistanceMiles": 752.1,
+    "drivingDurationMin": 824
+  },
+  "amsterdam-to-phoenix": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "phoenix-to-seattle": {
+    "drivingDistanceKm": 2241.4,
+    "drivingDistanceMiles": 1392.7,
+    "drivingDurationMin": 1589
+  },
+  "denver-to-phoenix": {
+    "drivingDistanceKm": 1320.7,
+    "drivingDistanceMiles": 820.6,
+    "drivingDurationMin": 932
+  },
+  "boston-to-phoenix": {
+    "drivingDistanceKm": 4245,
+    "drivingDistanceMiles": 2637.7,
+    "drivingDurationMin": 2898
+  },
+  "phoenix-to-washington-dc": {
+    "drivingDistanceKm": 3705.8,
+    "drivingDistanceMiles": 2302.7,
+    "drivingDurationMin": 2466
+  },
+  "nashville-to-phoenix": {
+    "drivingDistanceKm": 2635.1,
+    "drivingDistanceMiles": 1637.4,
+    "drivingDurationMin": 1735
+  },
+  "phoenix-to-portland": {
+    "drivingDistanceKm": 2143.9,
+    "drivingDistanceMiles": 1332.2,
+    "drivingDurationMin": 1485
+  },
+  "las-vegas-to-phoenix": {
+    "drivingDistanceKm": 457.6,
+    "drivingDistanceMiles": 284.3,
+    "drivingDurationMin": 359
+  },
+  "detroit-to-phoenix": {
+    "drivingDistanceKm": 3183.6,
+    "drivingDistanceMiles": 1978.2,
+    "drivingDurationMin": 2154
+  },
+  "atlanta-to-phoenix": {
+    "drivingDistanceKm": 2907.2,
+    "drivingDistanceMiles": 1806.4,
+    "drivingDurationMin": 1925
+  },
+  "miami-to-phoenix": {
+    "drivingDistanceKm": 3800,
+    "drivingDistanceMiles": 2361.2,
+    "drivingDurationMin": 2482
+  },
+  "minneapolis-to-phoenix": {
+    "drivingDistanceKm": 2643.8,
+    "drivingDistanceMiles": 1642.8,
+    "drivingDurationMin": 1811
+  },
+  "new-orleans-to-phoenix": {
+    "drivingDistanceKm": 2449,
+    "drivingDistanceMiles": 1521.7,
+    "drivingDurationMin": 1574
+  },
+  "newark-to-phoenix": {
+    "drivingDistanceKm": 3862.4,
+    "drivingDistanceMiles": 2400,
+    "drivingDurationMin": 2640
+  },
+  "orlando-to-phoenix": {
+    "drivingDistanceKm": 3439.4,
+    "drivingDistanceMiles": 2137.1,
+    "drivingDurationMin": 2237
+  },
+  "jersey-city-to-phoenix": {
+    "drivingDistanceKm": 3875.3,
+    "drivingDistanceMiles": 2408,
+    "drivingDurationMin": 2649
+  },
+  "phoenix-to-providence": {
+    "drivingDistanceKm": 4205.1,
+    "drivingDistanceMiles": 2612.9,
+    "drivingDurationMin": 2872
+  },
+  "new-haven-to-phoenix": {
+    "drivingDistanceKm": 4034.4,
+    "drivingDistanceMiles": 2506.9,
+    "drivingDurationMin": 2753
+  },
+  "hartford-to-phoenix": {
+    "drivingDistanceKm": 4082.8,
+    "drivingDistanceMiles": 2536.9,
+    "drivingDurationMin": 2775
+  },
+  "barcelona-to-philadelphia": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-san-antonio": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-san-diego": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-dallas": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-san-jose": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "austin-to-barcelona": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-san-francisco": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "amsterdam-to-barcelona": {
+    "drivingDistanceKm": 1539.9,
+    "drivingDistanceMiles": 956.8,
+    "drivingDurationMin": 983
+  },
+  "barcelona-to-seattle": {
+    "drivingDistanceKm": 2469.4,
+    "drivingDistanceMiles": 1534.4,
+    "drivingDurationMin": 2050
+  },
+  "barcelona-to-denver": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-boston": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-washington-dc": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-nashville": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-portland": {
+    "drivingDistanceKm": 2469.4,
+    "drivingDistanceMiles": 1534.4,
+    "drivingDurationMin": 2050
+  },
+  "barcelona-to-las-vegas": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-detroit": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "atlanta-to-barcelona": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-miami": {
+    "drivingDistanceKm": 1271.8,
+    "drivingDistanceMiles": 790.3,
+    "drivingDurationMin": 826
+  },
+  "barcelona-to-minneapolis": {
+    "drivingDistanceKm": 2469.4,
+    "drivingDistanceMiles": 1534.4,
+    "drivingDurationMin": 2050
+  },
+  "barcelona-to-new-orleans": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-newark": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-orlando": {
+    "drivingDistanceKm": 1271.8,
+    "drivingDistanceMiles": 790.3,
+    "drivingDurationMin": 826
+  },
+  "barcelona-to-jersey-city": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-providence": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-new-haven": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "barcelona-to-hartford": {
+    "drivingDistanceKm": 1275.7,
+    "drivingDistanceMiles": 792.7,
+    "drivingDurationMin": 831
+  },
+  "philadelphia-to-san-antonio": {
+    "drivingDistanceKm": 2796.5,
+    "drivingDistanceMiles": 1737.7,
+    "drivingDurationMin": 1894
+  },
+  "philadelphia-to-san-diego": {
+    "drivingDistanceKm": 4403.9,
+    "drivingDistanceMiles": 2736.5,
+    "drivingDurationMin": 2944
+  },
+  "dallas-to-philadelphia": {
+    "drivingDistanceKm": 2358,
+    "drivingDistanceMiles": 1465.2,
+    "drivingDurationMin": 1603
+  },
+  "philadelphia-to-san-jose": {
+    "drivingDistanceKm": 4684.5,
+    "drivingDistanceMiles": 2910.8,
+    "drivingDurationMin": 3060
+  },
+  "austin-to-philadelphia": {
+    "drivingDistanceKm": 2670.6,
+    "drivingDistanceMiles": 1659.4,
+    "drivingDurationMin": 1807
+  },
+  "philadelphia-to-san-francisco": {
+    "drivingDistanceKm": 4635.3,
+    "drivingDistanceMiles": 2880.2,
+    "drivingDurationMin": 3027
+  },
+  "amsterdam-to-philadelphia": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "philadelphia-to-seattle": {
+    "drivingDistanceKm": 4518.2,
+    "drivingDistanceMiles": 2807.5,
+    "drivingDurationMin": 2990
+  },
+  "denver-to-philadelphia": {
+    "drivingDistanceKm": 2817.8,
+    "drivingDistanceMiles": 1750.9,
+    "drivingDurationMin": 1885
+  },
+  "boston-to-philadelphia": {
+    "drivingDistanceKm": 490.6,
+    "drivingDistanceMiles": 304.8,
+    "drivingDurationMin": 388
+  },
+  "philadelphia-to-washington-dc": {
+    "drivingDistanceKm": 219.5,
+    "drivingDistanceMiles": 136.4,
+    "drivingDurationMin": 184
+  },
+  "nashville-to-philadelphia": {
+    "drivingDistanceKm": 1289.1,
+    "drivingDistanceMiles": 801,
+    "drivingDurationMin": 906
+  },
+  "philadelphia-to-portland": {
+    "drivingDistanceKm": 4617,
+    "drivingDistanceMiles": 2868.9,
+    "drivingDurationMin": 3018
+  },
+  "las-vegas-to-philadelphia": {
+    "drivingDistanceKm": 4015.5,
+    "drivingDistanceMiles": 2495.1,
+    "drivingDurationMin": 2644
+  },
+  "detroit-to-philadelphia": {
+    "drivingDistanceKm": 941.1,
+    "drivingDistanceMiles": 584.8,
+    "drivingDurationMin": 648
+  },
+  "atlanta-to-philadelphia": {
+    "drivingDistanceKm": 1246.6,
+    "drivingDistanceMiles": 774.6,
+    "drivingDurationMin": 910
+  },
+  "miami-to-philadelphia": {
+    "drivingDistanceKm": 1915.9,
+    "drivingDistanceMiles": 1190.5,
+    "drivingDurationMin": 1344
+  },
+  "minneapolis-to-philadelphia": {
+    "drivingDistanceKm": 1882.4,
+    "drivingDistanceMiles": 1169.7,
+    "drivingDurationMin": 1302
+  },
+  "new-orleans-to-philadelphia": {
+    "drivingDistanceKm": 1964.4,
+    "drivingDistanceMiles": 1220.6,
+    "drivingDurationMin": 1366
+  },
+  "newark-to-philadelphia": {
+    "drivingDistanceKm": 137.8,
+    "drivingDistanceMiles": 85.6,
+    "drivingDurationMin": 110
+  },
+  "orlando-to-philadelphia": {
+    "drivingDistanceKm": 1587.2,
+    "drivingDistanceMiles": 986.2,
+    "drivingDurationMin": 1120
+  },
+  "jersey-city-to-philadelphia": {
+    "drivingDistanceKm": 146.2,
+    "drivingDistanceMiles": 90.8,
+    "drivingDurationMin": 115
+  },
+  "philadelphia-to-providence": {
+    "drivingDistanceKm": 439.6,
+    "drivingDistanceMiles": 273.2,
+    "drivingDurationMin": 349
+  },
+  "new-haven-to-philadelphia": {
+    "drivingDistanceKm": 274.1,
+    "drivingDistanceMiles": 170.3,
+    "drivingDurationMin": 226
+  },
+  "hartford-to-philadelphia": {
+    "drivingDistanceKm": 332.7,
+    "drivingDistanceMiles": 206.7,
+    "drivingDurationMin": 269
+  },
+  "san-antonio-to-san-diego": {
+    "drivingDistanceKm": 2054.1,
+    "drivingDistanceMiles": 1276.4,
+    "drivingDurationMin": 1291
+  },
+  "dallas-to-san-antonio": {
+    "drivingDistanceKm": 439.7,
+    "drivingDistanceMiles": 273.2,
+    "drivingDurationMin": 294
+  },
+  "san-antonio-to-san-jose": {
+    "drivingDistanceKm": 2722.1,
+    "drivingDistanceMiles": 1691.4,
+    "drivingDurationMin": 1760
+  },
+  "austin-to-san-antonio": {
+    "drivingDistanceKm": 127.7,
+    "drivingDistanceMiles": 79.3,
+    "drivingDurationMin": 91
+  },
+  "san-antonio-to-san-francisco": {
+    "drivingDistanceKm": 2790.1,
+    "drivingDistanceMiles": 1733.7,
+    "drivingDurationMin": 1802
+  },
+  "amsterdam-to-san-antonio": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "san-antonio-to-seattle": {
+    "drivingDistanceKm": 3417.1,
+    "drivingDistanceMiles": 2123.3,
+    "drivingDurationMin": 2326
+  },
+  "denver-to-san-antonio": {
+    "drivingDistanceKm": 1495.6,
+    "drivingDistanceMiles": 929.3,
+    "drivingDurationMin": 994
+  },
+  "boston-to-san-antonio": {
+    "drivingDistanceKm": 3271.2,
+    "drivingDistanceMiles": 2032.6,
+    "drivingDurationMin": 2252
+  },
+  "san-antonio-to-washington-dc": {
+    "drivingDistanceKm": 2577.6,
+    "drivingDistanceMiles": 1601.6,
+    "drivingDurationMin": 1722
+  },
+  "nashville-to-san-antonio": {
+    "drivingDistanceKm": 1507,
+    "drivingDistanceMiles": 936.4,
+    "drivingDurationMin": 991
+  },
+  "portland-to-san-antonio": {
+    "drivingDistanceKm": 3320.5,
+    "drivingDistanceMiles": 2063.3,
+    "drivingDurationMin": 2255
+  },
+  "las-vegas-to-san-antonio": {
+    "drivingDistanceKm": 2047.9,
+    "drivingDistanceMiles": 1272.5,
+    "drivingDurationMin": 1338
+  },
+  "detroit-to-san-antonio": {
+    "drivingDistanceKm": 2332.8,
+    "drivingDistanceMiles": 1449.5,
+    "drivingDurationMin": 1567
+  },
+  "atlanta-to-san-antonio": {
+    "drivingDistanceKm": 1588.3,
+    "drivingDistanceMiles": 986.9,
+    "drivingDurationMin": 1076
+  },
+  "miami-to-san-antonio": {
+    "drivingDistanceKm": 2222.7,
+    "drivingDistanceMiles": 1381.1,
+    "drivingDurationMin": 1504
+  },
+  "minneapolis-to-san-antonio": {
+    "drivingDistanceKm": 2010.5,
+    "drivingDistanceMiles": 1249.3,
+    "drivingDurationMin": 1323
+  },
+  "new-orleans-to-san-antonio": {
+    "drivingDistanceKm": 871.7,
+    "drivingDistanceMiles": 541.6,
+    "drivingDurationMin": 596
+  },
+  "newark-to-san-antonio": {
+    "drivingDistanceKm": 2913.8,
+    "drivingDistanceMiles": 1810.6,
+    "drivingDurationMin": 1969
+  },
+  "orlando-to-san-antonio": {
+    "drivingDistanceKm": 1862.1,
+    "drivingDistanceMiles": 1157.1,
+    "drivingDurationMin": 1258
+  },
+  "jersey-city-to-san-antonio": {
+    "drivingDistanceKm": 2926.7,
+    "drivingDistanceMiles": 1818.6,
+    "drivingDurationMin": 1978
+  },
+  "providence-to-san-antonio": {
+    "drivingDistanceKm": 3220.2,
+    "drivingDistanceMiles": 2000.9,
+    "drivingDurationMin": 2213
+  },
+  "new-haven-to-san-antonio": {
+    "drivingDistanceKm": 3054.7,
+    "drivingDistanceMiles": 1898.1,
+    "drivingDurationMin": 2090
+  },
+  "hartford-to-san-antonio": {
+    "drivingDistanceKm": 3113.4,
+    "drivingDistanceMiles": 1934.6,
+    "drivingDurationMin": 2133
+  },
+  "dallas-to-san-diego": {
+    "drivingDistanceKm": 2188.2,
+    "drivingDistanceMiles": 1359.7,
+    "drivingDurationMin": 1399
+  },
+  "san-diego-to-san-jose": {
+    "drivingDistanceKm": 740.2,
+    "drivingDistanceMiles": 459.9,
+    "drivingDurationMin": 526
+  },
+  "austin-to-san-diego": {
+    "drivingDistanceKm": 2093,
+    "drivingDistanceMiles": 1300.5,
+    "drivingDurationMin": 1338
+  },
+  "san-diego-to-san-francisco": {
+    "drivingDistanceKm": 808.2,
+    "drivingDistanceMiles": 502.2,
+    "drivingDurationMin": 568
+  },
+  "amsterdam-to-san-diego": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "san-diego-to-seattle": {
+    "drivingDistanceKm": 2020.2,
+    "drivingDistanceMiles": 1255.3,
+    "drivingDurationMin": 1430
+  },
+  "denver-to-san-diego": {
+    "drivingDistanceKm": 1734.5,
+    "drivingDistanceMiles": 1077.8,
+    "drivingDurationMin": 1135
+  },
+  "boston-to-san-diego": {
+    "drivingDistanceKm": 4874.5,
+    "drivingDistanceMiles": 3028.9,
+    "drivingDurationMin": 3284
+  },
+  "san-diego-to-washington-dc": {
+    "drivingDistanceKm": 4326.4,
+    "drivingDistanceMiles": 2688.3,
+    "drivingDurationMin": 2826
+  },
+  "nashville-to-san-diego": {
+    "drivingDistanceKm": 3255.7,
+    "drivingDistanceMiles": 2023,
+    "drivingDurationMin": 2095
+  },
+  "portland-to-san-diego": {
+    "drivingDistanceKm": 1741.7,
+    "drivingDistanceMiles": 1082.2,
+    "drivingDurationMin": 1229
+  },
+  "las-vegas-to-san-diego": {
+    "drivingDistanceKm": 533.9,
+    "drivingDistanceMiles": 331.7,
+    "drivingDurationMin": 367
+  },
+  "detroit-to-san-diego": {
+    "drivingDistanceKm": 3773.9,
+    "drivingDistanceMiles": 2345,
+    "drivingDurationMin": 2480
+  },
+  "atlanta-to-san-diego": {
+    "drivingDistanceKm": 3447,
+    "drivingDistanceMiles": 2141.9,
+    "drivingDurationMin": 2237
+  },
+  "miami-to-san-diego": {
+    "drivingDistanceKm": 4273.5,
+    "drivingDistanceMiles": 2655.4,
+    "drivingDurationMin": 2791
+  },
+  "minneapolis-to-san-diego": {
+    "drivingDistanceKm": 3151.4,
+    "drivingDistanceMiles": 1958.2,
+    "drivingDurationMin": 2074
+  },
+  "new-orleans-to-san-diego": {
+    "drivingDistanceKm": 2922.4,
+    "drivingDistanceMiles": 1815.9,
+    "drivingDurationMin": 1884
+  },
+  "newark-to-san-diego": {
+    "drivingDistanceKm": 4492,
+    "drivingDistanceMiles": 2791.2,
+    "drivingDurationMin": 3026
+  },
+  "orlando-to-san-diego": {
+    "drivingDistanceKm": 3912.9,
+    "drivingDistanceMiles": 2431.4,
+    "drivingDurationMin": 2546
+  },
+  "jersey-city-to-san-diego": {
+    "drivingDistanceKm": 4504.9,
+    "drivingDistanceMiles": 2799.2,
+    "drivingDurationMin": 3035
+  },
+  "providence-to-san-diego": {
+    "drivingDistanceKm": 4834.7,
+    "drivingDistanceMiles": 3004.1,
+    "drivingDurationMin": 3257
+  },
+  "new-haven-to-san-diego": {
+    "drivingDistanceKm": 4664,
+    "drivingDistanceMiles": 2898.1,
+    "drivingDurationMin": 3139
+  },
+  "hartford-to-san-diego": {
+    "drivingDistanceKm": 4712.4,
+    "drivingDistanceMiles": 2928.1,
+    "drivingDurationMin": 3161
+  },
+  "dallas-to-san-jose": {
+    "drivingDistanceKm": 2720.5,
+    "drivingDistanceMiles": 1690.4,
+    "drivingDurationMin": 1791
+  },
+  "austin-to-dallas": {
+    "drivingDistanceKm": 313.2,
+    "drivingDistanceMiles": 194.6,
+    "drivingDurationMin": 205
+  },
+  "dallas-to-san-francisco": {
+    "drivingDistanceKm": 2788.5,
+    "drivingDistanceMiles": 1732.7,
+    "drivingDurationMin": 1833
+  },
+  "amsterdam-to-dallas": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "dallas-to-seattle": {
+    "drivingDistanceKm": 3344.3,
+    "drivingDistanceMiles": 2078.1,
+    "drivingDurationMin": 2209
+  },
+  "dallas-to-denver": {
+    "drivingDistanceKm": 1279.5,
+    "drivingDistanceMiles": 795,
+    "drivingDurationMin": 860
+  },
+  "boston-to-dallas": {
+    "drivingDistanceKm": 2833.1,
+    "drivingDistanceMiles": 1760.4,
+    "drivingDurationMin": 1962
+  },
+  "dallas-to-washington-dc": {
+    "drivingDistanceKm": 2139.6,
+    "drivingDistanceMiles": 1329.5,
+    "drivingDurationMin": 1432
+  },
+  "dallas-to-nashville": {
+    "drivingDistanceKm": 1068.9,
+    "drivingDistanceMiles": 664.2,
+    "drivingDurationMin": 701
+  },
+  "dallas-to-portland": {
+    "drivingDistanceKm": 3247.8,
+    "drivingDistanceMiles": 2018.1,
+    "drivingDurationMin": 2138
+  },
+  "dallas-to-las-vegas": {
+    "drivingDistanceKm": 1960.3,
+    "drivingDistanceMiles": 1218.1,
+    "drivingDurationMin": 1280
+  },
+  "dallas-to-detroit": {
+    "drivingDistanceKm": 1894.7,
+    "drivingDistanceMiles": 1177.3,
+    "drivingDurationMin": 1276
+  },
+  "atlanta-to-dallas": {
+    "drivingDistanceKm": 1259.3,
+    "drivingDistanceMiles": 782.5,
+    "drivingDurationMin": 848
+  },
+  "dallas-to-miami": {
+    "drivingDistanceKm": 2106.1,
+    "drivingDistanceMiles": 1308.7,
+    "drivingDurationMin": 1443
+  },
+  "dallas-to-minneapolis": {
+    "drivingDistanceKm": 1510.7,
+    "drivingDistanceMiles": 938.7,
+    "drivingDurationMin": 1040
+  },
+  "dallas-to-new-orleans": {
+    "drivingDistanceKm": 813.8,
+    "drivingDistanceMiles": 505.7,
+    "drivingDurationMin": 550
+  },
+  "dallas-to-newark": {
+    "drivingDistanceKm": 2475.8,
+    "drivingDistanceMiles": 1538.4,
+    "drivingDurationMin": 1679
+  },
+  "dallas-to-orlando": {
+    "drivingDistanceKm": 1745.5,
+    "drivingDistanceMiles": 1084.6,
+    "drivingDurationMin": 1197
+  },
+  "dallas-to-jersey-city": {
+    "drivingDistanceKm": 2488.7,
+    "drivingDistanceMiles": 1546.4,
+    "drivingDurationMin": 1688
+  },
+  "dallas-to-providence": {
+    "drivingDistanceKm": 2782.2,
+    "drivingDistanceMiles": 1728.8,
+    "drivingDurationMin": 1923
+  },
+  "dallas-to-new-haven": {
+    "drivingDistanceKm": 2616.7,
+    "drivingDistanceMiles": 1625.9,
+    "drivingDurationMin": 1800
+  },
+  "dallas-to-hartford": {
+    "drivingDistanceKm": 2675.3,
+    "drivingDistanceMiles": 1662.4,
+    "drivingDurationMin": 1843
+  },
+  "austin-to-san-jose": {
+    "drivingDistanceKm": 2761.9,
+    "drivingDistanceMiles": 1716.2,
+    "drivingDurationMin": 1805
+  },
+  "san-francisco-to-san-jose": {
+    "drivingDistanceKm": 77.9,
+    "drivingDistanceMiles": 48.4,
+    "drivingDurationMin": 61
+  },
+  "amsterdam-to-san-jose": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "san-jose-to-seattle": {
+    "drivingDistanceKm": 1349.3,
+    "drivingDistanceMiles": 838.4,
+    "drivingDurationMin": 968
+  },
+  "denver-to-san-jose": {
+    "drivingDistanceKm": 2069,
+    "drivingDistanceMiles": 1285.6,
+    "drivingDurationMin": 1329
+  },
+  "boston-to-san-jose": {
+    "drivingDistanceKm": 5060.7,
+    "drivingDistanceMiles": 3144.6,
+    "drivingDurationMin": 3348
+  },
+  "san-jose-to-washington-dc": {
+    "drivingDistanceKm": 4583.8,
+    "drivingDistanceMiles": 2848.2,
+    "drivingDurationMin": 3011
+  },
+  "nashville-to-san-jose": {
+    "drivingDistanceKm": 3641.6,
+    "drivingDistanceMiles": 2262.8,
+    "drivingDurationMin": 2375
+  },
+  "portland-to-san-jose": {
+    "drivingDistanceKm": 1070.7,
+    "drivingDistanceMiles": 665.3,
+    "drivingDurationMin": 767
+  },
+  "las-vegas-to-san-jose": {
+    "drivingDistanceKm": 847.3,
+    "drivingDistanceMiles": 526.5,
+    "drivingDurationMin": 592
+  },
+  "detroit-to-san-jose": {
+    "drivingDistanceKm": 3913.7,
+    "drivingDistanceMiles": 2431.9,
+    "drivingDurationMin": 2535
+  },
+  "atlanta-to-san-jose": {
+    "drivingDistanceKm": 3913.7,
+    "drivingDistanceMiles": 2431.9,
+    "drivingDurationMin": 2565
+  },
+  "miami-to-san-jose": {
+    "drivingDistanceKm": 4823.1,
+    "drivingDistanceMiles": 2996.9,
+    "drivingDurationMin": 3231
+  },
+  "minneapolis-to-san-jose": {
+    "drivingDistanceKm": 3219.6,
+    "drivingDistanceMiles": 2000.6,
+    "drivingDurationMin": 2099
+  },
+  "new-orleans-to-san-jose": {
+    "drivingDistanceKm": 3530.8,
+    "drivingDistanceMiles": 2193.9,
+    "drivingDurationMin": 2339
+  },
+  "newark-to-san-jose": {
+    "drivingDistanceKm": 4719.2,
+    "drivingDistanceMiles": 2932.4,
+    "drivingDurationMin": 3095
+  },
+  "orlando-to-san-jose": {
+    "drivingDistanceKm": 4462.5,
+    "drivingDistanceMiles": 2772.9,
+    "drivingDurationMin": 2985
+  },
+  "jersey-city-to-san-jose": {
+    "drivingDistanceKm": 4730.5,
+    "drivingDistanceMiles": 2939.4,
+    "drivingDurationMin": 3107
+  },
+  "providence-to-san-jose": {
+    "drivingDistanceKm": 5020.8,
+    "drivingDistanceMiles": 3119.8,
+    "drivingDurationMin": 3322
+  },
+  "new-haven-to-san-jose": {
+    "drivingDistanceKm": 4850.1,
+    "drivingDistanceMiles": 3013.7,
+    "drivingDurationMin": 3204
+  },
+  "hartford-to-san-jose": {
+    "drivingDistanceKm": 4898.5,
+    "drivingDistanceMiles": 3043.8,
+    "drivingDurationMin": 3226
+  },
+  "austin-to-san-francisco": {
+    "drivingDistanceKm": 2830.1,
+    "drivingDistanceMiles": 1758.5,
+    "drivingDurationMin": 1848
+  },
+  "amsterdam-to-austin": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "austin-to-seattle": {
+    "drivingDistanceKm": 3397.1,
+    "drivingDistanceMiles": 2110.9,
+    "drivingDurationMin": 2329
+  },
+  "austin-to-denver": {
+    "drivingDistanceKm": 1475.6,
+    "drivingDistanceMiles": 916.9,
+    "drivingDurationMin": 997
+  },
+  "austin-to-boston": {
+    "drivingDistanceKm": 3145.4,
+    "drivingDistanceMiles": 1954.5,
+    "drivingDurationMin": 2165
+  },
+  "austin-to-washington-dc": {
+    "drivingDistanceKm": 2451.9,
+    "drivingDistanceMiles": 1523.5,
+    "drivingDurationMin": 1635
+  },
+  "austin-to-nashville": {
+    "drivingDistanceKm": 1381.2,
+    "drivingDistanceMiles": 858.2,
+    "drivingDurationMin": 903
+  },
+  "austin-to-portland": {
+    "drivingDistanceKm": 3300.5,
+    "drivingDistanceMiles": 2050.8,
+    "drivingDurationMin": 2258
+  },
+  "austin-to-las-vegas": {
+    "drivingDistanceKm": 2032.2,
+    "drivingDistanceMiles": 1262.8,
+    "drivingDurationMin": 1355
+  },
+  "austin-to-detroit": {
+    "drivingDistanceKm": 2207.1,
+    "drivingDistanceMiles": 1371.4,
+    "drivingDurationMin": 1479
+  },
+  "atlanta-to-austin": {
+    "drivingDistanceKm": 1482.5,
+    "drivingDistanceMiles": 921.2,
+    "drivingDurationMin": 1013
+  },
+  "austin-to-miami": {
+    "drivingDistanceKm": 2170.1,
+    "drivingDistanceMiles": 1348.4,
+    "drivingDurationMin": 1476
+  },
+  "austin-to-minneapolis": {
+    "drivingDistanceKm": 1884.7,
+    "drivingDistanceMiles": 1171.1,
+    "drivingDurationMin": 1235
+  },
+  "austin-to-new-orleans": {
+    "drivingDistanceKm": 819,
+    "drivingDistanceMiles": 508.9,
+    "drivingDurationMin": 568
+  },
+  "austin-to-newark": {
+    "drivingDistanceKm": 2788.1,
+    "drivingDistanceMiles": 1732.4,
+    "drivingDurationMin": 1882
+  },
+  "austin-to-orlando": {
+    "drivingDistanceKm": 1809.5,
+    "drivingDistanceMiles": 1124.4,
+    "drivingDurationMin": 1230
+  },
+  "austin-to-jersey-city": {
+    "drivingDistanceKm": 2801,
+    "drivingDistanceMiles": 1740.5,
+    "drivingDurationMin": 1891
+  },
+  "austin-to-providence": {
+    "drivingDistanceKm": 3094.5,
+    "drivingDistanceMiles": 1922.8,
+    "drivingDurationMin": 2126
+  },
+  "austin-to-new-haven": {
+    "drivingDistanceKm": 2929,
+    "drivingDistanceMiles": 1820,
+    "drivingDurationMin": 2003
+  },
+  "austin-to-hartford": {
+    "drivingDistanceKm": 2987.6,
+    "drivingDistanceMiles": 1856.4,
+    "drivingDurationMin": 2046
+  },
+  "amsterdam-to-san-francisco": {
+    "drivingDistanceKm": 2281.7,
+    "drivingDistanceMiles": 1417.8,
+    "drivingDurationMin": 1457
+  },
+  "san-francisco-to-seattle": {
+    "drivingDistanceKm": 1299.1,
+    "drivingDistanceMiles": 807.2,
+    "drivingDurationMin": 935
+  },
+  "denver-to-san-francisco": {
+    "drivingDistanceKm": 2018.8,
+    "drivingDistanceMiles": 1254.4,
+    "drivingDurationMin": 1296
+  },
+  "boston-to-san-francisco": {
+    "drivingDistanceKm": 5010.5,
+    "drivingDistanceMiles": 3113.4,
+    "drivingDurationMin": 3315
+  },
+  "san-francisco-to-washington-dc": {
+    "drivingDistanceKm": 4533.6,
+    "drivingDistanceMiles": 2817,
+    "drivingDurationMin": 2977
+  },
+  "nashville-to-san-francisco": {
+    "drivingDistanceKm": 3708.6,
+    "drivingDistanceMiles": 2304.4,
+    "drivingDurationMin": 2416
+  },
+  "portland-to-san-francisco": {
+    "drivingDistanceKm": 1020.5,
+    "drivingDistanceMiles": 634.1,
+    "drivingDurationMin": 734
+  },
+  "las-vegas-to-san-francisco": {
+    "drivingDistanceKm": 914.3,
+    "drivingDistanceMiles": 568.1,
+    "drivingDurationMin": 634
+  },
+  "detroit-to-san-francisco": {
+    "drivingDistanceKm": 3863.5,
+    "drivingDistanceMiles": 2400.7,
+    "drivingDurationMin": 2502
+  },
+  "atlanta-to-san-francisco": {
+    "drivingDistanceKm": 3980.7,
+    "drivingDistanceMiles": 2473.5,
+    "drivingDurationMin": 2606
+  },
+  "miami-to-san-francisco": {
+    "drivingDistanceKm": 4890.1,
+    "drivingDistanceMiles": 3038.6,
+    "drivingDurationMin": 3273
+  },
+  "minneapolis-to-san-francisco": {
+    "drivingDistanceKm": 3169.4,
+    "drivingDistanceMiles": 1969.4,
+    "drivingDurationMin": 2065
+  },
+  "new-orleans-to-san-francisco": {
+    "drivingDistanceKm": 3597.8,
+    "drivingDistanceMiles": 2235.6,
+    "drivingDurationMin": 2380
+  },
+  "newark-to-san-francisco": {
+    "drivingDistanceKm": 4669,
+    "drivingDistanceMiles": 2901.2,
+    "drivingDurationMin": 3061
+  },
+  "orlando-to-san-francisco": {
+    "drivingDistanceKm": 4529.5,
+    "drivingDistanceMiles": 2814.5,
+    "drivingDurationMin": 3027
+  },
+  "jersey-city-to-san-francisco": {
+    "drivingDistanceKm": 4680.4,
+    "drivingDistanceMiles": 2908.3,
+    "drivingDurationMin": 3074
+  },
+  "providence-to-san-francisco": {
+    "drivingDistanceKm": 4970.6,
+    "drivingDistanceMiles": 3088.6,
+    "drivingDurationMin": 3289
+  },
+  "new-haven-to-san-francisco": {
+    "drivingDistanceKm": 4799.9,
+    "drivingDistanceMiles": 2982.5,
+    "drivingDurationMin": 3170
+  },
+  "hartford-to-san-francisco": {
+    "drivingDistanceKm": 4848.3,
+    "drivingDistanceMiles": 3012.6,
+    "drivingDurationMin": 3193
+  },
+  "amsterdam-to-seattle": {
+    "drivingDistanceKm": 1475.3,
+    "drivingDistanceMiles": 916.7,
+    "drivingDurationMin": 1183
+  },
+  "amsterdam-to-denver": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-boston": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-washington-dc": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-nashville": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-portland": {
+    "drivingDistanceKm": 1475.3,
+    "drivingDistanceMiles": 916.7,
+    "drivingDurationMin": 1183
+  },
+  "amsterdam-to-las-vegas": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-detroit": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-atlanta": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-miami": {
+    "drivingDistanceKm": 2276.1,
+    "drivingDistanceMiles": 1414.3,
+    "drivingDurationMin": 1449
+  },
+  "amsterdam-to-minneapolis": {
+    "drivingDistanceKm": 1475.3,
+    "drivingDistanceMiles": 916.7,
+    "drivingDurationMin": 1183
+  },
+  "amsterdam-to-new-orleans": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-newark": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-orlando": {
+    "drivingDistanceKm": 2276.1,
+    "drivingDistanceMiles": 1414.3,
+    "drivingDurationMin": 1449
+  },
+  "amsterdam-to-jersey-city": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-providence": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-new-haven": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "amsterdam-to-hartford": {
+    "drivingDistanceKm": 2280,
+    "drivingDistanceMiles": 1416.7,
+    "drivingDurationMin": 1454
+  },
+  "denver-to-seattle": {
+    "drivingDistanceKm": 2099.3,
+    "drivingDistanceMiles": 1304.4,
+    "drivingDurationMin": 1357
+  },
+  "boston-to-seattle": {
+    "drivingDistanceKm": 4892,
+    "drivingDistanceMiles": 3039.7,
+    "drivingDurationMin": 3269
+  },
+  "seattle-to-washington-dc": {
+    "drivingDistanceKm": 4415.2,
+    "drivingDistanceMiles": 2743.5,
+    "drivingDurationMin": 2931
+  },
+  "nashville-to-seattle": {
+    "drivingDistanceKm": 3856,
+    "drivingDistanceMiles": 2396,
+    "drivingDurationMin": 2531
+  },
+  "portland-to-seattle": {
+    "drivingDistanceKm": 280.2,
+    "drivingDistanceMiles": 174.1,
+    "drivingDurationMin": 208
+  },
+  "las-vegas-to-seattle": {
+    "drivingDistanceKm": 1787.4,
+    "drivingDistanceMiles": 1110.6,
+    "drivingDurationMin": 1233
+  },
+  "detroit-to-seattle": {
+    "drivingDistanceKm": 3747,
+    "drivingDistanceMiles": 2328.3,
+    "drivingDurationMin": 2460
+  },
+  "atlanta-to-seattle": {
+    "drivingDistanceKm": 4251,
+    "drivingDistanceMiles": 2641.4,
+    "drivingDurationMin": 2805
+  },
+  "miami-to-seattle": {
+    "drivingDistanceKm": 5314.8,
+    "drivingDistanceMiles": 3302.5,
+    "drivingDurationMin": 3526
+  },
+  "minneapolis-to-seattle": {
+    "drivingDistanceKm": 2670.9,
+    "drivingDistanceMiles": 1659.6,
+    "drivingDurationMin": 1705
+  },
+  "new-orleans-to-seattle": {
+    "drivingDistanceKm": 4155.9,
+    "drivingDistanceMiles": 2582.4,
+    "drivingDurationMin": 2757
+  },
+  "newark-to-seattle": {
+    "drivingDistanceKm": 4550.6,
+    "drivingDistanceMiles": 2827.6,
+    "drivingDurationMin": 3015
+  },
+  "orlando-to-seattle": {
+    "drivingDistanceKm": 4954.3,
+    "drivingDistanceMiles": 3078.5,
+    "drivingDurationMin": 3280
+  },
+  "jersey-city-to-seattle": {
+    "drivingDistanceKm": 4561.9,
+    "drivingDistanceMiles": 2834.6,
+    "drivingDurationMin": 3028
+  },
+  "providence-to-seattle": {
+    "drivingDistanceKm": 4852.1,
+    "drivingDistanceMiles": 3015,
+    "drivingDurationMin": 3243
+  },
+  "new-haven-to-seattle": {
+    "drivingDistanceKm": 4681.4,
+    "drivingDistanceMiles": 2908.9,
+    "drivingDurationMin": 3124
+  },
+  "hartford-to-seattle": {
+    "drivingDistanceKm": 4729.9,
+    "drivingDistanceMiles": 2939,
+    "drivingDurationMin": 3147
+  },
+  "boston-to-denver": {
+    "drivingDistanceKm": 3193.1,
+    "drivingDistanceMiles": 1984.1,
+    "drivingDurationMin": 2172
+  },
+  "denver-to-washington-dc": {
+    "drivingDistanceKm": 2667.6,
+    "drivingDistanceMiles": 1657.6,
+    "drivingDurationMin": 1832
+  },
+  "denver-to-nashville": {
+    "drivingDistanceKm": 1863.6,
+    "drivingDistanceMiles": 1158,
+    "drivingDurationMin": 1239
+  },
+  "denver-to-portland": {
+    "drivingDistanceKm": 2002.4,
+    "drivingDistanceMiles": 1244.2,
+    "drivingDurationMin": 1288
+  },
+  "denver-to-las-vegas": {
+    "drivingDistanceKm": 1204.9,
+    "drivingDistanceMiles": 748.7,
+    "drivingDurationMin": 772
+  },
+  "denver-to-detroit": {
+    "drivingDistanceKm": 2046.2,
+    "drivingDistanceMiles": 1271.4,
+    "drivingDurationMin": 1359
+  },
+  "atlanta-to-denver": {
+    "drivingDistanceKm": 2258.6,
+    "drivingDistanceMiles": 1403.4,
+    "drivingDurationMin": 1513
+  },
+  "denver-to-miami": {
+    "drivingDistanceKm": 3322.5,
+    "drivingDistanceMiles": 2064.5,
+    "drivingDurationMin": 2234
+  },
+  "denver-to-minneapolis": {
+    "drivingDistanceKm": 1473.4,
+    "drivingDistanceMiles": 915.5,
+    "drivingDurationMin": 964
+  },
+  "denver-to-new-orleans": {
+    "drivingDistanceKm": 2090.8,
+    "drivingDistanceMiles": 1299.2,
+    "drivingDurationMin": 1411
+  },
+  "denver-to-newark": {
+    "drivingDistanceKm": 2851.6,
+    "drivingDistanceMiles": 1771.9,
+    "drivingDurationMin": 1918
+  },
+  "denver-to-orlando": {
+    "drivingDistanceKm": 2961.9,
+    "drivingDistanceMiles": 1840.4,
+    "drivingDurationMin": 1988
+  },
+  "denver-to-jersey-city": {
+    "drivingDistanceKm": 2863,
+    "drivingDistanceMiles": 1779,
+    "drivingDurationMin": 1931
+  },
+  "denver-to-providence": {
+    "drivingDistanceKm": 3153.2,
+    "drivingDistanceMiles": 1959.3,
+    "drivingDurationMin": 2146
+  },
+  "denver-to-new-haven": {
+    "drivingDistanceKm": 2982.5,
+    "drivingDistanceMiles": 1853.2,
+    "drivingDurationMin": 2027
+  },
+  "denver-to-hartford": {
+    "drivingDistanceKm": 3031,
+    "drivingDistanceMiles": 1883.4,
+    "drivingDurationMin": 2049
+  },
+  "boston-to-washington-dc": {
+    "drivingDistanceKm": 705.4,
+    "drivingDistanceMiles": 438.3,
+    "drivingDurationMin": 554
+  },
+  "boston-to-nashville": {
+    "drivingDistanceKm": 1767,
+    "drivingDistanceMiles": 1098,
+    "drivingDurationMin": 1264
+  },
+  "boston-to-portland": {
+    "drivingDistanceKm": 4989.8,
+    "drivingDistanceMiles": 3100.5,
+    "drivingDurationMin": 3301
+  },
+  "boston-to-las-vegas": {
+    "drivingDistanceKm": 4388.3,
+    "drivingDistanceMiles": 2726.8,
+    "drivingDurationMin": 2927
+  },
+  "boston-to-detroit": {
+    "drivingDistanceKm": 1137.7,
+    "drivingDistanceMiles": 706.9,
+    "drivingDurationMin": 843
+  },
+  "atlanta-to-boston": {
+    "drivingDistanceKm": 1732.5,
+    "drivingDistanceMiles": 1076.5,
+    "drivingDurationMin": 1280
+  },
+  "boston-to-miami": {
+    "drivingDistanceKm": 2401.8,
+    "drivingDistanceMiles": 1492.4,
+    "drivingDurationMin": 1714
+  },
+  "boston-to-minneapolis": {
+    "drivingDistanceKm": 2255.2,
+    "drivingDistanceMiles": 1401.3,
+    "drivingDurationMin": 1584
+  },
+  "boston-to-new-orleans": {
+    "drivingDistanceKm": 2442.2,
+    "drivingDistanceMiles": 1517.5,
+    "drivingDurationMin": 1724
+  },
+  "boston-to-newark": {
+    "drivingDistanceKm": 359.7,
+    "drivingDistanceMiles": 223.5,
+    "drivingDurationMin": 288
+  },
+  "boston-to-orlando": {
+    "drivingDistanceKm": 2073.1,
+    "drivingDistanceMiles": 1288.2,
+    "drivingDurationMin": 1491
+  },
+  "boston-to-jersey-city": {
+    "drivingDistanceKm": 352.9,
+    "drivingDistanceMiles": 219.3,
+    "drivingDurationMin": 284
+  },
+  "boston-to-providence": {
+    "drivingDistanceKm": 81.1,
+    "drivingDistanceMiles": 50.4,
+    "drivingDurationMin": 69
+  },
+  "boston-to-new-haven": {
+    "drivingDistanceKm": 219.9,
+    "drivingDistanceMiles": 136.6,
+    "drivingDurationMin": 168
+  },
+  "boston-to-hartford": {
+    "drivingDistanceKm": 161,
+    "drivingDistanceMiles": 100,
+    "drivingDurationMin": 123
+  },
+  "nashville-to-washington-dc": {
+    "drivingDistanceKm": 1070.1,
+    "drivingDistanceMiles": 664.9,
+    "drivingDurationMin": 737
+  },
+  "portland-to-washington-dc": {
+    "drivingDistanceKm": 4514,
+    "drivingDistanceMiles": 2804.9,
+    "drivingDurationMin": 2963
+  },
+  "las-vegas-to-washington-dc": {
+    "drivingDistanceKm": 3912.5,
+    "drivingDistanceMiles": 2431.1,
+    "drivingDurationMin": 2589
+  },
+  "detroit-to-washington-dc": {
+    "drivingDistanceKm": 838.1,
+    "drivingDistanceMiles": 520.8,
+    "drivingDurationMin": 593
+  },
+  "atlanta-to-washington-dc": {
+    "drivingDistanceKm": 1027.2,
+    "drivingDistanceMiles": 638.3,
+    "drivingDurationMin": 730
+  },
+  "miami-to-washington-dc": {
+    "drivingDistanceKm": 1696.4,
+    "drivingDistanceMiles": 1054.1,
+    "drivingDurationMin": 1164
+  },
+  "minneapolis-to-washington-dc": {
+    "drivingDistanceKm": 1779.4,
+    "drivingDistanceMiles": 1105.7,
+    "drivingDurationMin": 1246
+  },
+  "new-orleans-to-washington-dc": {
+    "drivingDistanceKm": 1745.4,
+    "drivingDistanceMiles": 1084.5,
+    "drivingDurationMin": 1197
+  },
+  "newark-to-washington-dc": {
+    "drivingDistanceKm": 349,
+    "drivingDistanceMiles": 216.9,
+    "drivingDurationMin": 273
+  },
+  "orlando-to-washington-dc": {
+    "drivingDistanceKm": 1367.8,
+    "drivingDistanceMiles": 849.9,
+    "drivingDurationMin": 941
+  },
+  "jersey-city-to-washington-dc": {
+    "drivingDistanceKm": 357.3,
+    "drivingDistanceMiles": 222,
+    "drivingDurationMin": 278
+  },
+  "providence-to-washington-dc": {
+    "drivingDistanceKm": 650.8,
+    "drivingDistanceMiles": 404.4,
+    "drivingDurationMin": 512
+  },
+  "new-haven-to-washington-dc": {
+    "drivingDistanceKm": 485.3,
+    "drivingDistanceMiles": 301.6,
+    "drivingDurationMin": 389
+  },
+  "hartford-to-washington-dc": {
+    "drivingDistanceKm": 543.9,
+    "drivingDistanceMiles": 338,
+    "drivingDurationMin": 432
+  },
+  "nashville-to-portland": {
+    "drivingDistanceKm": 3789.7,
+    "drivingDistanceMiles": 2354.8,
+    "drivingDurationMin": 2475
+  },
+  "las-vegas-to-nashville": {
+    "drivingDistanceKm": 2881.6,
+    "drivingDistanceMiles": 1790.5,
+    "drivingDurationMin": 1865
+  },
+  "detroit-to-nashville": {
+    "drivingDistanceKm": 853.5,
+    "drivingDistanceMiles": 530.3,
+    "drivingDurationMin": 599
+  },
+  "atlanta-to-nashville": {
+    "drivingDistanceKm": 397,
+    "drivingDistanceMiles": 246.7,
+    "drivingDurationMin": 280
+  },
+  "miami-to-nashville": {
+    "drivingDistanceKm": 1460.9,
+    "drivingDistanceMiles": 907.8,
+    "drivingDurationMin": 1000
+  },
+  "minneapolis-to-nashville": {
+    "drivingDistanceKm": 1385.4,
+    "drivingDistanceMiles": 860.8,
+    "drivingDurationMin": 968
+  },
+  "nashville-to-new-orleans": {
+    "drivingDistanceKm": 855.1,
+    "drivingDistanceMiles": 531.3,
+    "drivingDurationMin": 581
+  },
+  "nashville-to-newark": {
+    "drivingDistanceKm": 1407.3,
+    "drivingDistanceMiles": 874.5,
+    "drivingDurationMin": 982
+  },
+  "nashville-to-orlando": {
+    "drivingDistanceKm": 1100.3,
+    "drivingDistanceMiles": 683.7,
+    "drivingDurationMin": 755
+  },
+  "jersey-city-to-nashville": {
+    "drivingDistanceKm": 1420.2,
+    "drivingDistanceMiles": 882.5,
+    "drivingDurationMin": 991
+  },
+  "nashville-to-providence": {
+    "drivingDistanceKm": 1713.7,
+    "drivingDistanceMiles": 1064.8,
+    "drivingDurationMin": 1226
+  },
+  "nashville-to-new-haven": {
+    "drivingDistanceKm": 1548.2,
+    "drivingDistanceMiles": 962,
+    "drivingDurationMin": 1103
+  },
+  "hartford-to-nashville": {
+    "drivingDistanceKm": 1606.9,
+    "drivingDistanceMiles": 998.5,
+    "drivingDurationMin": 1146
+  },
+  "las-vegas-to-portland": {
+    "drivingDistanceKm": 1599.7,
+    "drivingDistanceMiles": 994,
+    "drivingDurationMin": 1157
+  },
+  "detroit-to-portland": {
+    "drivingDistanceKm": 3846.9,
+    "drivingDistanceMiles": 2390.4,
+    "drivingDurationMin": 2491
+  },
+  "atlanta-to-portland": {
+    "drivingDistanceKm": 4190.7,
+    "drivingDistanceMiles": 2604,
+    "drivingDurationMin": 2741
+  },
+  "miami-to-portland": {
+    "drivingDistanceKm": 5254.5,
+    "drivingDistanceMiles": 3265,
+    "drivingDurationMin": 3461
+  },
+  "minneapolis-to-portland": {
+    "drivingDistanceKm": 2787.3,
+    "drivingDistanceMiles": 1731.9,
+    "drivingDurationMin": 1793
+  },
+  "new-orleans-to-portland": {
+    "drivingDistanceKm": 4058.8,
+    "drivingDistanceMiles": 2522,
+    "drivingDurationMin": 2686
+  },
+  "newark-to-portland": {
+    "drivingDistanceKm": 4652.4,
+    "drivingDistanceMiles": 2890.9,
+    "drivingDurationMin": 3050
+  },
+  "orlando-to-portland": {
+    "drivingDistanceKm": 4894,
+    "drivingDistanceMiles": 3041,
+    "drivingDurationMin": 3216
+  },
+  "jersey-city-to-portland": {
+    "drivingDistanceKm": 4663.7,
+    "drivingDistanceMiles": 2897.9,
+    "drivingDurationMin": 3063
+  },
+  "portland-to-providence": {
+    "drivingDistanceKm": 4954,
+    "drivingDistanceMiles": 3078.3,
+    "drivingDurationMin": 3278
+  },
+  "new-haven-to-portland": {
+    "drivingDistanceKm": 4783.3,
+    "drivingDistanceMiles": 2972.2,
+    "drivingDurationMin": 3159
+  },
+  "hartford-to-portland": {
+    "drivingDistanceKm": 4831.7,
+    "drivingDistanceMiles": 3002.3,
+    "drivingDurationMin": 3181
+  },
+  "detroit-to-las-vegas": {
+    "drivingDistanceKm": 3243.3,
+    "drivingDistanceMiles": 2015.3,
+    "drivingDurationMin": 2120
+  },
+  "atlanta-to-las-vegas": {
+    "drivingDistanceKm": 3155.3,
+    "drivingDistanceMiles": 1960.6,
+    "drivingDurationMin": 2055
+  },
+  "las-vegas-to-miami": {
+    "drivingDistanceKm": 4064.7,
+    "drivingDistanceMiles": 2525.7,
+    "drivingDurationMin": 2721
+  },
+  "las-vegas-to-minneapolis": {
+    "drivingDistanceKm": 2620.8,
+    "drivingDistanceMiles": 1628.5,
+    "drivingDurationMin": 1715
+  },
+  "las-vegas-to-new-orleans": {
+    "drivingDistanceKm": 2772.4,
+    "drivingDistanceMiles": 1722.7,
+    "drivingDurationMin": 1829
+  },
+  "las-vegas-to-newark": {
+    "drivingDistanceKm": 4048.8,
+    "drivingDistanceMiles": 2515.8,
+    "drivingDurationMin": 2680
+  },
+  "las-vegas-to-orlando": {
+    "drivingDistanceKm": 3704.1,
+    "drivingDistanceMiles": 2301.6,
+    "drivingDurationMin": 2476
+  },
+  "jersey-city-to-las-vegas": {
+    "drivingDistanceKm": 4060.1,
+    "drivingDistanceMiles": 2522.8,
+    "drivingDurationMin": 2692
+  },
+  "las-vegas-to-providence": {
+    "drivingDistanceKm": 4350.4,
+    "drivingDistanceMiles": 2703.2,
+    "drivingDurationMin": 2908
+  },
+  "las-vegas-to-new-haven": {
+    "drivingDistanceKm": 4179.7,
+    "drivingDistanceMiles": 2597.1,
+    "drivingDurationMin": 2789
+  },
+  "hartford-to-las-vegas": {
+    "drivingDistanceKm": 4228.1,
+    "drivingDistanceMiles": 2627.2,
+    "drivingDurationMin": 2811
+  },
+  "atlanta-to-detroit": {
+    "drivingDistanceKm": 1140.3,
+    "drivingDistanceMiles": 708.5,
+    "drivingDurationMin": 804
+  },
+  "detroit-to-miami": {
+    "drivingDistanceKm": 2204.2,
+    "drivingDistanceMiles": 1369.6,
+    "drivingDurationMin": 1525
+  },
+  "detroit-to-minneapolis": {
+    "drivingDistanceKm": 1113.1,
+    "drivingDistanceMiles": 691.6,
+    "drivingDurationMin": 779
+  },
+  "detroit-to-new-orleans": {
+    "drivingDistanceKm": 1708.7,
+    "drivingDistanceMiles": 1061.7,
+    "drivingDurationMin": 1176
+  },
+  "detroit-to-newark": {
+    "drivingDistanceKm": 975.1,
+    "drivingDistanceMiles": 605.9,
+    "drivingDurationMin": 681
+  },
+  "detroit-to-orlando": {
+    "drivingDistanceKm": 1843.6,
+    "drivingDistanceMiles": 1145.6,
+    "drivingDurationMin": 1279
+  },
+  "detroit-to-jersey-city": {
+    "drivingDistanceKm": 986.4,
+    "drivingDistanceMiles": 612.9,
+    "drivingDurationMin": 693
+  },
+  "detroit-to-providence": {
+    "drivingDistanceKm": 1129.3,
+    "drivingDistanceMiles": 701.7,
+    "drivingDurationMin": 833
+  },
+  "detroit-to-new-haven": {
+    "drivingDistanceKm": 1105.9,
+    "drivingDistanceMiles": 687.2,
+    "drivingDurationMin": 790
+  },
+  "detroit-to-hartford": {
+    "drivingDistanceKm": 1045,
+    "drivingDistanceMiles": 649.3,
+    "drivingDurationMin": 775
+  },
+  "atlanta-to-miami": {
+    "drivingDistanceKm": 1064.4,
+    "drivingDistanceMiles": 661.4,
+    "drivingDurationMin": 723
+  },
+  "atlanta-to-minneapolis": {
+    "drivingDistanceKm": 1782.2,
+    "drivingDistanceMiles": 1107.4,
+    "drivingDurationMin": 1243
+  },
+  "atlanta-to-new-orleans": {
+    "drivingDistanceKm": 755.2,
+    "drivingDistanceMiles": 469.3,
+    "drivingDurationMin": 515
+  },
+  "atlanta-to-newark": {
+    "drivingDistanceKm": 1400.8,
+    "drivingDistanceMiles": 870.4,
+    "drivingDurationMin": 998
+  },
+  "atlanta-to-orlando": {
+    "drivingDistanceKm": 703.9,
+    "drivingDistanceMiles": 437.4,
+    "drivingDurationMin": 477
+  },
+  "atlanta-to-jersey-city": {
+    "drivingDistanceKm": 1383.8,
+    "drivingDistanceMiles": 859.9,
+    "drivingDurationMin": 1004
+  },
+  "atlanta-to-providence": {
+    "drivingDistanceKm": 1677.3,
+    "drivingDistanceMiles": 1042.2,
+    "drivingDurationMin": 1237
+  },
+  "atlanta-to-new-haven": {
+    "drivingDistanceKm": 1511.8,
+    "drivingDistanceMiles": 939.4,
+    "drivingDurationMin": 1115
+  },
+  "atlanta-to-hartford": {
+    "drivingDistanceKm": 1570.4,
+    "drivingDistanceMiles": 975.8,
+    "drivingDurationMin": 1157
+  },
+  "miami-to-minneapolis": {
+    "drivingDistanceKm": 2846.1,
+    "drivingDistanceMiles": 1768.5,
+    "drivingDurationMin": 1965
+  },
+  "miami-to-new-orleans": {
+    "drivingDistanceKm": 1389.7,
+    "drivingDistanceMiles": 863.5,
+    "drivingDurationMin": 944
+  },
+  "miami-to-newark": {
+    "drivingDistanceKm": 2044.2,
+    "drivingDistanceMiles": 1270.2,
+    "drivingDurationMin": 1433
+  },
+  "miami-to-orlando": {
+    "drivingDistanceKm": 377.2,
+    "drivingDistanceMiles": 234.4,
+    "drivingDurationMin": 266
+  },
+  "jersey-city-to-miami": {
+    "drivingDistanceKm": 2052.6,
+    "drivingDistanceMiles": 1275.4,
+    "drivingDurationMin": 1438
+  },
+  "miami-to-providence": {
+    "drivingDistanceKm": 2346,
+    "drivingDistanceMiles": 1457.7,
+    "drivingDurationMin": 1671
+  },
+  "miami-to-new-haven": {
+    "drivingDistanceKm": 2180.5,
+    "drivingDistanceMiles": 1354.9,
+    "drivingDurationMin": 1549
+  },
+  "hartford-to-miami": {
+    "drivingDistanceKm": 2239.1,
+    "drivingDistanceMiles": 1391.3,
+    "drivingDurationMin": 1591
+  },
+  "minneapolis-to-new-orleans": {
+    "drivingDistanceKm": 1963.5,
+    "drivingDistanceMiles": 1220.1,
+    "drivingDurationMin": 1364
+  },
+  "minneapolis-to-newark": {
+    "drivingDistanceKm": 1914.6,
+    "drivingDistanceMiles": 1189.7,
+    "drivingDurationMin": 1327
+  },
+  "minneapolis-to-orlando": {
+    "drivingDistanceKm": 2478.8,
+    "drivingDistanceMiles": 1540.3,
+    "drivingDurationMin": 1704
+  },
+  "jersey-city-to-minneapolis": {
+    "drivingDistanceKm": 1925.9,
+    "drivingDistanceMiles": 1196.7,
+    "drivingDurationMin": 1339
+  },
+  "minneapolis-to-providence": {
+    "drivingDistanceKm": 2216.2,
+    "drivingDistanceMiles": 1377.1,
+    "drivingDurationMin": 1555
+  },
+  "minneapolis-to-new-haven": {
+    "drivingDistanceKm": 2045.5,
+    "drivingDistanceMiles": 1271,
+    "drivingDurationMin": 1436
+  },
+  "hartford-to-minneapolis": {
+    "drivingDistanceKm": 2093.9,
+    "drivingDistanceMiles": 1301.1,
+    "drivingDurationMin": 1458
+  },
+  "new-orleans-to-newark": {
+    "drivingDistanceKm": 2081.6,
+    "drivingDistanceMiles": 1293.4,
+    "drivingDurationMin": 1440
+  },
+  "new-orleans-to-orlando": {
+    "drivingDistanceKm": 1028.5,
+    "drivingDistanceMiles": 639.1,
+    "drivingDurationMin": 696
+  },
+  "jersey-city-to-new-orleans": {
+    "drivingDistanceKm": 2094.5,
+    "drivingDistanceMiles": 1301.5,
+    "drivingDurationMin": 1449
+  },
+  "new-orleans-to-providence": {
+    "drivingDistanceKm": 2388,
+    "drivingDistanceMiles": 1483.8,
+    "drivingDurationMin": 1683
+  },
+  "new-haven-to-new-orleans": {
+    "drivingDistanceKm": 2222.5,
+    "drivingDistanceMiles": 1381,
+    "drivingDurationMin": 1561
+  },
+  "hartford-to-new-orleans": {
+    "drivingDistanceKm": 2281.1,
+    "drivingDistanceMiles": 1417.4,
+    "drivingDurationMin": 1603
+  },
+  "newark-to-orlando": {
+    "drivingDistanceKm": 1717,
+    "drivingDistanceMiles": 1066.9,
+    "drivingDurationMin": 1213
+  },
+  "jersey-city-to-newark": {
+    "drivingDistanceKm": 12.5,
+    "drivingDistanceMiles": 7.8,
+    "drivingDurationMin": 15
+  },
+  "newark-to-providence": {
+    "drivingDistanceKm": 306.7,
+    "drivingDistanceMiles": 190.6,
+    "drivingDurationMin": 250
+  },
+  "new-haven-to-newark": {
+    "drivingDistanceKm": 141.2,
+    "drivingDistanceMiles": 87.7,
+    "drivingDurationMin": 127
+  },
+  "hartford-to-newark": {
+    "drivingDistanceKm": 199.9,
+    "drivingDistanceMiles": 124.2,
+    "drivingDurationMin": 170
+  },
+  "jersey-city-to-orlando": {
+    "drivingDistanceKm": 1723.6,
+    "drivingDistanceMiles": 1071,
+    "drivingDurationMin": 1211
+  },
+  "orlando-to-providence": {
+    "drivingDistanceKm": 2017.1,
+    "drivingDistanceMiles": 1253.4,
+    "drivingDurationMin": 1445
+  },
+  "new-haven-to-orlando": {
+    "drivingDistanceKm": 1851.6,
+    "drivingDistanceMiles": 1150.5,
+    "drivingDurationMin": 1322
+  },
+  "hartford-to-orlando": {
+    "drivingDistanceKm": 1910.2,
+    "drivingDistanceMiles": 1186.9,
+    "drivingDurationMin": 1365
+  },
+  "jersey-city-to-providence": {
+    "drivingDistanceKm": 301.2,
+    "drivingDistanceMiles": 187.2,
+    "drivingDurationMin": 245
+  },
+  "jersey-city-to-new-haven": {
+    "drivingDistanceKm": 135.7,
+    "drivingDistanceMiles": 84.3,
+    "drivingDurationMin": 122
+  },
+  "hartford-to-jersey-city": {
+    "drivingDistanceKm": 194.3,
+    "drivingDistanceMiles": 120.7,
+    "drivingDurationMin": 165
+  },
+  "new-haven-to-providence": {
+    "drivingDistanceKm": 167.2,
+    "drivingDistanceMiles": 103.9,
+    "drivingDurationMin": 126
+  },
+  "hartford-to-providence": {
+    "drivingDistanceKm": 119,
+    "drivingDistanceMiles": 73.9,
+    "drivingDurationMin": 99
+  },
+  "hartford-to-new-haven": {
+    "drivingDistanceKm": 62.2,
+    "drivingDistanceMiles": 38.6,
+    "drivingDurationMin": 49
   }
 }
