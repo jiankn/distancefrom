@@ -451,37 +451,37 @@ distancefrom/
 ## 9. 里程碑
 
 ### M1: 数据准备 + 项目脚手架（Day 1-3）
-- [ ] 初始化 Astro 项目 + 配置 Cloudflare adapter
-- [ ] 准备城市数据（GeoNames top 5000 → cities.json）
-- [ ] 实现 Haversine + 方位角 + 飞行估算模块
-- [ ] 编写 OSRM 批量预计算脚本（fetch-osrm-routes.ts）
-- [ ] 运行 OSRM 预计算：Top 200 城市 × 两两组合 ≈ 40K 对（约 2-3 小时）
-- [ ] 准备 fuel-prices.json 油价数据
-- [ ] 实现 drive-estimate.ts（OSRM 优先 + 估算兜底）
-- [ ] 实现 midway-stops.ts + trip-cost.ts
+- [x] 初始化 Astro 项目 + 配置 Cloudflare adapter
+- [x] 准备城市数据（GeoNames top 5000 → cities.json）— 当前 48 城市种子
+- [x] 实现 Haversine + 方位角 + 飞行估算模块
+- [x] 编写 OSRM 批量预计算脚本（fetch-osrm-routes.ts）
+- [x] 运行 OSRM 预计算：48 城市 × 两两组合 = 1128 对，完成 948 条真实路线
+- [x] 准备 fuel-prices.json 油价数据（14 个国家）
+- [x] 实现 drive-estimate.ts（OSRM 优先 + 估算兜底）
+- [x] 实现 midway-stops.ts + trip-cost.ts
 
 ### M2: 页面模板（Day 4-7）
-- [ ] Base 布局 + Header/Footer
-- [ ] 首页 + 双城市搜索（自动补全）
-- [ ] 距离详情页模板（含所有组件）
-- [ ] Leaflet 交互地图组件
-- [ ] 中途停留城市组件
-- [ ] 出行成本估算组件
-- [ ] 数据来源标注组件
-- [ ] 城市 Hub 页模板
+- [x] Base 布局 + Header/Footer
+- [x] 首页 + 双城市搜索（自动补全）
+- [x] 距离详情页模板（含所有组件）
+- [x] Leaflet 交互地图组件
+- [x] 中途停留城市组件（含内链）
+- [x] 出行成本估算组件
+- [x] 数据来源标注组件
+- [x] 城市 Hub 页模板
 
 ### M3: SEO + 广告 + 部署（Day 8-10）
-- [ ] Canonical 去重逻辑 + 301 重定向
-- [ ] Title/Meta 模板（含 "Best Route & Stops"）
-- [ ] JSON-LD 结构化数据
-- [ ] Sitemap 分块生成
-- [ ] 内链网络（每页 ≥12 链接）
-- [ ] 广告位组件（3 个位置）
-- [ ] 部署 Cloudflare Pages
+- [x] Canonical 去重逻辑 + 301 重定向
+- [x] Title/Meta 模板（含 "Best Route & Stops"）
+- [x] JSON-LD 结构化数据
+- [x] Sitemap 分块生成
+- [x] 内链网络（每页 21 个内链，超过 ≥12 目标）
+- [x] 广告位组件（3 个位置：结果卡片后、Quick Facts 后、粘性底部）
+- [ ] 部署 Cloudflare Pages（需要用户登录 Cloudflare 执行 `npm run deploy`）
 
 ### M4: 扩展 + 优化（Day 11-14）
-- [ ] SSG 预生成 Top 40K 热门城市对页面
-- [ ] SSG 预生成 Top 200 城市 Hub 页
+- [ ] 扩展城市数据至 GeoNames top 5000
+- [ ] SSG 预生成 Top 热门城市对页面
 - [ ] SSR 长尾页面 + Cache API + KV 缓存
 - [ ] Lighthouse 优化至目标值
 - [ ] 提交 GSC（首批 5,000-10,000 页）
