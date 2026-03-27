@@ -91,7 +91,7 @@ const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canon
     fuelCost={cost?.formatted ?? 'N/A'}
   />
 
-  <AdUnit slot="distance-top" />
+  <!-- TODO: AdUnit slot="distance-top" — uncomment after AdSense approval -->
 
   <Map lat1={cityA.lat} lng1={cityA.lng} label1={cityA.name}
        lat2={cityB.lat} lng2={cityB.lng} label2={cityB.name} />
@@ -101,7 +101,7 @@ const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canon
   <QuickFacts cityA={{ name: cityA.name, lat: cityA.lat, lng: cityA.lng, timezone: cityA.timezone, elevation: cityA.elevation }}
               cityB={{ name: cityB.name, lat: cityB.lat, lng: cityB.lng, timezone: cityB.timezone, elevation: cityB.elevation }} />
 
-  <AdUnit slot="distance-mid" />
+  <!-- TODO: AdUnit slot="distance-mid" — uncomment after AdSense approval -->
 
   <RelatedDistances
     cityAName={cityA.name} cityBName={cityB.name}
@@ -115,19 +115,14 @@ const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canon
 
   <DataSources driveSource={drive.source} />
 
-  <!-- Anchor Ad: sticky bottom, highest RPM on mobile -->
+  <!-- TODO: Anchor Ad — uncomment after AdSense approval
   <div class="anchor-ad" aria-hidden="true">
     <AdUnit slot="distance-anchor" format="auto" />
   </div>
+  -->
 </Base>
 
 <style>
   h1 { margin-top: 1.5rem; }
   .reverse-link { margin: 1.5rem 0; font-size: 0.95rem; }
-  .anchor-ad {
-    position: fixed; bottom: 0; left: 0; right: 0;
-    z-index: 50; background: var(--bg-primary);
-    border-top: 1px solid var(--border);
-    padding: 0.25rem 0;
-  }
 </style>
