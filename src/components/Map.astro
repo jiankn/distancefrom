@@ -15,9 +15,10 @@ const midLng = (lng1 + lng2) / 2;
 <script is:inline define:vars={{ lat1, lng1, label1, lat2, lng2, label2, midLat, midLng }}>
   function initMap() {
     const map = L.map('map').setView([midLat, midLng], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 18,
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 19,
+      subdomains: 'abcd',
     }).addTo(map);
     L.marker([lat1, lng1]).addTo(map).bindPopup(label1);
     L.marker([lat2, lng2]).addTo(map).bindPopup(label2);
