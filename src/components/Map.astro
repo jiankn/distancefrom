@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   lat1: number; lng1: number; label1: string;
   lat2: number; lng2: number; label2: string;
@@ -6,34 +6,66 @@ interface Props {
 const { lat1, lng1, label1, lat2, lng2, label2 } = Astro.props;
 const midLat = (lat1 + lat2) / 2;
 const midLng = (lng1 + lng2) / 2;
+const maptilerKey = import.meta.env.PUBLIC_MAPTILER_KEY || '';
+const stadiaKey = import.meta.env.PUBLIC_STADIA_KEY || '';
 ---
 <div class="map-wrapper">
   <div id="map" role="img" aria-label={`Map showing ${label1} and ${label2}`}></div>
 </div>
-
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script is:inline define:vars={{ lat1, lng1, label1, lat2, lng2, label2, midLat, midLng }}>
-  function initMap() {
-    const map = L.map('map').setView([midLat, midLng], 5);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+<script is:inline define:vars={{ lat1, lng1, label1, lat2, lng2, label2, midLat, midLng, maptilerKey, stadiaKey }}>
+  var PROVIDERS = [
+    {
+      name: 'maptiler',
+      url: maptilerKey ? 'https://api.maptiler.com/maps/dataviz-dark/{z}/{x}/{y}.png?key=' + maptilerKey : null,
+      attr: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      maxZoom: 19,
+    },
+    {
+      name: 'stadia',
+      url: stadiaKey
+        ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=' + stadiaKey
+        : 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
+      attr: '&copy; <a href="https://stadiamaps.com/">Stadia</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      maxZoom: 20,
+    },
+    {
+      name: 'carto',
+      url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
       maxZoom: 19,
       subdomains: 'abcd',
-    }).addTo(map);
+    },
+    {
+      name: 'osm',
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      maxZoom: 18,
+    },
+  ];
+  function initMap() {
+    var map = L.map('map').setView([midLat, midLng], 5);
+    var idx = 0, failCount = 0, layer = null;
+    function load(i) {
+      var p = PROVIDERS[i];
+      if (!p || !p.url) { if (i + 1 < PROVIDERS.length) load(i + 1); return; }
+      idx = i; failCount = 0;
+      if (layer) map.removeLayer(layer);
+      var opts = { attribution: p.attr, maxZoom: p.maxZoom };
+      if (p.subdomains) opts.subdomains = p.subdomains;
+      layer = L.tileLayer(p.url, opts);
+      layer.on('tileerror', function() { if (++failCount > 3 && idx + 1 < PROVIDERS.length) load(idx + 1); });
+      layer.addTo(map);
+    }
+    load(0);
     L.marker([lat1, lng1]).addTo(map).bindPopup(label1);
     L.marker([lat2, lng2]).addTo(map).bindPopup(label2);
     L.polyline([[lat1, lng1], [lat2, lng2]], { color: '#60a5fa', weight: 2, dashArray: '8,8' }).addTo(map);
     map.fitBounds([[lat1, lng1], [lat2, lng2]], { padding: [40, 40] });
   }
   if (typeof L !== 'undefined') { initMap(); }
-  else {
-    const s = document.createElement('script');
-    s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    s.onload = initMap;
-    document.head.appendChild(s);
-  }
+  else { var s = document.createElement('script'); s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = initMap; document.head.appendChild(s); }
 </script>
-
 <style>
   .map-wrapper { margin: 1.5rem 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
   #map { height: 350px; width: 100%; background: var(--bg-secondary); }
