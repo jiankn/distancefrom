@@ -1,6 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#0f1117"/>
-  <circle cx="9" cy="20" r="3" fill="#60a5fa"/>
-  <circle cx="23" cy="12" r="3" fill="#60a5fa"/>
-  <line x1="11" y1="19" x2="21" y2="13" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <!-- Pin A (origin) -->
+  <circle cx="8" cy="22" r="2.5" fill="#0284c7"/>
+  <circle cx="8" cy="22" r="1" fill="#fff"/>
+  <!-- Pin B (destination) -->
+  <circle cx="24" cy="10" r="2.5" fill="#0284c7"/>
+  <circle cx="24" cy="10" r="1" fill="#fff"/>
+  <!-- Dashed route line -->
+  <line x1="10.2" y1="20.6" x2="21.8" y2="11.4" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="3.5 2.5" stroke-linecap="round"/>
+  <!-- Distance arrow head at destination -->
+  <path d="M22.5 13.5L24 10l1.5 3.5" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Small globe arc (subtle) -->
+  <path d="M4 16a12 12 0 0 1 24 0" stroke="#bae6fd" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"/>
 </svg>
