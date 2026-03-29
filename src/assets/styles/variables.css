@@ -1,17 +1,94 @@
+/* ===== DistanceFrom.co Design System ===== */
+/* Theme: Refined Light Glassmorphism — Sky Blue + Adventure Orange */
+
 :root {
-  --bg-primary: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
-  --bg-secondary: rgba(255, 255, 255, 0.4);
-  --bg-card: rgba(255, 255, 255, 0.6);
-  --text-primary: #0f172a;
+  /* ----- Brand Colors ----- */
+  --color-primary:       #0284c7;
+  --color-primary-light: #38bdf8;
+  --color-primary-dark:  #0369a1;
+  --color-secondary:     #7dd3fc;
+  --color-cta:           #f97316;
+  --color-cta-hover:     #ea580c;
+
+  /* ----- Backgrounds ----- */
+  --bg-body:      #e8f4fc;
+  --bg-gradient:  linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #e0f2fe 100%);
+  --bg-card:      rgba(255, 255, 255, 0.65);
+  --bg-card-hover: rgba(255, 255, 255, 0.82);
+  --bg-glass:     rgba(255, 255, 255, 0.45);
+  --bg-glass-strong: rgba(255, 255, 255, 0.8);
+  --bg-secondary: rgba(255, 255, 255, 0.35);
+  --bg-input:     rgba(255, 255, 255, 0.7);
+  --bg-hero:      linear-gradient(160deg, #0284c7 0%, #0ea5e9 40%, #38bdf8 100%);
+
+  /* ----- Text ----- */
+  --text-primary:   #0f172a;
   --text-secondary: #334155;
-  --text-muted: #64748b;
-  --accent: #0284c7;
-  --accent-hover: #0369a1;
-  --border: rgba(255, 255, 255, 0.6);
-  --success: #059669;
-  --warning: #d97706;
-  --radius: 20px;
-  --radius-sm: 12px;
-  --max-width: 800px;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --text-muted:     #64748b;
+  --text-on-primary: #ffffff;
+  --text-on-hero:   rgba(255, 255, 255, 0.92);
+
+  /* ----- Borders & Shadows ----- */
+  --border:         rgba(148, 163, 184, 0.25);
+  --border-light:   rgba(255, 255, 255, 0.6);
+  --border-focus:   rgba(2, 132, 199, 0.5);
+  --shadow-sm:      0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md:      0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg:      0 16px 48px rgba(15, 23, 42, 0.10);
+  --shadow-glow:    0 0 20px rgba(2, 132, 199, 0.15);
+
+  /* ----- Semantic Colors ----- */
+  --color-success:  #059669;
+  --color-success-bg: rgba(5, 150, 105, 0.1);
+  --color-warning:  #d97706;
+  --color-warning-bg: rgba(217, 119, 6, 0.1);
+  --color-info:     #0284c7;
+  --color-info-bg:  rgba(2, 132, 199, 0.08);
+
+  /* ----- Spacing ----- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ----- Radii ----- */
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-full: 999px;
+
+  /* ----- Typography ----- */
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  --text-xs:  0.75rem;
+  --text-sm:  0.875rem;
+  --text-base: 1rem;
+  --text-lg:  1.125rem;
+  --text-xl:  1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  /* ----- Layout ----- */
+  --max-width:    1120px;
+  --max-width-sm: 800px;
+  --header-h:     64px;
+  --footer-h:     auto;
+
+  /* ----- Transitions ----- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* ----- Glass Effect ----- */
+  --glass-blur:   16px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
 }

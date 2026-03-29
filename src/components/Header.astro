@@ -1,0 +1,164 @@
+---
+// Header.astro — Floating navigation bar with brand + navigation
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '' } = Astro.props;
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+<header class="site-header" id="site-header">
+  <nav class="header-inner container" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="DistanceFrom.co Home">
+      <svg class="logo-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="8" cy="20" r="3" stroke="currentColor" stroke-width="2"/>
+        <circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="2"/>
+        <line x1="10.5" y1="18" x2="17.5" y2="10" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+        <path d="M20 5V2M20 2L18 4M20 2L22 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo-text">DistanceFrom<span class="logo-dot">.co</span></span>
+    </a>
+
+    <div class="nav-links" id="nav-links">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class:list={['nav-link', { active: currentPath === item.href }]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6" class="line-1"/>
+        <line x1="3" y1="12" x2="21" y2="12" class="line-2"/>
+        <line x1="3" y1="18" x2="21" y2="18" class="line-3"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const nav = document.getElementById('nav-links');
+  const header = document.getElementById('site-header');
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    nav?.classList.toggle('open');
+  });
+
+  // Scroll effect: add shadow on scroll
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header?.classList.toggle('scrolled', y > 20);
+    lastScroll = y;
+  }, { passive: true });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+    transition: box-shadow var(--duration-base) var(--ease-out),
+                background var(--duration-base) var(--ease-out);
+  }
+  .site-header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-h);
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+  .logo:hover { color: var(--color-primary); }
+  .logo-icon { width: 28px; height: 28px; color: var(--color-primary); }
+  .logo-dot { color: var(--color-primary); }
+
+  /* Nav Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+  .nav-link {
+    padding: 6px 14px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+  .nav-link:hover {
+    color: var(--color-primary);
+    background: var(--color-info-bg);
+  }
+  .nav-link.active {
+    color: var(--color-primary);
+    background: var(--color-info-bg);
+    font-weight: 600;
+  }
+
+  /* Mobile Toggle */
+  .mobile-toggle {
+    display: none;
+    width: 36px; height: 36px;
+    background: none; border: none;
+    cursor: pointer; padding: 6px;
+    color: var(--text-secondary);
+    border-radius: var(--radius-xs);
+    transition: background var(--duration-fast);
+  }
+  .mobile-toggle:hover { background: var(--bg-secondary); }
+  .mobile-toggle svg { width: 100%; height: 100%; }
+
+  @media (max-width: 768px) {
+    .mobile-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: var(--space-sm) var(--space-lg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      animation: slideDown var(--duration-base) var(--ease-out);
+    }
+    .nav-links.open { display: flex; }
+    .nav-link {
+      width: 100%;
+      padding: 10px 14px;
+    }
+  }
+</style>

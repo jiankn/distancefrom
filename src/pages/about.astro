@@ -2,28 +2,195 @@
 export const prerender = true;
 import Base from '../layouts/Base.astro';
 ---
-<Base title="About — DistanceFrom.co" description="Learn about DistanceFrom.co, how we calculate distances, and our data sources.">
-  <h1>About DistanceFrom.co</h1>
-  <div class="content">
-    <p>DistanceFrom.co helps you find the distance between any two cities worldwide, along with driving time, flight time, fuel cost estimates, and recommended stops along the way.</p>
-    <h2>How We Calculate</h2>
-    <p>Straight-line distances use the <strong>Haversine formula</strong>, which accounts for Earth's curvature with less than 0.5% error.</p>
-    <p>Driving distances for popular routes use real road data from <a href="https://project-osrm.org/" rel="noopener">OSRM (Open Source Routing Machine)</a>. For less common routes, we estimate using road factor coefficients (clearly labeled as "estimated").</p>
-    <p>Flight times are estimated based on an average cruise speed of 800 km/h plus 30 minutes for takeoff and landing.</p>
-    <h2>Data Sources</h2>
-    <ul>
-      <li><a href="https://www.geonames.org/" rel="noopener">GeoNames</a> — City coordinates and metadata</li>
-      <li><a href="https://www.openstreetmap.org/" rel="noopener">OpenStreetMap</a> — Map tiles and road data</li>
-      <li><a href="https://project-osrm.org/" rel="noopener">OSRM</a> — Real driving route calculations</li>
-    </ul>
+<Base title="About DistanceFrom.co — Your Travel Decision Assistant" description="Learn about DistanceFrom.co, our mission, how we calculate distances, and the data sources behind our service.">
+  <div class="about-page">
+    <h1 class="animate-in">About DistanceFrom.co</h1>
+
+    <div class="about-intro animate-in animate-in-delay-1">
+      <p class="intro-text">DistanceFrom.co is a free travel decision tool that helps you find the distance between any two cities worldwide. We go beyond simple distance numbers — providing driving times, flight estimates, fuel costs, and recommended stops to help you plan smarter trips.</p>
+    </div>
+
+    <!-- Mission -->
+    <section class="about-section animate-in animate-in-delay-2">
+      <div class="section-icon" style="--icon-bg: var(--color-info-bg); --icon-color: var(--color-info);">
+        <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div>
+        <h2>Our Mission</h2>
+        <p>We believe travel planning should be simple, fast, and free. Whether you're planning a road trip, considering a flight, or just curious about how far apart two cities are, we provide the information you need to make informed decisions — all in one place, without cluttered ads or paywalled features.</p>
+      </div>
+    </section>
+
+    <!-- How We Calculate -->
+    <section class="about-section animate-in animate-in-delay-3">
+      <div class="section-icon" style="--icon-bg: var(--color-success-bg); --icon-color: var(--color-success);">
+        <svg class="icon-svg" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      </div>
+      <div>
+        <h2>How We Calculate</h2>
+
+        <h3>Straight-Line Distances</h3>
+        <p>We use the <strong>Haversine formula</strong>, a well-established mathematical method that accounts for Earth's curvature. This provides accuracy within 0.5% for any two points on the globe. The Haversine formula calculates the shortest distance between two points on the surface of a sphere, making it ideal for geographic distance calculations.</p>
+
+        <h3>Driving Distances & Times</h3>
+        <p>For popular routes, we use real road data from <a href="https://project-osrm.org/" rel="noopener" target="_blank">OSRM (Open Source Routing Machine)</a>, an open-source routing engine that uses OpenStreetMap road data. These routes are pre-computed and represent actual road distances and driving times.</p>
+        <p>For less common city pairs, we estimate driving distances using road factor coefficients based on the type of route (urban, highway, long-distance). These estimates are clearly labeled as "estimated" on the page to maintain transparency.</p>
+
+        <h3>Flight Time Estimates</h3>
+        <p>Flight times are estimated based on an average commercial aircraft cruise speed of 800 km/h (500 mph), with an additional 30 minutes added for takeoff, landing, and taxiing procedures. For very short distances (under 200 km), we note that direct flights may not be available.</p>
+
+        <h3>Fuel Cost Estimates</h3>
+        <p>Fuel costs are calculated using regional average fuel prices and an assumed fuel consumption of 8L/100km (approximately 29 MPG), typical of a mid-size sedan. These are rough estimates intended to give you a general idea of trip costs. See our <a href="/disclaimer">Disclaimer</a> for important limitations.</p>
+      </div>
+    </section>
+
+    <!-- Data Sources -->
+    <section class="about-section animate-in animate-in-delay-4">
+      <div class="section-icon" style="--icon-bg: rgba(139, 92, 246, 0.1); --icon-color: #8b5cf6;">
+        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <h2>Data Sources & Methodology</h2>
+        <p>We believe in transparency. All our data comes from reputable, open-source projects:</p>
+        <ul class="data-sources-list">
+          <li>
+            <strong><a href="https://www.geonames.org/" rel="noopener" target="_blank">GeoNames</a></strong> — A comprehensive geographical database containing over 11 million place names. We use this for city coordinates, population data, timezone information, and elevation data.
+          </li>
+          <li>
+            <strong><a href="https://www.openstreetmap.org/" rel="noopener" target="_blank">OpenStreetMap (OSM)</a></strong> — A collaborative mapping project that provides the road network data powering our driving route calculations. OSM is maintained by a global community of mappers.
+          </li>
+          <li>
+            <strong><a href="https://project-osrm.org/" rel="noopener" target="_blank">OSRM (Open Source Routing Machine)</a></strong> — An open-source routing engine built on OpenStreetMap data. We pre-compute driving distances and times for popular routes using OSRM's high-quality routing algorithms.
+          </li>
+        </ul>
+        <p>Where we use estimated data rather than verified data, we clearly label this on the page. We update our datasets periodically to maintain accuracy.</p>
+      </div>
+    </section>
+
+    <!-- Transparency -->
+    <section class="about-section animate-in">
+      <div class="section-icon" style="--icon-bg: rgba(245, 158, 11, 0.1); --icon-color: #f59e0b;">
+        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <div>
+        <h2>Free & Ad-Supported</h2>
+        <p>DistanceFrom.co is free to use and always will be. We sustain our service through non-intrusive advertising. We carefully limit the number and placement of ads to ensure they don't interfere with your experience.</p>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <div class="about-cta animate-in">
+      <p>Have suggestions or found an issue? We'd love to hear from you.</p>
+      <a href="/contact" class="cta-link">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Contact Us
+      </a>
+    </div>
   </div>
 </Base>
 
 <style>
-  h1 { margin-top: 1.5rem; }
-  .content { margin-top: 1.5rem; line-height: 1.8; }
-  .content h2 { margin-top: 1.5rem; font-size: 1.2rem; color: var(--text-primary); }
-  .content p { margin-top: 0.75rem; color: var(--text-secondary); }
-  .content ul { margin-top: 0.75rem; padding-left: 1.5rem; color: var(--text-secondary); }
-  .content li { margin-top: 0.25rem; }
+  .about-page {
+    max-width: var(--max-width-sm);
+    margin: 0 auto;
+    padding-top: var(--space-lg);
+  }
+  .about-page h1 { margin-bottom: var(--space-lg); }
+
+  .about-intro { margin-bottom: var(--space-xl); }
+  .intro-text {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .about-section {
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    min-width: 44px;
+    border-radius: var(--radius-md);
+    background: var(--icon-bg);
+    color: var(--icon-color);
+    margin-top: 2px;
+  }
+
+  .about-section h2 {
+    font-size: var(--text-xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .about-section h3 {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xs);
+  }
+  .about-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-top: var(--space-sm);
+  }
+  .about-section ul {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-lg);
+    color: var(--text-secondary);
+  }
+  .about-section li { margin-top: var(--space-sm); line-height: 1.6; }
+
+  .data-sources-list { list-style: none; padding-left: 0 !important; }
+  .data-sources-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-sources-list li:last-child { border-bottom: none; }
+
+  .about-cta {
+    text-align: center;
+    margin-top: var(--space-2xl);
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+  }
+  .about-cta p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+  }
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    background: var(--color-primary);
+    color: var(--text-on-primary);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: all var(--duration-fast) var(--ease-out);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  }
+  .cta-link:hover {
+    background: var(--color-primary-dark);
+    color: var(--text-on-primary);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 640px) {
+    .about-section { flex-direction: column; gap: var(--space-sm); padding: var(--space-lg); }
+    .section-icon { width: 36px; height: 36px; min-width: 36px; }
+  }
 </style>

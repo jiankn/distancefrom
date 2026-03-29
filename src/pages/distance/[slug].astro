@@ -8,7 +8,6 @@ import MidwayStops from '../../components/MidwayStops.astro';
 import QuickFacts from '../../components/QuickFacts.astro';
 import RelatedDistances from '../../components/RelatedDistances.astro';
 import DataSources from '../../components/DataSources.astro';
-import AdUnit from '../../components/AdUnit.astro';
 import DualSearchBox from '../../components/DualSearchBox.astro';
 
 import citiesData from '../../data/cities.json';
@@ -76,11 +75,69 @@ const description = distancePageDescription(
   drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
 );
 const canonical = canonicalUrl(slugA, slugB);
+
+// Enhanced JSON-LD with FAQ and BreadcrumbList
 const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canonical);
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://distancefrom.co/" },
+    { "@type": "ListItem", "position": 2, "name": `${cityA.name} Distances`, "item": `https://distancefrom.co/city/${slugA}/` },
+    { "@type": "ListItem", "position": 3, "name": `${cityA.name} to ${cityB.name}` },
+  ]
+};
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": `How far is ${cityA.name} from ${cityB.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `The straight-line distance from ${cityA.name} to ${cityB.name} is ${dist.miles} miles (${dist.km} km).${drive.drivable ? ` The driving distance is ${drive.distanceMiles} miles (${drive.distanceKm} km), taking approximately ${drive.formatted}.` : ''}`
+      }
+    },
+    ...(drive.drivable ? [{
+      "@type": "Question",
+      "name": `How long does it take to drive from ${cityA.name} to ${cityB.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `The drive from ${cityA.name} to ${cityB.name} takes approximately ${drive.formatted}, covering ${drive.distanceMiles} miles.${cost ? ` Estimated fuel cost: ${cost.formatted}.` : ''}`
+      }
+    }] : []),
+    {
+      "@type": "Question",
+      "name": `How long is the flight from ${cityA.name} to ${cityB.name}?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `A flight from ${cityA.name} to ${cityB.name} takes approximately ${flight.formatted}.${flight.noDirectFlight ? ' Note: direct flights may not be available for this route.' : ''}`
+      }
+    }
+  ]
+};
 ---
 <Base title={title} description={description} canonical={canonical} jsonLd={jsonLd}>
-  <h1>Distance from {cityA.name} to {cityB.name}</h1>
-  <DualSearchBox />
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href={`/city/${slugA}/`}>{cityA.name}</a></li>
+      <li aria-current="page">{cityA.name} to {cityB.name}</li>
+    </ol>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+
+  <h1 class="page-title animate-in">Distance from {cityA.name} to {cityB.name}</h1>
+
+  <div class="search-compact animate-in animate-in-delay-1">
+    <DualSearchBox />
+  </div>
 
   <DistanceResult
     straightLineMiles={dist.miles} straightLineKm={dist.km}
@@ -91,8 +148,6 @@ const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canon
     fuelCost={cost?.formatted ?? 'N/A'}
   />
 
-  <!-- TODO: AdUnit slot="distance-top" — uncomment after AdSense approval -->
-
   <Map lat1={cityA.lat} lng1={cityA.lng} label1={cityA.name}
        lat2={cityB.lat} lng2={cityB.lng} label2={cityB.name} />
 
@@ -101,28 +156,78 @@ const jsonLd = distanceJsonLd(cityA.name, cityB.name, dist.miles, dist.km, canon
   <QuickFacts cityA={{ name: cityA.name, lat: cityA.lat, lng: cityA.lng, timezone: cityA.timezone, elevation: cityA.elevation }}
               cityB={{ name: cityB.name, lat: cityB.lat, lng: cityB.lng, timezone: cityB.timezone, elevation: cityB.elevation }} />
 
-  <!-- TODO: AdUnit slot="distance-mid" — uncomment after AdSense approval -->
-
   <RelatedDistances
     cityAName={cityA.name} cityBName={cityB.name}
     cityASlug={slugA} cityBSlug={slugB}
     fromA={relatedA} fromB={relatedB}
   />
 
-  <p class="reverse-link">
-    🔄 Reverse: <a href={`/distance/${slugB}-to-${slugA}/`}>{cityB.name} to {cityA.name}</a>
-  </p>
+  <div class="reverse-section animate-in">
+    <a href={`/distance/${slugB}-to-${slugA}/`} class="reverse-link">
+      <svg class="icon-svg--sm" viewBox="0 0 24 24"><path d="m7 16 4 4 4-4"/><path d="M11 20V4"/></svg>
+      Reverse: {cityB.name} to {cityA.name}
+    </a>
+  </div>
 
   <DataSources driveSource={drive.source} />
-
-  <!-- TODO: Anchor Ad — uncomment after AdSense approval
-  <div class="anchor-ad" aria-hidden="true">
-    <AdUnit slot="distance-anchor" format="auto" />
-  </div>
-  -->
 </Base>
 
 <style>
-  h1 { margin-top: 1.5rem; }
-  .reverse-link { margin: 1.5rem 0; font-size: 0.95rem; }
+  .breadcrumb {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+  .breadcrumb ol {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    flex-wrap: wrap;
+  }
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: 6px;
+    color: var(--border);
+  }
+  .breadcrumb a {
+    color: var(--text-muted);
+    transition: color var(--duration-fast);
+  }
+  .breadcrumb a:hover { color: var(--color-primary); }
+  .breadcrumb [aria-current="page"] {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .page-title {
+    margin-top: var(--space-sm);
+  }
+
+  .search-compact {
+    max-width: 640px;
+  }
+
+  .reverse-section {
+    margin: var(--space-lg) 0;
+  }
+  .reverse-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+  .reverse-link:hover {
+    color: var(--color-primary);
+    background: var(--bg-card);
+    border-color: var(--color-primary-light);
+  }
 </style>

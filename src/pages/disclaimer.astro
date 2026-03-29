@@ -1,0 +1,81 @@
+---
+export const prerender = true;
+import Base from '../layouts/Base.astro';
+---
+<Base title="Disclaimer — DistanceFrom.co" description="Important disclaimer about the accuracy and usage of distance calculations on DistanceFrom.co.">
+  <div class="legal-page">
+    <h1>Disclaimer</h1>
+    <p class="last-updated">Last updated: March 29, 2026</p>
+
+    <div class="content">
+      <h2>General Disclaimer</h2>
+      <p>The information provided on DistanceFrom.co is for <strong>general informational and reference purposes only</strong>. While we make every effort to ensure accuracy, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or suitability of the information.</p>
+
+      <h2>Distance Calculations</h2>
+      <p>Our distance calculations use multiple methods and data sources:</p>
+      <ul>
+        <li><strong>Straight-line distances</strong> are calculated using the Haversine formula with less than 0.5% error. These represent the shortest path along the surface of the Earth, not actual travel distances.</li>
+        <li><strong>Driving distances (actual route)</strong> for popular city pairs use pre-computed data from <a href="https://project-osrm.org/" rel="noopener" target="_blank">OSRM (Open Source Routing Machine)</a>. These represent real road routes but may not account for current road conditions, closures, or detours.</li>
+        <li><strong>Driving distances (estimated)</strong> for less common routes are calculated by applying road factor coefficients to straight-line distances. These are approximations and may differ significantly from actual driving distances.</li>
+        <li><strong>Flight times</strong> are estimated based on an average cruise speed of 800 km/h plus 30 minutes for takeoff and landing. Actual flight times may vary based on airline, route, weather, and other factors.</li>
+      </ul>
+
+      <h2>Fuel Cost Estimates</h2>
+      <p>Fuel cost calculations are approximate estimates based on:</p>
+      <ul>
+        <li>Regional average fuel prices (updated periodically)</li>
+        <li>An average fuel consumption of 8L/100km (medium sedan)</li>
+        <li>Driving distance estimates</li>
+      </ul>
+      <p>Actual fuel costs will vary based on your vehicle type, driving habits, current fuel prices, route conditions, and many other factors. These estimates should not be relied upon for financial planning.</p>
+
+      <h2>Not Professional Advice</h2>
+      <p>Nothing on this Website constitutes professional travel, navigation, financial, or planning advice. Always:</p>
+      <ul>
+        <li>Use dedicated GPS/navigation systems for actual travel</li>
+        <li>Check current road conditions and travel advisories before departing</li>
+        <li>Verify fuel prices at your actual location</li>
+        <li>Consult airlines or travel agents for accurate flight information</li>
+      </ul>
+
+      <h2>Data Sources</h2>
+      <p>We rely on data from reputable open-source projects and databases. While these sources are generally reliable, we cannot guarantee their accuracy or timeliness. Our data sources include <a href="https://www.geonames.org/" rel="noopener" target="_blank">GeoNames</a>, <a href="https://www.openstreetmap.org/" rel="noopener" target="_blank">OpenStreetMap</a>, and <a href="https://project-osrm.org/" rel="noopener" target="_blank">OSRM</a>.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>In no event shall DistanceFrom.co be liable for any loss or damage of any kind arising from the use of this Website or reliance on any information provided. This includes, without limitation, damages for loss of profits, data, or other intangible losses.</p>
+
+      <h2>External Links</h2>
+      <p>Our Website may contain links to external websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites.</p>
+
+      <h2>Contact</h2>
+      <p>If you believe any information on our Website is inaccurate, please <a href="/contact">contact us</a> and we will investigate promptly.</p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .legal-page {
+    max-width: var(--max-width-sm);
+    margin: 0 auto;
+    padding-top: var(--space-lg);
+  }
+  .legal-page h1 { margin-bottom: var(--space-xs); }
+  .last-updated {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-xl);
+  }
+  .content { line-height: 1.8; }
+  .content h2 {
+    margin-top: var(--space-xl);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+  }
+  .content p { margin-top: var(--space-sm); color: var(--text-secondary); }
+  .content ul {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-xl);
+    color: var(--text-secondary);
+  }
+  .content li { margin-top: var(--space-xs); }
+</style>

@@ -2,24 +2,125 @@
 export const prerender = true;
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Privacy Policy — DistanceFrom.co" description="Privacy policy for DistanceFrom.co.">
-  <h1>Privacy Policy</h1>
-  <div class="content">
-    <p>Last updated: {new Date().toISOString().split('T')[0]}</p>
-    <h2>Information We Collect</h2>
-    <p>We do not collect personal information. We use Google AdSense for advertising, which may use cookies to serve ads based on your browsing history.</p>
-    <h2>Cookies</h2>
-    <p>Third-party vendors, including Google, use cookies to serve ads based on your prior visits. You can opt out of personalized advertising at <a href="https://www.google.com/settings/ads" rel="noopener">Google Ads Settings</a>.</p>
-    <h2>Analytics</h2>
-    <p>We may use privacy-friendly analytics to understand how visitors use our site. No personally identifiable information is collected.</p>
-    <h2>Contact</h2>
-    <p>For questions about this policy, please contact us through our website.</p>
+<Base title="Privacy Policy — DistanceFrom.co" description="Privacy policy for DistanceFrom.co. Learn how we handle your data, cookies, and advertising.">
+  <div class="legal-page">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: March 29, 2026</p>
+
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>At DistanceFrom.co, we take your privacy seriously. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data. By using our Website, you agree to the collection and use of information as described in this policy.</p>
+
+      <h2>Information We Collect</h2>
+
+      <h3>Information You Provide</h3>
+      <p>If you contact us through our <a href="/contact">contact form</a>, we may collect your name, email address, and message content solely for the purpose of responding to your inquiry.</p>
+
+      <h3>Automatically Collected Information</h3>
+      <p>When you visit our Website, we may automatically collect certain information, including:</p>
+      <ul>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Pages visited and time spent</li>
+        <li>Referring website URL</li>
+        <li>Approximate geographic location (city/country level, based on IP address)</li>
+      </ul>
+      <p>We do not collect personally identifiable information (PII) through standard browsing. No account creation or login is required to use our service.</p>
+
+      <h2>Cookies and Tracking Technologies</h2>
+
+      <h3>Essential Cookies</h3>
+      <p>We use a minimal number of cookies to remember your preferences, such as your cookie consent choice.</p>
+
+      <h3>Advertising Cookies</h3>
+      <p>Third-party vendors, including Google and its advertising partners, use cookies to serve ads based on your prior visits to this Website and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the Internet.</p>
+
+      <h3>Managing Cookies</h3>
+      <p>You can manage your cookie preferences in the following ways:</p>
+      <ul>
+        <li>Use our cookie consent banner to accept or decline non-essential cookies</li>
+        <li>Opt out of personalized advertising at <a href="https://www.google.com/settings/ads" rel="noopener" target="_blank">Google Ads Settings</a></li>
+        <li>Visit <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">www.aboutads.info/choices</a> to opt out of third-party advertising cookies</li>
+        <li>Configure your browser settings to block or delete cookies</li>
+      </ul>
+
+      <h2>Google AdSense</h2>
+      <p>We use Google AdSense to display advertisements on our Website. Google AdSense may use cookies and web beacons to collect information about your browsing behavior for the purpose of serving relevant advertisements. This information may include:</p>
+      <ul>
+        <li>Your browser and device information</li>
+        <li>Your IP address</li>
+        <li>Pages you've visited on this and other websites</li>
+      </ul>
+      <p>For more information about how Google uses data, please visit <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">How Google Uses Cookies</a>.</p>
+
+      <h2>Analytics</h2>
+      <p>We may use privacy-friendly analytics services to understand how visitors use our Website. These services collect anonymized data and do not track individual users across websites.</p>
+
+      <h2>Data Sharing</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share anonymized, aggregated usage data with advertising partners to improve ad relevance.</p>
+
+      <h2>GDPR (European Users)</h2>
+      <p>If you are located in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+      <ul>
+        <li><strong>Right of Access:</strong> You can request a copy of your personal data</li>
+        <li><strong>Right to Rectification:</strong> You can request correction of inaccurate data</li>
+        <li><strong>Right to Erasure:</strong> You can request deletion of your personal data</li>
+        <li><strong>Right to Restrict Processing:</strong> You can request that we limit how we use your data</li>
+        <li><strong>Right to Data Portability:</strong> You can request your data in a machine-readable format</li>
+        <li><strong>Right to Object:</strong> You can object to the processing of your data</li>
+      </ul>
+      <p>To exercise any of these rights, please <a href="/contact">contact us</a>.</p>
+
+      <h2>CCPA (California Users)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA) gives you additional rights regarding your personal information. You have the right to:</p>
+      <ul>
+        <li>Know what personal information is being collected</li>
+        <li>Know whether your personal information is sold or disclosed</li>
+        <li>Say no to the sale of personal information</li>
+        <li>Request deletion of your personal information</li>
+      </ul>
+      <p>We do not sell personal information. To make a request, please <a href="/contact">contact us</a>.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Our Website is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please <a href="/contact">contact us</a> immediately.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this policy periodically.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or our data practices, please <a href="/contact">contact us</a>.</p>
+    </div>
   </div>
 </Base>
 
 <style>
-  h1 { margin-top: 1.5rem; }
-  .content { margin-top: 1.5rem; line-height: 1.8; }
-  .content h2 { margin-top: 1.5rem; font-size: 1.2rem; color: var(--text-primary); }
-  .content p { margin-top: 0.75rem; color: var(--text-secondary); }
+  .legal-page {
+    max-width: var(--max-width-sm);
+    margin: 0 auto;
+    padding-top: var(--space-lg);
+  }
+  .legal-page h1 { margin-bottom: var(--space-xs); }
+  .last-updated {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-bottom: var(--space-xl);
+  }
+  .content { line-height: 1.8; }
+  .content h2 {
+    margin-top: var(--space-xl);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+  }
+  .content h3 {
+    margin-top: var(--space-md);
+    font-size: var(--text-base);
+    color: var(--text-primary);
+  }
+  .content p { margin-top: var(--space-sm); color: var(--text-secondary); }
+  .content ul {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-xl);
+    color: var(--text-secondary);
+  }
+  .content li { margin-top: var(--space-xs); }
 </style>

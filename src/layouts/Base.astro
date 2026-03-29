@@ -1,5 +1,8 @@
 ---
 import '../assets/styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -10,6 +13,7 @@ interface Props {
 
 const { title, description, canonical, jsonLd } = Astro.props;
 const canonicalUrl = canonical ?? Astro.url.href;
+const currentPath = '/' + Astro.url.pathname.split('/').filter(Boolean)[0] || '/';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -20,49 +24,45 @@ const canonicalUrl = canonical ?? Astro.url.href;
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta name="robots" content="index, follow" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content="DistanceFrom.co" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
   {jsonLd && (
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   )}
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo">DistanceFrom.co</a>
-    </div>
-  </header>
-  <main class="container">
+  <Header currentPath={currentPath} />
+  <main class="main-content container">
     <slot />
   </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {new Date().getFullYear()} DistanceFrom.co &middot; <a href="/about">About</a> &middot; <a href="/privacy">Privacy</a></p>
-    </div>
-  </footer>
+  <Footer />
+  <CookieConsent />
 </body>
 </html>
 
 <style>
-  .site-header {
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-  .logo:hover { color: var(--accent); }
-  .site-footer {
-    margin-top: 3rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.875rem;
+  .main-content {
+    min-height: calc(100vh - var(--header-h) - 200px);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-2xl);
   }
 </style>

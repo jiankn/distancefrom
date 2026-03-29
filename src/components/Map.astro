@@ -1,4 +1,4 @@
-﻿---
+---
 interface Props {
   lat1: number; lng1: number; label1: string;
   lat2: number; lng2: number; label2: string;
@@ -9,8 +9,14 @@ const midLng = (lng1 + lng2) / 2;
 const maptilerKey = import.meta.env.PUBLIC_MAPTILER_KEY || '';
 const stadiaKey = import.meta.env.PUBLIC_STADIA_KEY || '';
 ---
-<div class="map-wrapper">
-  <div id="map" role="img" aria-label={`Map showing ${label1} and ${label2}`}></div>
+<div class="map-wrapper animate-in animate-in-delay-1">
+  <div id="map" role="img" aria-label={`Map showing ${label1} and ${label2}`}>
+    <!-- Skeleton loading placeholder -->
+    <div class="map-skeleton" id="map-skeleton">
+      <svg class="map-skeleton-icon icon-svg--lg" viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16"/><path d="M16 6v16"/></svg>
+      <span>Loading map...</span>
+    </div>
+  </div>
 </div>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script is:inline define:vars={{ lat1, lng1, label1, lat2, lng2, label2, midLat, midLng, maptilerKey, stadiaKey }}>
@@ -44,6 +50,9 @@ const stadiaKey = import.meta.env.PUBLIC_STADIA_KEY || '';
     },
   ];
   function initMap() {
+    var skeleton = document.getElementById('map-skeleton');
+    if (skeleton) skeleton.style.display = 'none';
+
     var map = L.map('map').setView([midLat, midLng], 5);
     var idx = 0, failCount = 0, layer = null;
     function load(i) {
@@ -58,15 +67,72 @@ const stadiaKey = import.meta.env.PUBLIC_STADIA_KEY || '';
       layer.addTo(map);
     }
     load(0);
-    L.marker([lat1, lng1]).addTo(map).bindPopup(label1);
-    L.marker([lat2, lng2]).addTo(map).bindPopup(label2);
-    L.polyline([[lat1, lng1], [lat2, lng2]], { color: '#60a5fa', weight: 2, dashArray: '8,8' }).addTo(map);
-    map.fitBounds([[lat1, lng1], [lat2, lng2]], { padding: [40, 40] });
+
+    // Custom styled markers
+    var iconBase = {
+      iconSize: [12, 12],
+      className: 'custom-marker',
+    };
+    var markerIcon = L.divIcon(Object.assign({}, iconBase, {
+      html: '<div style="width:12px;height:12px;background:#0ea5e9;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 8px rgba(14,165,233,0.5);"></div>',
+    }));
+
+    L.marker([lat1, lng1], { icon: markerIcon }).addTo(map).bindPopup(label1);
+    L.marker([lat2, lng2], { icon: markerIcon }).addTo(map).bindPopup(label2);
+    L.polyline([[lat1, lng1], [lat2, lng2]], { color: '#0ea5e9', weight: 2.5, dashArray: '8,6', opacity: 0.8 }).addTo(map);
+    map.fitBounds([[lat1, lng1], [lat2, lng2]], { padding: [50, 50] });
   }
   if (typeof L !== 'undefined') { initMap(); }
   else { var s = document.createElement('script'); s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = initMap; document.head.appendChild(s); }
 </script>
+
 <style>
-  .map-wrapper { margin: 1.5rem 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 32px rgba(31,38,135,0.07); }
-  #map { height: 350px; width: 100%; background: var(--bg-secondary); }
+  .map-wrapper {
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+  }
+
+  #map {
+    height: 380px;
+    width: 100%;
+    background: #1a2332;
+    position: relative;
+  }
+
+  .map-skeleton {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    background: #1a2332;
+    z-index: 1;
+  }
+  .map-skeleton-icon {
+    color: rgba(14, 165, 233, 0.3);
+    width: 40px;
+    height: 40px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* Override leaflet marker styles */
+  :global(.custom-marker) {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  @media (max-width: 640px) {
+    #map { height: 280px; }
+  }
 </style>

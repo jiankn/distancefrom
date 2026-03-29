@@ -25,30 +25,220 @@ const distances = Object.entries(cities)
 
 const title = `Distances from ${city.name} to Major Cities`;
 const description = `Find the distance from ${city.name} to any city worldwide. Driving distance, flight time, and more.`;
----
-<Base title={title} description={description}>
-  <h1>{title}</h1>
-  <DualSearchBox />
 
-  <section class="city-distances">
-    {distances.map(d => (
-      <a href={d.href} class="city-row">
-        <span class="city-name">{d.name}, {d.country}</span>
-        <span class="city-dist">{d.miles} mi ({d.km} km)</span>
-      </a>
-    ))}
-  </section>
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://distancefrom.co/" },
+    { "@type": "ListItem", "position": 2, "name": `${city.name} Distances` },
+  ]
+};
+
+// Group distances by range
+const nearby = distances.filter(d => d.miles <= 200);
+const medium = distances.filter(d => d.miles > 200 && d.miles <= 1000);
+const faraway = distances.filter(d => d.miles > 1000);
+---
+<Base title={title} description={description} jsonLd={breadcrumbLd}>
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">{city.name}</li>
+    </ol>
+  </nav>
+
+  <div class="city-hero animate-in">
+    <h1>{title}</h1>
+    <div class="city-meta">
+      <span class="city-meta-item">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+        {city.countryName}
+      </span>
+      <span class="city-meta-item">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        {city.timezone}
+      </span>
+      <span class="city-meta-item">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><circle cx="12" cy="12" r="10"/></svg>
+        {distances.length} destinations
+      </span>
+    </div>
+  </div>
+
+  <div class="search-compact animate-in animate-in-delay-1">
+    <DualSearchBox />
+  </div>
+
+  <!-- Grouped distance lists -->
+  {nearby.length > 0 && (
+    <section class="distance-group animate-in animate-in-delay-2">
+      <h2 class="group-title">
+        <span class="group-badge nearby">Nearby</span>
+        Under 200 miles
+      </h2>
+      <div class="card--flat distance-list">
+        {nearby.map(d => (
+          <a href={d.href} class="city-row">
+            <div class="city-row-info">
+              <span class="city-row-name">{d.name}</span>
+              <span class="city-row-country">{d.country}</span>
+            </div>
+            <span class="city-row-dist">{d.miles} mi <small>({d.km} km)</small></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {medium.length > 0 && (
+    <section class="distance-group animate-in animate-in-delay-3">
+      <h2 class="group-title">
+        <span class="group-badge medium">Medium</span>
+        200 – 1,000 miles
+      </h2>
+      <div class="card--flat distance-list">
+        {medium.map(d => (
+          <a href={d.href} class="city-row">
+            <div class="city-row-info">
+              <span class="city-row-name">{d.name}</span>
+              <span class="city-row-country">{d.country}</span>
+            </div>
+            <span class="city-row-dist">{d.miles} mi <small>({d.km} km)</small></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {faraway.length > 0 && (
+    <section class="distance-group animate-in animate-in-delay-4">
+      <h2 class="group-title">
+        <span class="group-badge faraway">Far Away</span>
+        Over 1,000 miles
+      </h2>
+      <div class="card--flat distance-list">
+        {faraway.map(d => (
+          <a href={d.href} class="city-row">
+            <div class="city-row-info">
+              <span class="city-row-name">{d.name}</span>
+              <span class="city-row-country">{d.country}</span>
+            </div>
+            <span class="city-row-dist">{d.miles} mi <small>({d.km} km)</small></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 </Base>
 
 <style>
-  h1 { margin-top: 1.5rem; }
-  .city-distances { margin-top: 1.5rem; }
-  .city-row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.6rem 1rem; border-bottom: 1px solid var(--border);
-    color: var(--text-primary); transition: background 0.15s;
+  .breadcrumb {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
-  .city-row:hover { background: var(--bg-card); }
-  .city-name { font-size: 0.95rem; }
-  .city-dist { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; }
+  .breadcrumb ol {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: 6px;
+    color: var(--border);
+  }
+  .breadcrumb a {
+    color: var(--text-muted);
+    transition: color var(--duration-fast);
+  }
+  .breadcrumb a:hover { color: var(--color-primary); }
+  .breadcrumb [aria-current="page"] {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .city-hero { margin-top: var(--space-sm); }
+  .city-hero h1 { margin-bottom: var(--space-sm); }
+
+  .city-meta {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+  }
+  .city-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  .city-meta-item .icon-svg--sm { color: var(--color-primary); }
+
+  .search-compact {
+    max-width: 640px;
+  }
+
+  .distance-group {
+    margin-top: var(--space-xl);
+  }
+
+  .group-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+  }
+  .group-badge {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .group-badge.nearby { background: var(--color-success-bg); color: var(--color-success); }
+  .group-badge.medium { background: var(--color-info-bg); color: var(--color-info); }
+  .group-badge.faraway { background: var(--color-warning-bg); color: var(--color-warning); }
+
+  .distance-list {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .city-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--space-lg);
+    color: var(--text-primary);
+    transition: background var(--duration-fast);
+    cursor: pointer;
+  }
+  .city-row:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+  }
+  .city-row + .city-row { border-top: 1px solid var(--border); }
+
+  .city-row-info { display: flex; align-items: center; gap: var(--space-sm); }
+  .city-row-name { font-size: var(--text-sm); font-weight: 500; }
+  .city-row-country { font-size: var(--text-xs); color: var(--text-muted); }
+
+  .city-row-dist {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .city-row-dist small {
+    font-weight: 400;
+    font-size: var(--text-xs);
+  }
 </style>

@@ -2,26 +2,73 @@
 interface Props { driveSource: 'osrm' | 'estimated'; }
 const { driveSource } = Astro.props;
 ---
-<section class="data-sources">
-  <p>
-    📋 Data sources:
-    <a href="https://www.geonames.org/" rel="noopener noreferrer" target="_blank">GeoNames</a>,
-    <a href="https://www.openstreetmap.org/" rel="noopener noreferrer" target="_blank">OpenStreetMap</a>
-    {driveSource === 'osrm' && (
-      <>, <a href="https://project-osrm.org/" rel="noopener noreferrer" target="_blank">OSRM</a></>
-    )}.
-    {driveSource === 'estimated' && (
-      <> Driving distance is estimated using road factor coefficients.</>
-    )}
-  </p>
+<section class="data-sources animate-in animate-in-delay-4">
+  <div class="sources-inner">
+    <div class="sources-icon">
+      <svg class="icon-svg--sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="sources-content">
+      <span class="sources-label">Verified Data Sources</span>
+      <span class="sources-links">
+        <a href="https://www.geonames.org/" rel="noopener noreferrer" target="_blank">GeoNames</a>
+        <span class="sep">&middot;</span>
+        <a href="https://www.openstreetmap.org/" rel="noopener noreferrer" target="_blank">OpenStreetMap</a>
+        {driveSource === 'osrm' && (
+          <>
+            <span class="sep">&middot;</span>
+            <a href="https://project-osrm.org/" rel="noopener noreferrer" target="_blank">OSRM</a>
+          </>
+        )}
+        {driveSource === 'estimated' && (
+          <span class="estimated-note"> &middot; Driving distance estimated using road factor coefficients</span>
+        )}
+      </span>
+    </div>
+  </div>
 </section>
 
 <style>
   .data-sources {
-    margin: 1.5rem 0; padding: 0.75rem 1rem;
-    background: var(--bg-secondary); border-radius: var(--radius-sm);
-    font-size: 0.8rem; color: var(--text-muted);
-    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-    border: 1px solid var(--border);
+    margin: var(--space-lg) 0;
+    padding: 12px var(--space-lg);
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
+
+  .sources-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .sources-icon {
+    color: var(--color-success);
+    flex-shrink: 0;
+  }
+
+  .sources-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .sources-label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-success);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .sources-links {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  .sources-links a { color: var(--text-muted); text-decoration: underline; }
+  .sources-links a:hover { color: var(--color-primary); }
+  .sep { margin: 0 2px; }
+  .estimated-note { font-style: italic; }
 </style>

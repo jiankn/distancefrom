@@ -14,43 +14,95 @@ interface Props {
 }
 const { cityAName, cityBName, fromA, fromB, cityASlug, cityBSlug } = Astro.props;
 ---
-<section class="card related">
-  <div class="related-group">
-    <h2>🔗 Related Distances from <a href={`/city/${cityASlug}/`}>{cityAName}</a></h2>
-    <ul>
-      {fromA.map(c => (
-        <li>
-          <a href={`/distance/${cityASlug < c.slug ? cityASlug + '-to-' + c.slug : c.slug + '-to-' + cityASlug}/`}>
-            → {c.name}
-          </a>
-          <span class="dist">{c.distanceMiles} mi</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-  <div class="related-group">
-    <h2>🔗 Related Distances from <a href={`/city/${cityBSlug}/`}>{cityBName}</a></h2>
-    <ul>
-      {fromB.map(c => (
-        <li>
-          <a href={`/distance/${cityBSlug < c.slug ? cityBSlug + '-to-' + c.slug : c.slug + '-to-' + cityBSlug}/`}>
-            → {c.name}
-          </a>
-          <span class="dist">{c.distanceMiles} mi</span>
-        </li>
-      ))}
-    </ul>
+<section class="related-section animate-in animate-in-delay-4">
+  <div class="related-grid">
+    <!-- From A -->
+    <div class="card--flat related-group">
+      <div class="related-header">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24" style="color: var(--color-primary);"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <h3>From <a href={`/city/${cityASlug}/`}>{cityAName}</a></h3>
+      </div>
+      <ul class="related-list">
+        {fromA.map(c => (
+          <li>
+            <a href={`/distance/${cityASlug < c.slug ? cityASlug + '-to-' + c.slug : c.slug + '-to-' + cityASlug}/`} class="related-link">
+              <span class="related-city">{c.name}</span>
+              <span class="related-dist">{c.distanceMiles} mi</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- From B -->
+    <div class="card--flat related-group">
+      <div class="related-header">
+        <svg class="icon-svg--sm" viewBox="0 0 24 24" style="color: var(--color-primary);"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <h3>From <a href={`/city/${cityBSlug}/`}>{cityBName}</a></h3>
+      </div>
+      <ul class="related-list">
+        {fromB.map(c => (
+          <li>
+            <a href={`/distance/${cityBSlug < c.slug ? cityBSlug + '-to-' + c.slug : c.slug + '-to-' + cityBSlug}/`} class="related-link">
+              <span class="related-city">{c.name}</span>
+              <span class="related-dist">{c.distanceMiles} mi</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
 </section>
 
 <style>
-  .related { margin: 1.5rem 0; }
-  .related-group + .related-group { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-  .related h2 { font-size: 1rem; margin-bottom: 0.5rem; }
-  .related ul { list-style: none; }
-  .related li {
-    display: flex; justify-content: space-between;
-    padding: 0.35rem 0; font-size: 0.9rem;
+  .related-section { margin: var(--space-lg) 0; }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
   }
-  .dist { color: var(--text-muted); }
+
+  .related-group { padding: 0; overflow: hidden; }
+
+  .related-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
+  }
+  .related-header h3 {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+  }
+  .related-header a { color: var(--color-primary); font-weight: 600; }
+
+  .related-list { list-style: none; }
+
+  .related-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--space-lg);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    transition: background var(--duration-fast);
+    cursor: pointer;
+  }
+  .related-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--color-primary);
+  }
+  .related-list li + li { border-top: 1px solid var(--border); }
+
+  .related-dist {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
 </style>
