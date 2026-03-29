@@ -4,8 +4,10 @@ import { canonicalPairKey } from './slug';
 const SITE = 'https://distancefrom.co';
 const YEAR = new Date().getFullYear();
 
-export function distancePageTitle(cityA: string, cityB: string, miles: number, driveTime: string): string {
-  return `${cityA} to ${cityB}: Distance, Drive Time, Best Route & Stops (${YEAR})`;
+export function distancePageTitle(cityA: string, cityB: string, miles: number, driveTime: string, typeA?: string, typeB?: string): string {
+  const hasNP = typeA === 'national-park' || typeB === 'national-park';
+  const suffix = hasNP ? 'How to Get There' : 'Best Route & Stops';
+  return `${cityA} to ${cityB}: Distance, Drive Time, ${suffix} (${YEAR})`;
 }
 
 export function distancePageDescription(

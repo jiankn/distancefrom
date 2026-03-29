@@ -1,0 +1,651 @@
+slug,name,country,countryName,state,region,lat,lng,timezone,population,elevation,type,description,iataCode,tags
+new-york,New York,US,United States,New York,,40.7128,-74.0060,America/New_York,8336817,10,city,The most populous city in the US and a global financial hub,JFK,metro|historic
+los-angeles,Los Angeles,US,United States,California,,34.0522,-118.2437,America/Los_Angeles,3979576,71,city,The entertainment capital of the world on Southern California's coast,LAX,metro|beach|entertainment
+chicago,Chicago,US,United States,Illinois,,41.8781,-87.6298,America/Chicago,2693976,181,city,The Windy City known for architecture and deep-dish pizza,ORD,metro|historic
+houston,Houston,US,United States,Texas,,29.7604,-95.3698,America/Chicago,2320268,15,city,The largest city in Texas and home to NASA's Johnson Space Center,IAH,metro
+phoenix,Phoenix,US,United States,Arizona,,33.4484,-112.0740,America/Phoenix,1680992,331,city,The Valley of the Sun in the heart of the Sonoran Desert,PHX,metro|desert
+philadelphia,Philadelphia,US,United States,Pennsylvania,,39.9526,-75.1652,America/New_York,1603797,12,city,The birthplace of American independence,PHL,metro|historic
+san-antonio,San Antonio,US,United States,Texas,,29.4241,-98.4936,America/Chicago,1547253,198,city,Home of the Alamo and the famous River Walk,SAT,historic
+san-diego,San Diego,US,United States,California,,32.7157,-117.1611,America/Los_Angeles,1423851,20,city,A coastal city known for its beaches and world-famous zoo,SAN,metro|beach
+dallas,Dallas,US,United States,Texas,,32.7767,-96.7970,America/Chicago,1343573,131,city,A major cultural and economic hub in North Texas,DFW,metro
+austin,Austin,US,United States,Texas,,30.2672,-97.7431,America/Chicago,978908,149,city,The Live Music Capital of the World and Texas state capital,AUS,metro|entertainment
+san-francisco,San Francisco,US,United States,California,,37.7749,-122.4194,America/Los_Angeles,873965,16,city,The City by the Bay famous for the Golden Gate Bridge,SFO,metro|historic
+seattle,Seattle,US,United States,Washington,,47.6062,-122.3321,America/Los_Angeles,737015,56,city,The Emerald City surrounded by mountains and water,SEA,metro
+denver,Denver,US,United States,Colorado,,39.7392,-104.9903,America/Denver,715522,1609,city,The Mile High City at the base of the Rocky Mountains,DEN,metro|mountain
+washington-dc,Washington DC,US,United States,District of Columbia,,38.9072,-77.0369,America/New_York,689545,7,city,The capital of the United States,DCA,metro|historic
+boston,Boston,US,United States,Massachusetts,,42.3601,-71.0589,America/New_York,692600,43,city,A historic city known for its universities and seafood,BOS,metro|historic
+las-vegas,Las Vegas,US,United States,Nevada,,36.1699,-115.1398,America/Los_Angeles,641903,610,city,The Entertainment Capital of the World in the Mojave Desert,LAS,metro|entertainment|desert
+miami,Miami,US,United States,Florida,,25.7617,-80.1918,America/New_York,467963,2,city,A vibrant coastal city known for beaches and nightlife,MIA,metro|beach
+atlanta,Atlanta,US,United States,Georgia,,33.7490,-84.3880,America/New_York,498715,320,city,The capital of Georgia and a major Southeast hub,ATL,metro
+detroit,Detroit,US,United States,Michigan,,42.3314,-83.0458,America/Detroit,639111,183,city,The Motor City and birthplace of Motown,DTW,metro|historic
+portland,Portland,US,United States,Oregon,,45.5152,-122.6784,America/Los_Angeles,652503,15,city,A quirky Pacific Northwest city known for food and nature,PDX,metro
+orlando,Orlando,US,United States,Florida,,28.5383,-81.3792,America/New_York,307573,34,city,Home to Walt Disney World and Universal Studios,MCO,metro|entertainment
+nashville,Nashville,US,United States,Tennessee,,36.1627,-86.7816,America/Chicago,689447,182,city,Music City USA and the home of country music,BNA,metro|entertainment
+new-orleans,New Orleans,US,United States,Louisiana,,29.9511,-90.0715,America/Chicago,383997,1,city,The Big Easy known for jazz and Cajun cuisine,MSY,metro|historic|entertainment
+minneapolis,Minneapolis,US,United States,Minnesota,,44.9778,-93.2650,America/Chicago,429954,264,city,The City of Lakes in the Upper Midwest,MSP,metro
+hartford,Hartford,US,United States,Connecticut,,41.7658,-72.6734,America/New_York,121054,18,city,The capital of Connecticut and insurance capital of the world,,historic
+providence,Providence,US,United States,Rhode Island,,41.8240,-71.4128,America/New_York,190934,23,city,The capital of Rhode Island with a vibrant arts scene,PVD,historic
+new-haven,New Haven,US,United States,Connecticut,,41.3083,-72.9279,America/New_York,134023,5,city,Home of Yale University on the Connecticut coast,,historic
+newark,Newark,US,United States,New Jersey,,40.7357,-74.1724,America/New_York,311549,10,city,New Jersey's largest city near New York,EWR,metro
+jersey-city,Jersey City,US,United States,New Jersey,,40.7178,-74.0431,America/New_York,292449,7,city,A waterfront city across the Hudson from Manhattan,,metro
+indianapolis,Indianapolis,US,United States,Indiana,,39.7684,-86.1581,America/New_York,887642,218,city,The capital of Indiana and home of the Indy 500,IND,metro
+columbus,Columbus,US,United States,Ohio,,39.9612,-82.9988,America/New_York,905748,275,city,Ohio's capital and largest city,CMH,metro
+charlotte,Charlotte,US,United States,North Carolina,,35.2271,-80.8431,America/New_York,874579,229,city,The Queen City and a major US banking center,CLT,metro
+jacksonville,Jacksonville,US,United States,Florida,,30.3322,-81.6557,America/New_York,949611,12,city,The largest city by area in the contiguous US,JAX,metro|beach
+fort-worth,Fort Worth,US,United States,Texas,,32.7555,-97.3308,America/Chicago,958692,203,city,A city blending Western heritage with modern culture,DFW,metro|historic
+memphis,Memphis,US,United States,Tennessee,,35.1495,-90.0490,America/Chicago,633104,102,city,Home of blues music and Graceland,MEM,metro|entertainment|historic
+baltimore,Baltimore,US,United States,Maryland,,39.2904,-76.6122,America/New_York,585708,10,city,A historic port city known for its Inner Harbor,BWI,metro|historic
+milwaukee,Milwaukee,US,United States,Wisconsin,,43.0389,-87.9065,America/Chicago,577222,188,city,Brew City on the shores of Lake Michigan,MKE,metro
+albuquerque,Albuquerque,US,United States,New Mexico,,35.0844,-106.6504,America/Denver,564559,1520,city,The largest city in New Mexico along Route 66,ABQ,desert|historic
+tucson,Tucson,US,United States,Arizona,,32.2226,-110.9747,America/Phoenix,542629,728,city,A desert city surrounded by mountain ranges,TUS,desert|hiking
+fresno,Fresno,US,United States,California,,36.7378,-119.7871,America/Los_Angeles,542107,94,city,The gateway to Yosemite and Sequoia national parks,FAT,metro
+sacramento,Sacramento,US,United States,California,,38.5816,-121.4944,America/Los_Angeles,524943,9,city,California's capital city in the Central Valley,SMF,metro
+kansas-city,Kansas City,US,United States,Missouri,,39.0997,-94.5786,America/Chicago,508090,277,city,A city straddling the Missouri-Kansas border known for BBQ,MCI,metro
+mesa,Mesa,US,United States,Arizona,,33.4152,-111.8315,America/Phoenix,504258,378,city,A large suburb east of Phoenix in the Sonoran Desert,,desert
+omaha,Omaha,US,United States,Nebraska,,41.2565,-95.9345,America/Chicago,486051,332,city,Nebraska's largest city on the Missouri River,OMA,metro
+colorado-springs,Colorado Springs,US,United States,Colorado,,38.8339,-104.8214,America/Denver,478961,1839,city,A city at the base of Pikes Peak,COS,mountain|hiking
+raleigh,Raleigh,US,United States,North Carolina,,35.7796,-78.6382,America/New_York,474069,96,city,Part of the Research Triangle in North Carolina,RDU,metro
+virginia-beach,Virginia Beach,US,United States,Virginia,,36.8529,-75.9780,America/New_York,459470,4,city,A resort city with miles of Atlantic coastline,,beach
+long-beach,Long Beach,US,United States,California,,33.7701,-118.1937,America/Los_Angeles,466742,9,city,A waterfront city south of Los Angeles,LGB,beach|metro
+oakland,Oakland,US,United States,California,,37.8044,-122.2712,America/Los_Angeles,433031,13,city,A diverse city across the bay from San Francisco,OAK,metro
+tampa,Tampa,US,United States,Florida,,27.9506,-82.4572,America/New_York,384959,15,city,A Gulf Coast city known for its waterfront,TPA,metro|beach
+st-louis,St. Louis,US,United States,Missouri,,38.6270,-90.1994,America/Chicago,301578,142,city,The Gateway to the West with its iconic Arch,STL,metro|historic
+pittsburgh,Pittsburgh,US,United States,Pennsylvania,,40.4406,-79.9959,America/New_York,302971,367,city,The Steel City at the confluence of three rivers,PIT,metro|historic
+cincinnati,Cincinnati,US,United States,Ohio,,39.1031,-84.5120,America/New_York,309317,267,city,The Queen City on the Ohio River,CVG,metro|historic
+cleveland,Cleveland,US,United States,Ohio,,41.4993,-81.6944,America/New_York,372624,199,city,A city on Lake Erie known for the Rock Hall of Fame,CLE,metro
+tulsa,Tulsa,US,United States,Oklahoma,,36.1540,-95.9928,America/Chicago,413066,226,city,Oklahoma's second-largest city on the Arkansas River,TUL,metro
+wichita,Wichita,US,United States,Kansas,,37.6872,-97.3301,America/Chicago,397532,402,city,The Air Capital of the World,ICT,metro
+arlington,Arlington,US,United States,Texas,,32.7357,-97.1081,America/Chicago,394266,184,city,Home to AT&T Stadium between Dallas and Fort Worth,,metro|entertainment
+bakersfield,Bakersfield,US,United States,California,,35.3733,-119.0187,America/Los_Angeles,403455,124,city,A city in California's Central Valley,,metro
+anaheim,Anaheim,US,United States,California,,33.8366,-117.9143,America/Los_Angeles,350365,48,city,Home of Disneyland Resort in Orange County,,entertainment
+riverside,Riverside,US,United States,California,,33.9533,-117.3962,America/Los_Angeles,314998,256,city,The birthplace of California's citrus industry,,metro
+corpus-christi,Corpus Christi,US,United States,Texas,,27.8006,-97.3964,America/Chicago,317863,7,city,A coastal city on the Gulf of Mexico,,beach
+lexington,Lexington,US,United States,Kentucky,,38.0406,-84.5037,America/New_York,322570,298,city,The Horse Capital of the World in the Bluegrass Region,,historic
+stockton,Stockton,US,United States,California,,37.9577,-121.2908,America/Los_Angeles,320804,8,city,A Central Valley city in California's agricultural heartland,,metro
+st-paul,St. Paul,US,United States,Minnesota,,44.9537,-93.0900,America/Chicago,311527,259,city,Minnesota's capital city and Minneapolis' twin,,metro|historic
+buffalo,Buffalo,US,United States,New York,,42.8864,-78.8784,America/New_York,278349,183,city,A city on Lake Erie near Niagara Falls,BUF,metro
+greensboro,Greensboro,US,United States,North Carolina,,36.0726,-79.7920,America/New_York,299035,270,city,A city in North Carolina's Piedmont Triad,,metro
+lincoln,Lincoln,US,United States,Nebraska,,40.8136,-96.7026,America/Chicago,291082,362,city,Nebraska's capital and home of the University of Nebraska,,metro
+norfolk,Norfolk,US,United States,Virginia,,36.8508,-76.2859,America/New_York,238005,5,city,Home to the world's largest naval base,ORF,metro|historic
+madison,Madison,US,United States,Wisconsin,,43.0731,-89.4012,America/Chicago,269840,266,city,Wisconsin's capital city on an isthmus between two lakes,MSN,metro
+boise,Boise,US,United States,Idaho,,43.6150,-116.2023,America/Boise,235684,824,city,Idaho's capital at the base of the Rocky Mountain foothills,BOI,metro|mountain
+richmond,Richmond,US,United States,Virginia,,37.5407,-77.4360,America/New_York,226610,63,city,Virginia's capital with a rich Civil War history,RIC,metro|historic
+spokane,Spokane,US,United States,Washington,,47.6588,-117.4260,America/Los_Angeles,228989,576,city,The largest city in the Inland Northwest,GEG,metro
+des-moines,Des Moines,US,United States,Iowa,,41.5868,-93.6250,America/Chicago,214133,291,city,Iowa's capital and insurance industry hub,DSM,metro
+montgomery,Montgomery,US,United States,Alabama,,32.3792,-86.3077,America/Chicago,200603,73,city,Alabama's capital and a key city in civil rights history,,historic
+baton-rouge,Baton Rouge,US,United States,Louisiana,,30.4515,-91.1871,America/Chicago,227470,17,city,Louisiana's capital on the Mississippi River,BTR,metro
+tacoma,Tacoma,US,United States,Washington,,47.2529,-122.4443,America/Los_Angeles,219346,74,city,A port city south of Seattle with views of Mount Rainier,,metro
+salt-lake-city,Salt Lake City,US,United States,Utah,,40.7608,-111.8910,America/Denver,200133,1288,city,Utah's capital near world-class ski resorts,SLC,metro|mountain|skiing
+el-paso,El Paso,US,United States,Texas,,31.7619,-106.4850,America/Denver,678815,1137,city,A border city at the western tip of Texas,ELP,metro|desert
+louisville,Louisville,US,United States,Kentucky,,38.2527,-85.7585,America/New_York,633045,142,city,Home of the Kentucky Derby and bourbon country,SDF,metro|historic
+oklahoma-city,Oklahoma City,US,United States,Oklahoma,,35.4676,-97.5164,America/Chicago,681054,366,city,Oklahoma's capital in the heart of the Great Plains,OKC,metro
+honolulu,Honolulu,US,United States,Hawaii,,21.3069,-157.8583,Pacific/Honolulu,350964,5,city,Hawaii's capital on the island of Oahu,HNL,beach|island
+anchorage,Anchorage,US,United States,Alaska,,61.2181,-149.9003,America/Anchorage,291247,31,city,Alaska's largest city surrounded by wilderness,ANC,metro|mountain|wildlife
+birmingham,Birmingham,US,United States,Alabama,,33.5207,-86.8025,America/Chicago,200733,196,city,Alabama's largest city with a rich civil rights legacy,BHM,metro|historic
+rochester,Rochester,US,United States,New York,,43.1566,-77.6088,America/New_York,211328,154,city,A city on Lake Ontario in western New York,ROC,metro
+grand-rapids,Grand Rapids,US,United States,Michigan,,42.9634,-85.6681,America/Detroit,198917,187,city,Michigan's second-largest city known for craft beer,GRR,metro
+chattanooga,Chattanooga,US,United States,Tennessee,,35.0456,-85.3097,America/New_York,181099,206,city,A scenic city on the Tennessee River,,hiking|scenic-drive
+reno,Reno,US,United States,Nevada,,39.5296,-119.8138,America/Los_Angeles,264165,1373,city,The Biggest Little City in the World near Lake Tahoe,RNO,entertainment|mountain
+pensacola,Pensacola,US,United States,Florida,,30.4213,-87.2169,America/Chicago,52529,9,city,A Gulf Coast city with white sand beaches,PNS,beach|historic
+savannah,Savannah,US,United States,Georgia,,32.0809,-81.0912,America/New_York,147780,15,city,A charming Southern city known for its historic district,SAV,historic|beach
+charleston,Charleston,US,United States,South Carolina,,32.7765,-79.9311,America/New_York,150227,6,city,A historic port city with cobblestone streets,CHS,historic|beach
+knoxville,Knoxville,US,United States,Tennessee,,35.9606,-83.9207,America/New_York,190740,276,city,The gateway to Great Smoky Mountains National Park,TYS,metro|hiking
+dayton,Dayton,US,United States,Ohio,,39.7589,-84.1916,America/New_York,137644,225,city,The birthplace of aviation in western Ohio,DAY,historic
+akron,Akron,US,United States,Ohio,,41.0814,-81.5190,America/New_York,190469,306,city,The Rubber Capital of the World south of Cleveland,,metro
+worcester,Worcester,US,United States,Massachusetts,,42.2626,-71.8023,America/New_York,206518,146,city,The Heart of the Commonwealth in central Massachusetts,,metro
+mobile,Mobile,US,United States,Alabama,,30.6954,-88.0399,America/Chicago,187041,3,city,A Gulf Coast port city with French colonial roots,,historic|beach
+shreveport,Shreveport,US,United States,Louisiana,,32.5252,-93.7502,America/Chicago,187593,56,city,A city on the Red River in northwest Louisiana,,metro
+key-west,Key West,US,United States,Florida,,24.5551,-81.7800,America/New_York,25478,1,town,The southernmost point in the continental US,EYW,beach|island|historic
+fort-lauderdale,Fort Lauderdale,US,United States,Florida,,26.1224,-80.1373,America/New_York,182760,3,city,The Venice of America known for its canals and beaches,FLL,beach|metro
+naples-fl,Naples,US,United States,Florida,,26.1420,-81.7948,America/New_York,22088,3,town,An upscale Gulf Coast city in Southwest Florida,APF,beach
+clearwater,Clearwater,US,United States,Florida,,27.9659,-82.8001,America/New_York,117580,12,town,Home to one of America's top-rated beaches,,beach
+destin,Destin,US,United States,Florida,,30.3935,-86.4958,America/Chicago,14067,3,town,The World's Luckiest Fishing Village on the Emerald Coast,,beach
+panama-city-beach,Panama City Beach,US,United States,Florida,,30.1766,-85.8055,America/Chicago,12749,5,town,A popular spring break destination on the Gulf Coast,,beach
+st-augustine,St. Augustine,US,United States,Florida,,29.8943,-81.3145,America/New_York,15415,2,town,The oldest continuously occupied European settlement in the US,,historic|beach
+sarasota,Sarasota,US,United States,Florida,,27.3364,-82.5307,America/New_York,57738,7,town,A cultural hub on Florida's Gulf Coast,SRQ,beach
+fort-myers,Fort Myers,US,United States,Florida,,26.6406,-81.8723,America/New_York,92754,3,city,A Southwest Florida city near Sanibel Island,RSW,beach
+daytona-beach,Daytona Beach,US,United States,Florida,,29.2108,-81.0228,America/New_York,72647,3,town,Famous for its hard-packed beach and NASCAR speedway,DAB,beach|entertainment
+palm-springs,Palm Springs,US,United States,California,,33.8303,-116.5453,America/Los_Angeles,48518,146,town,A desert resort city known for mid-century modern architecture,PSP,desert|resort
+santa-barbara,Santa Barbara,US,United States,California,,34.4208,-119.6982,America/Los_Angeles,88665,15,town,The American Riviera on California's central coast,SBA,beach|wine
+monterey,Monterey,US,United States,California,,36.6002,-121.8947,America/Los_Angeles,30218,26,town,A coastal city famous for its aquarium and Cannery Row,MRY,beach|wildlife
+carmel-by-the-sea,Carmel-by-the-Sea,US,United States,California,,36.5554,-121.9233,America/Los_Angeles,3897,72,town,A fairy-tale village on the Monterey Peninsula,,beach|historic
+napa,Napa,US,United States,California,,38.2975,-122.2869,America/Los_Angeles,79068,5,town,The heart of California's premier wine country,,wine
+lake-tahoe,Lake Tahoe,US,United States,California,,39.0968,-120.0324,America/Los_Angeles,1039,1897,resort,A stunning alpine lake straddling California and Nevada,,lake|skiing|hiking|mountain
+malibu,Malibu,US,United States,California,,34.0259,-118.7798,America/Los_Angeles,12645,24,town,A celebrity beach community along the Pacific Coast Highway,,beach|surfing
+laguna-beach,Laguna Beach,US,United States,California,,33.5427,-117.7854,America/Los_Angeles,23032,21,town,An artist colony and beach town in Orange County,,beach
+san-luis-obispo,San Luis Obispo,US,United States,California,,35.2828,-120.6596,America/Los_Angeles,47536,71,town,A charming college town on California's Central Coast,SBP,wine
+big-sur,Big Sur,US,United States,California,,36.2704,-121.8081,America/Los_Angeles,1369,152,landmark,One of the most scenic stretches of coastline in the world,,scenic-drive|hiking
+maui,Maui,US,United States,Hawaii,,20.7984,-156.3319,Pacific/Honolulu,164221,0,island,The Valley Isle known for beaches and the Road to Hana,OGG,beach|island|hiking|surfing
+kauai,Kauai,US,United States,Hawaii,,22.0964,-159.5261,Pacific/Honolulu,73298,0,island,The Garden Isle with dramatic Na Pali Coast cliffs,LIH,beach|island|hiking
+big-island,Big Island,US,United States,Hawaii,,19.7241,-155.0868,Pacific/Honolulu,200629,0,island,Hawaii's largest island with active volcanoes,KOA,beach|island|hiking|volcano
+cape-cod,Cape Cod,US,United States,Massachusetts,,41.6688,-70.2962,America/New_York,215888,10,resort,A hook-shaped peninsula with charming seaside villages,HYA,beach|historic
+marthas-vineyard,Martha's Vineyard,US,United States,Massachusetts,,41.3805,-70.6455,America/New_York,17332,0,island,An exclusive island retreat off the Massachusetts coast,MVY,beach|island
+nantucket,Nantucket,US,United States,Massachusetts,,41.2835,-70.0995,America/New_York,14255,0,island,A historic whaling island with pristine beaches,ACK,beach|island|historic
+bar-harbor,Bar Harbor,US,United States,Maine,,44.3876,-68.2039,America/New_York,5089,10,town,The gateway to Acadia National Park,BHB,hiking|beach
+newport-ri,Newport,US,United States,Rhode Island,,41.4901,-71.3128,America/New_York,24697,9,town,Famous for Gilded Age mansions and sailing,,historic|beach
+mystic,Mystic,US,United States,Connecticut,,41.3543,-71.9662,America/New_York,4525,3,town,A historic seaport village with a renowned aquarium,,historic
+lake-placid,Lake Placid,US,United States,New York,,44.2795,-73.9799,America/New_York,2521,570,resort,A mountain village that hosted two Winter Olympics,,skiing|mountain|lake
+myrtle-beach,Myrtle Beach,US,United States,South Carolina,,33.6891,-78.8867,America/New_York,35682,8,resort,A popular family beach destination on the Grand Strand,MYR,beach|entertainment
+hilton-head,Hilton Head Island,US,United States,South Carolina,,32.2163,-80.7526,America/New_York,40000,3,island,An upscale resort island known for golf and beaches,HHH,beach|island
+outer-banks,Outer Banks,US,United States,North Carolina,,35.5585,-75.4665,America/New_York,58000,2,resort,A string of barrier islands along the North Carolina coast,,beach|surfing|historic
+gatlinburg,Gatlinburg,US,United States,Tennessee,,35.7143,-83.5102,America/New_York,4044,408,town,A mountain town at the entrance to Great Smoky Mountains,,hiking|mountain|entertainment
+pigeon-forge,Pigeon Forge,US,United States,Tennessee,,35.7884,-83.5544,America/New_York,6349,317,town,Home to Dollywood near the Great Smoky Mountains,,entertainment|mountain
+gulf-shores,Gulf Shores,US,United States,Alabama,,30.2460,-87.7008,America/Chicago,12220,3,resort,A family-friendly beach town on Alabama's Gulf Coast,,beach
+sedona,Sedona,US,United States,Arizona,,34.8697,-111.7610,America/Phoenix,10336,1319,town,A desert town famous for its red rock formations,,hiking|desert|scenic-drive
+jackson-hole,Jackson Hole,US,United States,Wyoming,,43.4799,-110.7624,America/Denver,10529,1901,resort,A valley town near Grand Teton and Yellowstone,JAC,skiing|mountain|hiking|wildlife
+park-city,Park City,US,United States,Utah,,40.6461,-111.4980,America/Denver,8457,2103,resort,A premier ski destination that hosted the 2002 Olympics,,skiing|mountain
+aspen,Aspen,US,United States,Colorado,,39.1911,-106.8175,America/Denver,7004,2438,resort,A world-famous ski resort and cultural hub,ASE,skiing|mountain|entertainment
+vail,Vail,US,United States,Colorado,,39.6403,-106.3742,America/Denver,5614,2500,resort,One of the largest ski resorts in North America,,skiing|mountain
+telluride,Telluride,US,United States,Colorado,,37.9375,-107.8123,America/Denver,2607,2667,resort,A box canyon ski town with stunning mountain scenery,TEX,skiing|mountain|hiking
+moab,Moab,US,United States,Utah,,38.5733,-109.5498,America/Denver,5366,1227,town,The adventure capital near Arches and Canyonlands,CNY,hiking|desert|mountain
+bend,Bend,US,United States,Oregon,,44.0582,-121.3153,America/Los_Angeles,102059,1108,town,An outdoor recreation hub in central Oregon,RDM,skiing|hiking|mountain
+sun-valley,Sun Valley,US,United States,Idaho,,43.6975,-114.3514,America/Boise,1786,1752,resort,America's first destination ski resort,,skiing|mountain
+mackinac-island,Mackinac Island,US,United States,Michigan,,45.8492,-84.6189,America/Detroit,583,191,island,A car-free island in the Straits of Mackinac,,island|historic
+branson,Branson,US,United States,Missouri,,36.6437,-93.2185,America/Chicago,12638,244,resort,A family entertainment destination in the Ozarks,,entertainment|lake
+juneau,Juneau,US,United States,Alaska,,58.3005,-134.4197,America/Anchorage,32255,17,city,Alaska's capital accessible only by air or sea,JNU,mountain|wildlife
+fairbanks,Fairbanks,US,United States,Alaska,,64.8378,-147.7164,America/Anchorage,32515,136,city,A gateway to the Arctic and northern lights viewing,FAI,wildlife|mountain
+grand-canyon,Grand Canyon,US,United States,Arizona,,36.1069,-112.1129,America/Phoenix,0,2100,national-park,One of the world's most spectacular natural wonders,,hiking|camping|scenic-drive|national-park
+yellowstone,Yellowstone,US,United States,Wyoming,,44.4280,-110.5885,America/Denver,0,2357,national-park,America's first national park with geysers and wildlife,,hiking|camping|wildlife|national-park
+yosemite,Yosemite,US,United States,California,,37.8651,-119.5383,America/Los_Angeles,0,1209,national-park,Famous for granite cliffs and giant sequoia groves,,hiking|camping|mountain|national-park
+zion,Zion,US,United States,Utah,,37.2982,-113.0263,America/Denver,0,1219,national-park,A canyon wonderland with towering red cliffs,,hiking|camping|national-park
+glacier,Glacier,US,United States,Montana,,48.7596,-113.7870,America/Denver,0,1966,national-park,The Crown of the Continent with pristine wilderness,,hiking|camping|mountain|wildlife|national-park
+grand-teton,Grand Teton,US,United States,Wyoming,,43.7904,-110.6818,America/Denver,0,2100,national-park,Dramatic mountain peaks rising above Jackson Hole valley,,hiking|camping|mountain|wildlife|national-park
+rocky-mountain,Rocky Mountain,US,United States,Colorado,,40.3428,-105.6836,America/Denver,0,3658,national-park,Alpine tundra and mountain peaks in northern Colorado,,hiking|camping|mountain|national-park
+acadia,Acadia,US,United States,Maine,,44.3386,-68.2733,America/New_York,0,466,national-park,A rugged Atlantic coast park on Mount Desert Island,,hiking|beach|national-park
+great-smoky-mountains,Great Smoky Mountains,US,United States,Tennessee,,35.6118,-83.4895,America/New_York,0,2025,national-park,America's most visited national park in the Appalachians,,hiking|camping|mountain|wildlife|national-park
+joshua-tree,Joshua Tree,US,United States,California,,33.8734,-115.9010,America/Los_Angeles,0,792,national-park,A desert park where two ecosystems meet,,hiking|camping|desert|national-park
+death-valley,Death Valley,US,United States,California,,36.5323,-116.9325,America/Los_Angeles,0,-86,national-park,The hottest and driest place in North America,,hiking|desert|national-park
+bryce-canyon,Bryce Canyon,US,United States,Utah,,37.5930,-112.1871,America/Denver,0,2529,national-park,Famous for its unique red rock hoodoo formations,,hiking|camping|national-park
+arches,Arches,US,United States,Utah,,38.7331,-109.5925,America/Denver,0,1510,national-park,Home to over 2000 natural stone arches,,hiking|national-park
+canyonlands,Canyonlands,US,United States,Utah,,38.2136,-109.9025,America/Denver,0,1524,national-park,A vast wilderness of canyons carved by the Colorado River,,hiking|camping|national-park
+capitol-reef,Capitol Reef,US,United States,Utah,,38.2832,-111.2471,America/Denver,0,1693,national-park,A hidden gem with colorful canyons and rock formations,,hiking|camping|national-park
+sequoia,Sequoia,US,United States,California,,36.4864,-118.5658,America/Los_Angeles,0,2050,national-park,Home to the world's largest trees by volume,,hiking|camping|mountain|national-park
+redwood,Redwood,US,United States,California,,41.2132,-124.0046,America/Los_Angeles,0,40,national-park,Home to the tallest trees on Earth,,hiking|camping|national-park
+olympic,Olympic,US,United States,Washington,,47.8021,-123.6044,America/Los_Angeles,0,1424,national-park,Rainforests and rugged Pacific coastline,,hiking|camping|beach|mountain|national-park
+mount-rainier,Mount Rainier,US,United States,Washington,,46.8523,-121.7603,America/Los_Angeles,0,4392,national-park,An iconic volcanic peak south of Seattle,,hiking|camping|mountain|national-park
+crater-lake,Crater Lake,US,United States,Oregon,,42.8684,-122.1685,America/Los_Angeles,0,1883,national-park,The deepest lake in the US in a volcanic caldera,,hiking|lake|national-park
+badlands,Badlands,US,United States,South Dakota,,43.8554,-102.3397,America/Chicago,0,785,national-park,Dramatic eroded buttes and pinnacles,,hiking|camping|wildlife|national-park
+shenandoah,Shenandoah,US,United States,Virginia,,38.5329,-78.3514,America/New_York,0,1234,national-park,A Blue Ridge park with Skyline Drive,,hiking|camping|scenic-drive|national-park
+everglades,Everglades,US,United States,Florida,,25.2866,-80.8987,America/New_York,0,0,national-park,A vast subtropical wilderness in southern Florida,,wildlife|camping|national-park
+big-bend,Big Bend,US,United States,Texas,,29.2498,-103.2502,America/Chicago,0,549,national-park,A remote park along the Rio Grande in West Texas,,hiking|camping|desert|national-park
+carlsbad-caverns,Carlsbad Caverns,US,United States,New Mexico,,32.1479,-104.5567,America/Denver,0,1340,national-park,Spectacular underground limestone chambers,,hiking|national-park
+mesa-verde,Mesa Verde,US,United States,Colorado,,37.1838,-108.4887,America/Denver,0,2613,national-park,Ancient cliff dwellings of the Ancestral Puebloans,,hiking|historic|national-park
+white-sands,White Sands,US,United States,New Mexico,,32.7872,-106.3257,America/Denver,0,1219,national-park,Surreal white gypsum sand dunes in the desert,,hiking|desert|national-park
+denali,Denali,US,United States,Alaska,,63.1148,-151.1926,America/Anchorage,0,6190,national-park,Home to North America's tallest peak,,hiking|camping|mountain|wildlife|national-park
+kenai-fjords,Kenai Fjords,US,United States,Alaska,,59.9833,-149.6500,America/Anchorage,0,1829,national-park,Glaciers meeting the sea on Alaska's Kenai Peninsula,,hiking|wildlife|national-park
+glacier-bay,Glacier Bay,US,United States,Alaska,,58.5000,-136.0000,America/Anchorage,0,4663,national-park,Tidewater glaciers and marine wildlife in southeast Alaska,,wildlife|national-park
+niagara-falls,Niagara Falls,US,United States,New York,,43.0962,-79.0377,America/New_York,48671,99,landmark,One of the world's most famous waterfalls,IAG,landmark
+mount-rushmore,Mount Rushmore,US,United States,South Dakota,,43.8791,-103.4591,America/Chicago,0,1745,landmark,Iconic presidential faces carved into granite,,historic|landmark
+monument-valley,Monument Valley,US,United States,Utah,,36.9833,-110.1167,America/Denver,0,1625,landmark,Iconic sandstone buttes on the Navajo Nation,,scenic-drive|desert|landmark
+mammoth-cave,Mammoth Cave,US,United States,Kentucky,,37.1862,-86.1005,America/New_York,0,210,national-park,The world's longest known cave system,,hiking|camping|national-park
+hot-springs,Hot Springs,US,United States,Arkansas,,34.5037,-93.0552,America/Chicago,38797,180,national-park,Historic bathhouses fed by natural thermal springs,,hiking|historic|national-park
+petrified-forest,Petrified Forest,US,United States,Arizona,,34.9100,-109.7871,America/Phoenix,0,1676,national-park,Ancient petrified wood and painted desert landscapes,,hiking|desert|national-park
+saguaro,Saguaro,US,United States,Arizona,,32.1797,-111.1660,America/Phoenix,0,900,national-park,Giant saguaro cacti in the Sonoran Desert,,hiking|desert|national-park
+london,London,GB,United Kingdom,,,51.5074,-0.1278,Europe/London,8982000,11,city,The capital of the United Kingdom and a global metropolis,LHR,metro|historic
+manchester,Manchester,GB,United Kingdom,,England,53.4808,-2.2426,Europe/London,553230,38,city,A vibrant Northern English city known for football and music,MAN,metro|entertainment
+birmingham-uk,Birmingham,GB,United Kingdom,,England,52.4862,-1.8904,Europe/London,1144900,140,city,England's second-largest city in the West Midlands,BHX,metro
+edinburgh,Edinburgh,GB,United Kingdom,,Scotland,55.9533,-3.1883,Europe/London,524930,47,city,Scotland's historic capital with a dramatic castle,EDI,metro|historic
+glasgow,Glasgow,GB,United Kingdom,,Scotland,55.8642,-4.2518,Europe/London,635640,12,city,Scotland's largest city known for art and architecture,GLA,metro
+liverpool,Liverpool,GB,United Kingdom,,England,53.4084,-2.9916,Europe/London,496784,10,city,The birthplace of The Beatles on the River Mersey,LPL,metro|historic|entertainment
+leeds,Leeds,GB,United Kingdom,,England,53.8008,-1.5491,Europe/London,812000,63,city,A major city in West Yorkshire,LBA,metro
+bristol,Bristol,GB,United Kingdom,,England,51.4545,-2.5879,Europe/London,472400,11,city,A creative city in southwest England,BRS,metro|historic
+newcastle,Newcastle upon Tyne,GB,United Kingdom,,England,54.9783,-1.6178,Europe/London,302820,42,city,A city on the River Tyne in northeast England,NCL,metro
+sheffield,Sheffield,GB,United Kingdom,,England,53.3811,-1.4701,Europe/London,556500,75,city,The Steel City at the edge of the Peak District,,metro
+nottingham,Nottingham,GB,United Kingdom,,England,52.9548,-1.1581,Europe/London,337100,52,city,The city of Robin Hood in the East Midlands,EMA,metro|historic
+cardiff,Cardiff,GB,United Kingdom,,Wales,51.4816,-3.1791,Europe/London,362400,9,city,The capital of Wales,CWL,metro
+belfast,Belfast,GB,United Kingdom,,Northern Ireland,54.5973,-5.9301,Europe/London,343542,1,city,The capital of Northern Ireland,BFS,metro|historic
+brighton,Brighton,GB,United Kingdom,,England,50.8225,-0.1372,Europe/London,229700,0,city,A seaside city known for its pier and vibrant culture,,beach|entertainment
+cambridge,Cambridge,GB,United Kingdom,,England,52.2053,0.1218,Europe/London,145700,6,city,A world-renowned university city,CBG,historic
+oxford,Oxford,GB,United Kingdom,,England,51.7520,-1.2577,Europe/London,152450,63,city,Home to the world's oldest English-speaking university,,historic
+york,York,GB,United Kingdom,,England,53.9600,-1.0873,Europe/London,210618,17,city,A medieval walled city with a stunning minster,,historic
+aberdeen,Aberdeen,GB,United Kingdom,,Scotland,57.1497,-2.0943,Europe/London,196670,20,city,The Granite City on Scotland's northeast coast,ABZ,metro
+inverness,Inverness,GB,United Kingdom,,Scotland,57.4778,-4.2247,Europe/London,63780,6,city,The capital of the Scottish Highlands,INV,historic
+bath,Bath,GB,United Kingdom,,England,51.3811,-2.3590,Europe/London,94782,18,town,A UNESCO World Heritage city with Roman baths,,historic
+canterbury,Canterbury,GB,United Kingdom,,England,51.2802,1.0789,Europe/London,55240,6,town,Home to Canterbury Cathedral and a pilgrimage destination,,historic
+stratford-upon-avon,Stratford-upon-Avon,GB,United Kingdom,,England,52.1917,-1.7083,Europe/London,27830,49,town,The birthplace of William Shakespeare,,historic
+windsor,Windsor,GB,United Kingdom,,England,51.4839,-0.6044,Europe/London,32184,15,town,Home to Windsor Castle; a royal residence,,historic
+salisbury,Salisbury,GB,United Kingdom,,England,51.0688,-1.7945,Europe/London,45600,67,town,A cathedral city near Stonehenge,,historic
+windermere,Windermere,GB,United Kingdom,,England,54.3808,-2.9075,Europe/London,8245,40,town,The gateway to the Lake District,LKD,lake|hiking|scenic-drive
+cotswolds,Cotswolds,GB,United Kingdom,,England,51.8330,-1.7833,Europe/London,0,200,landmark,Rolling hills and honey-colored stone villages,,scenic-drive|historic
+newquay,Newquay,GB,United Kingdom,,England,50.4120,-5.0757,Europe/London,22312,60,town,Cornwall's surfing capital,NQY,beach|surfing
+st-ives,St Ives,GB,United Kingdom,,England,50.2114,-5.4810,Europe/London,11226,10,town,A picturesque Cornish seaside town with art galleries,,beach
+penzance,Penzance,GB,United Kingdom,,England,50.1186,-5.5371,Europe/London,21168,0,town,A historic town at the tip of Cornwall,,beach|historic
+bakewell,Bakewell,GB,United Kingdom,,England,53.2133,-1.6756,Europe/London,3949,120,town,A market town in the heart of the Peak District,,hiking
+fort-william,Fort William,GB,United Kingdom,,Scotland,56.8198,-5.1052,Europe/London,10459,3,town,The outdoor capital of the UK near Ben Nevis,,hiking|mountain
+portree,Portree,GB,United Kingdom,,Scotland,57.4125,-6.1953,Europe/London,2318,0,town,The main town on the Isle of Skye,,island|hiking|scenic-drive
+st-andrews,St Andrews,GB,United Kingdom,,Scotland,56.3398,-2.7967,Europe/London,18810,10,town,The home of golf on Scotland's east coast,,historic|beach
+blackpool,Blackpool,GB,United Kingdom,,England,53.8175,-3.0357,Europe/London,141100,5,town,A classic British seaside resort,BLK,beach|entertainment
+bournemouth,Bournemouth,GB,United Kingdom,,England,50.7192,-1.8808,Europe/London,187503,0,town,A south coast resort with sandy beaches,BOH,beach
+whitby,Whitby,GB,United Kingdom,,England,54.4858,-0.6206,Europe/London,13213,0,town,A historic fishing port that inspired Bram Stoker's Dracula,,historic|beach
+durham,Durham,GB,United Kingdom,,England,54.7761,-1.5733,Europe/London,48069,63,city,A cathedral city with a UNESCO World Heritage Site,,historic
+chester,Chester,GB,United Kingdom,,England,53.1930,-2.8931,Europe/London,79645,9,city,A Roman-era city with medieval half-timbered buildings,,historic
+harrogate,Harrogate,GB,United Kingdom,,England,53.9921,-1.5418,Europe/London,75070,120,town,An elegant spa town in North Yorkshire,,historic
+oban,Oban,GB,United Kingdom,,Scotland,56.4120,-5.4714,Europe/London,8574,0,town,The gateway to the Scottish Isles,,island|scenic-drive
+stirling,Stirling,GB,United Kingdom,,Scotland,56.1166,-3.9369,Europe/London,37220,25,city,A historic city with a famous castle,,historic
+loch-lomond,Loch Lomond,GB,United Kingdom,,Scotland,56.0907,-4.5826,Europe/London,0,8,landmark,Scotland's largest freshwater lake,,lake|hiking|scenic-drive
+toronto,Toronto,CA,Canada,Ontario,,43.6532,-79.3832,America/Toronto,2731571,76,city,Canada's largest city and financial capital,YYZ,metro
+vancouver,Vancouver,CA,Canada,British Columbia,,49.2827,-123.1207,America/Vancouver,662248,70,city,A Pacific coast city surrounded by mountains,YVR,metro|mountain|beach
+montreal,Montreal,CA,Canada,Quebec,,45.5017,-73.5673,America/Toronto,1762949,36,city,A bilingual metropolis with European charm,YUL,metro|historic
+calgary,Calgary,CA,Canada,Alberta,,51.0447,-114.0719,America/Edmonton,1306784,1045,city,A gateway to the Canadian Rockies,YYC,metro|mountain
+edmonton,Edmonton,CA,Canada,Alberta,,53.5461,-113.4938,America/Edmonton,1010899,668,city,Alberta's capital and gateway to the north,YEG,metro
+ottawa,Ottawa,CA,Canada,Ontario,,45.4215,-75.6972,America/Toronto,1017449,70,city,Canada's capital city,YOW,metro|historic
+winnipeg,Winnipeg,CA,Canada,Manitoba,,49.8951,-97.1384,America/Winnipeg,749607,238,city,The cultural cradle of Canada's prairies,YWG,metro
+quebec-city,Quebec City,CA,Canada,Quebec,,46.8139,-71.2080,America/Toronto,549459,74,city,A UNESCO World Heritage city with French heritage,YQB,historic
+halifax,Halifax,CA,Canada,Nova Scotia,,44.6488,-63.5752,America/Halifax,439819,0,city,A major Atlantic port city,YHZ,metro|historic|beach
+victoria,Victoria,CA,Canada,British Columbia,,48.4284,-123.3656,America/Vancouver,394211,20,city,British Columbia's charming capital on Vancouver Island,YYJ,historic|beach
+hamilton,Hamilton,CA,Canada,Ontario,,43.2557,-79.8711,America/Toronto,569353,78,city,A steel city at the western end of Lake Ontario,YHM,metro
+saskatoon,Saskatoon,CA,Canada,Saskatchewan,,52.1332,-106.6700,America/Regina,317480,482,city,Saskatchewan's largest city on the South Saskatchewan River,YXE,metro
+kelowna,Kelowna,CA,Canada,British Columbia,,49.8880,-119.4960,America/Vancouver,151957,344,city,A lakeside city in the Okanagan wine region,YLW,lake|wine
+niagara-falls-ca,Niagara Falls,CA,Canada,Ontario,,43.0896,-79.0849,America/Toronto,94415,180,landmark,The Canadian side of the famous waterfalls,YNF,landmark
+banff,Banff,CA,Canada,Alberta,,51.1784,-115.5708,America/Edmonton,8305,1383,town,A mountain resort town in Banff National Park,YBA,mountain|hiking|skiing|national-park
+jasper,Jasper,CA,Canada,Alberta,,52.8737,-117.0814,America/Edmonton,5236,1062,town,A town in the heart of Jasper National Park,,mountain|hiking|wildlife|national-park
+whistler,Whistler,CA,Canada,British Columbia,,50.1163,-122.9574,America/Vancouver,13982,670,resort,A world-class ski resort that hosted the 2010 Olympics,YWS,skiing|mountain|hiking
+tofino,Tofino,CA,Canada,British Columbia,,49.1530,-125.9066,America/Vancouver,2304,5,town,A remote surf town on Vancouver Island's west coast,,beach|surfing|wildlife
+canmore,Canmore,CA,Canada,Alberta,,51.0884,-115.3479,America/Edmonton,14816,1309,town,A mountain town near Banff National Park,,mountain|hiking|skiing
+lake-louise,Lake Louise,CA,Canada,Alberta,,51.4254,-116.1773,America/Edmonton,1200,1540,resort,An iconic turquoise lake in the Canadian Rockies,,mountain|hiking|skiing|lake
+charlottetown,Charlottetown,CA,Canada,Prince Edward Island,,46.2382,-63.1311,America/Halifax,38809,0,city,The birthplace of Canadian Confederation,YYG,historic|beach
+mont-tremblant,Mont-Tremblant,CA,Canada,Quebec,,46.2096,-74.5850,America/Toronto,9646,265,resort,Quebec's premier ski and outdoor resort,,skiing|mountain|lake
+yellowknife,Yellowknife,CA,Canada,Northwest Territories,,62.4540,-114.3718,America/Edmonton,20861,206,city,The capital of the Northwest Territories; aurora viewing,YZF,wildlife
+whitehorse,Whitehorse,CA,Canada,Yukon,,60.7212,-135.0568,America/Whitehorse,28201,703,city,The capital of Yukon Territory,YXY,mountain|wildlife
+algonquin-park,Algonquin Park,CA,Canada,Ontario,,45.5872,-78.3750,America/Toronto,0,400,national-park,Ontario's oldest and most famous provincial park,,hiking|camping|lake|wildlife|national-park
+sydney,Sydney,AU,Australia,New South Wales,,-33.8688,151.2093,Australia/Sydney,5312000,3,city,Australia's largest city with its iconic Opera House,SYD,metro|beach
+melbourne,Melbourne,AU,Australia,Victoria,,-37.8136,144.9631,Australia/Melbourne,5078193,31,city,Australia's cultural capital known for coffee and art,MEL,metro
+brisbane,Brisbane,AU,Australia,Queensland,,-27.4698,153.0251,Australia/Brisbane,2560700,27,city,A sunny river city and gateway to the Gold Coast,BNE,metro
+perth,Perth,AU,Australia,Western Australia,,-31.9505,115.8605,Australia/Perth,2085973,0,city,Australia's most isolated major city on the Indian Ocean,PER,metro|beach
+adelaide,Adelaide,AU,Australia,South Australia,,-34.9285,138.6007,Australia/Adelaide,1376601,50,city,A city of churches surrounded by wine regions,ADL,metro|wine
+gold-coast,Gold Coast,AU,Australia,Queensland,,-28.0167,153.4000,Australia/Brisbane,679127,0,city,A coastal city famous for surfing and theme parks,OOL,beach|surfing|entertainment
+canberra,Canberra,AU,Australia,Australian Capital Territory,,-35.2809,149.1300,Australia/Sydney,462213,578,city,Australia's purpose-built capital city,CBR,metro
+hobart,Hobart,AU,Australia,Tasmania,,-42.8821,147.3272,Australia/Hobart,247461,0,city,Tasmania's capital at the foot of Mount Wellington,HBA,historic|mountain
+darwin,Darwin,AU,Australia,Northern Territory,,-12.4634,130.8456,Australia/Darwin,147255,30,city,A tropical city and gateway to Kakadu,DRW,metro|wildlife
+cairns,Cairns,AU,Australia,Queensland,,-16.9186,145.7781,Australia/Brisbane,156169,0,city,The gateway to the Great Barrier Reef,CNS,beach|diving|wildlife
+byron-bay,Byron Bay,AU,Australia,New South Wales,,-28.6474,153.6020,Australia/Sydney,9514,0,town,Australia's easternmost point; a bohemian beach town,,beach|surfing
+noosa,Noosa,AU,Australia,Queensland,,-26.3910,153.0764,Australia/Brisbane,55000,0,resort,An upscale beach resort on the Sunshine Coast,,beach|surfing
+airlie-beach,Airlie Beach,AU,Australia,Queensland,,-20.2686,148.7181,Australia/Brisbane,1189,0,town,The gateway to the Whitsunday Islands,,beach|diving|island
+port-douglas,Port Douglas,AU,Australia,Queensland,,-16.4836,145.4656,Australia/Brisbane,3504,0,town,A tropical village near the Great Barrier Reef,,beach|diving|wildlife
+uluru,Uluru,AU,Australia,Northern Territory,,-25.3444,131.0369,Australia/Darwin,0,863,landmark,Australia's iconic sacred red rock monolith,,desert|landmark
+blue-mountains,Blue Mountains,AU,Australia,New South Wales,,-33.7150,150.3120,Australia/Sydney,0,1000,national-park,Dramatic eucalyptus-covered cliffs west of Sydney,,hiking|scenic-drive|national-park
+margaret-river,Margaret River,AU,Australia,Western Australia,,-33.9537,115.0753,Australia/Perth,7000,90,town,A premier wine and surf region in Western Australia,,wine|surfing|beach
+broome,Broome,AU,Australia,Western Australia,,-17.9614,122.2359,Australia/Perth,16222,0,town,A remote pearling town with Cable Beach,,beach|desert
+alice-springs,Alice Springs,AU,Australia,Northern Territory,,-23.6980,133.8807,Australia/Darwin,26534,576,town,The Red Centre of Australia near Uluru,ASP,desert
+apollo-bay,Apollo Bay,AU,Australia,Victoria,,-38.7594,143.6722,Australia/Melbourne,1598,0,town,A coastal town on the Great Ocean Road,,beach|scenic-drive
+hervey-bay,Hervey Bay,AU,Australia,Queensland,,-25.2882,152.7654,Australia/Brisbane,54674,0,town,The whale watching capital of Australia,HVB,beach|wildlife
+kangaroo-island,Kangaroo Island,AU,Australia,South Australia,,-35.7752,137.2142,Australia/Adelaide,4702,0,island,Australia's third-largest island with abundant wildlife,,island|wildlife|beach
+barossa-valley,Barossa Valley,AU,Australia,South Australia,,-34.5611,138.9500,Australia/Adelaide,0,280,landmark,One of Australia's oldest and finest wine regions,,wine
+queenstown-tas,Queenstown,AU,Australia,Tasmania,,-42.0800,145.5550,Australia/Hobart,1800,140,town,A former mining town in Tasmania's rugged west,,mountain|hiking
+exmouth,Exmouth,AU,Australia,Western Australia,,-21.9310,114.1280,Australia/Perth,2780,0,town,Gateway to Ningaloo Reef for whale shark encounters,,beach|diving|wildlife
+berlin,Berlin,DE,Germany,,,52.5200,13.4050,Europe/Berlin,3748148,34,city,Germany's capital and largest city,BER,metro|historic
+munich,Munich,DE,Germany,,Bavaria,48.1351,11.5820,Europe/Berlin,1488202,519,city,Bavaria's capital known for Oktoberfest and beer gardens,MUC,metro|historic|entertainment
+hamburg,Hamburg,DE,Germany,,,53.5511,9.9937,Europe/Berlin,1906411,6,city,Germany's second-largest city and major port,HAM,metro
+frankfurt,Frankfurt,DE,Germany,,Hesse,50.1109,8.6821,Europe/Berlin,773068,112,city,Germany's financial capital,FRA,metro
+cologne,Cologne,DE,Germany,,North Rhine-Westphalia,50.9375,6.9603,Europe/Berlin,1083498,37,city,A Rhine river city famous for its Gothic cathedral,CGN,metro|historic
+stuttgart,Stuttgart,DE,Germany,,Baden-Württemberg,48.7758,9.1829,Europe/Berlin,635911,245,city,Home of Mercedes-Benz and Porsche,STR,metro
+dusseldorf,Düsseldorf,DE,Germany,,North Rhine-Westphalia,51.2277,6.7735,Europe/Berlin,621877,38,city,A fashion and art hub on the Rhine,DUS,metro
+dresden,Dresden,DE,Germany,,Saxony,51.0504,13.7373,Europe/Berlin,563011,113,city,The Florence on the Elbe with baroque architecture,DRS,historic
+leipzig,Leipzig,DE,Germany,,Saxony,51.3397,12.3731,Europe/Berlin,601866,113,city,A city of music; home of Bach and the Gewandhaus,LEJ,historic|entertainment
+nuremberg,Nuremberg,DE,Germany,,Bavaria,49.4521,11.0767,Europe/Berlin,518370,309,city,A medieval city famous for its Christmas market,NUE,historic
+heidelberg,Heidelberg,DE,Germany,,Baden-Württemberg,49.3988,8.6724,Europe/Berlin,160355,114,city,A romantic university city on the Neckar River,,historic
+rothenburg,Rothenburg ob der Tauber,DE,Germany,,Bavaria,49.3769,10.1789,Europe/Berlin,11243,425,town,Germany's best-preserved medieval town,,historic
+fussen,Füssen,DE,Germany,,Bavaria,47.5692,10.7005,Europe/Berlin,15610,808,town,The gateway to Neuschwanstein Castle,,historic|mountain
+garmisch-partenkirchen,Garmisch-Partenkirchen,DE,Germany,,Bavaria,47.4917,11.0958,Europe/Berlin,26178,708,town,A Bavarian ski town at the foot of the Zugspitze,,skiing|mountain
+black-forest,Black Forest,DE,Germany,,Baden-Württemberg,48.0000,8.1500,Europe/Berlin,0,1000,landmark,A mountainous region of dense forests and cuckoo clocks,,hiking|scenic-drive
+paris,Paris,FR,France,,,48.8566,2.3522,Europe/Paris,2161000,35,city,The City of Light and France's capital,CDG,metro|historic|entertainment
+nice,Nice,FR,France,,Provence-Alpes-Côte d'Azur,43.7102,7.2620,Europe/Paris,342669,10,city,The jewel of the French Riviera,NCE,beach|metro
+lyon,Lyon,FR,France,,Auvergne-Rhône-Alpes,45.7640,4.8357,Europe/Paris,522250,173,city,France's gastronomic capital,LYS,metro|historic
+marseille,Marseille,FR,France,,Provence-Alpes-Côte d'Azur,43.2965,5.3698,Europe/Paris,870018,12,city,France's oldest city and largest port,MRS,metro|beach|historic
+bordeaux,Bordeaux,FR,France,,Nouvelle-Aquitaine,44.8378,-0.5792,Europe/Paris,257068,6,city,The wine capital of the world,BOD,wine|historic
+toulouse,Toulouse,FR,France,,Occitanie,43.6047,1.4442,Europe/Paris,493465,141,city,The Pink City and European aerospace hub,TLS,metro
+strasbourg,Strasbourg,FR,France,,Grand Est,48.5734,7.7521,Europe/Paris,284677,139,city,A Franco-German city home to the European Parliament,SXB,historic
+cannes,Cannes,FR,France,,Provence-Alpes-Côte d'Azur,43.5528,7.0174,Europe/Paris,74285,0,town,Famous for its international film festival,,beach|entertainment
+avignon,Avignon,FR,France,,Provence-Alpes-Côte d'Azur,43.9493,4.8055,Europe/Paris,93671,23,city,A medieval city with the famous Palais des Papes,,historic
+chamonix,Chamonix,FR,France,,Auvergne-Rhône-Alpes,45.9237,6.8694,Europe/Paris,8906,1035,resort,A legendary alpine town at the base of Mont Blanc,,skiing|mountain|hiking
+annecy,Annecy,FR,France,,Auvergne-Rhône-Alpes,45.8992,6.1294,Europe/Paris,131084,448,city,The Venice of the Alps with a crystal-clear lake,,lake|mountain
+colmar,Colmar,FR,France,,Grand Est,48.0794,7.3558,Europe/Paris,70284,194,town,A fairy-tale Alsatian town with half-timbered houses,,historic|wine
+mont-saint-michel,Mont Saint-Michel,FR,France,,Normandy,48.6361,-1.5115,Europe/Paris,30,10,landmark,A medieval abbey on a tidal island,,historic|landmark
+saint-tropez,Saint-Tropez,FR,France,,Provence-Alpes-Côte d'Azur,43.2727,6.6407,Europe/Paris,4451,0,town,A glamorous resort town on the French Riviera,,beach
+rome,Rome,IT,Italy,,Lazio,41.9028,12.4964,Europe/Rome,2873000,21,city,The Eternal City and capital of Italy,FCO,metro|historic
+milan,Milan,IT,Italy,,Lombardy,45.4642,9.1900,Europe/Rome,1396059,120,city,Italy's fashion and financial capital,MXP,metro|entertainment
+florence,Florence,IT,Italy,,Tuscany,43.7696,11.2558,Europe/Rome,382258,50,city,The cradle of the Renaissance,FLR,historic
+venice,Venice,IT,Italy,,Veneto,45.4408,12.3155,Europe/Rome,261905,1,city,A unique city built on water with canals and gondolas,VCE,historic
+naples,Naples,IT,Italy,,Campania,40.8518,14.2681,Europe/Rome,959470,17,city,A vibrant city near Pompeii and the Amalfi Coast,NAP,metro|historic
+turin,Turin,IT,Italy,,Piedmont,45.0703,7.6869,Europe/Rome,870952,239,city,An elegant city at the foot of the Alps,TRN,metro|historic
+bologna,Bologna,IT,Italy,,Emilia-Romagna,44.4949,11.3426,Europe/Rome,394463,54,city,Italy's food capital with the oldest university,BLQ,historic
+positano,Positano,IT,Italy,,Campania,40.6281,14.4850,Europe/Rome,3942,6,town,A cliffside village on the Amalfi Coast,,beach|scenic-drive
+la-spezia,La Spezia,IT,Italy,,Liguria,44.1025,9.8240,Europe/Rome,94192,3,city,The gateway to Cinque Terre,,beach|hiking
+bellagio,Bellagio,IT,Italy,,Lombardy,45.9875,9.2615,Europe/Rome,3700,235,town,The Pearl of Lake Como,,lake|scenic-drive
+siena,Siena,IT,Italy,,Tuscany,43.3188,11.3308,Europe/Rome,54240,322,city,A medieval Tuscan city famous for the Palio horse race,,historic
+sorrento,Sorrento,IT,Italy,,Campania,40.6263,14.3758,Europe/Rome,16405,50,town,A cliffside town overlooking the Bay of Naples,,beach|scenic-drive
+pisa,Pisa,IT,Italy,,Tuscany,43.7228,10.4017,Europe/Rome,91104,4,city,Home of the famous Leaning Tower,PSA,historic
+verona,Verona,IT,Italy,,Veneto,45.4384,10.9916,Europe/Rome,258108,59,city,The city of Romeo and Juliet with a Roman arena,VRN,historic
+palermo,Palermo,IT,Italy,,Sicily,38.1157,13.3615,Europe/Rome,663401,14,city,Sicily's vibrant capital with Arab-Norman architecture,PMO,historic|beach
+taormina,Taormina,IT,Italy,,Sicily,37.8516,15.2853,Europe/Rome,10889,204,town,A hilltop town with views of Mount Etna and the sea,,beach|historic
+matera,Matera,IT,Italy,,Basilicata,40.6664,16.6044,Europe/Rome,60403,401,city,A city of ancient cave dwellings (Sassi),,historic
+madrid,Madrid,ES,Spain,,,40.4168,-3.7038,Europe/Madrid,3223334,667,city,Spain's capital and largest city,MAD,metro|historic|entertainment
+barcelona,Barcelona,ES,Spain,,Catalonia,41.3874,2.1686,Europe/Madrid,1620343,12,city,A Mediterranean city famous for Gaudí's architecture,BCN,metro|beach|historic|entertainment
+seville,Seville,ES,Spain,,Andalusia,37.3891,-5.9845,Europe/Madrid,688711,7,city,The heart of Andalusia with flamenco and Moorish palaces,SVQ,historic|entertainment
+valencia,Valencia,ES,Spain,,Valencia,39.4699,-0.3763,Europe/Madrid,800215,15,city,A coastal city known for paella and futuristic architecture,VLC,beach|historic
+malaga,Malaga,ES,Spain,,Andalusia,36.7213,-4.4214,Europe/Madrid,578460,11,city,The birthplace of Picasso on the Costa del Sol,AGP,beach|historic
+granada,Granada,ES,Spain,,Andalusia,37.1773,-3.5986,Europe/Madrid,232208,738,city,Home of the Alhambra palace at the foot of the Sierra Nevada,,historic|mountain
+bilbao,Bilbao,ES,Spain,,Basque Country,43.2630,-2.9350,Europe/Madrid,346843,19,city,A Basque city transformed by the Guggenheim Museum,BIO,metro
+san-sebastian,San Sebastián,ES,Spain,,Basque Country,43.3183,-1.9812,Europe/Madrid,187415,6,city,A culinary capital with a stunning beach,EAS,beach
+ibiza,Ibiza,ES,Spain,,Balearic Islands,38.9067,1.4206,Europe/Madrid,50401,0,island,A Mediterranean party island with beautiful coves,IBZ,beach|island|entertainment
+mallorca,Mallorca,ES,Spain,,Balearic Islands,39.6953,3.0176,Europe/Madrid,916000,0,island,The largest Balearic island with diverse landscapes,PMI,beach|island|mountain|hiking
+tenerife,Tenerife,ES,Spain,,Canary Islands,28.2916,-16.6291,Atlantic/Canary,928604,0,island,The largest Canary Island with Mount Teide,TFS,beach|island|hiking|mountain
+toledo,Toledo,ES,Spain,,Castilla-La Mancha,39.8628,-4.0273,Europe/Madrid,84873,529,city,The City of Three Cultures south of Madrid,,historic
+cordoba,Córdoba,ES,Spain,,Andalusia,37.8882,-4.7794,Europe/Madrid,325708,106,city,Home of the Mezquita; a blend of cultures,,historic
+marbella,Marbella,ES,Spain,,Andalusia,36.5099,-4.8862,Europe/Madrid,147633,0,resort,A glamorous resort town on the Costa del Sol,,beach|entertainment
+ronda,Ronda,ES,Spain,,Andalusia,36.7462,-5.1613,Europe/Madrid,33877,723,town,A dramatic hilltop town split by a deep gorge,,historic|scenic-drive
+amsterdam,Amsterdam,NL,Netherlands,,,52.3676,4.9041,Europe/Amsterdam,872680,-2,city,The capital of the Netherlands with canals and museums,AMS,metro|historic
+rotterdam,Rotterdam,NL,Netherlands,,,51.9244,4.4777,Europe/Amsterdam,651446,-2,city,Europe's largest port with bold modern architecture,RTM,metro
+the-hague,The Hague,NL,Netherlands,,,52.0705,4.3007,Europe/Amsterdam,548320,1,city,The seat of the Dutch government and international courts,,metro|historic
+utrecht,Utrecht,NL,Netherlands,,,52.0907,5.1214,Europe/Amsterdam,361924,2,city,A charming canal city in the heart of the Netherlands,,historic
+zurich,Zurich,CH,Switzerland,,,47.3769,8.5417,Europe/Zurich,421878,408,city,Switzerland's largest city and financial center,ZRH,metro|mountain
+geneva,Geneva,CH,Switzerland,,,46.2044,6.1432,Europe/Zurich,203856,375,city,An international city on the shores of Lake Geneva,GVA,metro|lake
+bern,Bern,CH,Switzerland,,,46.9480,7.4474,Europe/Zurich,134591,540,city,Switzerland's capital with a medieval old town,,historic
+lucerne,Lucerne,CH,Switzerland,,,47.0502,8.3093,Europe/Zurich,82257,436,city,A picturesque city on Lake Lucerne with mountain views,,lake|mountain|scenic-drive
+interlaken,Interlaken,CH,Switzerland,,,46.6863,7.8632,Europe/Zurich,5748,564,resort,An adventure hub between two alpine lakes,,mountain|hiking|skiing|lake
+zermatt,Zermatt,CH,Switzerland,,,46.0207,7.7491,Europe/Zurich,5820,1608,resort,A car-free village at the foot of the Matterhorn,,skiing|mountain|hiking
+grindelwald,Grindelwald,CH,Switzerland,,,46.6243,8.0413,Europe/Zurich,3842,1034,resort,A scenic village below the Eiger's north face,,skiing|mountain|hiking
+stockholm,Stockholm,SE,Sweden,,,59.3293,18.0686,Europe/Stockholm,975904,28,city,Sweden's capital spread across 14 islands,ARN,metro|historic
+copenhagen,Copenhagen,DK,Denmark,,,55.6761,12.5683,Europe/Copenhagen,644431,9,city,Denmark's capital known for design and hygge,CPH,metro|historic
+oslo,Oslo,NO,Norway,,,59.9139,10.7522,Europe/Oslo,697010,23,city,Norway's capital surrounded by fjords and forests,OSL,metro|mountain
+helsinki,Helsinki,FI,Finland,,,60.1699,24.9384,Europe/Helsinki,656920,26,city,Finland's capital on the Baltic Sea,HEL,metro
+reykjavik,Reykjavik,IS,Iceland,,,64.1466,-21.9426,Atlantic/Reykjavik,131136,0,city,The world's northernmost capital city,KEF,scenic-drive|mountain
+bergen,Bergen,NO,Norway,,,60.3913,5.3221,Europe/Oslo,285601,12,city,The gateway to Norway's fjords,BGO,mountain|scenic-drive
+tromso,Tromsø,NO,Norway,,,69.6492,18.9553,Europe/Oslo,77544,0,city,The gateway to the Arctic and northern lights,TOS,mountain|wildlife
+rovaniemi,Rovaniemi,FI,Finland,,,66.5039,25.7294,Europe/Helsinki,64194,80,city,The official hometown of Santa Claus in Lapland,RVN,mountain|wildlife
+lofoten,Lofoten Islands,NO,Norway,,,68.2500,14.5000,Europe/Oslo,24500,0,island,Dramatic Arctic islands with fishing villages,,island|mountain|hiking|wildlife
+vienna,Vienna,AT,Austria,,,48.2082,16.3738,Europe/Vienna,1911191,171,city,Austria's imperial capital known for music and art,VIE,metro|historic|entertainment
+salzburg,Salzburg,AT,Austria,,,47.8095,13.0550,Europe/Vienna,155021,424,city,The birthplace of Mozart and The Sound of Music,SZG,historic|mountain
+innsbruck,Innsbruck,AT,Austria,,Tyrol,47.2692,11.4041,Europe/Vienna,131961,574,city,An alpine city that hosted two Winter Olympics,INN,skiing|mountain
+hallstatt,Hallstatt,AT,Austria,,Upper Austria,47.5622,13.6493,Europe/Vienna,778,511,town,A fairy-tale lakeside village in the Austrian Alps,,lake|mountain|historic
+prague,Prague,CZ,Czech Republic,,,50.0755,14.4378,Europe/Prague,1309000,235,city,The City of a Hundred Spires,PRG,metro|historic
+budapest,Budapest,HU,Hungary,,,47.4979,19.0402,Europe/Budapest,1752286,96,city,A grand city straddling the Danube River,BUD,metro|historic
+warsaw,Warsaw,PL,Poland,,,52.2297,21.0122,Europe/Warsaw,1793579,100,city,Poland's capital rebuilt after WWII,WAW,metro|historic
+krakow,Krakow,PL,Poland,,,50.0647,19.9450,Europe/Warsaw,779115,219,city,A medieval city with one of Europe's largest market squares,KRK,historic
+lisbon,Lisbon,PT,Portugal,,,38.7223,-9.1393,Europe/Lisbon,544851,2,city,Portugal's hilly coastal capital,LIS,metro|historic|beach
+porto,Porto,PT,Portugal,,,41.1579,-8.6291,Europe/Lisbon,249633,0,city,A riverside city famous for port wine,OPO,historic|wine
+dublin,Dublin,IE,Ireland,,,53.3498,-6.2603,Europe/Dublin,1228179,8,city,Ireland's vibrant capital,DUB,metro|historic|entertainment
+athens,Athens,GR,Greece,,,37.9838,23.7275,Europe/Athens,664046,70,city,The cradle of Western civilization,ATH,metro|historic
+santorini,Santorini,GR,Greece,,,36.3932,25.4615,Europe/Athens,15550,100,island,A volcanic island with iconic white-and-blue architecture,JTR,beach|island
+mykonos,Mykonos,GR,Greece,,,37.4467,25.3289,Europe/Athens,10134,0,island,A cosmopolitan Greek island known for nightlife,JMK,beach|island|entertainment
+dubrovnik,Dubrovnik,HR,Croatia,,,42.6507,18.0944,Europe/Zagreb,42615,0,city,The Pearl of the Adriatic with medieval walls,DBV,historic|beach
+split,Split,HR,Croatia,,,43.5081,16.4402,Europe/Zagreb,178102,0,city,A coastal city built around a Roman palace,SPU,historic|beach
+ljubljana,Ljubljana,SI,Slovenia,,,46.0569,14.5058,Europe/Ljubljana,295504,295,city,Slovenia's charming green capital,LJU,historic
+bruges,Bruges,BE,Belgium,,,51.2093,3.2247,Europe/Brussels,118284,0,city,A medieval city with canals and chocolate shops,,historic
+tokyo,Tokyo,JP,Japan,,,35.6762,139.6503,Asia/Tokyo,13960000,40,city,Japan's capital and the world's most populous metro area,NRT,metro|historic
+osaka,Osaka,JP,Japan,,,34.6937,135.5023,Asia/Tokyo,2753862,0,city,Japan's kitchen known for street food and nightlife,KIX,metro|entertainment
+kyoto,Kyoto,JP,Japan,,,35.0116,135.7681,Asia/Tokyo,1475183,50,city,Japan's cultural capital with thousands of temples,,historic
+hiroshima,Hiroshima,JP,Japan,,,34.3853,132.4553,Asia/Tokyo,1199391,0,city,A city of peace with a powerful memorial,HIJ,historic
+nara,Nara,JP,Japan,,,34.6851,135.8048,Asia/Tokyo,360310,80,city,An ancient capital with free-roaming deer,,historic|wildlife
+hakone,Hakone,JP,Japan,,,35.2326,139.1070,Asia/Tokyo,11490,723,resort,A hot spring resort town with views of Mount Fuji,,mountain|lake
+sapporo,Sapporo,JP,Japan,,,43.0618,141.3545,Asia/Tokyo,1973395,26,city,Hokkaido's capital known for snow festivals and ramen,CTS,metro|skiing
+okinawa,Okinawa,JP,Japan,,,26.3344,127.8056,Asia/Tokyo,318853,0,island,A subtropical island chain with unique culture,OKA,beach|island|diving
+fukuoka,Fukuoka,JP,Japan,,,33.5904,130.4017,Asia/Tokyo,1603043,3,city,A gateway to Asia on Kyushu island,FUK,metro
+mount-fuji,Mount Fuji,JP,Japan,,,35.3606,138.7274,Asia/Tokyo,0,3776,landmark,Japan's iconic sacred mountain,,mountain|hiking|landmark
+singapore,Singapore,SG,Singapore,,,1.3521,103.8198,Asia/Singapore,5850342,15,city,A city-state known for gardens and food,SIN,metro|entertainment
+bangkok,Bangkok,TH,Thailand,,,13.7563,100.5018,Asia/Bangkok,10539000,2,city,Thailand's vibrant capital with temples and street food,BKK,metro|historic|entertainment
+bali,Bali,ID,Indonesia,,,-8.3405,115.0920,Asia/Makassar,4225000,0,island,Indonesia's Island of the Gods,DPS,beach|island|surfing|hiking
+phuket,Phuket,TH,Thailand,,,7.8804,98.3923,Asia/Bangkok,416582,0,island,Thailand's largest island with stunning beaches,HKT,beach|island|diving
+chiang-mai,Chiang Mai,TH,Thailand,,,18.7883,98.9853,Asia/Bangkok,131091,310,city,A cultural city in northern Thailand's mountains,CNX,historic|mountain|hiking
+hanoi,Hanoi,VN,Vietnam,,,21.0278,105.8342,Asia/Ho_Chi_Minh,8053663,0,city,Vietnam's capital with French colonial architecture,HAN,metro|historic
+ho-chi-minh-city,Ho Chi Minh City,VN,Vietnam,,,10.8231,106.6297,Asia/Ho_Chi_Minh,8993082,19,city,Vietnam's largest city formerly known as Saigon,SGN,metro|historic
+kuala-lumpur,Kuala Lumpur,MY,Malaysia,,,3.1390,101.6869,Asia/Kuala_Lumpur,1982112,22,city,Malaysia's capital with the iconic Petronas Towers,KUL,metro
+siem-reap,Siem Reap,KH,Cambodia,,,13.3671,103.8448,Asia/Phnom_Penh,245494,14,town,The gateway to the temples of Angkor Wat,REP,historic
+dubai,Dubai,AE,United Arab Emirates,,,25.2048,55.2708,Asia/Dubai,3331420,5,city,A futuristic city of skyscrapers in the desert,DXB,metro|entertainment|desert|beach
+abu-dhabi,Abu Dhabi,AE,United Arab Emirates,,,24.4539,54.3773,Asia/Dubai,1483000,27,city,The capital of the UAE with the Louvre Abu Dhabi,AUH,metro|desert|beach
+petra,Petra,JO,Jordan,,,30.3285,35.4444,Asia/Amman,0,900,landmark,An ancient city carved into rose-red cliffs,,historic|landmark|hiking
+jerusalem,Jerusalem,IL,Israel,,,31.7683,35.2137,Asia/Jerusalem,936425,754,city,A holy city for three major religions,,historic
+tel-aviv,Tel Aviv,IL,Israel,,,32.0853,34.7818,Asia/Jerusalem,460613,5,city,Israel's modern coastal metropolis,TLV,metro|beach
+amman,Amman,JO,Jordan,,,31.9454,35.9284,Asia/Amman,4007526,757,city,Jordan's capital and a gateway to Petra,AMM,metro|historic
+doha,Doha,QA,Qatar,,,25.2854,51.5310,Asia/Qatar,2382000,10,city,Qatar's capital with futuristic architecture,DOH,metro
+mexico-city,Mexico City,MX,Mexico,,,19.4326,-99.1332,America/Mexico_City,9209944,2240,city,Mexico's capital and one of the world's largest cities,MEX,metro|historic
+cancun,Cancun,MX,Mexico,,,21.1619,-86.8515,America/Cancun,888797,10,resort,Mexico's premier Caribbean beach resort,CUN,beach|resort
+playa-del-carmen,Playa del Carmen,MX,Mexico,,,20.6296,-87.0739,America/Cancun,304942,10,town,A trendy beach town on the Riviera Maya,,beach
+tulum,Tulum,MX,Mexico,,,20.2114,-87.4654,America/Cancun,46721,10,town,Ancient Mayan ruins overlooking Caribbean beaches,,beach|historic
+puerto-vallarta,Puerto Vallarta,MX,Mexico,,,20.6534,-105.2253,America/Mexico_City,291839,2,resort,A Pacific coast resort town,PVR,beach
+sao-paulo,São Paulo,BR,Brazil,,,-23.5505,-46.6333,America/Sao_Paulo,12325232,760,city,South America's largest city,GRU,metro
+rio-de-janeiro,Rio de Janeiro,BR,Brazil,,,-22.9068,-43.1729,America/Sao_Paulo,6748000,11,city,A stunning coastal city with Sugarloaf and Christ the Redeemer,GIG,metro|beach|mountain
+buenos-aires,Buenos Aires,AR,Argentina,,,-34.6037,-58.3816,America/Argentina/Buenos_Aires,3075646,25,city,The Paris of South America,EZE,metro|historic|entertainment
+lima,Lima,PE,Peru,,,-12.0464,-77.0428,America/Lima,10092000,154,city,Peru's capital and gastronomic hub,LIM,metro|historic
+cusco,Cusco,PE,Peru,,,-13.5320,-71.9675,America/Lima,428450,3400,city,The ancient Inca capital and gateway to Machu Picchu,CUZ,historic|mountain|hiking
+machu-picchu,Machu Picchu,PE,Peru,,,-13.1631,-72.5450,America/Lima,0,2430,landmark,The Lost City of the Incas high in the Andes,,historic|landmark|hiking|mountain
+cartagena,Cartagena,CO,Colombia,,,10.3910,-75.5364,America/Bogota,1028736,2,city,A walled colonial city on the Caribbean coast,CTG,historic|beach
+medellin,Medellín,CO,Colombia,,,6.2442,-75.5812,America/Bogota,2569007,1495,city,The City of Eternal Spring,MDE,metro|mountain
+bogota,Bogotá,CO,Colombia,,,4.7110,-74.0721,America/Bogota,7181469,2640,city,Colombia's high-altitude capital,BOG,metro|historic|mountain
+santiago,Santiago,CL,Chile,,,-33.4489,-70.6693,America/Santiago,6310000,520,city,Chile's capital between the Andes and the Pacific,SCL,metro|mountain
+mumbai,Mumbai,IN,India,,,19.0760,72.8777,Asia/Kolkata,12442373,14,city,India's financial capital and Bollywood hub,BOM,metro
+beijing,Beijing,CN,China,,,39.9042,116.4074,Asia/Shanghai,21540000,43,city,China's capital with the Forbidden City and Great Wall,PEK,metro|historic
+shanghai,Shanghai,CN,China,,,31.2304,121.4737,Asia/Shanghai,24870895,4,city,China's largest city and financial center,PVG,metro
+hong-kong,Hong Kong,HK,Hong Kong,,,22.3193,114.1694,Asia/Hong_Kong,7500700,32,city,A dynamic city where East meets West,HKG,metro|entertainment
+taipei,Taipei,TW,Taiwan,,,25.0330,121.5654,Asia/Taipei,2646204,9,city,Taiwan's capital with night markets and temples,TPE,metro|historic
+seoul,Seoul,KR,South Korea,,,37.5665,126.9780,Asia/Seoul,9776000,38,city,South Korea's high-tech capital,ICN,metro|historic|entertainment
+cape-town,Cape Town,ZA,South Africa,,,-33.9249,18.4241,Africa/Johannesburg,4618000,0,city,A stunning city between Table Mountain and the sea,CPT,metro|beach|mountain|hiking
+marrakech,Marrakech,MA,Morocco,,,31.6295,-7.9811,Africa/Casablanca,928850,466,city,A vibrant Moroccan city with souks and palaces,RAK,historic|desert
+cairo,Cairo,EG,Egypt,,,30.0444,31.2357,Africa/Cairo,10230350,75,city,Home to the Pyramids of Giza,CAI,metro|historic
+nairobi,Nairobi,KE,Kenya,,,-1.2921,36.8219,Africa/Nairobi,4397073,1661,city,Kenya's capital and a gateway to safari,NBO,metro|wildlife
+auckland,Auckland,NZ,New Zealand,,,-36.8485,174.7633,Pacific/Auckland,1657200,0,city,New Zealand's largest city on two harbors,AKL,metro|beach
+queenstown-nz,Queenstown,NZ,New Zealand,,,-45.0312,168.6626,Pacific/Auckland,15800,310,resort,The adventure capital of the world,ZQN,mountain|hiking|skiing|lake
+fiji,Fiji,FJ,Fiji,,,-17.7134,178.0650,Pacific/Fiji,0,0,island,A tropical paradise of over 300 islands,NAN,beach|island|diving
+maldives,Maldives,MV,Maldives,,,4.1755,73.5093,Indian/Maldives,557426,2,island,A tropical nation of coral atolls in the Indian Ocean,MLE,beach|island|diving
+mauritius,Mauritius,MU,Mauritius,,,-20.3484,57.5522,Indian/Mauritius,1265740,0,island,A volcanic island nation in the Indian Ocean,MRU,beach|island|hiking
+san-jose-ca,San Jose,US,United States,California,,37.3382,-121.8863,America/Los_Angeles,1021795,25,city,The capital of Silicon Valley,SJC,metro
+jacksonville-fl,Jacksonville,US,United States,Florida,,30.3322,-81.6557,America/New_York,949611,12,city,Florida's largest city by area,JAX,metro|beach
+fort-worth-tx,Fort Worth,US,United States,Texas,,32.7555,-97.3308,America/Chicago,958692,203,city,Where the West begins in North Texas,,metro|historic
+santa-fe,Santa Fe,US,United States,New Mexico,,35.6870,-105.9378,America/Denver,89117,2134,city,The oldest state capital with adobe architecture,SAF,historic|desert|mountain
+flagstaff,Flagstaff,US,United States,Arizona,,35.1983,-111.6513,America/Phoenix,73964,2106,city,A mountain town near the Grand Canyon,FLG,mountain|hiking
+durango,Durango,US,United States,Colorado,,37.2753,-107.8801,America/Denver,19071,1988,town,A historic railroad town in the San Juan Mountains,DRO,mountain|hiking|historic
+key-largo,Key Largo,US,United States,Florida,,25.0865,-80.4473,America/New_York,10433,0,town,The first of the Florida Keys and a diving paradise,,beach|diving|island
+sanibel-island,Sanibel Island,US,United States,Florida,,26.4490,-82.0220,America/New_York,7397,1,island,A barrier island famous for seashell collecting,,beach|island|wildlife
+amelia-island,Amelia Island,US,United States,Florida,,30.6174,-81.4626,America/New_York,16747,3,island,A barrier island with Victorian charm near Jacksonville,,beach|island|historic
+marco-island,Marco Island,US,United States,Florida,,25.9412,-81.7184,America/New_York,18045,2,island,A Gulf Coast island near the Everglades,,beach|island
+anna-maria-island,Anna Maria Island,US,United States,Florida,,27.5306,-82.7326,America/New_York,7701,2,island,A laid-back Gulf Coast barrier island,,beach|island
+siesta-key,Siesta Key,US,United States,Florida,,27.2678,-82.5462,America/New_York,6565,1,island,Home to America's number one beach,,beach|island
+30a,30A,US,United States,Florida,,30.3200,-86.1500,America/Chicago,0,5,resort,A scenic stretch of Florida's Emerald Coast,,beach
+kiawah-island,Kiawah Island,US,United States,South Carolina,,32.6082,-80.0848,America/New_York,1626,2,island,An exclusive resort island near Charleston,,beach|island
+tybee-island,Tybee Island,US,United States,Georgia,,32.0005,-80.8457,America/New_York,3094,2,island,Savannah's beach near historic Fort Screven,,beach|island|historic
+jekyll-island,Jekyll Island,US,United States,Georgia,,31.0555,-81.4209,America/New_York,853,2,island,A Georgia barrier island with a Gilded Age history,,beach|island|historic
+whitefish,Whitefish,US,United States,Montana,,48.4106,-114.3528,America/Denver,8032,920,town,A ski town near Glacier National Park,,skiing|mountain|hiking
+bozeman,Bozeman,US,United States,Montana,,45.6770,-111.0429,America/Denver,53293,1461,city,A gateway to Yellowstone and Big Sky skiing,BZN,mountain|hiking|skiing
+missoula,Missoula,US,United States,Montana,,46.8721,-114.0001,America/Denver,75516,978,city,A university town in western Montana's mountains,MSO,mountain|hiking
+rapid-city,Rapid City,US,United States,South Dakota,,44.0805,-103.2310,America/Chicago,77503,966,city,The gateway to Mount Rushmore and the Black Hills,RAP,mountain|hiking|historic
+deadwood,Deadwood,US,United States,South Dakota,,44.3767,-103.7296,America/Chicago,1324,1393,town,A Wild West town in the Black Hills,,historic|entertainment
+cody,Cody,US,United States,Wyoming,,44.5263,-109.0565,America/Denver,10014,1524,town,The eastern gateway to Yellowstone,,mountain|wildlife|historic
+west-yellowstone,West Yellowstone,US,United States,Montana,,44.6621,-111.1041,America/Denver,1353,2028,town,The western gateway to Yellowstone National Park,,mountain|wildlife|hiking
+mammoth-lakes,Mammoth Lakes,US,United States,California,,37.6485,-118.9721,America/Los_Angeles,8263,2400,resort,A year-round mountain resort in the Eastern Sierra,MMH,skiing|mountain|hiking|lake
+death-valley-junction,Furnace Creek,US,United States,California,,36.4578,-116.8659,America/Los_Angeles,24,-59,town,The main hub within Death Valley National Park,,desert|hiking
+joshua-tree-town,Joshua Tree,US,United States,California,,34.1347,-116.3131,America/Los_Angeles,7414,817,town,A desert community at the entrance to Joshua Tree NP,,desert|hiking
+springdale,Springdale,US,United States,Utah,,37.1899,-112.9983,America/Denver,614,1158,town,The gateway town to Zion National Park,,hiking|scenic-drive
+kanab,Kanab,US,United States,Utah,,37.0475,-112.5263,America/Denver,4834,1506,town,A base for exploring southern Utah's parks,,hiking|desert|scenic-drive
+page,Page,US,United States,Arizona,,36.9147,-111.4558,America/Phoenix,7440,1255,town,Gateway to Antelope Canyon and Lake Powell,,lake|desert|scenic-drive
+tusayan,Tusayan,US,United States,Arizona,,35.9742,-112.1213,America/Phoenix,558,1965,town,The closest town to the Grand Canyon South Rim,,hiking|national-park
+estes-park,Estes Park,US,United States,Colorado,,40.3772,-105.5217,America/Denver,6304,2293,town,The gateway to Rocky Mountain National Park,,mountain|hiking|wildlife
+steamboat-springs,Steamboat Springs,US,United States,Colorado,,40.4850,-106.8317,America/Denver,13458,2051,resort,A Colorado ski town known for champagne powder,,skiing|mountain|hiking
+crested-butte,Crested Butte,US,United States,Colorado,,38.8697,-106.9878,America/Denver,1639,2715,resort,Colorado's last great ski town,,skiing|mountain|hiking
+durham-nc,Durham,US,United States,North Carolina,,35.9940,-78.8986,America/New_York,283506,123,city,Part of the Research Triangle with Duke University,,metro
+asheville,Asheville,US,United States,North Carolina,,35.5951,-82.5515,America/New_York,94067,649,city,A mountain city known for arts and the Biltmore Estate,AVL,mountain|hiking|historic
+wilmington-nc,Wilmington,US,United States,North Carolina,,34.2257,-77.9447,America/New_York,115451,9,city,A historic port city with nearby beaches,ILM,beach|historic
+virginia-beach-resort,Virginia Beach Oceanfront,US,United States,Virginia,,36.8529,-75.9780,America/New_York,459470,4,resort,A popular East Coast beach resort,,beach
+ocean-city-md,Ocean City,US,United States,Maryland,,38.3365,-75.0849,America/New_York,6924,1,resort,A classic mid-Atlantic boardwalk beach town,,beach|entertainment
+rehoboth-beach,Rehoboth Beach,US,United States,Delaware,,38.7210,-75.0760,America/New_York,1588,3,resort,The Nation's Summer Capital on the Delaware coast,,beach
+wildwood,Wildwood,US,United States,New Jersey,,38.9918,-74.8149,America/New_York,5325,2,resort,A classic Jersey Shore boardwalk town,,beach|entertainment
+atlantic-city,Atlantic City,US,United States,New Jersey,,39.3643,-74.4229,America/New_York,38497,3,city,A seaside resort city known for its boardwalk and casinos,ACY,beach|entertainment
+long-island,Long Island,US,United States,New York,,40.7891,-73.1350,America/New_York,7869820,20,resort,Beaches and wine country east of New York City,ISP,beach
+hamptons,The Hamptons,US,United States,New York,,40.9632,-72.1843,America/New_York,60000,10,resort,An exclusive beach community on Long Island's east end,,beach
+stowe,Stowe,US,United States,Vermont,,44.4654,-72.6874,America/New_York,4314,220,resort,A charming New England ski village,,skiing|mountain|hiking
+killington,Killington,US,United States,Vermont,,43.6776,-72.7934,America/New_York,811,1100,resort,The Beast of the East ski resort,,skiing|mountain
+woodstock-vt,Woodstock,US,United States,Vermont,,43.6243,-72.5185,America/New_York,3048,210,town,One of America's prettiest small towns,,historic
+north-conway,North Conway,US,United States,New Hampshire,,44.0537,-71.1284,America/New_York,2349,163,town,A White Mountains resort village,,skiing|mountain|hiking
+acadia-area,Bar Harbor,US,United States,Maine,,44.3876,-68.2039,America/New_York,5089,10,town,The gateway to Acadia National Park,,hiking|beach|national-park
+portland-me,Portland,US,United States,Maine,,43.6591,-70.2568,America/New_York,68408,19,city,A foodie city on the Maine coast,PWM,beach|historic
+burlington,Burlington,US,United States,Vermont,,44.4759,-73.2121,America/New_York,44743,61,city,Vermont's largest city on Lake Champlain,BTV,lake|mountain
+ithaca,Ithaca,US,United States,New York,,42.4440,-76.5019,America/New_York,32108,124,city,A college town with gorges and waterfalls,ITH,hiking|lake
+cooperstown,Cooperstown,US,United States,New York,,42.6995,-74.9246,America/New_York,1761,366,town,Home of the Baseball Hall of Fame,,historic|lake
+saratoga-springs,Saratoga Springs,US,United States,New York,,43.0831,-73.7846,America/New_York,28491,100,city,A spa city famous for horse racing,,historic|entertainment
+williamsburg,Williamsburg,US,United States,Virginia,,37.2707,-76.7075,America/New_York,15425,26,town,Home to Colonial Williamsburg living history museum,,historic
+virginia-beach-va,Virginia Beach,US,United States,Virginia,,36.8529,-75.9780,America/New_York,459470,4,city,A resort city with a long boardwalk on the Atlantic,,beach
+annapolis,Annapolis,US,United States,Maryland,,38.9784,-76.4922,America/New_York,40812,12,city,Maryland's capital and the US Naval Academy home,,historic|beach
+fredericksburg,Fredericksburg,US,United States,Virginia,,38.3032,-77.4605,America/New_York,29036,15,city,A historic city between DC and Richmond,,historic
+gettysburg,Gettysburg,US,United States,Pennsylvania,,39.8309,-77.2311,America/New_York,7620,168,town,Site of the pivotal Civil War battle,,historic
+lancaster,Lancaster,US,United States,Pennsylvania,,40.0379,-76.3055,America/New_York,63591,119,city,The heart of Pennsylvania Dutch Country,,historic
+hershey,Hershey,US,United States,Pennsylvania,,40.2859,-76.6505,America/New_York,14257,128,town,The Sweetest Place on Earth,,entertainment
+niagara-on-the-lake,Niagara-on-the-Lake,CA,Canada,Ontario,,43.2553,-79.0717,America/Toronto,17511,79,town,A charming wine town near Niagara Falls,,wine|historic
+prince-edward-county,Prince Edward County,CA,Canada,Ontario,,43.9500,-77.1500,America/Toronto,25704,75,town,Ontario's emerging wine and culinary destination,,wine|beach
+muskoka,Muskoka,CA,Canada,Ontario,,45.0000,-79.3000,America/Toronto,60599,280,resort,Ontario's cottage country with pristine lakes,,lake|hiking
+thunder-bay,Thunder Bay,CA,Canada,Ontario,,48.3809,-89.2477,America/Toronto,110172,199,city,A city on Lake Superior's north shore,YQT,hiking|lake
+st-johns,St. John's,CA,Canada,Newfoundland and Labrador,,47.5615,-52.7126,America/St_Johns,110525,75,city,The oldest city in North America,YYT,historic
+regina,Regina,CA,Canada,Saskatchewan,,50.4452,-104.6189,America/Regina,228928,577,city,Saskatchewan's capital on the prairies,YQR,metro
+torquay,Torquay,GB,United Kingdom,,England,50.4619,-3.5253,Europe/London,65245,0,town,The heart of the English Riviera in Devon,,beach
+llandudno,Llandudno,GB,United Kingdom,,Wales,53.3241,-3.8276,Europe/London,20701,0,town,Wales' largest seaside resort,,beach
+keswick,Keswick,GB,United Kingdom,,England,54.6013,-3.1347,Europe/London,5243,80,town,A market town in the heart of the Lake District,,lake|hiking|mountain
+ambleside,Ambleside,GB,United Kingdom,,England,54.4289,-2.9625,Europe/London,2600,53,town,A popular base for Lake District walks,,lake|hiking
+pitlochry,Pitlochry,GB,United Kingdom,,Scotland,56.7042,-3.7340,Europe/London,2776,120,town,A Victorian resort town in Highland Perthshire,,hiking|scenic-drive
+exeter,Exeter,GB,United Kingdom,,England,50.7184,-3.5339,Europe/London,130428,24,city,A historic cathedral city in Devon,EXT,historic
+plymouth,Plymouth,GB,United Kingdom,,England,50.3755,-4.1427,Europe/London,264200,50,city,A naval city on the Devon coast,,historic|beach
+norwich,Norwich,GB,United Kingdom,,England,52.6309,1.2974,Europe/London,213166,5,city,A medieval city in East Anglia,NWI,historic
+southampton,Southampton,GB,United Kingdom,,England,50.9097,-1.4044,Europe/London,269781,0,city,A major cruise port on England's south coast,SOU,metro|historic
+leicester,Leicester,GB,United Kingdom,,England,52.6369,-1.1398,Europe/London,368600,63,city,A multicultural city in the East Midlands,EMA,metro|historic
+monaco,Monaco,MC,Monaco,,,43.7384,7.4246,Europe/Paris,39242,0,city,A tiny glamorous principality on the French Riviera,,entertainment|beach
+biarritz,Biarritz,FR,France,,Nouvelle-Aquitaine,43.4832,-1.5586,Europe/Paris,25532,0,town,A Basque Country surf town on the Atlantic,,beach|surfing
+la-rochelle,La Rochelle,FR,France,,Nouvelle-Aquitaine,46.1603,-1.1511,Europe/Paris,77196,0,city,A charming Atlantic port city,,historic|beach
+carcassonne,Carcassonne,FR,France,,Occitanie,43.2130,2.3491,Europe/Paris,47068,110,city,A medieval fortified city in southern France,,historic
+versailles,Versailles,FR,France,,Île-de-France,48.8014,2.1301,Europe/Paris,85205,130,town,Home to the Palace of Versailles,,historic
+aix-en-provence,Aix-en-Provence,FR,France,,Provence-Alpes-Côte d'Azur,43.5297,5.4474,Europe/Paris,145133,177,city,A elegant Provençal city with thermal springs,,historic
+nantes,Nantes,FR,France,,Pays de la Loire,47.2184,-1.5536,Europe/Paris,314138,8,city,A creative city at the mouth of the Loire,NTE,metro|historic
+montpellier,Montpellier,FR,France,,Occitanie,43.6108,3.8767,Europe/Paris,290053,27,city,A vibrant university city near the Mediterranean,MPL,metro
+lille,Lille,FR,France,,Hauts-de-France,50.6292,3.0573,Europe/Paris,234475,20,city,A Flemish-influenced city near the Belgian border,LIL,metro|historic
+genoa,Genoa,IT,Italy,,Liguria,44.4056,8.9463,Europe/Rome,580097,20,city,A historic port city on the Italian Riviera,GOA,historic|beach
+lucca,Lucca,IT,Italy,,Tuscany,43.8430,10.5027,Europe/Rome,89539,19,city,A Tuscan city enclosed by Renaissance walls,,historic
+rimini,Rimini,IT,Italy,,Emilia-Romagna,44.0594,12.5681,Europe/Rome,150755,5,city,Italy's most popular beach resort on the Adriatic,RMI,beach
+cagliari,Cagliari,IT,Italy,,Sardinia,39.2238,9.1217,Europe/Rome,154460,4,city,Sardinia's capital with beaches and ancient ruins,CAG,beach|historic|island
+como,Como,IT,Italy,,Lombardy,45.8080,9.0852,Europe/Rome,84834,201,city,A lakeside city at the southern tip of Lake Como,,lake|scenic-drive
+pompeii,Pompeii,IT,Italy,,Campania,40.7462,14.4989,Europe/Rome,25620,14,landmark,An ancient Roman city preserved by volcanic ash,,historic|landmark
+alicante,Alicante,ES,Spain,,Valencia,38.3452,-0.4810,Europe/Madrid,337304,0,city,A Mediterranean port city on the Costa Blanca,ALC,beach
+cadiz,Cadiz,ES,Spain,,Andalusia,36.5271,-6.2886,Europe/Madrid,116027,0,city,One of the oldest cities in Western Europe,,historic|beach
+salamanca,Salamanca,ES,Spain,,Castilla y León,40.9701,-5.6635,Europe/Madrid,144228,803,city,A golden sandstone university city,,historic
+santiago-de-compostela,Santiago de Compostela,ES,Spain,,Galicia,42.8782,-8.5448,Europe/Madrid,97260,260,city,The end point of the Camino de Santiago pilgrimage,SCQ,historic
+girona,Girona,ES,Spain,,Catalonia,41.9794,2.8214,Europe/Madrid,103369,70,city,A medieval city near the Costa Brava,GRO,historic
+eindhoven,Eindhoven,NL,Netherlands,,,51.4416,5.4697,Europe/Amsterdam,238478,17,city,A Dutch city known for design and technology,EIN,metro
+maastricht,Maastricht,NL,Netherlands,,,50.8514,5.6910,Europe/Amsterdam,122488,50,city,A historic city where the EU treaty was signed,MST,historic
+haarlem,Haarlem,NL,Netherlands,,,52.3874,4.6462,Europe/Amsterdam,162902,0,city,A charming city near Amsterdam with art museums,,historic
+basel,Basel,CH,Switzerland,,,47.5596,7.5886,Europe/Zurich,177654,260,city,A cultural city on the Rhine at three borders,BSL,metro|historic
+lausanne,Lausanne,CH,Switzerland,,,46.5197,6.6323,Europe/Zurich,139111,495,city,An Olympic city on the shores of Lake Geneva,,lake|mountain
+montreux,Montreux,CH,Switzerland,,,46.4312,6.9107,Europe/Zurich,26574,390,town,A lakeside town famous for its jazz festival,,lake|mountain|entertainment
+gothenburg,Gothenburg,SE,Sweden,,,57.7089,11.9746,Europe/Stockholm,583056,12,city,Sweden's second city with a vibrant food scene,GOT,metro
+malmo,Malmö,SE,Sweden,,,55.6050,13.0038,Europe/Stockholm,351749,12,city,A Swedish city connected to Copenhagen by bridge,MMX,metro
+aarhus,Aarhus,DK,Denmark,,,56.1629,10.2039,Europe/Copenhagen,285273,0,city,Denmark's second city and cultural capital,AAR,metro
+tampere,Tampere,FI,Finland,,,61.4978,23.7610,Europe/Helsinki,244315,77,city,Finland's second city between two lakes,TMP,metro|lake
+ghent,Ghent,BE,Belgium,,,51.0543,3.7174,Europe/Brussels,265086,5,city,A medieval Flemish city with canals and castles,,historic
+brussels,Brussels,BE,Belgium,,,50.8503,4.3517,Europe/Brussels,1209000,13,city,The capital of Belgium and the European Union,BRU,metro|historic
+penang,Penang,MY,Malaysia,,,5.4164,100.3327,Asia/Kuala_Lumpur,708127,0,island,A Malaysian island known for street food and heritage,PEN,beach|island|historic
+langkawi,Langkawi,MY,Malaysia,,,6.3500,99.8000,Asia/Kuala_Lumpur,99000,0,island,A duty-free Malaysian island paradise,LGK,beach|island
+krabi,Krabi,TH,Thailand,,,8.0863,98.9063,Asia/Bangkok,33273,0,town,A Thai province with limestone cliffs and islands,KBV,beach|island|hiking
+manila,Manila,PH,Philippines,,,14.5995,120.9842,Asia/Manila,1846513,5,city,The capital of the Philippines,MNL,metro|historic
+boracay,Boracay,PH,Philippines,,,11.9674,121.9248,Asia/Manila,37802,0,island,A tiny Philippine island with white sand beaches,,beach|island|diving
+nagoya,Nagoya,JP,Japan,,,35.1815,136.9066,Asia/Tokyo,2320361,17,city,Japan's fourth-largest city and industrial hub,NGO,metro
+kobe,Kobe,JP,Japan,,,34.6901,135.1956,Asia/Tokyo,1537272,50,city,A port city famous for its beef and harbor views,UKB,metro
+kamakura,Kamakura,JP,Japan,,,35.3192,139.5467,Asia/Tokyo,172302,10,town,A coastal town with a Great Buddha statue,,historic|beach
+takayama,Takayama,JP,Japan,,,36.1461,137.2522,Asia/Tokyo,86498,573,town,A beautifully preserved Edo-era mountain town,,historic|mountain
+delhi,Delhi,IN,India,,,28.7041,77.1025,Asia/Kolkata,16787941,216,city,India's capital territory with Mughal-era monuments,DEL,metro|historic
+bangalore,Bangalore,IN,India,,,12.9716,77.5946,Asia/Kolkata,8443675,920,city,India's Silicon Valley and garden city,BLR,metro
+jaipur,Jaipur,IN,India,,,26.9124,75.7873,Asia/Kolkata,3073350,431,city,The Pink City and gateway to Rajasthan,JAI,historic
+agra,Agra,IN,India,,,27.1767,78.0081,Asia/Kolkata,1760285,171,city,Home of the Taj Mahal,AGR,historic|landmark
+goa,Goa,IN,India,,,15.2993,74.1240,Asia/Kolkata,1458545,0,resort,India's beach paradise on the Arabian Sea,GOI,beach
+johannesburg,Johannesburg,ZA,South Africa,,,-26.2041,28.0473,Africa/Johannesburg,5635127,1753,city,South Africa's largest city and economic hub,JNB,metro
+zanzibar,Zanzibar,TZ,Tanzania,,,-6.1659,39.2026,Africa/Dar_es_Salaam,1303569,0,island,A spice island off the Tanzanian coast,ZNZ,beach|island|historic
+victoria-falls,Victoria Falls,ZW,Zimbabwe,,,-17.9243,25.8572,Africa/Harare,35000,915,landmark,One of the world's largest and most spectacular waterfalls,VFA,landmark|wildlife
+luang-prabang,Luang Prabang,LA,Laos,,,19.8856,102.1350,Asia/Vientiane,66781,300,town,A UNESCO World Heritage city on the Mekong,LPQ,historic
+ubud,Ubud,ID,Indonesia,,,-8.5069,115.2625,Asia/Makassar,74320,200,town,Bali's cultural heart surrounded by rice terraces,,hiking|historic
+guadalajara,Guadalajara,MX,Mexico,,,20.6597,-103.3496,America/Mexico_City,1495189,1566,city,Mexico's second city and birthplace of mariachi,GDL,metro|historic|entertainment
+oaxaca,Oaxaca,MX,Mexico,,,17.0732,-96.7266,America/Mexico_City,300050,1555,city,A colonial city known for mezcal and indigenous culture,OAX,historic
+san-miguel-de-allende,San Miguel de Allende,MX,Mexico,,,20.9144,-100.7452,America/Mexico_City,160383,1910,town,A colonial gem in Mexico's heartland,,historic
+cabo-san-lucas,Cabo San Lucas,MX,Mexico,,,22.8905,-109.9167,America/Mazatlan,81111,3,resort,A resort city at the tip of Baja California,SJD,beach|diving
+havana,Havana,CU,Cuba,,,23.1136,-82.3666,America/Havana,2130081,59,city,Cuba's colorful capital frozen in time,HAV,historic|beach
+punta-cana,Punta Cana,DO,Dominican Republic,,,18.5601,-68.3725,America/Santo_Domingo,100023,0,resort,The Caribbean's most visited beach destination,PUJ,beach|resort
+montego-bay,Montego Bay,JM,Jamaica,,,18.4762,-77.8939,America/Jamaica,110115,0,city,Jamaica's second city and a popular resort,MBJ,beach
+aruba,Aruba,AW,Aruba,,,12.5211,-69.9683,America/Aruba,106766,0,island,A Caribbean island known for white sand beaches,AUA,beach|island
+st-lucia,St. Lucia,LC,Saint Lucia,,,13.9094,-60.9789,America/Port_of_Spain,184100,0,island,A volcanic Caribbean island with the iconic Pitons,UVF,beach|island|hiking|mountain
+barbados,Barbados,BB,Barbados,,,13.1939,-59.5432,America/Barbados,287375,0,island,A Caribbean island known for rum and beaches,BGI,beach|island|surfing
+turks-and-caicos,Turks and Caicos,TC,Turks and Caicos Islands,,,21.7645,-72.3353,America/Grand_Turk,45114,0,island,A British territory with pristine Caribbean beaches,PLS,beach|island|diving
+bermuda,Bermuda,BM,Bermuda,,,32.3078,-64.7505,Atlantic/Bermuda,63903,0,island,A British territory with pink sand beaches,BDA,beach|island
+bahamas,Nassau,BS,Bahamas,,,25.0480,-77.3554,America/Nassau,274400,0,island,The capital of the Bahamas,NAS,beach|island|diving
+tuscaloosa,Tuscaloosa,US,United States,Alabama,,33.2098,-87.5692,America/Chicago,101129,67,city,Home of the University of Alabama,,metro
+tallahassee,Tallahassee,US,United States,Florida,,30.4383,-84.2807,America/New_York,196169,62,city,Florida's capital city,TLH,metro
+gainesville,Gainesville,US,United States,Florida,,29.6516,-82.3248,America/New_York,141085,50,city,Home of the University of Florida,GNV,metro
+columbia-sc,Columbia,US,United States,South Carolina,,34.0007,-81.0348,America/New_York,137541,89,city,South Carolina's capital city,CAE,metro
+greenville-sc,Greenville,US,United States,South Carolina,,34.8526,-82.3940,America/New_York,72095,296,city,A revitalized city in the foothills of the Blue Ridge,GSP,metro|mountain
+little-rock,Little Rock,US,United States,Arkansas,,34.7465,-92.2896,America/Chicago,202591,102,city,Arkansas' capital on the Arkansas River,LIT,metro
+jackson-ms,Jackson,US,United States,Mississippi,,32.2988,-90.1848,America/Chicago,153701,91,city,Mississippi's capital city,JAN,metro
+fayetteville-ar,Fayetteville,US,United States,Arkansas,,36.0626,-94.1574,America/Chicago,93949,427,city,A college town in the Ozark Mountains,XNA,mountain|hiking
+boulder,Boulder,US,United States,Colorado,,40.0150,-105.2705,America/Denver,105673,1655,city,A progressive city at the base of the Flatirons,,mountain|hiking
+fort-collins,Fort Collins,US,United States,Colorado,,40.5853,-105.0844,America/Denver,169810,1525,city,A craft beer hub in northern Colorado,,mountain
+santa-cruz,Santa Cruz,US,United States,California,,36.9741,-122.0308,America/Los_Angeles,67324,9,city,A beach city with a famous boardwalk,,beach|surfing
+paso-robles,Paso Robles,US,United States,California,,35.6264,-120.6910,America/Los_Angeles,32276,219,town,A Central Coast wine country destination,,wine
+solvang,Solvang,US,United States,California,,34.5958,-120.1376,America/Los_Angeles,5926,146,town,A Danish-themed village in Santa Ynez Valley,,wine|historic
+healdsburg,Healdsburg,US,United States,California,,38.6105,-122.8694,America/Los_Angeles,12093,32,town,A charming wine country town in Sonoma County,,wine
+sonoma,Sonoma,US,United States,California,,38.2919,-122.4580,America/Los_Angeles,11054,18,town,The birthplace of California wine,,wine|historic
+half-moon-bay,Half Moon Bay,US,United States,California,,37.4636,-122.4286,America/Los_Angeles,12534,10,town,A coastal town south of San Francisco,,beach|surfing
+mendocino,Mendocino,US,United States,California,,39.3077,-123.7995,America/Los_Angeles,894,47,town,A dramatic headland village on the Mendocino Coast,,beach|scenic-drive
+eureka,Eureka,US,United States,California,,40.8021,-124.1637,America/Los_Angeles,27177,13,city,A Victorian seaport near the Redwoods,ACV,historic|beach
+cannon-beach,Cannon Beach,US,United States,Oregon,,45.8918,-123.9615,America/Los_Angeles,1457,6,town,An Oregon coast town with iconic Haystack Rock,,beach|scenic-drive
+hood-river,Hood River,US,United States,Oregon,,45.7054,-121.5215,America/Los_Angeles,8313,46,town,A windsurfing mecca in the Columbia River Gorge,,mountain|lake
+leavenworth,Leavenworth,US,United States,Washington,,47.5962,-120.6615,America/Los_Angeles,2148,345,town,A Bavarian-themed village in the Cascades,,mountain|skiing|hiking
+walla-walla,Walla Walla,US,United States,Washington,,46.0646,-118.3430,America/Los_Angeles,34060,288,town,A wine destination in eastern Washington,,wine
+coeur-dalene,Coeur d'Alene,US,United States,Idaho,,47.6777,-116.7805,America/Los_Angeles,54628,664,city,A lakeside resort city in northern Idaho,,lake|mountain|skiing
+mcall,McCall,US,United States,Idaho,,44.9110,-116.0988,America/Boise,3386,1524,resort,A mountain lake town in central Idaho,,lake|mountain|skiing|hiking
+sandpoint,Sandpoint,US,United States,Idaho,,48.2766,-116.5533,America/Los_Angeles,9364,640,town,A lakeside town near Schweitzer ski resort,,lake|mountain|skiing
+whidbey-island,Whidbey Island,US,United States,Washington,,48.2500,-122.7000,America/Los_Angeles,69000,0,island,The longest island in Washington State,,island|beach
+san-juan-islands,San Juan Islands,US,United States,Washington,,48.5326,-123.0286,America/Los_Angeles,17582,0,island,A Pacific Northwest archipelago for whale watching,,island|wildlife
+door-county,Door County,US,United States,Wisconsin,,45.0500,-87.3000,America/Chicago,30241,180,resort,Wisconsin's Cape Cod with cherry orchards,,beach|scenic-drive
+traverse-city,Traverse City,US,United States,Michigan,,44.7631,-85.6206,America/Detroit,15678,180,city,The Cherry Capital on Lake Michigan,TVC,beach|wine|lake
+sleeping-bear-dunes,Sleeping Bear Dunes,US,United States,Michigan,,44.8000,-86.0500,America/Detroit,0,300,national-park,Towering sand dunes on Lake Michigan's shore,,beach|hiking|national-park|lake
+pictured-rocks,Pictured Rocks,US,United States,Michigan,,46.5500,-86.3500,America/Detroit,0,200,national-park,Colorful sandstone cliffs on Lake Superior,,hiking|beach|national-park|lake
+apostle-islands,Apostle Islands,US,United States,Wisconsin,,46.9500,-90.7000,America/Chicago,0,0,national-park,Sea caves and islands on Lake Superior,,island|beach|national-park|lake
+voyageurs,Voyageurs,US,United States,Minnesota,,48.5000,-92.8333,America/Chicago,0,340,national-park,A water-based park on the Canadian border,,lake|camping|wildlife|national-park
+isle-royale,Isle Royale,US,United States,Michigan,,48.0000,-88.9000,America/Detroit,0,425,national-park,A remote island wilderness in Lake Superior,,island|hiking|camping|wildlife|national-park
+guadalupe-mountains,Guadalupe Mountains,US,United States,Texas,,31.8913,-104.8606,America/Chicago,0,2667,national-park,The highest point in Texas,,hiking|desert|national-park
+channel-islands,Channel Islands,US,United States,California,,34.0069,-119.7785,America/Los_Angeles,0,0,national-park,California's Galapagos off the coast,,island|hiking|wildlife|national-park|diving
+dry-tortugas,Dry Tortugas,US,United States,Florida,,24.6285,-82.8732,America/New_York,0,0,national-park,A remote island fort in the Gulf of Mexico,,island|beach|diving|national-park
+congaree,Congaree,US,United States,South Carolina,,33.7948,-80.7821,America/New_York,0,30,national-park,The largest intact old-growth bottomland forest,,hiking|camping|national-park
+cuyahoga-valley,Cuyahoga Valley,US,United States,Ohio,,41.2808,-81.5678,America/New_York,0,220,national-park,A green oasis between Cleveland and Akron,,hiking|scenic-drive|national-park
+new-river-gorge,New River Gorge,US,United States,West Virginia,,38.0659,-81.0812,America/New_York,0,300,national-park,America's newest national park with epic gorge views,,hiking|camping|national-park
+indiana-dunes,Indiana Dunes,US,United States,Indiana,,41.6533,-87.0524,America/New_York,0,60,national-park,Sand dunes and beaches on Lake Michigan,,beach|hiking|national-park|lake
+black-canyon,Black Canyon of the Gunnison,US,United States,Colorado,,38.5754,-107.7416,America/Denver,0,2722,national-park,A dramatic narrow canyon in western Colorado,,hiking|camping|national-park
+great-sand-dunes,Great Sand Dunes,US,United States,Colorado,,37.7916,-105.5943,America/Denver,0,2400,national-park,North America's tallest sand dunes,,hiking|camping|national-park
+pinnacles,Pinnacles,US,United States,California,,36.4906,-121.1825,America/Los_Angeles,0,1028,national-park,Volcanic spires and talus caves,,hiking|wildlife|national-park
+lassen-volcanic,Lassen Volcanic,US,United States,California,,40.4977,-121.5050,America/Los_Angeles,0,3187,national-park,A volcanic landscape with hydrothermal features,,hiking|camping|mountain|national-park
+north-cascades,North Cascades,US,United States,Washington,,48.7718,-121.2985,America/Los_Angeles,0,2804,national-park,Rugged alpine wilderness in Washington,,hiking|camping|mountain|national-park
+haleakala,Haleakala,US,United States,Hawaii,,20.7204,-156.1552,Pacific/Honolulu,0,3055,national-park,A massive volcanic crater on Maui,,hiking|mountain|national-park
+hawaii-volcanoes,Hawaii Volcanoes,US,United States,Hawaii,,19.4194,-155.2885,Pacific/Honolulu,0,1247,national-park,Active volcanoes on the Big Island,,hiking|national-park
+virgin-islands,Virgin Islands,US,United States,US Virgin Islands,,18.3358,-64.8963,America/Virgin,0,389,national-park,Tropical beaches and coral reefs,,beach|island|diving|national-park
+tuscany,Tuscany,IT,Italy,,Tuscany,43.3500,11.3500,Europe/Rome,0,300,landmark,Italy's most beloved countryside region,,wine|scenic-drive|historic
+amalfi,Amalfi,IT,Italy,,Campania,40.6340,14.6027,Europe/Rome,5145,6,town,The heart of the Amalfi Coast,,beach|scenic-drive|historic
+capri,Capri,IT,Italy,,Campania,40.5507,14.2224,Europe/Rome,14231,0,island,A glamorous island in the Bay of Naples,,island|beach
+ravello,Ravello,IT,Italy,,Campania,40.6491,14.6117,Europe/Rome,2478,350,town,A hilltop town with stunning Amalfi Coast views,,scenic-drive
+assisi,Assisi,IT,Italy,,Umbria,43.0707,12.6196,Europe/Rome,28299,424,town,The birthplace of St. Francis,,historic
+lake-garda,Lake Garda,IT,Italy,,Veneto,45.6500,10.6500,Europe/Rome,0,65,landmark,Italy's largest lake between the Alps and the plains,,lake|scenic-drive
+cinque-terre,Cinque Terre,IT,Italy,,Liguria,44.1461,9.6439,Europe/Rome,0,0,landmark,Five colorful fishing villages on the Ligurian coast,,hiking|beach|scenic-drive
+davos,Davos,CH,Switzerland,,,46.8027,9.8360,Europe/Zurich,11060,1560,resort,A high-altitude resort town in the Swiss Alps,,skiing|mountain
+st-moritz,St. Moritz,CH,Switzerland,,,46.4908,9.8355,Europe/Zurich,5067,1822,resort,The birthplace of winter tourism in the Engadin,,skiing|mountain|lake
+great-ocean-road,Great Ocean Road,AU,Australia,Victoria,,-38.6800,143.4800,Australia/Melbourne,0,0,landmark,One of the world's most scenic coastal drives,,scenic-drive|beach
+phillip-island,Phillip Island,AU,Australia,Victoria,,-38.4818,145.2292,Australia/Melbourne,10387,0,island,Famous for its nightly penguin parade,,island|wildlife|beach
+cradle-mountain,Cradle Mountain,AU,Australia,Tasmania,,-41.6500,145.9500,Australia/Hobart,0,1545,national-park,Tasmania's most iconic mountain wilderness,,hiking|mountain|national-park|wildlife
+freycinet,Freycinet,AU,Australia,Tasmania,,-42.1500,148.2833,Australia/Hobart,0,620,national-park,Home to the famous Wineglass Bay,,hiking|beach|national-park
+rottnest-island,Rottnest Island,AU,Australia,Western Australia,,-32.0000,115.5167,Australia/Perth,300,0,island,A car-free island with quokkas near Perth,,island|beach|wildlife
+jervis-bay,Jervis Bay,AU,Australia,New South Wales,,-35.1000,150.7000,Australia/Sydney,0,0,landmark,Home to the whitest sand beach in the world,,beach|hiking
+yarra-valley,Yarra Valley,AU,Australia,Victoria,,-37.7500,145.5000,Australia/Melbourne,0,100,landmark,Melbourne's premier wine region,,wine|scenic-drive
+mornington-peninsula,Mornington Peninsula,AU,Australia,Victoria,,-38.3500,144.9500,Australia/Melbourne,0,0,resort,A coastal playground south of Melbourne,,beach|wine
+sunshine-coast,Sunshine Coast,AU,Australia,Queensland,,-26.6500,153.0667,Australia/Brisbane,351000,0,resort,A relaxed coastal region north of Brisbane,,beach|surfing|hiking
+daintree,Daintree,AU,Australia,Queensland,,-16.2500,145.4167,Australia/Brisbane,0,0,national-park,The world's oldest tropical rainforest,,hiking|wildlife|national-park
+kakadu,Kakadu,AU,Australia,Northern Territory,,-12.8333,132.8333,Australia/Darwin,0,0,national-park,Australia's largest national park with Aboriginal rock art,,wildlife|hiking|national-park
+bay-of-islands,Bay of Islands,NZ,New Zealand,,,-35.2167,174.0833,Pacific/Auckland,0,0,landmark,A subtropical paradise in New Zealand's Northland,,beach|island|diving
+rotorua,Rotorua,NZ,New Zealand,,,-38.1368,176.2497,Pacific/Auckland,58300,280,city,A geothermal wonderland with Maori culture,ROT,hiking|lake
+milford-sound,Milford Sound,NZ,New Zealand,,,-44.6333,167.8833,Pacific/Auckland,0,0,landmark,New Zealand's most famous fjord,,hiking|scenic-drive|mountain
+wanaka,Wanaka,NZ,New Zealand,,,-44.7000,169.1500,Pacific/Auckland,8900,280,town,A lakeside town near ski fields and hiking,,lake|mountain|skiing|hiking
+abel-tasman,Abel Tasman,NZ,New Zealand,,,-40.9500,172.9500,Pacific/Auckland,0,0,national-park,Golden beaches and coastal hiking,,hiking|beach|national-park
+tongariro,Tongariro,NZ,New Zealand,,,-39.2000,175.5833,Pacific/Auckland,0,2797,national-park,Volcanic landscapes and the famous Alpine Crossing,,hiking|mountain|national-park
+hobbiton,Hobbiton,NZ,New Zealand,,,-37.8722,175.6830,Pacific/Auckland,0,50,landmark,The real-life Shire from Lord of the Rings,,entertainment|landmark
+waitomo,Waitomo,NZ,New Zealand,,,-38.2600,175.1000,Pacific/Auckland,0,50,landmark,Famous glowworm caves,,hiking
+coromandel,Coromandel Peninsula,NZ,New Zealand,,,-36.7500,175.5000,Pacific/Auckland,0,0,landmark,Pristine beaches and the Hot Water Beach,,beach|hiking
+franz-josef,Franz Josef,NZ,New Zealand,,,-43.3833,170.1833,Pacific/Auckland,330,150,town,A glacier village on the West Coast,,hiking|mountain
+te-anau,Te Anau,NZ,New Zealand,,,-45.4167,167.7167,Pacific/Auckland,2000,210,town,The gateway to Milford Sound and Fiordland,,lake|hiking|mountain
+lake-tekapo,Lake Tekapo,NZ,New Zealand,,,-44.0000,170.4833,Pacific/Auckland,369,710,town,A turquoise lake famous for stargazing,,lake|mountain

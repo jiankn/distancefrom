@@ -1,0 +1,63 @@
+---
+interface Props {
+  cityA: { name: string; state?: string; countryName: string; type?: string };
+  cityB: { name: string; state?: string; countryName: string; type?: string };
+  straightLineMiles: number;
+  straightLineKm: number;
+  drivable: boolean;
+  driveMiles: number;
+  driveTime: string;
+  flightTime: string;
+  bearingDir: string;
+}
+const { cityA, cityB, straightLineMiles, straightLineKm, drivable, driveMiles, driveTime, flightTime, bearingDir } = Astro.props;
+
+const locA = cityA.state ? `${cityA.state}, ${cityA.countryName}` : cityA.countryName;
+const locB = cityB.state ? `${cityB.state}, ${cityB.countryName}` : cityB.countryName;
+const isNP = cityB.type === 'national-park' || cityA.type === 'national-park';
+
+let text = `The distance from ${cityA.name} to ${cityB.name} is ${straightLineMiles} miles (${straightLineKm} km) as the crow flies. `;
+text += `${cityB.name} is located ${bearingDir} of ${cityA.name}. `;
+
+if (drivable && driveMiles > 0) {
+  text += `By car, the driving distance is approximately ${driveMiles} miles, taking about ${driveTime}. `;
+}
+text += `A direct flight would take roughly ${flightTime}. `;
+
+if (cityA.countryName === cityB.countryName) {
+  text += `Both are located in ${cityA.countryName}`;
+  if (cityA.state && cityB.state && cityA.state !== cityB.state) {
+    text += ` — ${cityA.name} in ${cityA.state} and ${cityB.name} in ${cityB.state}`;
+  }
+  text += '.';
+} else {
+  text += `${cityA.name} is in ${locA}, while ${cityB.name} is in ${locB}.`;
+}
+---
+<section class="natural-desc animate-in">
+  <h2 class="sr-only">How far is {cityA.name} from {cityB.name}?</h2>
+  <p>{text}</p>
+</section>
+
+<style>
+  .natural-desc {
+    margin: var(--space-md) 0 var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .natural-desc p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+</style>

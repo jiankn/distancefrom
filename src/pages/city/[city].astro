@@ -19,12 +19,46 @@ const distances = Object.entries(cities)
   .map(([s, c]) => {
     const d = haversine(city.lat, city.lng, c.lat, c.lng);
     const key = canonicalPairKey(slug, s);
-    return { slug: s, name: c.name, country: c.countryName, miles: d.miles, km: d.km, href: `/distance/${key}/` };
+    return { slug: s, name: c.name, country: c.countryName, countryCode: c.country, miles: d.miles, km: d.km, href: `/distance/${key}/`, type: c.type, population: c.population };
   })
   .sort((a, b) => a.miles - b.miles);
 
-const title = `Distances from ${city.name} to Major Cities`;
-const description = `Find the distance from ${city.name} to any city worldwide. Driving distance, flight time, and more.`;
+const isNP = city.type === 'national-park';
+const titlePrefix = isNP ? `Distances from ${city.name} to Nearby Cities` : `Distances from ${city.name} to Major Cities & Destinations`;
+const title = titlePrefix;
+const description = city.description
+  ? `${city.description}. Find distances from ${city.name} to ${distances.length}+ destinations worldwide.`
+  : `Find the distance from ${city.name} to any city worldwide. Driving distance, flight time, and more.`;
+
+// Stats
+const nearest = distances[0];
+const farthest = distances[distances.length - 1];
+
+// Popular routes: top 10 by population product heuristic
+const popular = [...distances]
+  .sort((a, b) => (b.population * 1) - (a.population * 1))
+  .slice(0, 10);
+
+// Domestic vs international
+const domestic = distances.filter(d => d.countryCode === city.country);
+const international = distances.filter(d => d.countryCode !== city.country);
+
+// Group domestic by range
+const nearby = domestic.filter(d => d.miles <= 200);
+const medium = domestic.filter(d => d.miles > 200 && d.miles <= 1000);
+const faraway = domestic.filter(d => d.miles > 1000);
+
+// Group international by country
+const intlByCountry: Record<string, typeof distances> = {};
+for (const d of international) {
+  if (!intlByCountry[d.country]) intlByCountry[d.country] = [];
+  intlByCountry[d.country].push(d);
+}
+const intlCountries = Object.entries(intlByCountry).sort((a, b) => {
+  const minA = Math.min(...a[1].map(d => d.miles));
+  const minB = Math.min(...b[1].map(d => d.miles));
+  return minA - minB;
+});
 
 const breadcrumbLd = {
   "@context": "https://schema.org",
@@ -34,11 +68,6 @@ const breadcrumbLd = {
     { "@type": "ListItem", "position": 2, "name": `${city.name} Distances` },
   ]
 };
-
-// Group distances by range
-const nearby = distances.filter(d => d.miles <= 200);
-const medium = distances.filter(d => d.miles > 200 && d.miles <= 1000);
-const faraway = distances.filter(d => d.miles > 1000);
 ---
 <Base title={title} description={description} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
@@ -51,6 +80,7 @@ const faraway = distances.filter(d => d.miles > 1000);
 
   <div class="city-hero animate-in">
     <h1>{title}</h1>
+    {city.description && <p class="city-desc">{city.description}</p>}
     <div class="city-meta">
       <span class="city-meta-item">
         <svg class="icon-svg--sm" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
@@ -67,13 +97,42 @@ const faraway = distances.filter(d => d.miles > 1000);
     </div>
   </div>
 
+  <!-- Stats -->
+  {nearest && farthest && (
+    <div class="stats-bar animate-in animate-in-delay-1">
+      <div class="stat-chip">Nearest: <a href={nearest.href}>{nearest.name}</a> ({nearest.miles} mi)</div>
+      <div class="stat-chip">Farthest: <a href={farthest.href}>{farthest.name}</a> ({farthest.miles} mi)</div>
+    </div>
+  )}
+
   <div class="search-compact animate-in animate-in-delay-1">
     <DualSearchBox />
   </div>
 
-  <!-- Grouped distance lists -->
-  {nearby.length > 0 && (
+  <!-- Popular Routes -->
+  {popular.length > 0 && (
     <section class="distance-group animate-in animate-in-delay-2">
+      <h2 class="group-title">
+        <span class="group-badge popular">Popular</span>
+        Most Popular Routes
+      </h2>
+      <div class="card--flat distance-list">
+        {popular.map(d => (
+          <a href={d.href} class="city-row">
+            <div class="city-row-info">
+              <span class="city-row-name">{d.name}</span>
+              <span class="city-row-country">{d.country}</span>
+            </div>
+            <span class="city-row-dist">{d.miles} mi <small>({d.km} km)</small></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Domestic distances -->
+  {nearby.length > 0 && (
+    <section class="distance-group animate-in">
       <h2 class="group-title">
         <span class="group-badge nearby">Nearby</span>
         Under 200 miles
@@ -93,7 +152,7 @@ const faraway = distances.filter(d => d.miles > 1000);
   )}
 
   {medium.length > 0 && (
-    <section class="distance-group animate-in animate-in-delay-3">
+    <section class="distance-group animate-in">
       <h2 class="group-title">
         <span class="group-badge medium">Medium</span>
         200 – 1,000 miles
@@ -113,7 +172,7 @@ const faraway = distances.filter(d => d.miles > 1000);
   )}
 
   {faraway.length > 0 && (
-    <section class="distance-group animate-in animate-in-delay-4">
+    <section class="distance-group animate-in">
       <h2 class="group-title">
         <span class="group-badge faraway">Far Away</span>
         Over 1,000 miles
@@ -129,6 +188,31 @@ const faraway = distances.filter(d => d.miles > 1000);
           </a>
         ))}
       </div>
+    </section>
+  )}
+
+  <!-- International by country -->
+  {intlCountries.length > 0 && (
+    <section class="distance-group animate-in">
+      <h2 class="group-title">
+        <span class="group-badge intl">International</span>
+        Destinations Abroad
+      </h2>
+      {intlCountries.slice(0, 15).map(([countryName, dests]) => (
+        <details class="country-group">
+          <summary class="country-header">{countryName} <span class="country-count">({dests.length})</span></summary>
+          <div class="card--flat distance-list">
+            {dests.map(d => (
+              <a href={d.href} class="city-row">
+                <div class="city-row-info">
+                  <span class="city-row-name">{d.name}</span>
+                </div>
+                <span class="city-row-dist">{d.miles} mi <small>({d.km} km)</small></span>
+              </a>
+            ))}
+          </div>
+        </details>
+      ))}
     </section>
   )}
 </Base>
@@ -163,6 +247,35 @@ const faraway = distances.filter(d => d.miles > 1000);
 
   .city-hero { margin-top: var(--space-sm); }
   .city-hero h1 { margin-bottom: var(--space-sm); }
+  .city-desc {
+    font-size: var(--text-sm); color: var(--text-secondary);
+    line-height: 1.6; margin-bottom: var(--space-sm);
+  }
+
+  .stats-bar {
+    display: flex; gap: var(--space-md); flex-wrap: wrap;
+    margin-bottom: var(--space-md);
+  }
+  .stat-chip {
+    font-size: var(--text-xs); color: var(--text-muted);
+    padding: 4px 12px; background: var(--bg-glass);
+    border: 1px solid var(--border-light); border-radius: var(--radius-full);
+  }
+  .stat-chip a { color: var(--color-primary); font-weight: 500; }
+
+  .group-badge.popular { background: rgba(249,115,22,0.1); color: var(--color-cta); }
+  .group-badge.intl { background: rgba(139,92,246,0.1); color: #8b5cf6; }
+
+  .country-group { margin-top: var(--space-sm); }
+  .country-header {
+    cursor: pointer; font-size: var(--text-sm); font-weight: 500;
+    color: var(--text-secondary); padding: var(--space-sm) 0;
+    list-style: none;
+  }
+  .country-header::-webkit-details-marker { display: none; }
+  .country-header::before { content: '▸ '; color: var(--color-primary); }
+  details[open] > .country-header::before { content: '▾ '; }
+  .country-count { color: var(--text-muted); font-weight: 400; }
 
   .city-meta {
     display: flex;

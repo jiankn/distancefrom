@@ -3,10 +3,13 @@ export const prerender = false; // SSR for long-tail, will add getStaticPaths fo
 
 import Base from '../../layouts/Base.astro';
 import DistanceResult from '../../components/DistanceResult.astro';
+import NaturalDescription from '../../components/NaturalDescription.astro';
 import Map from '../../components/Map.astro';
+import TravelComparison from '../../components/TravelComparison.astro';
 import MidwayStops from '../../components/MidwayStops.astro';
 import QuickFacts from '../../components/QuickFacts.astro';
 import RelatedDistances from '../../components/RelatedDistances.astro';
+import DidYouKnow from '../../components/DidYouKnow.astro';
 import DataSources from '../../components/DataSources.astro';
 import DualSearchBox from '../../components/DualSearchBox.astro';
 
@@ -69,7 +72,7 @@ const relatedA = getRelated(slugA, cityA, slugB);
 const relatedB = getRelated(slugB, cityB, slugA);
 
 // SEO
-const title = distancePageTitle(cityA.name, cityB.name, dist.miles, drive.formatted);
+const title = distancePageTitle(cityA.name, cityB.name, dist.miles, drive.formatted, cityA.type, cityB.type);
 const description = distancePageDescription(
   cityA.name, cityB.name, dist.miles, dist.km,
   drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
@@ -148,8 +151,25 @@ const faqLd = {
     fuelCost={cost?.formatted ?? 'N/A'}
   />
 
+  <NaturalDescription
+    cityA={{ name: cityA.name, state: cityA.state, countryName: cityA.countryName, type: cityA.type }}
+    cityB={{ name: cityB.name, state: cityB.state, countryName: cityB.countryName, type: cityB.type }}
+    straightLineMiles={dist.miles} straightLineKm={dist.km}
+    drivable={drive.drivable} driveMiles={drive.distanceMiles}
+    driveTime={drive.formatted} flightTime={flight.formatted}
+    bearingDir={bear.direction}
+  />
+
   <Map lat1={cityA.lat} lng1={cityA.lng} label1={cityA.name}
        lat2={cityB.lat} lng2={cityB.lng} label2={cityB.name} />
+
+  <TravelComparison
+    cityA={cityA.name} cityB={cityB.name}
+    drivable={drive.drivable} driveTime={drive.formatted}
+    driveMiles={drive.distanceMiles} driveMinutes={drive.durationMin}
+    fuelCost={cost?.formatted ?? 'N/A'} flightTime={flight.formatted}
+    noDirectFlight={flight.noDirectFlight} straightLineKm={dist.km}
+  />
 
   <MidwayStops cityA={cityA.name} cityB={cityB.name} cityASlug={slugA} cityBSlug={slugB} stops={stops} />
 
@@ -168,6 +188,8 @@ const faqLd = {
       Reverse: {cityB.name} to {cityA.name}
     </a>
   </div>
+
+  <DidYouKnow cityA={cityA.name} cityB={cityB.name} straightLineMiles={dist.miles} straightLineKm={dist.km} />
 
   <DataSources driveSource={drive.source} />
 </Base>
