@@ -57,19 +57,39 @@ const {
 </div>
 
 <style>
-  .result-card { margin: 1.5rem 0; }
+  .result-card {
+    margin: 1.5rem 0;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.07);
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 1.5rem;
+    color: var(--text-primary);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .result-card:hover {
+    background: rgba(255,255,255,0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(31,38,135,0.1);
+  }
   .result-row {
-    display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.5rem 0; font-size: 1.05rem;
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.8rem 0; font-size: 1.05rem;
   }
-  .result-row + .result-row { border-top: 1px solid var(--border); }
-  .icon { font-size: 1.2rem; width: 1.5rem; text-align: center; }
+  .result-row + .result-row { border-top: 1px solid rgba(255,255,255,0.4); }
+  .icon { font-size: 1.3rem; width: 1.8rem; text-align: center; display: inline-block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
   .badge {
-    font-size: 0.7rem; padding: 0.15rem 0.5rem;
-    border-radius: 4px; margin-left: 0.5rem;
-    text-transform: uppercase; font-weight: 600;
+    font-size: 0.7rem; padding: 0.2rem 0.5rem;
+    border-radius: 6px; margin-left: 0.5rem;
+    text-transform: uppercase; font-weight: 700;
+    letter-spacing: 0.05em;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
-  .badge.osrm { background: #065f46; color: var(--success); }
-  .badge.estimated { background: #78350f; color: var(--warning); }
-  .muted { color: var(--text-muted); }
+  .badge.osrm { color: #0369a1; }
+  .badge.estimated { color: #b45309; }
+  .muted { color: var(--text-muted); font-style: italic; }
 </style>

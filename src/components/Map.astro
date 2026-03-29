@@ -67,6 +67,6 @@ const stadiaKey = import.meta.env.PUBLIC_STADIA_KEY || '';
   else { var s = document.createElement('script'); s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = initMap; document.head.appendChild(s); }
 </script>
 <style>
-  .map-wrapper { margin: 1.5rem 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+  .map-wrapper { margin: 1.5rem 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 32px rgba(31,38,135,0.07); }
   #map { height: 350px; width: 100%; background: var(--bg-secondary); }
 </style>

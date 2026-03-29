@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI/UX 设计方案预览 - DistanceResult</title>
+<style>
+  :root {
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 2rem;
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background: #e5e7eb;
+  }
+  .section {
+    border-radius: 24px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .section-title {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    background: rgba(255,255,255,0.8);
+    padding: 0.5rem 1.5rem;
+    border-radius: 99px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 10;
+  }
+  
+  /* Base Card Styles */
+  .card-container {
+    width: 100%;
+    max-width: 500px;
+  }
+  .result-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .icon { font-size: 1.3rem; width: 1.8rem; text-align: center; }
+  .badge {
+    font-size: 0.7rem; padding: 0.2rem 0.5rem;
+    border-radius: 6px; margin-left: 0.5rem;
+    text-transform: uppercase; font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  /* 1. Clean Minimalist */
+  .bg-1 { background: #f9fafb; }
+  .card-1 {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.02);
+    color: #111827;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-1:hover { transform: translateY(-2px); box-shadow: 0 25px 50px rgba(0,0,0,0.05); }
+  .card-1 .result-row + .result-row { border-top: 1px solid #f3f4f6; }
+  .card-1 .badge { background: #dcfce7; color: #166534; }
+
+  /* 2. Glassmorphism */
+  .bg-2 { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); }
+  .card-2 {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31,38,135,0.07);
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 1.5rem;
+    color: #0f172a;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+    transition: background 0.3s ease;
+  }
+  .card-2:hover { background: rgba(255,255,255,0.7); }
+  .card-2 .result-row + .result-row { border-top: 1px solid rgba(255,255,255,0.4); }
+  .card-2 .badge { background: rgba(255,255,255,0.8); color: #0369a1; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+  /* 3. Editorial Ticket */
+  .bg-3 { background: #fafaf9; }
+  .card-3 {
+    background: #ffffff;
+    border: 1px solid #d6d3d1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0px #e7e5e4;
+    color: #1c1917;
+    font-weight: 500;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card-3:hover { box-shadow: 8px 8px 0px #d6d3d1; transform: translate(-2px, -2px); }
+  .card-3 .result-row + .result-row { border-top: 1px dashed #d6d3d1; }
+  .card-3 .badge { border: 1px solid #1c1917; background: transparent; color: #1c1917; border-radius: 4px; }
+
+  /* 4. Modern SaaS */
+  .bg-4 { background: #f8fafc; }
+  .card-4 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px -5px rgba(59,130,246,0.1), 0 8px 10px -6px rgba(59,130,246,0.1);
+    position: relative;
+    overflow: hidden;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+  }
+  .card-4:hover { transform: translateY(-4px); }
+  .card-4::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+  }
+  .card-4 .result-row + .result-row { border-top: 1px solid #f1f5f9; }
+  .card-4 .badge { background: #eff6ff; color: #2563eb; }
+
+  /* 5. Soft Clay (Neumorphism) */
+  .bg-5 { background: #f3f4f6; }
+  .card-5 {
+    background: #f3f4f6;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 8px 8px 16px #d1d5db, -8px -8px 16px #ffffff;
+    border: none;
+    color: #4b5563;
+    transition: box-shadow 0.2s ease;
+  }
+  .card-5:hover { box-shadow: 10px 10px 20px #d1d5db, -10px -10px 20px #ffffff; }
+  .card-5 .result-row + .result-row { border-top: 1px solid rgba(0,0,0,0.03); }
+  .card-5 .badge { background: #e5e7eb; color: #374151; box-shadow: inset 2px 2px 4px #d1d5db, inset -2px -2px 4px #ffffff; }
+
+</style>
+</head>
+<body>
+
+  <div class="section bg-1">
+    <div class="section-title">1. 纯白极简 (Clean Minimalist)</div>
+    <div class="card-container">
+      <div class="card-1">
+        <div class="result-row"><span class="icon">📏</span><span>100 miles (160 km) straight line</span></div>
+        <div class="result-row"><span class="icon">🚗</span><span>120 miles (193 km) driving <span class="badge">actual route</span></span></div>
+        <div class="result-row"><span class="icon">⏱️</span><span>2h 15m drive time</span></div>
+        <div class="result-row"><span class="icon">💰</span><span>Est. fuel cost: $15.50</span></div>
+        <div class="result-row"><span class="icon">✈️</span><span>~45m flight time</span></div>
+        <div class="result-row"><span class="icon">🧭</span><span>Bearing: 45° (NE)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-2">
+    <div class="section-title">2. 磨砂天空 (Glassmorphism)</div>
+    <div class="card-container">
+      <div class="card-2">
+        <div class="result-row"><span class="icon">📏</span><span>100 miles (160 km) straight line</span></div>
+        <div class="result-row"><span class="icon">🚗</span><span>120 miles (193 km) driving <span class="badge">actual route</span></span></div>
+        <div class="result-row"><span class="icon">⏱️</span><span>2h 15m drive time</span></div>
+        <div class="result-row"><span class="icon">💰</span><span>Est. fuel cost: $15.50</span></div>
+        <div class="result-row"><span class="icon">✈️</span><span>~45m flight time</span></div>
+        <div class="result-row"><span class="icon">🧭</span><span>Bearing: 45° (NE)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-3">
+    <div class="section-title">3. 旅行机票 (Editorial Ticket)</div>
+    <div class="card-container">
+      <div class="card-3">
+        <div class="result-row"><span class="icon">📏</span><span>100 miles (160 km) straight line</span></div>
+        <div class="result-row"><span class="icon">🚗</span><span>120 miles (193 km) driving <span class="badge">actual route</span></span></div>
+        <div class="result-row"><span class="icon">⏱️</span><span>2h 15m drive time</span></div>
+        <div class="result-row"><span class="icon">💰</span><span>Est. fuel cost: $15.50</span></div>
+        <div class="result-row"><span class="icon">✈️</span><span>~45m flight time</span></div>
+        <div class="result-row"><span class="icon">🧭</span><span>Bearing: 45° (NE)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-4">
+    <div class="section-title">4. 活力 SaaS (Modern SaaS)</div>
+    <div class="card-container">
+      <div class="card-4">
+        <div class="result-row"><span class="icon">📏</span><span>100 miles (160 km) straight line</span></div>
+        <div class="result-row"><span class="icon">🚗</span><span>120 miles (193 km) driving <span class="badge">actual route</span></span></div>
+        <div class="result-row"><span class="icon">⏱️</span><span>2h 15m drive time</span></div>
+        <div class="result-row"><span class="icon">💰</span><span>Est. fuel cost: $15.50</span></div>
+        <div class="result-row"><span class="icon">✈️</span><span>~45m flight time</span></div>
+        <div class="result-row"><span class="icon">🧭</span><span>Bearing: 45° (NE)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-5">
+    <div class="section-title">5. 浮雕新拟态 (Soft Clay)</div>
+    <div class="card-container">
+      <div class="card-5">
+        <div class="result-row"><span class="icon">📏</span><span>100 miles (160 km) straight line</span></div>
+        <div class="result-row"><span class="icon">🚗</span><span>120 miles (193 km) driving <span class="badge">actual route</span></span></div>
+        <div class="result-row"><span class="icon">⏱️</span><span>2h 15m drive time</span></div>
+        <div class="result-row"><span class="icon">💰</span><span>Est. fuel cost: $15.50</span></div>
+        <div class="result-row"><span class="icon">✈️</span><span>~45m flight time</span></div>
+        <div class="result-row"><span class="icon">🧭</span><span>Bearing: 45° (NE)</span></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
