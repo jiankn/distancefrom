@@ -28,3 +28,6 @@ osrm-data/
 # Planning docs
 GROWTH-PLAN.md
 PROMPT-FOR-OPENAI.md
+
+# Wrangler local state and deploy config
+.wrangler/
