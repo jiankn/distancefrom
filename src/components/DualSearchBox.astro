@@ -50,6 +50,9 @@
     min-width: 200px;
     position: relative;
   }
+  .input-group:focus-within {
+    z-index: 20;
+  }
 
   .input-wrapper {
     position: relative;
@@ -152,7 +155,7 @@
     list-style: none;
     max-height: 220px;
     overflow-y: auto;
-    z-index: 50;
+    z-index: 30;
     display: none;
     box-shadow: var(--shadow-lg);
     animation: slideDown var(--duration-fast) var(--ease-out);
