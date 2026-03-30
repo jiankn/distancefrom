@@ -1,6 +1,6 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+
+# Pages deployment config. Keep Workers-only keys like [assets] out of this file.
 name = "distancefrom"
 pages_build_output_dir = "./dist"
 compatibility_date = "2026-03-17"
-
-[assets]
-binding = "STATIC_ASSETS"

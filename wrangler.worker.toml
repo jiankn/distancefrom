@@ -1,0 +1,5 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
+
+# Astro's Cloudflare adapter reads this Workers-style config during build/dev.
+name = "distancefrom"
+compatibility_date = "2026-03-17"
