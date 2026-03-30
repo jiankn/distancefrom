@@ -1,20 +1,13 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import citiesData from '../data/cities.json';
-import { canonicalPairKey } from '../utils/slug';
+import routeDataJson from '../data/route-data.json';
+import { getIndexableDistancePairs } from '../utils/city-identity';
 
 export const prerender = true;
 
 const SITE = 'https://distancefrom.co';
-const CHUNK = 10000;
-const slugs = Object.keys(citiesData);
-
-// Generate all canonical pairs
-const pairs: string[] = [];
-for (let i = 0; i < slugs.length; i++) {
-  for (let j = i + 1; j < slugs.length; j++) {
-    pairs.push(canonicalPairKey(slugs[i], slugs[j]));
-  }
-}
+const CHUNK = 5000;
+const pairs = getIndexableDistancePairs(routeDataJson as Record<string, unknown>, citiesData as Record<string, any>);
 const chunks = Math.ceil(pairs.length / CHUNK);
 
 export const getStaticPaths: GetStaticPaths = () =>

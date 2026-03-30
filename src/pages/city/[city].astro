@@ -6,29 +6,47 @@ import DualSearchBox from '../../components/DualSearchBox.astro';
 import citiesData from '../../data/cities.json';
 import { haversine } from '../../utils/haversine';
 import { canonicalPairKey } from '../../utils/slug';
+import { cityHubUrl } from '../../utils/seo';
+import { getCanonicalCitySlug, getCanonicalCitySlugs, getDisplayCityName } from '../../utils/city-identity';
 import type { City } from '../../data/types';
 
 const cities = citiesData as Record<string, City>;
-const slug = Astro.params.city ?? '';
+const rawSlug = Astro.params.city ?? '';
+const slug = getCanonicalCitySlug(rawSlug, cities);
+if (!cities[slug]) return Astro.redirect('/');
+if (rawSlug !== slug) return Astro.redirect(`/city/${slug}/`, 301);
+
 const city = cities[slug];
-if (!city) return Astro.redirect('/');
+const cityLabel = getDisplayCityName(slug, city, cities);
+const canonical = cityHubUrl(slug);
+const canonicalCitySlugs = new Set(getCanonicalCitySlugs(cities));
 
 // All distances from this city, sorted by distance
 const distances = Object.entries(cities)
-  .filter(([s]) => s !== slug)
+  .filter(([s]) => s !== slug && canonicalCitySlugs.has(s))
   .map(([s, c]) => {
     const d = haversine(city.lat, city.lng, c.lat, c.lng);
     const key = canonicalPairKey(slug, s);
-    return { slug: s, name: c.name, country: c.countryName, countryCode: c.country, miles: d.miles, km: d.km, href: `/distance/${key}/`, type: c.type, population: c.population };
+    return {
+      slug: s,
+      name: getDisplayCityName(s, c, cities),
+      country: c.countryName,
+      countryCode: c.country,
+      miles: d.miles,
+      km: d.km,
+      href: `/distance/${key}/`,
+      type: c.type,
+      population: c.population,
+    };
   })
   .sort((a, b) => a.miles - b.miles);
 
 const isNP = city.type === 'national-park';
-const titlePrefix = isNP ? `Distances from ${city.name} to Nearby Cities` : `Distances from ${city.name} to Major Cities & Destinations`;
+const titlePrefix = isNP ? `Distances from ${cityLabel} to Nearby Cities` : `Distances from ${cityLabel} to Major Cities & Destinations`;
 const title = titlePrefix;
 const description = city.description
-  ? `${city.description}. Find distances from ${city.name} to ${distances.length}+ destinations worldwide.`
-  : `Find the distance from ${city.name} to any city worldwide. Driving distance, flight time, and more.`;
+  ? `${city.description}. Find distances from ${cityLabel} to ${distances.length}+ destinations worldwide.`
+  : `Find the distance from ${cityLabel} to any city worldwide. Driving distance, flight time, and more.`;
 
 // Stats
 const nearest = distances[0];
@@ -65,16 +83,16 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://distancefrom.co/" },
-    { "@type": "ListItem", "position": 2, "name": `${city.name} Distances` },
+    { "@type": "ListItem", "position": 2, "name": `${cityLabel} Distances`, "item": canonical },
   ]
 };
 ---
-<Base title={title} description={description} jsonLd={breadcrumbLd}>
+<Base title={title} description={description} canonical={canonical} jsonLd={breadcrumbLd}>
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       <li><a href="/">Home</a></li>
-      <li aria-current="page">{city.name}</li>
+      <li aria-current="page">{cityLabel}</li>
     </ol>
   </nav>
 

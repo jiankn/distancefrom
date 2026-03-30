@@ -9,9 +9,10 @@ interface Props {
   description: string;
   canonical?: string;
   jsonLd?: object;
+  robots?: string;
 }
 
-const { title, description, canonical, jsonLd } = Astro.props;
+const { title, description, canonical, jsonLd, robots = 'index, follow' } = Astro.props;
 const canonicalUrl = canonical ?? Astro.url.href;
 const currentPath = '/' + Astro.url.pathname.split('/').filter(Boolean)[0] || '/';
 ---
@@ -24,7 +25,7 @@ const currentPath = '/' + Astro.url.pathname.split('/').filter(Boolean)[0] || '/
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={robots} />
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

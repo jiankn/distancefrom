@@ -30,6 +30,7 @@ export function cityHubUrl(slug: string): string {
 
 export function distanceJsonLd(
   cityA: string, cityB: string,
+  slugA: string,
   miles: number, km: number,
   url: string,
 ) {
@@ -48,7 +49,7 @@ export function distanceJsonLd(
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
-        { '@type': 'ListItem', position: 2, name: `Distances from ${cityA}`, item: cityHubUrl(cityA.toLowerCase().replace(/\s+/g, '-')) },
+        { '@type': 'ListItem', position: 2, name: `Distances from ${cityA}`, item: cityHubUrl(slugA) },
         { '@type': 'ListItem', position: 3, name: `${cityA} to ${cityB}` },
       ],
     },

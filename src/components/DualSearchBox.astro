@@ -1,5 +1,19 @@
 ---
 // Dual city search with autocomplete — upgraded UI
+import citiesData from '../data/cities.json';
+import { getCanonicalCitySlugs, getDisplayCityName } from '../utils/city-identity';
+
+const cityRecord = citiesData as Record<string, any>;
+const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
+  const city = cityRecord[slug];
+  return {
+    slug,
+    name: getDisplayCityName(slug, city, cityRecord),
+    searchName: city.name,
+    country: city.countryName,
+    state: city.state,
+  };
+});
 ---
 <form class="search-box animate-in" action="/distance/" method="get" id="search-form" role="search" aria-label="Distance search">
   <div class="search-inputs">
@@ -191,13 +205,7 @@
   }
 </style>
 
-<script>
-  import citiesData from '../data/cities.json';
-
-  const cities = Object.entries(citiesData).map(([slug, c]: [string, any]) => ({
-    slug, name: c.name, country: c.countryName, state: c.state,
-  }));
-
+<script define:vars={{ cities }}>
   function setupAutocomplete(inputId: string, listId: string) {
     const input = document.getElementById(inputId) as HTMLInputElement;
     const list = document.getElementById(listId) as HTMLUListElement;
@@ -207,10 +215,14 @@
       const q = input.value.toLowerCase().trim();
       if (q.length < 2) { list.classList.remove('active'); return; }
       const matches = cities
-        .filter(c => c.name.toLowerCase().includes(q) || c.slug.includes(q))
+        .filter(c =>
+          c.searchName.toLowerCase().includes(q) ||
+          c.name.toLowerCase().includes(q) ||
+          c.slug.includes(q)
+        )
         .slice(0, 8);
       list.innerHTML = matches.map(c =>
-        `<li role="option" data-slug="${c.slug}">${c.name}${c.state ? ', ' + c.state : ''}, ${c.country}</li>`
+        `<li role="option" data-slug="${c.slug}">${c.name}</li>`
       ).join('');
       list.classList.toggle('active', matches.length > 0);
     });
@@ -219,7 +231,7 @@
       const li = (e.target as HTMLElement).closest('li');
       if (!li) return;
       selectedSlug = li.dataset.slug!;
-      input.value = li.textContent!.split(',')[0];
+      input.value = li.textContent!.trim();
       input.dataset.slug = selectedSlug;
       list.classList.remove('active');
     });

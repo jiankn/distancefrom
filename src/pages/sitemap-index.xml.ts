@@ -1,15 +1,17 @@
 import type { APIRoute } from 'astro';
 import citiesData from '../data/cities.json';
+import routeDataJson from '../data/route-data.json';
+import { getCanonicalCitySlugs, getIndexableDistancePairs } from '../utils/city-identity';
 
 export const prerender = true;
 
 const SITE = 'https://distancefrom.co';
-const cities = Object.keys(citiesData);
+const cities = getCanonicalCitySlugs(citiesData as Record<string, any>);
+const indexablePairs = getIndexableDistancePairs(routeDataJson as Record<string, unknown>, citiesData as Record<string, any>);
 
-// Calculate number of sitemap chunks (10,000 URLs per sitemap)
-const CHUNK_SIZE = 10000;
-const totalPairs = cities.length * (cities.length - 1) / 2;
-const pairChunks = Math.ceil(totalPairs / CHUNK_SIZE);
+// Keep distance sitemap files comfortably small for crawler reliability.
+const CHUNK_SIZE = 5000;
+const pairChunks = Math.ceil(indexablePairs.length / CHUNK_SIZE);
 const cityChunks = Math.ceil(cities.length / CHUNK_SIZE);
 
 export const GET: APIRoute = () => {
