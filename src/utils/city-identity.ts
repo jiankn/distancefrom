@@ -92,6 +92,7 @@ function cityQualifier(city: City): string {
 }
 
 function cityTypeLabel(type: City['type']): string {
+  if (!type) return '';
   return type
     .split('-')
     .map((part) => part[0].toUpperCase() + part.slice(1))
@@ -131,23 +132,50 @@ export function getDisplayCityName(slug: string, city: City, cities: CityRecord,
   return `${typedLabel} [${slug}]`;
 }
 
-export function getIndexableDistancePairs(routeData: Record<string, unknown>, cities: CityRecord): string[] {
-  const pairs = new Set<string>();
+export function getIndexableDistancePairs(routeData: Record<string, unknown>, cities: CityRecord): { pair: string; priority: string }[] {
+  const result: { pair: string; priority: string }[] = [];
+  const added = new Set<string>();
 
+  // Helper to add pair
+  const addPair = (slugA: string, slugB: string, priority: string) => {
+    slugA = getCanonicalCitySlug(slugA, cities);
+    slugB = getCanonicalCitySlug(slugB, cities);
+    if (!cities[slugA] || !cities[slugB] || slugA === slugB) return;
+    const key = canonicalPairKey(slugA, slugB);
+    if (!added.has(key)) {
+      added.add(key);
+      result.push({ pair: key, priority });
+    }
+  };
+
+  // 1. Add all pairs with OSRM data (high priority)
   for (const rawPair of Object.keys(routeData)) {
     const [rawA, rawB] = rawPair.split('-to-');
-    if (!rawA || !rawB) {
-      continue;
-    }
-
-    const slugA = getCanonicalCitySlug(rawA, cities);
-    const slugB = getCanonicalCitySlug(rawB, cities);
-    if (!cities[slugA] || !cities[slugB] || slugA === slugB) {
-      continue;
-    }
-
-    pairs.add(canonicalPairKey(slugA, slugB));
+    if (!rawA || !rawB) continue;
+    addPair(rawA, rawB, '0.8');
   }
 
-  return [...pairs].sort((a, b) => a.localeCompare(b));
+  // 2. Add same-country top cities pairs (medium priority)
+  // Group cities by country, take top 50 by population
+  const byCountry: Record<string, string[]> = {};
+  for (const [slug, city] of Object.entries(cities)) {
+    byCountry[city.country] ??= [];
+    byCountry[city.country].push(slug);
+  }
+
+  for (const slugs of Object.values(byCountry)) {
+    const top50 = slugs
+      .map(s => ({ slug: s, pop: cities[s].population ?? 0 }))
+      .sort((a, b) => b.pop - a.pop)
+      .slice(0, 50)
+      .map(x => x.slug);
+
+    for (let i = 0; i < top50.length; i++) {
+      for (let j = i + 1; j < top50.length; j++) {
+        addPair(top50[i], top50[j], '0.5');
+      }
+    }
+  }
+
+  return result.sort((a, b) => a.pair.localeCompare(b.pair));
 }

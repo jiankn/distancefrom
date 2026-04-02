@@ -90,7 +90,10 @@ const description = distancePageDescription(
   drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
 );
 const canonical = canonicalUrl(slugA, slugB);
-const robots = drive.source === 'osrm' ? 'index, follow' : 'noindex, follow';
+// Index same-country pairs (valuable even with haversine estimates)
+// and all pairs with OSRM data. Only noindex cross-country pairs without OSRM.
+const sameCountry = cityA.country === cityB.country;
+const robots = (drive.source === 'osrm' || sameCountry) ? 'index, follow' : 'noindex, follow';
 const pageHeading = `Distance from ${cityALabel} to ${cityBLabel}`;
 
 // Enhanced JSON-LD with FAQ and BreadcrumbList
