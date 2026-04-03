@@ -27,7 +27,10 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
     </div>
 
     <button type="button" class="swap-btn" id="swap-btn" aria-label="Swap cities" tabindex="0">
-      <svg class="icon-svg" viewBox="0 0 24 24"><path d="m7 16 4 4 4-4"/><path d="M11 20V4"/></svg>
+      <svg class="icon-svg swap-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16"/><path d="m16 3 4 4-4 4"/>
+        <path d="M20 17H4"/><path d="m8 13-4 4 4 4"/>
+      </svg>
     </button>
 
     <div class="input-group">
@@ -108,12 +111,13 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
   }
 
   .swap-btn {
+    --swap-icon-rotation: 0deg;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-sm);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
     background: var(--bg-card);
     border: 1px solid var(--border);
     color: var(--text-muted);
@@ -127,7 +131,24 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
     color: var(--color-primary);
     background: var(--bg-card-hover);
     border-color: var(--color-primary);
-    transform: rotate(180deg);
+    transform: translateY(-1px);
+  }
+  .swap-btn:focus-visible {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-glow);
+    outline: none;
+  }
+  .swap-btn:active {
+    transform: scale(0.96);
+  }
+  .swap-icon {
+    width: 18px;
+    height: 18px;
+    transform: rotate(var(--swap-icon-rotation));
+    transition: transform 180ms var(--ease-out);
+  }
+  .swap-btn[data-swapping="true"] .swap-icon {
+    transform: rotate(calc(var(--swap-icon-rotation) + 180deg));
   }
 
   .submit-btn {
@@ -197,10 +218,7 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
     }
     .input-group { min-width: 100%; }
     .swap-btn {
-      transform: rotate(0deg);
-    }
-    .swap-btn:hover {
-      transform: rotate(180deg);
+      --swap-icon-rotation: 90deg;
     }
   }
 </style>
@@ -275,7 +293,9 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
   setupAutocomplete('from-input', 'from-suggestions');
   setupAutocomplete('to-input', 'to-suggestions');
 
-  document.getElementById('swap-btn')?.addEventListener('click', () => {
+  const swapBtn = document.getElementById('swap-btn');
+
+  swapBtn?.addEventListener('click', () => {
     const from = document.getElementById('from-input');
     const to = document.getElementById('to-input');
     const tempVal = from.value;
@@ -285,6 +305,9 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
     const tempSlug = from.dataset.slug;
     from.dataset.slug = to.dataset.slug;
     to.dataset.slug = tempSlug;
+
+    swapBtn.setAttribute('data-swapping', 'true');
+    window.setTimeout(() => swapBtn.removeAttribute('data-swapping'), 180);
   });
 
   document.getElementById('search-form')?.addEventListener('submit', (e) => {
