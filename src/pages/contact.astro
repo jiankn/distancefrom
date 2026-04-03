@@ -24,7 +24,7 @@ import Base from '../layouts/Base.astro';
           <span id="form-error-msg">Something went wrong. Please try again.</span>
         </div>
 
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" method="POST" action="/api/contact">
           <!-- Honeypot (hidden from humans, bots fill it in) -->
           <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
 
@@ -90,50 +90,55 @@ import Base from '../layouts/Base.astro';
   </div>
 </Base>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
-  const successEl = document.getElementById('form-success')!;
-  const errorEl = document.getElementById('form-error')!;
-  const errorMsg = document.getElementById('form-error-msg')!;
-  const iconSend = btn.querySelector('.btn-icon-send') as SVGElement;
-  const iconLoad = btn.querySelector('.btn-icon-loading') as SVGElement;
-  const btnText = btn.querySelector('.btn-text')!;
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('contact-form');
+    var btn = document.getElementById('submit-btn');
+    var successEl = document.getElementById('form-success');
+    var errorEl = document.getElementById('form-error');
+    var errorMsg = document.getElementById('form-error-msg');
+    var iconSend = btn.querySelector('.btn-icon-send');
+    var iconLoad = btn.querySelector('.btn-icon-loading');
+    var btnText = btn.querySelector('.btn-text');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    successEl.style.display = 'none';
-    errorEl.style.display = 'none';
+    if (!form || !btn) return;
 
-    // UI → loading
-    btn.disabled = true;
-    iconSend.style.display = 'none';
-    iconLoad.style.display = '';
-    btnText.textContent = 'Sending…';
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
 
-    try {
-      const res = await fetch('/api/contact', {
+      // UI → loading
+      btn.disabled = true;
+      iconSend.style.display = 'none';
+      iconLoad.style.display = '';
+      btnText.textContent = 'Sending\u2026';
+
+      fetch('/api/contact', {
         method: 'POST',
         body: new FormData(form),
-      });
-      const data = await res.json();
-
-      if (data.ok) {
-        successEl.style.display = 'flex';
-        form.reset();
-      } else {
-        errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.ok) {
+          successEl.style.display = 'flex';
+          form.reset();
+        } else {
+          errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+          errorEl.style.display = 'flex';
+        }
+      })
+      .catch(function() {
+        errorMsg.textContent = 'Network error. Please check your connection and try again.';
         errorEl.style.display = 'flex';
-      }
-    } catch {
-      errorMsg.textContent = 'Network error. Please check your connection and try again.';
-      errorEl.style.display = 'flex';
-    } finally {
-      btn.disabled = false;
-      iconSend.style.display = '';
-      iconLoad.style.display = 'none';
-      btnText.textContent = 'Send Message';
-    }
+      })
+      .finally(function() {
+        btn.disabled = false;
+        iconSend.style.display = '';
+        iconLoad.style.display = 'none';
+        btnText.textContent = 'Send Message';
+      });
+    });
   });
 </script>
 
