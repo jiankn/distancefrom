@@ -13,9 +13,13 @@ const RESEND_URL = 'https://api.resend.com/emails';
 
 export const POST: APIRoute = async ({ request, locals }) => {
   /* ---- env (Cloudflare Workers runtime) ---- */
-  const runtime = (locals as any).runtime;
-  const apiKey = runtime?.env?.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
-  const toEmail = runtime?.env?.CONTACT_TO_EMAIL || import.meta.env.CONTACT_TO_EMAIL || 'boyz109@qq.com';
+  const runtime = locals ? (locals as any).runtime : undefined;
+  
+  // Need to be careful with import.meta.env in CF Workers
+  const metaEnv = typeof import.meta !== 'undefined' && import.meta.env ? (import.meta.env as any) : {};
+  
+  const apiKey = runtime?.env?.RESEND_API_KEY || metaEnv.RESEND_API_KEY;
+  const toEmail = runtime?.env?.CONTACT_TO_EMAIL || metaEnv.CONTACT_TO_EMAIL || 'boyz109@qq.com';
 
   if (!apiKey) {
     return new Response(
