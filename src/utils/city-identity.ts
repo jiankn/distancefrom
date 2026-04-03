@@ -152,11 +152,11 @@ export function getIndexableDistancePairs(routeData: Record<string, unknown>, ci
   for (const rawPair of Object.keys(routeData)) {
     const [rawA, rawB] = rawPair.split('-to-');
     if (!rawA || !rawB) continue;
-    addPair(rawA, rawB, '0.8');
+    addPair(rawA, rawB, '0.9');
   }
 
-  // 2. Add same-country top cities pairs (medium priority)
-  // Group cities by country, take top 50 by population
+  // 2. Add ALL same-country pairs (medium-high priority)
+  // This is the key change: unleash all indexable pairs!
   const byCountry: Record<string, string[]> = {};
   for (const [slug, city] of Object.entries(cities)) {
     byCountry[city.country] ??= [];
@@ -164,15 +164,27 @@ export function getIndexableDistancePairs(routeData: Record<string, unknown>, ci
   }
 
   for (const slugs of Object.values(byCountry)) {
-    const top50 = slugs
+    // Sort by population so higher-priority pairs come first in sitemap
+    const sortedSlugs = slugs
       .map(s => ({ slug: s, pop: cities[s].population ?? 0 }))
       .sort((a, b) => b.pop - a.pop)
-      .slice(0, 50)
       .map(x => x.slug);
 
-    for (let i = 0; i < top50.length; i++) {
-      for (let j = i + 1; j < top50.length; j++) {
-        addPair(top50[i], top50[j], '0.5');
+    // Generate all pairwise combinations (n choose 2)
+    for (let i = 0; i < sortedSlugs.length; i++) {
+      // Limit combinations per country to prevent sitemap explosion if needed
+      // For 200 cities: ~20k pairs; for 1000 cities: ~500k pairs
+      // If you have more than 500 cities per country, you may want to cap here
+      for (let j = i + 1; j < sortedSlugs.length; j++) {
+        const slugA = sortedSlugs[i];
+        const slugB = sortedSlugs[j];
+        // Determine priority: both in top 200 → 0.8; one in top 200 → 0.6; others → 0.4
+        const isTopA = i < 200;
+        const isTopB = j < 200;
+        let priority = '0.4';
+        if (isTopA && isTopB) priority = '0.8';
+        else if (isTopA || isTopB) priority = '0.6';
+        addPair(slugA, slugB, priority);
       }
     }
   }
