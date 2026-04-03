@@ -1,5 +1,5 @@
 ---
-export const prerender = true;
+export const prerender = false;
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Contact Us — DistanceFrom.co" description="Get in touch with the DistanceFrom.co team. We'd love to hear your feedback, questions, or suggestions.">
@@ -11,7 +11,23 @@ import Base from '../layouts/Base.astro';
       <!-- Contact Form -->
       <div class="card--flat contact-form-card">
         <h2>Send a Message</h2>
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+
+        <!-- Success banner (hidden by default) -->
+        <div id="form-success" class="form-banner success" style="display:none;">
+          <svg class="icon-svg--sm" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          <span>Message sent! We'll get back to you soon.</span>
+        </div>
+
+        <!-- Error banner (hidden by default) -->
+        <div id="form-error" class="form-banner error" style="display:none;">
+          <svg class="icon-svg--sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+          <span id="form-error-msg">Something went wrong. Please try again.</span>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <!-- Honeypot (hidden from humans, bots fill it in) -->
+          <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
           <div class="form-group">
             <label for="contact-name">Your Name</label>
             <input type="text" id="contact-name" name="name" placeholder="John Doe" required />
@@ -36,9 +52,10 @@ import Base from '../layouts/Base.astro';
             <label for="contact-message">Message</label>
             <textarea id="contact-message" name="message" placeholder="Tell us what's on your mind..." rows="5" required></textarea>
           </div>
-          <button type="submit" class="submit-btn">
-            <svg class="icon-svg--sm" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
-            Send Message
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <svg class="icon-svg--sm btn-icon-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+            <svg class="icon-svg--sm btn-icon-loading" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="32" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.8s" repeatCount="indefinite"/></circle></svg>
+            <span class="btn-text">Send Message</span>
           </button>
         </form>
       </div>
@@ -73,6 +90,53 @@ import Base from '../layouts/Base.astro';
   </div>
 </Base>
 
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const successEl = document.getElementById('form-success')!;
+  const errorEl = document.getElementById('form-error')!;
+  const errorMsg = document.getElementById('form-error-msg')!;
+  const iconSend = btn.querySelector('.btn-icon-send') as SVGElement;
+  const iconLoad = btn.querySelector('.btn-icon-loading') as SVGElement;
+  const btnText = btn.querySelector('.btn-text')!;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successEl.style.display = 'none';
+    errorEl.style.display = 'none';
+
+    // UI → loading
+    btn.disabled = true;
+    iconSend.style.display = 'none';
+    iconLoad.style.display = '';
+    btnText.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      const data = await res.json();
+
+      if (data.ok) {
+        successEl.style.display = 'flex';
+        form.reset();
+      } else {
+        errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+        errorEl.style.display = 'flex';
+      }
+    } catch {
+      errorMsg.textContent = 'Network error. Please check your connection and try again.';
+      errorEl.style.display = 'flex';
+    } finally {
+      btn.disabled = false;
+      iconSend.style.display = '';
+      iconLoad.style.display = 'none';
+      btnText.textContent = 'Send Message';
+    }
+  });
+</script>
+
 <style>
   .contact-page {
     max-width: var(--max-width);
@@ -100,6 +164,36 @@ import Base from '../layouts/Base.astro';
     font-size: var(--text-lg);
     color: var(--text-primary);
     margin-bottom: var(--space-lg);
+  }
+
+  .form-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+    animation: slideDown 0.3s var(--ease-out);
+  }
+  .form-banner.success {
+    background: var(--color-success-bg);
+    color: var(--color-success);
+  }
+  .form-banner.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
   }
 
   .form-group {
