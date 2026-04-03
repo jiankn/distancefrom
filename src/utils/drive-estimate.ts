@@ -1,5 +1,4 @@
 /** Driving distance/time: OSRM data first, Haversine estimate fallback */
-import { canonicalPairKey } from './slug';
 
 export interface DriveEstimate {
   distanceKm: number;
@@ -10,15 +9,15 @@ export interface DriveEstimate {
   drivable: boolean;
 }
 
+/** Shape of a single OSRM route entry */
+export interface OsrmRouteEntry {
+  drivingDistanceKm: number;
+  drivingDistanceMiles: number;
+  drivingDurationMin: number;
+}
+
 const KM_TO_MILES = 0.621371;
 const AVG_SPEED_KMH = 80;
-
-// Route data loaded at build time
-let routeData: Record<string, { drivingDistanceKm: number; drivingDistanceMiles: number; drivingDurationMin: number }> = {};
-
-export function setRouteData(data: typeof routeData) {
-  routeData = data;
-}
 
 /** Check if two cities are likely on different continents / across ocean */
 function isCrossOcean(lat1: number, lng1: number, lat2: number, lng2: number): boolean {
@@ -33,22 +32,25 @@ function isCrossOcean(lat1: number, lng1: number, lat2: number, lng2: number): b
   return false;
 }
 
+/**
+ * Estimate driving distance/time.
+ * If `osrmData` is provided (fetched at runtime from static assets), use it.
+ * Otherwise fall back to Haversine × road-factor estimate.
+ */
 export function driveEstimate(
-  slugA: string, slugB: string,
   straightLineKm: number,
   lat1: number, lng1: number,
   lat2: number, lng2: number,
+  osrmData?: OsrmRouteEntry | null,
 ): DriveEstimate {
-  // Check OSRM data first
-  const key = canonicalPairKey(slugA, slugB);
-  const osrm = routeData[key];
-  if (osrm) {
-    const h = Math.floor(osrm.drivingDurationMin / 60);
-    const m = osrm.drivingDurationMin % 60;
+  // Use OSRM data if available
+  if (osrmData) {
+    const h = Math.floor(osrmData.drivingDurationMin / 60);
+    const m = osrmData.drivingDurationMin % 60;
     return {
-      distanceKm: osrm.drivingDistanceKm,
-      distanceMiles: osrm.drivingDistanceMiles,
-      durationMin: osrm.drivingDurationMin,
+      distanceKm: osrmData.drivingDistanceKm,
+      distanceMiles: osrmData.drivingDistanceMiles,
+      durationMin: osrmData.drivingDurationMin,
       formatted: h > 0 ? `${h}h ${m}min` : `${m}min`,
       source: 'osrm',
       drivable: true,

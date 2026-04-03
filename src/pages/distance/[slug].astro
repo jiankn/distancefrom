@@ -14,12 +14,12 @@ import DataSources from '../../components/DataSources.astro';
 import DualSearchBox from '../../components/DualSearchBox.astro';
 
 import citiesData from '../../data/cities.json';
-import routeDataJson from '../../data/route-data.json';
 import fuelPricesJson from '../../data/fuel-prices.json';
 
 import { haversine } from '../../utils/haversine';
 import { bearing } from '../../utils/bearing';
-import { driveEstimate, setRouteData } from '../../utils/drive-estimate';
+import { driveEstimate } from '../../utils/drive-estimate';
+import type { OsrmRouteEntry } from '../../utils/drive-estimate';
 import { flightEstimate } from '../../utils/flight-estimate';
 import { findMidwayStops } from '../../utils/midway-stops';
 import { tripCost, setFuelPrices } from '../../utils/trip-cost';
@@ -29,8 +29,7 @@ import { getCanonicalCities, getCanonicalCitySlug, getDisplayCityName } from '..
 
 import type { City } from '../../data/types';
 
-// Initialize data
-setRouteData(routeDataJson as any);
+// Initialize fuel prices (small, safe to keep in bundle)
 setFuelPrices(fuelPricesJson as any);
 
 const cities = citiesData as Record<string, City>;
@@ -59,10 +58,25 @@ const cityB = cities[slugB];
 const cityALabel = getDisplayCityName(slugA, cityA, cities);
 const cityBLabel = getDisplayCityName(slugB, cityB, cities);
 
+// Fetch OSRM route data on demand from static assets (avoids bundling 17MB)
+let osrmData: OsrmRouteEntry | null = null;
+try {
+  // canonicalPairKey puts alphabetically-first city first, which matches
+  // how split-route-data.ts files data under the first city slug.
+  const originCity = pairSlug.split('-to-')[0];
+  const routeRes = await fetch(new URL(`/data/routes/${originCity}.json`, Astro.url));
+  if (routeRes.ok) {
+    const cityRoutes: Record<string, OsrmRouteEntry> = await routeRes.json();
+    osrmData = cityRoutes[pairSlug] ?? null;
+  }
+} catch {
+  // Graceful fallback — haversine estimate will be used
+}
+
 // Compute all data
 const dist = haversine(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
 const bear = bearing(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
-const drive = driveEstimate(slugA, slugB, dist.km, cityA.lat, cityA.lng, cityB.lat, cityB.lng);
+const drive = driveEstimate(dist.km, cityA.lat, cityA.lng, cityB.lat, cityB.lng, osrmData);
 const flight = flightEstimate(dist.km);
 const cost = drive.drivable ? tripCost(drive.distanceKm, cityA.country, cityB.country) : null;
 const stops = findMidwayStops(slugA, cityA.lat, cityA.lng, slugB, cityB.lat, cityB.lng, canonicalCities);
