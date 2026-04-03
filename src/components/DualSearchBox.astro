@@ -206,9 +206,9 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
 </style>
 
 <script define:vars={{ cities }}>
-  function setupAutocomplete(inputId: string, listId: string) {
-    const input = document.getElementById(inputId) as HTMLInputElement;
-    const list = document.getElementById(listId) as HTMLUListElement;
+  function setupAutocomplete(inputId, listId) {
+    const input = document.getElementById(inputId);
+    const list = document.getElementById(listId);
     let selectedSlug = '';
 
     input.addEventListener('input', () => {
@@ -228,16 +228,45 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
     });
 
     list.addEventListener('click', (e) => {
-      const li = (e.target as HTMLElement).closest('li');
+      const li = e.target.closest('li');
       if (!li) return;
-      selectedSlug = li.dataset.slug!;
-      input.value = li.textContent!.trim();
+      selectedSlug = li.dataset.slug;
+      input.value = li.textContent.trim();
       input.dataset.slug = selectedSlug;
       list.classList.remove('active');
     });
 
+    // Handle blur and outside clicks
     document.addEventListener('click', (e) => {
-      if (!(e.target as HTMLElement).closest(`#${inputId}, #${listId}`)) {
+      if (!e.target.closest(`#${inputId}`) && !e.target.closest(`#${listId}`)) {
+        list.classList.remove('active');
+      }
+    });
+
+    // Basic keyboard navigation
+    input.addEventListener('keydown', (e) => {
+      if (!list.classList.contains('active')) return;
+      const items = Array.from(list.querySelectorAll('li'));
+      if (!items.length) return;
+      
+      let currentIndex = items.findIndex(item => item.hasAttribute('aria-selected'));
+      
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentIndex >= 0) items[currentIndex].removeAttribute('aria-selected');
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].setAttribute('aria-selected', 'true');
+        input.value = items[currentIndex].textContent;
+        input.dataset.slug = items[currentIndex].dataset.slug;
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentIndex >= 0) items[currentIndex].removeAttribute('aria-selected');
+        currentIndex = currentIndex <= 0 ? items.length - 1 : currentIndex - 1;
+        items[currentIndex].setAttribute('aria-selected', 'true');
+        input.value = items[currentIndex].textContent;
+        input.dataset.slug = items[currentIndex].dataset.slug;
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
         list.classList.remove('active');
       }
     });
@@ -247,18 +276,39 @@ const cities = getCanonicalCitySlugs(cityRecord).map((slug) => {
   setupAutocomplete('to-input', 'to-suggestions');
 
   document.getElementById('swap-btn')?.addEventListener('click', () => {
-    const from = document.getElementById('from-input') as HTMLInputElement;
-    const to = document.getElementById('to-input') as HTMLInputElement;
-    [from.value, to.value] = [to.value, from.value];
-    [from.dataset.slug, to.dataset.slug] = [to.dataset.slug, from.dataset.slug];
+    const from = document.getElementById('from-input');
+    const to = document.getElementById('to-input');
+    const tempVal = from.value;
+    from.value = to.value;
+    to.value = tempVal;
+    
+    const tempSlug = from.dataset.slug;
+    from.dataset.slug = to.dataset.slug;
+    to.dataset.slug = tempSlug;
   });
 
   document.getElementById('search-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const from = (document.getElementById('from-input') as HTMLInputElement).dataset.slug;
-    const to = (document.getElementById('to-input') as HTMLInputElement).dataset.slug;
+    const fromInput = document.getElementById('from-input');
+    const toInput = document.getElementById('to-input');
+    
+    let from = fromInput.dataset.slug;
+    let to = toInput.dataset.slug;
+
+    // Fallback: If user typed but didn't select, try to find an exact or best match
+    if (!from && fromInput.value) {
+      const match = cities.find(c => c.name.toLowerCase() === fromInput.value.toLowerCase() || c.searchName.toLowerCase() === fromInput.value.toLowerCase());
+      if (match) from = match.slug;
+    }
+    if (!to && toInput.value) {
+      const match = cities.find(c => c.name.toLowerCase() === toInput.value.toLowerCase() || c.searchName.toLowerCase() === toInput.value.toLowerCase());
+      if (match) to = match.slug;
+    }
+
     if (from && to && from !== to) {
       window.location.href = `/distance/${from}-to-${to}/`;
+    } else {
+      alert("Please select valid and distinct cities from the dropdown.");
     }
   });
 </script>

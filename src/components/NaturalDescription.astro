@@ -16,27 +16,65 @@ const locA = cityA.state ? `${cityA.state}, ${cityA.countryName}` : cityA.countr
 const locB = cityB.state ? `${cityB.state}, ${cityB.countryName}` : cityB.countryName;
 const isNP = cityB.type === 'national-park' || cityA.type === 'national-park';
 
-let text = `The distance from ${cityA.name} to ${cityB.name} is ${straightLineMiles} miles (${straightLineKm} km) as the crow flies. `;
-text += `${cityB.name} is located ${bearingDir} of ${cityA.name}. `;
+let paragraphs: string[] = [];
+
+let p1 = `The distance from ${cityA.name} to ${cityB.name} is ${straightLineMiles} miles (${straightLineKm} km) as the crow flies. `;
+p1 += `${cityB.name} is located ${bearingDir} of ${cityA.name}. `;
 
 if (drivable && driveMiles > 0) {
-  text += `By car, the driving distance is approximately ${driveMiles} miles, taking about ${driveTime}. `;
+  p1 += `By car, the driving distance is approximately ${driveMiles} miles, taking about ${driveTime}. `;
 }
-text += `A direct flight would take roughly ${flightTime}. `;
+p1 += `A direct flight would take roughly ${flightTime}. `;
 
 if (cityA.countryName === cityB.countryName) {
-  text += `Both are located in ${cityA.countryName}`;
+  p1 += `Both are located in ${cityA.countryName}`;
   if (cityA.state && cityB.state && cityA.state !== cityB.state) {
-    text += ` — ${cityA.name} in ${cityA.state} and ${cityB.name} in ${cityB.state}`;
+    p1 += ` — ${cityA.name} in ${cityA.state} and ${cityB.name} in ${cityB.state}`;
   }
-  text += '.';
+  p1 += '.';
 } else {
-  text += `${cityA.name} is in ${locA}, while ${cityB.name} is in ${locB}.`;
+  p1 += `${cityA.name} is in ${locA}, while ${cityB.name} is in ${locB}.`;
+}
+paragraphs.push(p1.trim());
+
+// Micro-differentiators for SEO and UX
+if (drivable && driveMiles > 0) {
+  let travelAdvice = "";
+  
+  // 1. Fatigue & Rest Stop Advice based on distance
+  if (driveMiles < 120) {
+    travelAdvice += "This is a quick and easy drive, perfect for a day trip or weekend getaway. ";
+  } else if (driveMiles >= 180 && driveMiles <= 360) {
+    travelAdvice += "For a drive of this length, it's recommended to plan at least one quick rest stop to stretch your legs. ";
+  } else if (driveMiles > 480) {
+    travelAdvice += "This is a serious road trip! Be sure to take breaks every 2-3 hours and consider an overnight stop to avoid driver fatigue. ";
+  }
+
+  // 2. Directional / Environmental Tips
+  if (bearingDir.includes("W")) {
+    travelAdvice += "Since you'll be heading mostly West, pack a good pair of sunglasses if you plan to drive during the late afternoon to avoid the sun glare. ";
+  } else if (bearingDir.includes("N") && driveMiles > 400) {
+    travelAdvice += "Heading North for this distance usually means noticeable weather changes. Make sure to check the forecast for your destination before hitting the road. ";
+  }
+
+  // 3. Cross-border Tips
+  if (cityA.countryName !== cityB.countryName) {
+    travelAdvice += "Keep in mind this route crosses international borders. Don't forget your passport, and check current border crossing times and vehicle insurance requirements. ";
+  }
+
+  // 4. Flight vs Drive practical comparison
+  if (driveMiles < 250) {
+    travelAdvice += "Given the short distance, driving or taking a train is often faster and more convenient than dealing with airport security and flight boarding times. ";
+  }
+  
+  if (travelAdvice) {
+    paragraphs.push(travelAdvice.trim());
+  }
 }
 ---
 <section class="natural-desc animate-in">
   <h2 class="sr-only">How far is {cityA.name} from {cityB.name}?</h2>
-  <p>{text}</p>
+  {paragraphs.map(p => <p>{p}</p>)}
 </section>
 
 <style>
@@ -54,6 +92,9 @@ if (cityA.countryName === cityB.countryName) {
     color: var(--text-secondary);
     line-height: 1.7;
     margin: 0;
+  }
+  .natural-desc p + p {
+    margin-top: 0.75rem;
   }
   .sr-only {
     position: absolute; width: 1px; height: 1px;
