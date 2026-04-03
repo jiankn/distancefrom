@@ -11,10 +11,11 @@ export const prerender = false;
 
 const RESEND_URL = 'https://api.resend.com/emails';
 
-export const POST: APIRoute = async ({ request }) => {
-  /* ---- env ---- */
-  const apiKey = import.meta.env.RESEND_API_KEY;
-  const toEmail = import.meta.env.CONTACT_TO_EMAIL || 'boyz109@qq.com';
+export const POST: APIRoute = async ({ request, locals }) => {
+  /* ---- env (Cloudflare Workers runtime) ---- */
+  const runtime = (locals as any).runtime;
+  const apiKey = runtime?.env?.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
+  const toEmail = runtime?.env?.CONTACT_TO_EMAIL || import.meta.env.CONTACT_TO_EMAIL || 'boyz109@qq.com';
 
   if (!apiKey) {
     return new Response(
