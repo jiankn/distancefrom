@@ -108,7 +108,7 @@ const canonical = canonicalUrl(slugA, slugB);
 // and all pairs with OSRM data. Only noindex cross-country pairs without OSRM.
 const sameCountry = cityA.country === cityB.country;
 const robots = (drive.source === 'osrm' || sameCountry) ? 'index, follow' : 'noindex, follow';
-const pageHeading = `Distance from ${cityALabel} to ${cityBLabel}`;
+const pageHeading = `${cityALabel} to ${cityBLabel}: Road Trip Guide & Distance`;
 
 // Enhanced JSON-LD with FAQ and BreadcrumbList
 const jsonLd = distanceJsonLd(cityALabel, cityBLabel, slugA, dist.miles, dist.km, canonical);
@@ -129,26 +129,34 @@ const faqLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": `How far is ${cityALabel} from ${cityBLabel}?`,
+      "name": `What's the best route from ${cityALabel} to ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `The straight-line distance from ${cityALabel} to ${cityBLabel} is ${dist.miles} miles (${dist.km} km).${drive.drivable ? ` The driving distance is ${drive.distanceMiles} miles (${drive.distanceKm} km), taking approximately ${drive.formatted}.` : ''}`
+        "text": `The most popular route from ${cityALabel} to ${cityBLabel} covers ${drive.drivable ? drive.distanceMiles : dist.miles} miles and takes ${drive.formatted}. Plan ahead with our road trip guide featuring top stops and fuel cost estimates.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": `How far is ${cityALabel} from ${cityBLabel} by car?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `${drive.drivable ? `By car, ${cityALabel} to ${cityBLabel} is ${drive.distanceMiles} miles (${drive.distanceKm} km) and takes about ${drive.formatted}.` : `Driving from ${cityALabel} to ${cityBLabel} may not be feasible. The straight-line distance is ${dist.miles} miles (${dist.km} km).`}${cost ? ` Estimated fuel cost is ${cost.formatted}.` : ''}`
       }
     },
     ...(drive.drivable ? [{
       "@type": "Question",
-      "name": `How long does it take to drive from ${cityALabel} to ${cityBLabel}?`,
+      "name": `Where should I stop between ${cityALabel} and ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `The drive from ${cityALabel} to ${cityBLabel} takes approximately ${drive.formatted}, covering ${drive.distanceMiles} miles.${cost ? ` Estimated fuel cost: ${cost.formatted}.` : ''}`
+        "text": `Great question! The halfway point between ${cityALabel} and ${cityBLabel} is perfect for a break. Explore our curated list of top stops, hidden gems, and scenic viewpoints along the route.`
       }
     }] : []),
     {
       "@type": "Question",
-      "name": `How long is the flight from ${cityALabel} to ${cityBLabel}?`,
+      "name": `Is it better to fly or drive from ${cityALabel} to ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `A flight from ${cityALabel} to ${cityBLabel} takes approximately ${flight.formatted}.${flight.noDirectFlight ? ' Note: direct flights may not be available for this route.' : ''}`
+        "text": `Compare your options: Driving takes ${drive.formatted}${cost ? ` and costs about ${cost.formatted} in fuel` : ''}. Flying takes approximately ${flight.formatted}. Use our comparison tool to decide which works best for you!`
       }
     }
   ]

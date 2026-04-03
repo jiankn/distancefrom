@@ -6,8 +6,8 @@ const YEAR = new Date().getFullYear();
 
 export function distancePageTitle(cityA: string, cityB: string, miles: number, driveTime: string, typeA?: string, typeB?: string): string {
   const hasNP = typeA === 'national-park' || typeB === 'national-park';
-  const suffix = hasNP ? 'How to Get There' : 'Best Route & Stops';
-  return `${cityA} to ${cityB}: Distance, Drive Time, ${suffix} (${YEAR})`;
+  const keyInfo = hasNP ? 'Route & Best Stops' : `${driveTime} Drive • ${Math.round(miles)} miles`;
+  return `${cityA} to ${cityB}: ${keyInfo} • Road Trip Guide (${YEAR})`;
 }
 
 export function distancePageDescription(
@@ -16,7 +16,7 @@ export function distancePageDescription(
   driveTime: string, flightTime: string,
   fuelCost: string,
 ): string {
-  return `${cityA} to ${cityB} is ${miles} miles (${km} km). Drive: ${driveTime}, ~${fuelCost} fuel. Flight: ~${flightTime}. Plus best stops along the way.`;
+  return `Plan your ${cityA} to ${cityB} road trip: ${driveTime} drive • ${Math.round(miles)} miles • Est. fuel ${fuelCost}. Discover hidden gems & where to stop halfway.`;
 }
 
 export function canonicalUrl(slugA: string, slugB: string): string {
