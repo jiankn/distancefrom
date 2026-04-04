@@ -42,19 +42,27 @@ if (drivable && driveMiles > 0) {
   let travelAdvice = "";
   
   // 1. Fatigue & Rest Stop Advice based on distance
-  if (driveMiles < 120) {
-    travelAdvice += "This is a quick and easy drive, perfect for a day trip or weekend getaway. ";
-  } else if (driveMiles >= 180 && driveMiles <= 360) {
-    travelAdvice += "For a drive of this length, it's recommended to plan at least one quick rest stop to stretch your legs. ";
-  } else if (driveMiles > 480) {
-    travelAdvice += "This is a serious road trip! Be sure to take breaks every 2-3 hours and consider an overnight stop to avoid driver fatigue. ";
+  if (driveMiles < 50) {
+    travelAdvice += "This is a very short trip, perfect for a quick morning drive or an easy commute. ";
+  } else if (driveMiles >= 50 && driveMiles < 120) {
+    travelAdvice += "This is a quick and easy drive, perfect for a day trip or weekend getaway. You can easily make the round trip in a single day. ";
+  } else if (driveMiles >= 120 && driveMiles <= 360) {
+    travelAdvice += "For a drive of this length, it's recommended to plan at least one quick rest stop to stretch your legs and grab a coffee. ";
+  } else if (driveMiles > 360 && driveMiles <= 600) {
+    travelAdvice += "This is a solid day of driving. Be sure to take breaks every 2-3 hours to avoid driver fatigue, and plan your meals ahead of time. ";
+  } else if (driveMiles > 600) {
+    travelAdvice += "This is a serious multi-day road trip! We strongly recommend breaking this journey up with an overnight stay to ensure you arrive safely and refreshed. ";
   }
 
   // 2. Directional / Environmental Tips
   if (bearingDir.includes("W")) {
-    travelAdvice += "Since you'll be heading mostly West, pack a good pair of sunglasses if you plan to drive during the late afternoon to avoid the sun glare. ";
+    travelAdvice += "Since you'll be heading mostly West, pack a good pair of sunglasses if you plan to drive during the late afternoon to avoid the harsh sun glare. ";
+  } else if (bearingDir.includes("E")) {
+    travelAdvice += "Heading East means you'll be driving into the sunrise if you start early. Keep your windshield clean for the best visibility. ";
   } else if (bearingDir.includes("N") && driveMiles > 400) {
     travelAdvice += "Heading North for this distance usually means noticeable weather changes. Make sure to check the forecast for your destination before hitting the road. ";
+  } else if (bearingDir.includes("S") && driveMiles > 400) {
+    travelAdvice += "As you head South, expect warmer temperatures. Make sure your car's AC is working well before embarking on this journey. ";
   }
 
   // 3. Cross-border Tips
@@ -65,6 +73,8 @@ if (drivable && driveMiles > 0) {
   // 4. Flight vs Drive practical comparison
   if (driveMiles < 250) {
     travelAdvice += "Given the short distance, driving or taking a train is often faster and more convenient than dealing with airport security and flight boarding times. ";
+  } else if (driveMiles > 800) {
+    travelAdvice += "For a trip of this distance, flying is significantly faster. However, driving offers the flexibility to explore stops along the way. ";
   }
   
   if (travelAdvice) {

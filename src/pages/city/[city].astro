@@ -8,6 +8,7 @@ import { haversine } from '../../utils/haversine';
 import { canonicalPairKey } from '../../utils/slug';
 import { cityHubUrl } from '../../utils/seo';
 import { getCanonicalCitySlug, getCanonicalCitySlugs, getDisplayCityName } from '../../utils/city-identity';
+import { getIndexableCitySlugs, isIndexableCitySlug } from '../../utils/indexability';
 import type { City } from '../../data/types';
 
 const cities = citiesData as Record<string, City>;
@@ -19,11 +20,17 @@ if (rawSlug !== slug) return Astro.redirect(`/city/${slug}/`, 301);
 const city = cities[slug];
 const cityLabel = getDisplayCityName(slug, city, cities);
 const canonical = cityHubUrl(slug);
-const canonicalCitySlugs = new Set(getCanonicalCitySlugs(cities));
+const indexableCitySlugs = new Set(getIndexableCitySlugs(cities));
+const browseCitySlugs = new Set(getCanonicalCitySlugs(cities).filter((candidate) => indexableCitySlugs.has(candidate)));
+const robots = isIndexableCitySlug(slug, cities) ? 'index, follow' : 'noindex, follow';
+const MAX_POPULAR = 12;
+const MAX_DOMESTIC_PER_SECTION = 24;
+const MAX_INTL_COUNTRIES = 8;
+const MAX_INTL_PER_COUNTRY = 8;
 
 // All distances from this city, sorted by distance
 const distances = Object.entries(cities)
-  .filter(([s]) => s !== slug && canonicalCitySlugs.has(s))
+  .filter(([s]) => s !== slug && browseCitySlugs.has(s))
   .map(([s, c]) => {
     const d = haversine(city.lat, city.lng, c.lat, c.lng);
     const key = canonicalPairKey(slug, s);
@@ -55,16 +62,16 @@ const farthest = distances[distances.length - 1];
 // Popular routes: top 10 by population product heuristic
 const popular = [...distances]
   .sort((a, b) => (b.population * 1) - (a.population * 1))
-  .slice(0, 10);
+  .slice(0, MAX_POPULAR);
 
 // Domestic vs international
 const domestic = distances.filter(d => d.countryCode === city.country);
 const international = distances.filter(d => d.countryCode !== city.country);
 
 // Group domestic by range
-const nearby = domestic.filter(d => d.miles <= 200);
-const medium = domestic.filter(d => d.miles > 200 && d.miles <= 1000);
-const faraway = domestic.filter(d => d.miles > 1000);
+const nearby = domestic.filter(d => d.miles <= 200).slice(0, MAX_DOMESTIC_PER_SECTION);
+const medium = domestic.filter(d => d.miles > 200 && d.miles <= 1000).slice(0, MAX_DOMESTIC_PER_SECTION);
+const faraway = domestic.filter(d => d.miles > 1000).slice(0, MAX_DOMESTIC_PER_SECTION);
 
 // Group international by country
 const intlByCountry: Record<string, typeof distances> = {};
@@ -76,7 +83,7 @@ const intlCountries = Object.entries(intlByCountry).sort((a, b) => {
   const minA = Math.min(...a[1].map(d => d.miles));
   const minB = Math.min(...b[1].map(d => d.miles));
   return minA - minB;
-});
+}).slice(0, MAX_INTL_COUNTRIES);
 
 const breadcrumbLd = {
   "@context": "https://schema.org",
@@ -87,7 +94,7 @@ const breadcrumbLd = {
   ]
 };
 ---
-<Base title={title} description={description} canonical={canonical} jsonLd={breadcrumbLd}>
+<Base title={title} description={description} canonical={canonical} jsonLd={breadcrumbLd} robots={robots}>
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
@@ -216,11 +223,11 @@ const breadcrumbLd = {
         <span class="group-badge intl">International</span>
         Destinations Abroad
       </h2>
-      {intlCountries.slice(0, 15).map(([countryName, dests]) => (
+      {intlCountries.map(([countryName, dests]) => (
         <details class="country-group">
           <summary class="country-header">{countryName} <span class="country-count">({dests.length})</span></summary>
           <div class="card--flat distance-list">
-            {dests.map(d => (
+            {dests.slice(0, MAX_INTL_PER_COUNTRY).map(d => (
               <a href={d.href} class="city-row">
                 <div class="city-row-info">
                   <span class="city-row-name">{d.name}</span>

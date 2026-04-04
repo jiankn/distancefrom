@@ -1,7 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import citiesData from '../data/cities.json';
 import routeDataJson from '../data/route-data.json';
-import { getIndexableDistancePairs } from '../utils/city-identity';
+import { getIndexableDistancePairs } from '../utils/indexability';
 
 export const prerender = true;
 

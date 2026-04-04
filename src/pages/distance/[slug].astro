@@ -26,6 +26,7 @@ import { tripCost, setFuelPrices } from '../../utils/trip-cost';
 import { canonicalPairKey } from '../../utils/slug';
 import { distancePageTitle, distancePageDescription, canonicalUrl, distanceJsonLd } from '../../utils/seo';
 import { getCanonicalCities, getCanonicalCitySlug, getDisplayCityName } from '../../utils/city-identity';
+import { isIndexableDistancePair } from '../../utils/indexability';
 
 import type { City } from '../../data/types';
 
@@ -87,7 +88,7 @@ function getRelated(slug: string, city: City, excludeSlug: string) {
   return (city.nearby ?? [])
     .map((s: string) => getCanonicalCitySlug(s, cities))
     .filter((s: string) => s !== slug && s !== excludeSlug && cities[s] && !seen.has(s) && seen.add(s))
-    .slice(0, 6)
+    .slice(0, 12) // Increased from 6 to 12 for deeper internal linking
     .map((s: string) => {
       const c = cities[s];
       const d = haversine(city.lat, city.lng, c.lat, c.lng);
@@ -104,10 +105,13 @@ const description = distancePageDescription(
   drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
 );
 const canonical = canonicalUrl(slugA, slugB);
-// Index same-country pairs (valuable even with haversine estimates)
-// and all pairs with OSRM data. Only noindex cross-country pairs without OSRM.
-const sameCountry = cityA.country === cityB.country;
-const robots = (drive.source === 'osrm' || sameCountry) ? 'index, follow' : 'noindex, follow';
+const robots = isIndexableDistancePair({
+  slugA,
+  slugB,
+  cities,
+  hasRouteData: Boolean(osrmData),
+  distanceMiles: dist.miles,
+}) ? 'index, follow' : 'noindex, follow';
 const pageHeading = `${cityALabel} to ${cityBLabel}: Road Trip Guide & Distance`;
 
 // Enhanced JSON-LD with FAQ and BreadcrumbList

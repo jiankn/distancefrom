@@ -1,12 +1,12 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import citiesData from '../data/cities.json';
-import { getCanonicalCitySlugs } from '../utils/city-identity';
+import { getIndexableCitySlugs } from '../utils/indexability';
 
 export const prerender = true;
 
 const SITE = 'https://distancefrom.co';
 const CHUNK = 10000;
-const slugs = getCanonicalCitySlugs(citiesData as Record<string, any>);
+const slugs = getIndexableCitySlugs(citiesData as Record<string, any>);
 const chunks = Math.ceil(slugs.length / CHUNK);
 
 export const getStaticPaths: GetStaticPaths = () =>
