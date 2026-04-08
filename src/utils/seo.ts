@@ -1,7 +1,6 @@
 /** SEO utilities: title, meta, canonical, JSON-LD */
 import { canonicalPairKey } from './slug';
-
-const SITE = 'https://distancefrom.co';
+import { SITE_URL } from './site';
 const YEAR = new Date().getFullYear();
 
 export function distancePageTitle(cityA: string, cityB: string, miles: number, driveTime: string, typeA?: string, typeB?: string): string {
@@ -21,11 +20,11 @@ export function distancePageDescription(
 
 export function canonicalUrl(slugA: string, slugB: string): string {
   const key = canonicalPairKey(slugA, slugB);
-  return `${SITE}/distance/${key}/`;
+  return `${SITE_URL}/distance/${key}/`;
 }
 
 export function cityHubUrl(slug: string): string {
-  return `${SITE}/city/${slug}/`;
+  return `${SITE_URL}/city/${slug}/`;
 }
 
 export function distanceJsonLd(
@@ -48,7 +47,7 @@ export function distanceJsonLd(
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
         { '@type': 'ListItem', position: 2, name: `Distances from ${cityA}`, item: cityHubUrl(slugA) },
         { '@type': 'ListItem', position: 3, name: `${cityA} to ${cityB}` },
       ],
