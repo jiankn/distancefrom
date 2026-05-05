@@ -9,7 +9,7 @@ interface Props {
   title: string;
   description: string;
   canonical?: string;
-  jsonLd?: object;
+  jsonLd?: object | object[];
   robots?: string;
 }
 
@@ -17,6 +17,7 @@ const { title, description, canonical, jsonLd, robots = 'index, follow' } = Astr
 const canonicalUrl = canonical ?? absoluteSiteUrl(Astro.url.pathname);
 const currentSegments = Astro.url.pathname.split('/').filter(Boolean);
 const currentPath = currentSegments.length > 0 ? `/${currentSegments[0]}` : '/';
+const jsonLdItems = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -47,9 +48,9 @@ const currentPath = currentSegments.length > 0 ? `/${currentSegments[0]}` : '/';
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
 
-  {jsonLd && (
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  )}
+  {jsonLdItems.map((item) => (
+    <script type="application/ld+json" set:html={JSON.stringify(item)} />
+  ))}
 </head>
 <body>
   <Header currentPath={currentPath} />

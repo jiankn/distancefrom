@@ -30,9 +30,9 @@ const trainCostHigh = Math.round(driveMiles * 0.35);
 
 let verdict = '';
 if (!drivable) {
-  verdict = `Flying is the only practical option between ${cityA} and ${cityB}.`;
+  verdict = `A standard driving route may not be practical between ${cityA} and ${cityB}; compare flights and local transit before planning.`;
 } else if (driveMiles < 150) {
-  verdict = `At ${driveMiles} miles, driving is the most practical option.`;
+  verdict = `At ${driveMiles} miles, driving is often the most practical option.`;
 } else if (driveMiles < 400) {
   verdict = `For 2+ travelers, driving is usually cheaper. Solo? Consider the bus.`;
 } else {

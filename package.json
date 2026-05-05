@@ -15,6 +15,7 @@
     "data:pairs": "tsx scripts/generate-popular-pairs.ts",
     "data:split-routes": "tsx scripts/split-route-data.ts",
     "data:all": "npm run data:cities && npm run data:pairs",
+    "audit:gsc": "tsx scripts/audit-gsc.ts",
     "deploy": "npm run data:split-routes && npm run build && npx wrangler deploy"
   },
   "dependencies": {

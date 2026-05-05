@@ -8,7 +8,7 @@ import { haversine } from '../../utils/haversine';
 import { canonicalPairKey } from '../../utils/slug';
 import { cityHubUrl } from '../../utils/seo';
 import { getCanonicalCitySlug, getCanonicalCitySlugs, getDisplayCityName } from '../../utils/city-identity';
-import { getIndexableCitySlugs, isIndexableCitySlug } from '../../utils/indexability';
+import { getIndexableCitySlugs, isIndexableCitySlug, isIndexableDistancePair } from '../../utils/indexability';
 import type { City } from '../../data/types';
 
 const cities = citiesData as Record<string, City>;
@@ -46,6 +46,13 @@ const distances = Object.entries(cities)
       population: c.population,
     };
   })
+  .filter((d) => isIndexableDistancePair({
+    slugA: slug,
+    slugB: d.slug,
+    cities,
+    hasRouteData: false,
+    distanceMiles: d.miles,
+  }))
   .sort((a, b) => a.miles - b.miles);
 
 const isNP = city.type === 'national-park';
@@ -61,12 +68,15 @@ const farthest = distances[distances.length - 1];
 
 // Popular routes: top 10 by population product heuristic
 const popular = [...distances]
-  .sort((a, b) => (b.population * 1) - (a.population * 1))
+  .sort((a, b) => (b.population ?? 0) - (a.population ?? 0))
   .slice(0, MAX_POPULAR);
 
 // Domestic vs international
 const domestic = distances.filter(d => d.countryCode === city.country);
 const international = distances.filter(d => d.countryCode !== city.country);
+const nearbyCount = domestic.filter(d => d.miles <= 200).length;
+const mediumCount = domestic.filter(d => d.miles > 200 && d.miles <= 1000).length;
+const farawayCount = domestic.filter(d => d.miles > 1000).length;
 
 // Group domestic by range
 const nearby = domestic.filter(d => d.miles <= 200).slice(0, MAX_DOMESTIC_PER_SECTION);
@@ -85,6 +95,14 @@ const intlCountries = Object.entries(intlByCountry).sort((a, b) => {
   return minA - minB;
 }).slice(0, MAX_INTL_COUNTRIES);
 
+const citySummary = [
+  `${cityLabel} has ${distances.length} indexable distance guides on DistanceFrom.co.`,
+  nearest ? `The nearest listed destination is ${nearest.name} at ${nearest.miles} miles (${nearest.km} km).` : '',
+  farthest ? `The farthest listed destination is ${farthest.name} at ${farthest.miles} miles (${farthest.km} km).` : '',
+  domestic.length > 0 ? `${domestic.length} routes stay within ${city.countryName}; ${nearbyCount} are under 200 miles, ${mediumCount} are 200 to 1,000 miles, and ${farawayCount} are over 1,000 miles.` : '',
+  international.length > 0 ? `${international.length} routes connect ${cityLabel} with destinations abroad, grouped by country below for faster scanning.` : '',
+].filter(Boolean).join(' ');
+
 const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -93,8 +111,33 @@ const breadcrumbLd = {
     { "@type": "ListItem", "position": 2, "name": `${cityLabel} Distances`, "item": canonical },
   ]
 };
+
+const cityPageLd = [
+  breadcrumbLd,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: canonical,
+    about: {
+      '@type': city.type === 'national-park' ? 'TouristAttraction' : 'Place',
+      name: cityLabel,
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: city.countryName,
+        ...(city.state ? { addressRegion: city.state } : {}),
+      },
+    },
+    mainEntity: popular.slice(0, 10).map((d) => ({
+      '@type': 'WebPage',
+      name: `${cityLabel} to ${d.name}`,
+      url: `${d.href.startsWith('/') ? 'https://distancefrom.co' : ''}${d.href}`,
+    })),
+  },
+];
 ---
-<Base title={title} description={description} canonical={canonical} jsonLd={breadcrumbLd} robots={robots}>
+<Base title={title} description={description} canonical={canonical} jsonLd={cityPageLd} robots={robots}>
   <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
@@ -128,6 +171,13 @@ const breadcrumbLd = {
       <div class="stat-chip">Nearest: <a href={nearest.href}>{nearest.name}</a> ({nearest.miles} mi)</div>
       <div class="stat-chip">Farthest: <a href={farthest.href}>{farthest.name}</a> ({farthest.miles} mi)</div>
     </div>
+  )}
+
+  {distances.length > 0 && (
+    <section class="city-summary animate-in animate-in-delay-1">
+      <h2>Distance Planning from {cityLabel}</h2>
+      <p>{citySummary}</p>
+    </section>
   )}
 
   <div class="search-compact animate-in animate-in-delay-1">
@@ -287,6 +337,26 @@ const breadcrumbLd = {
     border: 1px solid var(--border-light); border-radius: var(--radius-full);
   }
   .stat-chip a { color: var(--color-primary); font-weight: 500; }
+
+  .city-summary {
+    margin: var(--space-lg) 0;
+    padding: var(--space-lg);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .city-summary h2 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xs);
+    color: var(--text-primary);
+  }
+  .city-summary p {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
 
   .group-badge.popular { background: rgba(249,115,22,0.1); color: var(--color-cta); }
   .group-badge.intl { background: rgba(139,92,246,0.1); color: #8b5cf6; }

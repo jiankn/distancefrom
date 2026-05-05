@@ -26,7 +26,7 @@ import { tripCost, setFuelPrices } from '../../utils/trip-cost';
 import { canonicalPairKey } from '../../utils/slug';
 import { distancePageTitle, distancePageDescription, canonicalUrl, distanceJsonLd } from '../../utils/seo';
 import { getCanonicalCities, getCanonicalCitySlug, getDisplayCityName } from '../../utils/city-identity';
-import { isIndexableDistancePair } from '../../utils/indexability';
+import { couldBeIndexableDistancePairWithRouteData, isIndexableDistancePair } from '../../utils/indexability';
 
 import type { City } from '../../data/types';
 
@@ -58,6 +58,64 @@ const cityA = cities[slugA];
 const cityB = cities[slugB];
 const cityALabel = getDisplayCityName(slugA, cityA, cities);
 const cityBLabel = getDisplayCityName(slugB, cityB, cities);
+const dist = haversine(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
+const canonical = canonicalUrl(slugA, slugB);
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function noindexDistanceResponse(): Response {
+  const title = `${cityALabel} to ${cityBLabel} Distance`;
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="${canonical}">
+  <title>${escapeHtml(title)}</title>
+</head>
+<body>
+  <main>
+    <h1>${escapeHtml(title)}</h1>
+    <p>The straight-line distance is ${dist.miles} miles (${dist.km} km).</p>
+    <p><a href="/city/${slugA}/">Explore indexed routes from ${escapeHtml(cityALabel)}</a></p>
+  </main>
+</body>
+</html>`;
+
+  return new Response(html, {
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+      'X-Robots-Tag': 'noindex, follow',
+    },
+  });
+}
+
+const indexableWithoutRouteData = isIndexableDistancePair({
+  slugA,
+  slugB,
+  cities,
+  hasRouteData: false,
+  distanceMiles: dist.miles,
+});
+
+const routeDataCouldMatter = !indexableWithoutRouteData && couldBeIndexableDistancePairWithRouteData({
+  slugA,
+  slugB,
+  cities,
+  distanceMiles: dist.miles,
+});
+
+if (!indexableWithoutRouteData && !routeDataCouldMatter) {
+  return noindexDistanceResponse();
+}
 
 // Fetch OSRM route data on demand from static assets (avoids bundling 17MB)
 let osrmData: OsrmRouteEntry | null = null;
@@ -74,8 +132,19 @@ try {
   // Graceful fallback — haversine estimate will be used
 }
 
+const indexableWithActualRouteData = isIndexableDistancePair({
+  slugA,
+  slugB,
+  cities,
+  hasRouteData: Boolean(osrmData),
+  distanceMiles: dist.miles,
+});
+
+if (!indexableWithActualRouteData) {
+  return noindexDistanceResponse();
+}
+
 // Compute all data
-const dist = haversine(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
 const bear = bearing(cityA.lat, cityA.lng, cityB.lat, cityB.lng);
 const drive = driveEstimate(dist.km, cityA.lat, cityA.lng, cityB.lat, cityB.lng, osrmData);
 const flight = flightEstimate(dist.km);
@@ -87,7 +156,23 @@ function getRelated(slug: string, city: City, excludeSlug: string) {
   const seen = new Set<string>();
   return (city.nearby ?? [])
     .map((s: string) => getCanonicalCitySlug(s, cities))
-    .filter((s: string) => s !== slug && s !== excludeSlug && cities[s] && !seen.has(s) && seen.add(s))
+    .filter((s: string) => {
+      if (s === slug || s === excludeSlug || !cities[s] || seen.has(s)) {
+        return false;
+      }
+      const relatedDistance = haversine(city.lat, city.lng, cities[s].lat, cities[s].lng);
+      if (!isIndexableDistancePair({
+        slugA: slug,
+        slugB: s,
+        cities,
+        hasRouteData: false,
+        distanceMiles: relatedDistance.miles,
+      })) {
+        return false;
+      }
+      seen.add(s);
+      return true;
+    })
     .slice(0, 12) // Increased from 6 to 12 for deeper internal linking
     .map((s: string) => {
       const c = cities[s];
@@ -104,14 +189,7 @@ const description = distancePageDescription(
   cityALabel, cityBLabel, dist.miles, dist.km,
   drive.formatted, flight.formatted, cost?.formatted ?? 'N/A',
 );
-const canonical = canonicalUrl(slugA, slugB);
-const robots = isIndexableDistancePair({
-  slugA,
-  slugB,
-  cities,
-  hasRouteData: Boolean(osrmData),
-  distanceMiles: dist.miles,
-}) ? 'index, follow' : 'noindex, follow';
+const robots = 'index, follow';
 const pageHeading = `${cityALabel} to ${cityBLabel}: Road Trip Guide & Distance`;
 
 // Enhanced JSON-LD with FAQ and BreadcrumbList
@@ -133,10 +211,10 @@ const faqLd = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": `What's the best route from ${cityALabel} to ${cityBLabel}?`,
+      "name": `What route should I plan from ${cityALabel} to ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `The most popular route from ${cityALabel} to ${cityBLabel} covers ${drive.drivable ? drive.distanceMiles : dist.miles} miles and takes ${drive.formatted}. Plan ahead with our road trip guide featuring top stops and fuel cost estimates.`
+        "text": `Use this page as a planning baseline for ${cityALabel} to ${cityBLabel}. ${drive.drivable ? `The estimated driving route is ${drive.distanceMiles} miles and takes about ${drive.formatted}.` : `Driving may not be practical; the straight-line distance is ${dist.miles} miles (${dist.km} km).`} Compare the distance, estimated travel time, and available stop suggestions before booking or driving.`
       }
     },
     {
@@ -149,10 +227,10 @@ const faqLd = {
     },
     ...(drive.drivable ? [{
       "@type": "Question",
-      "name": `Where should I stop between ${cityALabel} and ${cityBLabel}?`,
+      "name": `Where can I stop between ${cityALabel} and ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Great question! The halfway point between ${cityALabel} and ${cityBLabel} is perfect for a break. Explore our curated list of top stops, hidden gems, and scenic viewpoints along the route.`
+        "text": `The stop suggestions on this route are selected from nearby cities and places around the midpoint. Treat them as planning options, then confirm opening hours, detours, and road conditions before you travel.`
       }
     }] : []),
     {
@@ -160,7 +238,9 @@ const faqLd = {
       "name": `Is it better to fly or drive from ${cityALabel} to ${cityBLabel}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Compare your options: Driving takes ${drive.formatted}${cost ? ` and costs about ${cost.formatted} in fuel` : ''}. Flying takes approximately ${flight.formatted}. Use our comparison tool to decide which works best for you!`
+        "text": drive.drivable
+          ? `Driving takes about ${drive.formatted}${cost ? ` with estimated fuel around ${cost.formatted}` : ''}. Flying takes approximately ${flight.formatted} before airport time. Short routes usually favor driving; very long routes usually favor flying unless you want stops and flexibility.`
+          : `A normal driving route may not be available between ${cityALabel} and ${cityBLabel}. Use the straight-line distance and estimated flight time of ${flight.formatted} as planning context.`
       }
     }
   ]
@@ -199,7 +279,7 @@ const faqLd = {
     cityB={{ name: cityBLabel, state: cityB.state, countryName: cityB.countryName, type: cityB.type }}
     straightLineMiles={dist.miles} straightLineKm={dist.km}
     drivable={drive.drivable} driveMiles={drive.distanceMiles}
-    driveTime={drive.formatted} flightTime={flight.formatted}
+    driveTime={drive.formatted} driveSource={drive.source} flightTime={flight.formatted}
     bearingDir={bear.direction}
   />
 

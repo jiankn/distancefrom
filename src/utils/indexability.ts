@@ -155,6 +155,46 @@ export function isIndexableDistancePair(input: DistanceIndexabilityInput): boole
   );
 }
 
+export function couldBeIndexableDistancePairWithRouteData(input: Omit<DistanceIndexabilityInput, 'hasRouteData'>): boolean {
+  const slugA = getCanonicalCitySlug(input.slugA, input.cities);
+  const slugB = getCanonicalCitySlug(input.slugB, input.cities);
+  const cityA = input.cities[slugA];
+  const cityB = input.cities[slugB];
+
+  if (!cityA || !cityB || slugA === slugB) {
+    return false;
+  }
+
+  if (!isIndexableCitySlug(slugA, input.cities) || !isIndexableCitySlug(slugB, input.cities)) {
+    return false;
+  }
+
+  const distanceMiles = input.distanceMiles ?? haversine(cityA.lat, cityA.lng, cityB.lat, cityB.lng).miles;
+  const sameCountry = cityA.country === cityB.country;
+  const populationA = cityA.population ?? 0;
+  const populationB = cityB.population ?? 0;
+  const hasSpecialDestination = isSpecialDestination(cityA) || isSpecialDestination(cityB);
+
+  return (
+    isIndexableDistancePair({ slugA, slugB, cities: input.cities, hasRouteData: false, distanceMiles }) ||
+    (
+      !sameCountry &&
+      distanceMiles <= MIN_CROSS_BORDER_DISTANCE_MILES &&
+      populationA >= MIN_CROSS_BORDER_CITY_POPULATION &&
+      populationB >= MIN_CROSS_BORDER_CITY_POPULATION
+    ) ||
+    (
+      hasSpecialDestination &&
+      distanceMiles <= MIN_SPECIAL_ROUTE_DISTANCE_MILES
+    ) ||
+    (
+      populationA >= MIN_MEGA_CITY_POPULATION &&
+      populationB >= MIN_MEGA_CITY_POPULATION &&
+      distanceMiles <= 1200
+    )
+  );
+}
+
 export function getIndexableDistancePriority(input: DistanceIndexabilityInput): string {
   const slugA = getCanonicalCitySlug(input.slugA, input.cities);
   const slugB = getCanonicalCitySlug(input.slugB, input.cities);
@@ -220,6 +260,14 @@ export function getIndexableDistancePairs(routeData: RouteDataRecord, cities: Ci
   for (const pair of routePairs) {
     const [slugA, slugB] = pair.split('-to-');
     addPair(slugA, slugB, true);
+  }
+
+  for (const slugA of indexableCities) {
+    for (const slugB of cities[slugA].nearby ?? []) {
+      const canonicalB = getCanonicalCitySlug(slugB, cities);
+      const pair = canonicalPairKey(slugA, canonicalB);
+      addPair(slugA, canonicalB, routePairs.has(pair));
+    }
   }
 
   const slugsByCountry: Record<string, string[]> = {};

@@ -4,6 +4,7 @@ import DualSearchBox from '../components/DualSearchBox.astro';
 import citiesData from '../data/cities.json';
 import { haversine } from '../utils/haversine';
 import { canonicalPairKey } from '../utils/slug';
+import { SITE_URL } from '../utils/site';
 
 // Top popular pairs for homepage
 const popularPairs = [
@@ -36,14 +37,32 @@ const totalPairs = (totalCities * (totalCities - 1)) / 2;
 const featuredCities = ['new-york', 'london', 'tokyo', 'paris', 'sydney', 'dubai', 'grand-canyon', 'los-angeles', 'rome', 'banff', 'barcelona', 'queenstown-nz']
   .filter(s => cities[s])
   .map(s => ({ slug: s, name: cities[s].name, country: cities[s].countryName }));
+
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'DistanceFrom.co',
+    url: SITE_URL,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'DistanceFrom.co',
+    url: SITE_URL,
+    applicationCategory: 'TravelApplication',
+    operatingSystem: 'Any',
+    description: 'Calculate city-to-city distance, drive time, flight time, estimated fuel cost, and suggested stops for trip planning.',
+  },
+];
 ---
-<Base title="Distance Calculator — How Far Between Cities | DistanceFrom.co" description="Calculate the distance between any two cities worldwide. Get driving distance, drive time, flight time, fuel cost, and best stops along the way.">
+<Base title="Distance Calculator — How Far Between Cities | DistanceFrom.co" description="Calculate the distance between any two cities worldwide. Get driving distance, drive time, flight time, fuel cost, and suggested stops along the way." jsonLd={homeJsonLd}>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1 class="hero-title animate-in">How Far Between Cities?</h1>
-      <p class="hero-subtitle animate-in animate-in-delay-1">Get real driving distances, flight times, fuel costs & best stops — all in one place.</p>
+      <p class="hero-subtitle animate-in animate-in-delay-1">Get real driving distances, flight times, fuel costs & suggested stops — all in one place.</p>
       <div class="hero-search animate-in animate-in-delay-2">
         <DualSearchBox />
       </div>
@@ -96,8 +115,8 @@ const featuredCities = ['new-york', 'london', 'tokyo', 'paris', 'sydney', 'dubai
         <div class="feature-icon" style="--icon-bg: rgba(239, 68, 68, 0.1); --icon-color: #ef4444;">
           <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg>
         </div>
-        <h3>Best Stops Along the Way</h3>
-        <p>Discover recommended stops between any two cities.</p>
+        <h3>Suggested Stops Along the Way</h3>
+        <p>Compare possible midway stops between any two cities.</p>
       </div>
     </div>
   </section>

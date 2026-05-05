@@ -1,12 +1,15 @@
 /** SEO utilities: title, meta, canonical, JSON-LD */
 import { canonicalPairKey } from './slug';
 import { SITE_URL } from './site';
-const YEAR = new Date().getFullYear();
 
 export function distancePageTitle(cityA: string, cityB: string, miles: number, driveTime: string, typeA?: string, typeB?: string): string {
   const hasNP = typeA === 'national-park' || typeB === 'national-park';
-  const keyInfo = hasNP ? 'Route & Best Stops' : `${driveTime} Drive • ${Math.round(miles)} miles`;
-  return `${cityA} to ${cityB}: ${keyInfo} • Road Trip Guide (${YEAR})`;
+  const keyInfo = hasNP
+    ? 'Route & Stop Ideas'
+    : driveTime === 'Not drivable'
+      ? `${Math.round(miles)} miles`
+      : `${driveTime} Drive - ${Math.round(miles)} miles`;
+  return `${cityA} to ${cityB}: ${keyInfo} | Distance & Route`;
 }
 
 export function distancePageDescription(
@@ -15,7 +18,11 @@ export function distancePageDescription(
   driveTime: string, flightTime: string,
   fuelCost: string,
 ): string {
-  return `Plan your ${cityA} to ${cityB} road trip: ${driveTime} drive • ${Math.round(miles)} miles • Est. fuel ${fuelCost}. Discover hidden gems & where to stop halfway.`;
+  if (driveTime === 'Not drivable') {
+    return `Find the distance from ${cityA} to ${cityB}: ${Math.round(miles)} miles (${Math.round(km)} km). Compare straight-line distance, flight time, and travel context.`;
+  }
+
+  return `Plan your ${cityA} to ${cityB} trip: ${driveTime} drive, ${Math.round(miles)} miles, estimated fuel ${fuelCost}. Compare driving, flying, and midway stop options.`;
 }
 
 export function canonicalUrl(slugA: string, slugB: string): string {

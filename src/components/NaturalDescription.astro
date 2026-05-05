@@ -7,10 +7,11 @@ interface Props {
   drivable: boolean;
   driveMiles: number;
   driveTime: string;
+  driveSource: 'osrm' | 'estimated';
   flightTime: string;
   bearingDir: string;
 }
-const { cityA, cityB, straightLineMiles, straightLineKm, drivable, driveMiles, driveTime, flightTime, bearingDir } = Astro.props;
+const { cityA, cityB, straightLineMiles, straightLineKm, drivable, driveMiles, driveTime, driveSource, flightTime, bearingDir } = Astro.props;
 
 const locA = cityA.state ? `${cityA.state}, ${cityA.countryName}` : cityA.countryName;
 const locB = cityB.state ? `${cityB.state}, ${cityB.countryName}` : cityB.countryName;
@@ -81,6 +82,17 @@ if (drivable && driveMiles > 0) {
     paragraphs.push(travelAdvice.trim());
   }
 }
+
+const confidenceParts = [
+  `Coordinates come from public place data for ${cityA.name} and ${cityB.name}.`,
+  drivable && driveMiles > 0
+    ? driveSource === 'osrm'
+      ? 'The driving distance uses an OSRM road-route result when route data is available.'
+      : 'The driving distance is estimated from straight-line distance with a road-factor model, so confirm the route in your navigation app.'
+    : 'No practical driving route is shown, so the page emphasizes straight-line distance and flight-time context.',
+  'Fuel, flight, bus, and train values are planning estimates and can change by date, provider, road closures, and border rules.',
+];
+paragraphs.push(confidenceParts.join(' '));
 ---
 <section class="natural-desc animate-in">
   <h2 class="sr-only">How far is {cityA.name} from {cityB.name}?</h2>

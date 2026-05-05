@@ -3,6 +3,7 @@ import citiesData from '../data/cities.json';
 import routeDataJson from '../data/route-data.json';
 import { getIndexableDistancePairs } from '../utils/indexability';
 import { SITE_URL } from '../utils/site';
+import { sitemapLastmod } from '../utils/content-freshness';
 
 export const prerender = true;
 
@@ -16,8 +17,9 @@ export const getStaticPaths: GetStaticPaths = () =>
 export const GET: APIRoute = ({ params }) => {
   const i = Number(params.index);
   const slice = pairs.slice(i * CHUNK, (i + 1) * CHUNK);
+  const lastmod = sitemapLastmod();
   const urls = slice.map(p =>
-    `<url><loc>${SITE_URL}/distance/${p.pair}/</loc><changefreq>monthly</changefreq><priority>${p.priority}</priority></url>`
+    `<url><loc>${SITE_URL}/distance/${p.pair}/</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>${p.priority}</priority></url>`
   );
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
